@@ -4,6 +4,14 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content/english/_index.md
+  label: home
+  match: "**/*"
+- type: document
+  path: content/english/contact/_index.md
+  label: contact
+  match: "**/*"
 - type: directory
   path: content/english/blog
   label: blog
