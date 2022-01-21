@@ -1,7 +1,7 @@
 ############################## English ############################
 [en]
 languageName = "En"
-title = "Bigspring Hugo"
+title = "Flinn Lab"
 contentDir = "content/english" # content/english
 weight = 1
 ########### footer content ##########

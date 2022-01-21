@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 baseURL = "http://flinnlab.com/"
-title = "Bigspring Light"
+title = "Flinn Lab"
 theme = "bigspring-light"
 # post pagination
 paginate = "3"

@@ -11,7 +11,7 @@ banner:
 
 ##################### Feature ##########################
 feature:
-  enable : true
+  enable : false
   title : "Something You Need To Know"
   feature_item:
     # feature item loop
@@ -48,7 +48,7 @@ feature:
 
 ######################### Service #####################
 service:
-  enable : true
+  enable : false
   service_item:
     # service item loop
     - title : "It is the most advanced digital marketing and it company."
@@ -94,7 +94,7 @@ service:
         
 ################### Screenshot ########################
 screenshot:
-  enable : true
+  enable : false
   title : "Experience the best <br> workflow with us"
   image : "images/screenshot.svg"
 
@@ -102,7 +102,7 @@ screenshot:
 
 ##################### Call to action #####################
 call_to_action:
-  enable : true
+  enable : false
   title : "Ready to get started?"
   image : "images/cta.svg"
   content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur."
