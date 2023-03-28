@@ -1,9 +1,0 @@
-[submodule "themes/hugo-universal-theme"]
-	path = themes/hugo-universal-theme
-	url = https://github.com/devcows/hugo-universal-theme
-[submodule "themes/bigspring-hugo"]
-	path = themes/bigspring-hugo
-	url = git@github.com:themefisher/bigspring-hugo.git
-[submodule "themes/bigspring-light"]
-	path = themes/bigspring-light
-	url = git@github.com:themefisher/bigspring-hugo.git
