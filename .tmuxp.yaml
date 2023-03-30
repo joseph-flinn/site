@@ -1,10 +1,11 @@
 session_name: site
 windows:
 - focus: 'true'
-  layout: bb9c,225x76,0,0[225x57,0,0,0,225x18,0,58,2]
+  layout: dd1d,225x76,0,0[225x57,0,0,1,225x18,0,58{112x18,0,58,2,112x18,113,58,3}]
   options: {}
   panes:
-  - focus: 'true'
+  - nvim
   - nix-shell
+  - focus: 'true'
   start_directory: /home/joseph/projects/site
   window_name: dev
