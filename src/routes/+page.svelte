@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import PageTitle from "$lib/PageTitle.svelte";
+  import Card from "$lib/Card.svelte";
+
+  import MOCKDATA from '../data.js';
+</script>
+
+
+<PageTitle title="skills"/>
+<Card>
+  <ul>
+    {#each MOCKDATA.skills.managerial as skill}
+      <li>{skill}</li>
+    {/each}
+  </ul>
+</Card>
+
+
+<style>
+</style>

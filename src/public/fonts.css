@@ -1,0 +1,50 @@
+/* fonts.css */
+
+@font-face {
+    font-family: 'Monoid';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('%sveltekit.assets%/fonts/Monoid/Monoid-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Monoid-Italic';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('%sveltekit.assets%/fonts/Monoid/Monoid-Italic.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Monoid-Bold';
+    font-style: monospace;
+    font-weight: 700;
+    src: url('%sveltekit.assets%/fonts/Monoid/Monoid-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Ubuntu-Italic';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('%sveltekit.assets%/fonts/Ubuntu-Italic.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('%sveltekit.assets%/fonts/Ubuntu-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Ubuntu-BoldItalic';
+    font-style: monospace;
+    font-weight: 700;
+    src: url('%sveltekit.assets%/fonts/Ubuntu-BoldItalic.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    font-style: monospace;
+    font-weight: 700;
+    src: url('%sveltekit.assets%/fonts/Ubuntu-Bold.ttf') format('truetype'),
+}
