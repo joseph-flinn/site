@@ -7,7 +7,7 @@
 </script>
 
 <label style="--height:{height};--width:{width}" class="switch">
-  <input type="checkbox">
+  <input on:click type="checkbox">
   <span style="
     --height:{height};
     --width:{width};

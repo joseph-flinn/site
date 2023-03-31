@@ -3,10 +3,18 @@
   import Card from "$lib/Card.svelte";
   import Toggle from "$lib/Toggle.svelte";
 
-  import { skills } from '../data.js';
+  import { skillsData } from '../data.js';
 
+
+  let toggleValue = true;
+  let skillArea = skillsData[Number(toggleValue)].area;
+  let skills = skillsData[Number(toggleValue)].skills;
 
   const handleToggle = () => {
+    toggleValue = !toggleValue;
+    skillArea = skillsData[Number(toggleValue)].area;
+    skills = skillsData[Number(toggleValue)].skills;
+    console.log(`handling toggle\n${skillArea}`);
   }
 </script>
 
@@ -23,14 +31,14 @@
         style="align: right;" 
         height="25px" 
         width="100px" 
-        activeColor="#bbb" 
-        inactiveColor="#ddd"
+        activeColor="#ccc" 
+        inactiveColor="#ccc"
       />
     </div>
   </div>
   <Card>
     <ul>
-      {#each skills.managerial as skill}
+      {#each skills as skill}
         <li>{skill}</li>
       {/each}
     </ul>
