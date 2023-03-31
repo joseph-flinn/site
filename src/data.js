@@ -1,11 +1,11 @@
 
-const pages = [
+export const pages = [
   {"name": "home", "path": "/"},
   {"name": "posts", "path": "/posts"},
   {"name": "stream", "path": "/stream"},
 ];
 
-const skills = {
+export const skills = {
   "technical": [
     "kubernetes",
     "docker",
@@ -23,9 +23,9 @@ const skills = {
 }
 
 
-const MOCKDATA = {
+const data = {
   pages,
   skills
 };
 
-export default MOCKDATA;
+export default data;
