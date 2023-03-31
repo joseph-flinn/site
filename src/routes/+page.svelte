@@ -20,7 +20,7 @@
 
 
 <div>
-  <div style="width: 100%; padding: 3em 0em 3em 0em;"/>
+  <div style="width: 100%; padding: 2em 0em 2em 0em;"/>
   <div style="display: flex">
     <div class="titleWrapper">
       <PageTitle title="skills"/>
@@ -36,7 +36,7 @@
       />
     </div>
   </div>
-  <Card>
+  <Card title={skillArea}>
     <ul>
       {#each skills as skill}
         <li>{skill}</li>

@@ -1,10 +1,19 @@
+<script>
+  export let title = null;
+</script>
+
 <div class="card">
+  {#if title}
+  <b style="padding: 0.5em;">{title}</b>
+  {/if}
   <slot/>
 </div>
 
 
 <style>
   .card {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     margin: 0em 1em 0em 1em;
     padding: 0.25em;
