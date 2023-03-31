@@ -3,14 +3,14 @@
   import "../public/fonts.css";
   import NavBar from '$lib/NavBar.svelte';
 
-  import MOCKDATA from '../data.js';
+  import { pages } from '../data.js';
 </script>
 
 
 <div class="fullh-container">
   <div class="side"/>
   <div class="page">
-    <NavBar pages={MOCKDATA.pages}/>
+    <NavBar pages={pages}/>
     <div class="page-content">
       <slot></slot>
     </div>
