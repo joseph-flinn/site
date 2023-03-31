@@ -11,6 +11,7 @@
   <div class="side"/>
   <div class="page">
     <NavBar pages={pages}/>
+    <div style="width: 100%; padding: 2em 0em 2em 0em;"/>
     <div class="page-content">
       <slot></slot>
     </div>
@@ -27,7 +28,7 @@
 
   .side {
     flex-grow: 1;
-    background-color: lightblue;
+    background-color: lightgrey;
   }
 
   .page {

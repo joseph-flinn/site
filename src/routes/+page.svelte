@@ -3,6 +3,8 @@
   import Card from "$lib/Card.svelte";
   import Toggle from "$lib/Toggle.svelte";
 
+  import SkillsCard from "$lib/SkillsCard.svelte";
+
   import { skillsData } from '../data.js';
 
 
@@ -19,43 +21,12 @@
 </script>
 
 
-<div>
-  <div style="width: 100%; padding: 2em 0em 2em 0em;"/>
-  <div style="display: flex">
-    <div class="titleWrapper">
-      <PageTitle title="skills"/>
-    </div>
-    <div class="toggleWrapper">
-      <Toggle 
-        on:click={handleToggle}
-        style="align: right;" 
-        height="25px" 
-        width="100px" 
-        activeColor="#ccc" 
-        inactiveColor="#ccc"
-      />
-    </div>
-  </div>
-  <Card title={skillArea}>
-    <ul>
-      {#each skills as skill}
-        <li>{skill}</li>
-      {/each}
-    </ul>
-  </Card>
+
+<div class="titleWrapper">
+  <PageTitle name="skills"/>
 </div>
-
-
-<style>
-  .titleWrapper {
-    display: inline-block;
-    padding: 1em;
-    flex-grow: 1;
-  }
-
-  .toggleWrapper {
-    display: inline-block;
-    float: right;
-    padding: 1em;
-  }
-</style>
+<SkillsCard 
+  on:click={handleToggle} 
+  skillArea={skillArea} 
+  skills={skills}
+/>

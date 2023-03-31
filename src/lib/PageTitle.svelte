@@ -1,13 +1,14 @@
 <script>
-  export let title;
+  export let name;
 </script>
 
 <div class="title">
-  <b>{title}</b>
+  <b>{name}</b>
 </div>
 
 <style>
   .title {
     font-size: 26px;
+    padding: 1em;
   }
 </style>
