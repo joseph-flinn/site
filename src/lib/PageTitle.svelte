@@ -3,11 +3,11 @@
 </script>
 
 <div class="title">
-  <h3>{title}</h3>
+  <b>{title}</b>
 </div>
 
 <style>
   .title {
-    padding: 4em 1em 0em 1em;
+    font-size: 26px;
   }
 </style>
