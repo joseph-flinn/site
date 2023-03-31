@@ -11,7 +11,7 @@
   <div class="side"/>
   <div class="page">
     <NavBar pages={pages}/>
-    <div style="width: 100%; padding: 2em 0em 2em 0em;"/>
+    <div class="spacer"/>
     <div class="page-content">
       <slot></slot>
     </div>
@@ -35,6 +35,11 @@
     width: 800px;
   }
 
+  .spacer {
+    width: 100%;
+    padding: 2em 0em 2em 0em;
+  }
+
   .page-content {
     display: flex;
     flex-direction: column;
@@ -43,6 +48,12 @@
   @media only screen and (max-width: 800px) {
     .page {
       width: 100vw;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .spacer {
+      padding: 0.25em 0em 0.25em 0em;
     }
   }
 </style>

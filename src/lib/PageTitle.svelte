@@ -9,6 +9,6 @@
 <style>
   .title {
     font-size: 26px;
-    padding: 1em;
+    padding: 0.5em;
   }
 </style>

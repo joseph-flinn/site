@@ -17,6 +17,7 @@
         width="100px" 
         activeColor="#ccc" 
         inactiveColor="#ccc"
+        animationTime="0s"
       />
     </div>
   </div>

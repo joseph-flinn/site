@@ -4,6 +4,7 @@
   export let color = "#fff";
   export let inactiveColor = "#ccc";
   export let activeColor = "#000";
+  export let animationTime = ".4s";
 </script>
 
 <label style="--height:{height};--width:{width}" class="switch">
@@ -14,6 +15,7 @@
     --active-color:{activeColor};
     --inactive-color:{inactiveColor};
     --color:{color};
+    --animation-time:{animationTime}
   " class="slider">
   </span>
 </label>
@@ -40,8 +42,8 @@
     right: 0;
     bottom: 0;
     background-color: var(--inactive-color);
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: var(--animation-time);
+    transition: var(--animation-time);
   }
 
   .slider:before {
@@ -52,8 +54,8 @@
     left: 1px;
     bottom: 1px;
     background-color: var(--color);
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: var(--animation-time);
+    transition: var(--animation-time);
   }
 
   input:checked + .slider {
