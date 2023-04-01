@@ -1,38 +1,18 @@
-# create-svelte
+# site - Indie Web: Source of Truth
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Development
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+nix-shell
+vite dev  # Run a local development instance at http://localhost:5173
 
-# create a new project in my-app
-npm create svelte@latest my-app
+
+# Run a local development instance across all networking interfaces on port 5173. 
+# This is used to expose via Tailscale or the VLAN the computer is on. Mostly used
+# for confirming mobile UX
+vite dev --host 0.0.0.0  
 ```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Deployment
+Every push to `main` will auto deploy to `joseph-flinn.github.io/site`
