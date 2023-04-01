@@ -3,11 +3,9 @@
 
   import { base } from "$app/paths";
 
-  console.log(`base: ${base}`)
-
 </script>
 
-<div>
+<div style="padding: 0.5em;">
   {#each pages as page}
   <a href="{base}{page.path}"><b>{page.name}</b></a>
   {/each}

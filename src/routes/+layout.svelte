@@ -2,6 +2,7 @@
   import "../public/global.css";
   import "../public/fonts.css";
   import NavBar from '$lib/NavBar.svelte';
+  import Footer from '$lib/Footer.svelte';
 
   import { pages } from '../data.js';
 </script>
@@ -15,6 +16,7 @@
     <div class="page-content">
       <slot></slot>
     </div>
+    <Footer />
   </div>
   <div class="side"/>
 </div>
@@ -22,17 +24,21 @@
 
 <style>
   .fullh-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     display: flex;
-    height: 100vw;
+    overflow-y: auto;
   }
 
   .side {
     flex-grow: 1;
-    background-color: lightgrey;
   }
 
   .page {
     width: 800px;
+    display: flex;
+    flex-direction: column;
   }
 
   .spacer {
@@ -43,6 +49,7 @@
   .page-content {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
   }
 
   @media only screen and (max-width: 800px) {
