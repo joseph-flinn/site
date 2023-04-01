@@ -1,13 +1,15 @@
 <script>
   export let pages;
 
-  import {base} from "$app/paths";
+  import { base } from "$app/paths";
+
+  console.log(`base: ${base}`)
 
 </script>
 
 <div>
   {#each pages as page}
-  <a href="{base}/{page.path}"><b>{page.name}</b></a>
+  <a href="{base}{page.path}"><b>{page.name}</b></a>
   {/each}
 </div>
 
