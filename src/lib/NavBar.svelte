@@ -1,11 +1,13 @@
 <script>
   export let pages;
 
+  import {base} from "$app/paths";
+
 </script>
 
 <div>
   {#each pages as page}
-  <a href={page.path}><b>{page.name}</b></a>
+  <a href="{base}/{page.path}"><b>{page.name}</b></a>
   {/each}
 </div>
 
