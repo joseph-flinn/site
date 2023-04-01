@@ -4,3 +4,8 @@ body {
   color: #5c5955;
   margin: 0em;
 }
+
+a {
+  text-decoration: none;
+  color: #5c5955;
+}
