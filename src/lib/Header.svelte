@@ -8,7 +8,7 @@
 </script>
 
 
-<div style="display: flex; padding: 0.5em;">
+<div style="display: flex; padding: 0.5em 0em 0.5em 0em;">
   <a href="{base}/">
     <img src={logo} alt="JF Brand Icon" class="svg"/>
   </a>
