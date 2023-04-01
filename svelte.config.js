@@ -2,6 +2,8 @@ import adapter from  '@sveltejs/adapter-static';
 
 const dev = process.argv.includes('dev');
 
+const base = '';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -10,7 +12,7 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		paths: {
-			//base: dev ? '' : '/site',
+			base: dev ? '' : base,
 		}
 	}
 };
