@@ -26,11 +26,3 @@
     <p>{paragraph}</p>
   {/each}
 </div>
-
-
-<style>
-  p {
-    text-align: justify;
-    text-justify: auto;
-  }
-</style>
