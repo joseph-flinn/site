@@ -2,6 +2,7 @@
   import "../public/global.css";
   import "../public/fonts.css";
   import NavBar from '$lib/NavBar.svelte';
+  import Header from '$lib/Header.svelte';
   import Footer from '$lib/Footer.svelte';
 
   import { pages } from '../data.js';
@@ -11,8 +12,7 @@
 <div class="fullh-container">
   <div class="side"/>
   <div class="page">
-    <NavBar pages={pages}/>
-    <div class="spacer"/>
+    <Header pages={pages}/>
     <div class="page-content">
       <slot></slot>
     </div>
@@ -41,26 +41,15 @@
     flex-direction: column;
   }
 
-  .spacer {
-    width: 100%;
-    padding: 2em 0em 2em 0em;
-  }
-
   .page-content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 600px) {
     .page {
       width: 100vw;
-    }
-  }
-
-  @media only screen and (max-width: 800px) {
-    .spacer {
-      padding: 0.25em 0em 0.25em 0em;
     }
   }
 </style>

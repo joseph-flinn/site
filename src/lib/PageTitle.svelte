@@ -2,9 +2,7 @@
   export let name;
 </script>
 
-<div class="title">
-  <b>{name}</b>
-</div>
+<div class="title">{name}</div>
 
 <style>
   .title {
