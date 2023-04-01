@@ -20,10 +20,10 @@ export const skillsData = [
   {
     "area": "managerial",
     "skills": [
-      "aggressive organizational alignment",
       "managing for high performance: purpose + expectations + feedback",
       "effective feedback with PSBIQ model",
-      "budding coach"
+      "budding coach",
+      "aggressive organizational alignment"
     ]
   }
 ]
