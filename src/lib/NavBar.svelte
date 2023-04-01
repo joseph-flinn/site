@@ -14,8 +14,6 @@
 <style>
   a {
     padding: 1em;
-    text-decoration: none;
-    color: #5c5955;
   }
 </style>
 
