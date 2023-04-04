@@ -7,9 +7,7 @@
 
 <div style="padding: 0.5em;">
   {#each pages as page}
-    {#if page.name != "home"}
-      <a href="{base}{page.path}"><b>{page.name}</b></a>
-    {/if}
+    <a href="{base}{page.path}"><b>{page.name}</b></a>
   {/each}
 </div>
 
