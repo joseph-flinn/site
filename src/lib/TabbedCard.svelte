@@ -60,4 +60,10 @@
     background-color: #fff;
     border-top: 3px solid #ccc;
   }
+
+  @media only screen and (max-width: 600px) {
+    .tab-button:hover {
+      background-color: #fff;
+    }
+  }
 </style>
