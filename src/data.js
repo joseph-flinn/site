@@ -28,6 +28,23 @@ export const skillsData = [
   }
 ]
 
+export const skillsDataObj = {
+  "technical": [ 
+    "kubernetes",
+    "docker",
+    "python",
+    "javascript",
+    "linux",
+    "ci/cd"
+  ],
+  "managerial": [
+    "managing for high performance: purpose + expectations + feedback",
+    "effective feedback with PSBIQ model",
+    "budding coach",
+    "aggressive organizational alignment"
+  ]
+}
+
 export const postsData = {
   "post-1": {
     "title": "Post 1",

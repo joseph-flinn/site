@@ -4,15 +4,17 @@
   import Toggle from "$lib/Toggle.svelte";
 
   import SkillsCard from "$lib/SkillsCard.svelte";
+  import TabbedCard from "$lib/TabbedCard.svelte";
 
   import { skillsData } from '../data.js';
+  import { skillsDataObj } from '../data.js';
 
 
   let toggleValue = true;
   let skillArea = skillsData[Number(toggleValue)].area;
   let skills = skillsData[Number(toggleValue)].skills;
 
-  const handleToggle = () => {
+  const handleClick = () => {
     toggleValue = !toggleValue;
     skillArea = skillsData[Number(toggleValue)].area;
     skills = skillsData[Number(toggleValue)].skills;
@@ -25,8 +27,5 @@
 <div class="titleWrapper">
   <PageTitle name="skills"/>
 </div>
-<SkillsCard 
-  on:click={handleToggle} 
-  skillArea={skillArea} 
-  skills={skills}
-/>
+<TabbedCard data={skillsDataObj}>
+</TabbedCard>
