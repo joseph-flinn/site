@@ -7,14 +7,20 @@
 
 
 <PageTitle name="posts"/>
-<ul>
-  {#each Object.entries(data) as [key, value]}
-    <li><a href="{$page.url.pathname}/{key}">{value.date} - {value.title}</a></li>
-  {/each}
-</ul>
+<div style="padding: 1em;">
+{#each Object.entries(data) as [key, value]}
+  <div class="post-item">
+    <a href="{$page.url.pathname}/{key}">{value.date} - {value.title}</a>
+  </div>
+{/each}
+</div>
 
 
 <style>
+  .post-item {
+    padding: 0.5em;
+  }
+
   a:hover {
     font-weight: 700;
   }

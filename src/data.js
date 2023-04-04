@@ -5,30 +5,7 @@ export const pages = [
   {"name": "stream", "path": "/stream"},
 ];
 
-export const skillsData = [
-  {  
-    "area": "technical",
-    "skills": [
-      "kubernetes",
-      "docker",
-      "python",
-      "javascript",
-      "linux",
-      "ci/cd"
-    ]
-  },
-  {
-    "area": "managerial",
-    "skills": [
-      "managing for high performance: purpose + expectations + feedback",
-      "effective feedback with PSBIQ model",
-      "budding coach",
-      "aggressive organizational alignment"
-    ]
-  }
-]
-
-export const skillsDataObj = {
+export const skillsData = {
   "technical": [ 
     "kubernetes",
     "docker",
