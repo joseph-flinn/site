@@ -16,6 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.0
 
+      - name: Build post.json
+        run: npm run build:posts
+
       - name: Build Site
         run: |
           npm ci
