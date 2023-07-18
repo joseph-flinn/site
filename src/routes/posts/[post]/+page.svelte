@@ -1,10 +1,11 @@
 <script>
   export let data;
 
-  const { title, date, ...rest } = data;
+  import SvelteMarkdown from 'svelte-markdown'
 
-  const body = rest.body.split("\n\n");
-  const wordCount = body.reduce((sum, paragraph) => sum += paragraph.split(" ").length , 0)
+  const { title, date, body, ...rest } = data;
+
+  const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
 </script>
 
 
@@ -22,7 +23,5 @@
   </div>
 </div>
 <div style="padding: 1em;">
-  {#each body as paragraph}
-    <p>{paragraph}</p>
-  {/each}
+  <SvelteMarkdown source={body} />
 </div>
