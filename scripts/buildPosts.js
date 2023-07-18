@@ -1,5 +1,4 @@
 import fs from 'fs';
-import { promises as pfs } from 'fs';
 
 
 const extractData = (metadataLines) => {
@@ -10,36 +9,33 @@ const extractData = (metadataLines) => {
       return [key, value]
     })
 
-  console.log(`data: ${JSON.stringify(data)}`)
   return Object.fromEntries(data);
 
 }
 
 const filenames = fs.readdirSync('./posts/');
 
-const posts = filenames.map(filename => {
-  const postData = pfs.readFile(`./posts/${filename}`, 'utf8', (err, fileData) => {
-    if (err) throw err;
-    return fileData
-  }).then( fileData => {
-    const [ data, body ] = fileData.split("---\n");
-    const dataLines = data.split("\n");
+const posts = filenames.reduce((results, filename) => {
+  const fileData = fs.readFileSync(`./posts/${filename}`, 'utf8');
+  const [ data, body ] = fileData.split("---\n");
+  const dataLines = data.split("\n");
 
-    console.log(`ExtractData: ${JSON.stringify(extractData(dataLines))}`);
+  const postData = {
+    ...extractData(dataLines),
+    "body": body
+  }
+   
+  return {
+    ...results,
+    [postData.stub]: postData
+  }
 
-    return {
-      ...extractData(dataLines),
-      "body": body
-    }
-  });
-  
-
-  console.log(`postData: ${postData}`);
-  return postData;
-});
+}, {});
 
 
-console.log(posts);
+fs.writeFile("./src/posts.json", JSON.stringify(posts, null, 2), (err) => {
+  if (err) throw err;
+})
 
 
 
