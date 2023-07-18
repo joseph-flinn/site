@@ -7,12 +7,12 @@ export const pages = [
 
 export const skillsData = {
   "technical": [ 
+    "ci/cd",
     "kubernetes",
     "docker",
     "python",
     "javascript",
-    "linux",
-    "ci/cd"
+    "linux"
   ],
   "managerial": [
     "managing for high performance: purpose + expectations + feedback",
