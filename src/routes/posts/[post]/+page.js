@@ -1,7 +1,8 @@
-import { postsData } from '../../../data.js';
+//import { postsData } from '../../../data.js';
+import posts from '../../../posts.json';
 
 export const load = ({ params }) => {
     return {
-        ...postsData[params.post]
+        ...posts[params.post]
     };
 }

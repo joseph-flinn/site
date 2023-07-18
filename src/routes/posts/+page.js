@@ -1,7 +1,7 @@
-import { postsData } from '../../data.js';
+import posts from '../../posts.json';
 
 export const load = () => {
     return {
-        ...postsData
+        ...posts
     };
 }

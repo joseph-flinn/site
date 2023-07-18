@@ -1,0 +1,23 @@
+{
+  "pages": [
+    {"name": "home", "path": "/"},
+    {"name": "posts", "path": "/posts"},
+    {"name": "stream", "path": "/stream"}
+  ],
+  "skillsData": {
+    "technical": [ 
+      "ci/cd",
+      "kubernetes",
+      "docker",
+      "python",
+      "javascript",
+      "linux"
+    ],
+    "managerial": [
+      "managing for high performance: purpose + expectations + feedback",
+      "effective feedback with PSBIQ model",
+      "budding coach",
+      "aggressive organizational alignment"
+    ]
+  }
+}

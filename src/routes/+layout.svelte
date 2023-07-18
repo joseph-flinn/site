@@ -5,14 +5,14 @@
   import Header from '$lib/Header.svelte';
   import Footer from '$lib/Footer.svelte';
 
-  import { pages } from '../data.js';
+  import data from '../data.json';
 </script>
 
 
 <div class="fullh-container">
   <div class="side"/>
   <div class="page">
-    <Header pages={pages}/>
+    <Header pages={data.pages}/>
     <div class="page-content">
       <slot></slot>
     </div>

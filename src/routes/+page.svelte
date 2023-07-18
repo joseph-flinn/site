@@ -6,7 +6,7 @@
   import TabbedCard from "$lib/TabbedCard.svelte";
   import UnderConstruction from "$lib/UnderConstruction.svelte";
 
-  import { skillsData } from '../data.js';
+  import data from '../data.json';
 
 </script>
 
@@ -15,7 +15,7 @@
 <div class="titleWrapper">
   <PageTitle name="skills"/>
 </div>
-<TabbedCard data={skillsData}>
+<TabbedCard data={data.skillsData}>
 </TabbedCard>
 <div style="padding: 2em;"/>
 <div class="titleWrapper">
