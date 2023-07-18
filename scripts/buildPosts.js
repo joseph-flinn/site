@@ -1,6 +1,10 @@
 import fs from 'fs';
 
 
+const assert = (condition, message) => {
+    if (!condition) throw new Error(message || "Assertion failed");
+}
+
 const extractData = (metadataLines) => {
   const data = metadataLines
     .filter(line => line.startsWith("!!"))
@@ -15,13 +19,23 @@ const extractData = (metadataLines) => {
 
 const filenames = fs.readdirSync('./posts/');
 
+
+// Compile 
 const posts = filenames.reduce((results, filename) => {
+  const requiredMetaDataKeys = ["title", "date", "stub"];
+
   const fileData = fs.readFileSync(`./posts/${filename}`, 'utf8');
   const [ data, body ] = fileData.split("---\n");
-  const dataLines = data.split("\n");
+
+  const postMetadata = extractData(data.split("\n"));
+
+  requiredMetaDataKeys.map(key => assert(
+    key in postMetadata, 
+    `${filename} - "${key}" is a required post metadata`
+  ));
 
   const postData = {
-    ...extractData(dataLines),
+    ...postMetadata,
     "body": body
   }
    
@@ -33,17 +47,7 @@ const posts = filenames.reduce((results, filename) => {
 }, {});
 
 
+// Save post data to posts.json
 fs.writeFile("./src/posts.json", JSON.stringify(posts, null, 2), (err) => {
   if (err) throw err;
 })
-
-
-
-/*
-const filename = process.argv[2];
-fs.readFile(filename, 'utf8', function(err, data) {
-  if (err) throw err;
-  console.log('OK: ' + filename);
-  console.log(data)
-});
-*/
