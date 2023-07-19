@@ -18,7 +18,7 @@ reasons a bit before jumping into how `git` was not designed to support them.
 
 It is easier for an engineer to add a new tool or service to an existing repository where all of their tools have been
 already been configured. Most repos have had configurations added to them to support linters, code formatters, editor
-configurations, and other miscellaneous configuration files for other tools that integrate with `git` resdpos. There is
+configurations, and other miscellaneous configuration files for other tools that integrate with `git` repos. There is
 less friction creating a new directory in a repo that already has these configurations set up instead of copying and
 pasting (**shudder**) them into a new repo, forgetting one, and having to go retrieve that one too.
 
@@ -43,7 +43,7 @@ Reusable code in the same repo is the easiest way to share code. I've done it my
 arduino projects. Any changes to the `/lib` directory automatically get picked up by the projects using it. However, it
 also automatically breaks them when breaking changes are added to the `/lib` directory. It also couples the different
 projects together to help communicate which versions of which work together. Barring any bugs, version 1.2.0 of App1 and
-App2 will work together because they were developed and tested toegether.
+App2 will work together because they were developed and tested together.
 
 
 ### Git was not designed for monorepos
@@ -65,13 +65,13 @@ To overcome this issue, it has been proposed to use a monorepo naming standard l
 can work to get around git not being designed to support monorepos. While it can work, I would mention that it feels bad
 to tag the entire tree of the monorepo to update a single project in the repo.
 
-There are more techincal issues in git for supporting monorepos that Atlassian goes into more depth in their article
+There are more technical issues in git for supporting monorepos that Atlassian goes into more depth in their article
 "[Monorepos in git](https://www.atlassian.com/git/tutorials/monorepos)".
 
 
 ### Resulting Pain Points
 
-There are some work arounds to get to a point where git can be adapted to host monorepos. However, those adaptions cause
+There are some workarounds to get to a point where git can be adapted to host monorepos. However, those adaptions cause
 later pain points. 
 
 #### 1. Industry Standard CI/CD flows
@@ -89,14 +89,14 @@ configuration to get it right, only to have the needs change for one/all of the 
 or shared library.
 
 In addition to this, most monorepo structures are very custom to support the specific projects that they hold. Because
-of these snowflake designs, industry patterns using the avaiable CI/CD tools may not work for the project. Every
+of these snowflake designs, industry patterns using the available CI/CD tools may not work for the project. Every
 adventure into the CI/CD world of the monorepo becomes a balancing act because there are constraints between the
 projects and the pipelines for those projects.
 
 
 #### 2. Automatic Dependency Management
 
-It has become common practice to use an automated depedency manager to keep project dependencies up-to-date. GitHub's
+It has become common practice to use an automated dependency manager to keep project dependencies up-to-date. GitHub's
 Dependabot and Renovate are a couple of examples. As of today, neither of these leaders in dependency management support
 the `<app>-<version>` standard of tagging of monorepos. If the software that is in the monorepo is used in other
 software (library, sdk, GitHub Action, Dockerfile, Helm Chart), project specific tags cannot be used as a source. I
@@ -114,7 +114,7 @@ indicators or exit criteria for when to look to migrate away from the monorepo.
 #### 1. Git Tagging and Release
 
 As soon as I need to start tracking the version of a project with a git tag for internal or external release, it is time
-to make a dedicated project repository. The tagging becomes streamlined and the CI/CD becomes more manageble. But the
+to make a dedicated project repository. The tagging becomes streamlined and the CI/CD becomes more manageable. But the
 biggest value add is the long term maintainability. A simple structure with simplified CI/CD is a lot easier to manage
 long term. It does not require almost-constant tweaking with the risk of breaking CI/CD pipelines for other projects.
 
@@ -128,7 +128,7 @@ doesn't. When a project gets to about five thousand lines of code it is time to 
 
 ### Migration
 
-To migrate away from a monorepo, use the idea of [Evoloutionary Architecture](https://evolutionaryarchitecture.com/) to 
+To migrate away from a monorepo, use the idea of [Evolutionary Architecture](https://evolutionaryarchitecture.com/) to 
 find the projects that can easily be removed from monorepo and moved out to its own. Then find the loosely coupled
 applications which are coupled, but not highly coupled and move them out to their own. Project by project, eventually
 the repo structure will evolve from a monorepo to independent repos.
@@ -141,8 +141,3 @@ via a monorepo.
 
 Stay tuned for the next article where I go in depth of a full streamlined CI/CD flow example of separate projects
 depending on a central library, all with their own repos.
-
-
-
-
-Any view/opinions expressed in this article are mine alone and are not the views/opinions of my employer.
