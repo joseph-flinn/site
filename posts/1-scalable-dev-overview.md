@@ -6,12 +6,12 @@
 This is the first of a series of articles on a git provider based flow that scales well from a handful of developers to
 many developers working in the same repository. It will focus on modern processes to maximize value delivered from the
 Value Stream. We'll be walking through an fully implementation of the flow that can be used as a guideline for new
-projects or what to use as a goal for a proccess migration.
+projects or what to use as a goal for a process migration.
 
 
 ## CD - Continuous Delivery vs Continuous Deployment
 
-CD is a very important part in delivering and sustaining value in today's technilogical organizations. There are many
+CD is a very important part in delivering and sustaining value in today's technological organizations. There are many
 organization benefits. Some of the benefits are: increased product stability, increased velocity in value delivery which
 leads to more value delivered, and improved culture supported by company processes. There is a more in depth analysis of
 the benefits in
@@ -29,22 +29,22 @@ application. But in the context of CD, Production might also take the form of a 
 
 It seems that engineers are drawn to continuous deployment. It focuses on minimizing the length of the development
 feedback loops. Implementing continuous deployment produces the shortest feedback loops that you can have in value
-delivery in the software world. However, continous deployment can be scary to non-technical executives. The journey
-towards continous deployment is almost guaranteed to bring a higher count of failures from changes. For example, if an
+delivery in the software world. However, continuous deployment can be scary to non-technical executives. The journey
+towards continuous deployment is almost guaranteed to bring a higher count of failures from changes. For example, if an
 organization deploys to Production once a month, three of those deployments might cause system failures giving a change
 rate failure of 25%. Let's assume that the organization is able to update processes to release once a week and maintains
 the same 25% change rate failure. This means that the number of changes that led to a system failure has increased to 
 13. Without digging into the data and what it means, this increase in count can be uncomfortable for executives.
-Inserting a manual step right before a deployment/release to Production to keep the decision to release a human one.
+    Inserting a manual step right before a deployment/release to Production to keep the decision to release a human one.
 
 In addition to the above, continuous delivery might also be the only option depending on the technology being created.
 For example, any client application being uploaded to a store front probably has to go through some sort of approval
-process before going live. This normally takes a few days. Continous deployment won't be helpful because dimissing the
+process before going live. This normally takes a few days. Continuous deployment won't be helpful because dismissing the
 current review and updating the release asset multiple times a day will result in an application rarely getting through
-the review process before needing to be updated again. Or you will be constrained to how often you can merge an update, 
+the review process before needing to be updated again. Or you will be constrained to how often you can merge an update,
 which defeats the point of CD because it prevents faster delivery to the end users.
 
-This series will be focused on scoping to continous delivery with a stub out for where continuous deployment would go.
+This series will be focused on scoping to continuous delivery with a stub out for where continuous deployment would go.
 This is mostly because of the case of most application hosting environments are going to be different and the
 technologies used to deploy will differ from one group to another. 
 
