@@ -58,21 +58,16 @@ strategy and the usage of a single project in the repo (see [Git was not designe
 monorepos](https://joseph.flinnlab.com/posts/git-monorepo) for more information)
 
 
-## Writing Notes
+## Automatic Versioning
 
-Goal of Scalable Development Process
-- Scalable from a handful of developers to many developers working in the same repository
-- Use modern techniques to maximize the value delivered to the end user (Production, version released, etc)
-- Show a tangible example of the process
+Versioning is an important part of communicating with both end users and internal stakeholders about updates that are
+released or even pending. Having a set definition of how to talk about different capabilities or fixes is important. And
+I have seen this important communication tool detract and get in the way of implementing MinimumCD. We will be walking
+through a automatic versioning scheme that fits very well into the developer workflow and will free up any need to worry 
+about versioning release assets or deployments. 
 
 
-Scalable Development Process
-- MinimumCD
-  + Trunk Based Development
-    - if main is broken, fixing it becomes the organization's highest priority
-  + Automated Testing
-    - Unit + Integration testing (pre-merge to main)
-    - Regression testing (post-merge to main, pre-deployment)
-  + Versioning with Trunk Based Development
-    - Treat version as a part of a release asset instead of the build artifact
-    - Automate version bumping
+--- 
+
+I'm excited to walk through the simple and scalable solution with y'all in the next few weeks. It can be immediately
+executed upon to start increasing value delivered to end users. Stay tuned!
