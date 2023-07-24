@@ -3,6 +3,10 @@
 
   import { page } from '$app/stores';  
   import PageTitle from "$lib/PageTitle.svelte";
+
+  const posts = data.forEach(post => {
+
+  })
 </script>
 
 
