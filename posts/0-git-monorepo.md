@@ -1,6 +1,7 @@
 !! title: Git was not designed to support monorepos
-!! stub: git-monorepo
-!! date: 2023-07-17
+!! slug: git-monorepo
+!! published: 2023-07-17
+!! description: A discussion around why git was not designed for monorepos: when to use them and when to migrate
 
 ---
 I work with monorepos in git on a daily basis and have learned through experience that git was not designed to support
