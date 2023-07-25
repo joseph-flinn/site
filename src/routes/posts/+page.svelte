@@ -4,17 +4,25 @@
   import { page } from '$app/stores';  
   import PageTitle from "$lib/PageTitle.svelte";
 
-  const posts = data.forEach(post => {
+  const posts = Object.entries(data)
+    .map(([key, value]) => {
+      return value
+    }).sort((postA, postB) => {
+      const postADate = new Date(postA.published);
+      const postBDate = new Date(postB.published);
 
-  })
+      if (postADate < postBDate) return 1;
+      if (postADate > postBDate) return -1;
+      return 0;
+    })
 </script>
 
 
 <PageTitle name="posts"/>
 <div style="padding: 1em;">
-{#each Object.entries(data) as [key, value]}
+{#each posts as post}
   <div class="post-item">
-    <a href="{$page.url.pathname}/{key}">{value.date} - {value.title}</a>
+    <a href="{$page.url.pathname}/{post.slug}">{post.published} - {post.title}</a>
   </div>
 {/each}
 </div>
