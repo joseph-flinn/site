@@ -41,7 +41,7 @@ const posts = filenames.reduce((results, filename) => {
    
   return {
     ...results,
-    [postData.stub]: postData
+    [postData.slug]: postData
   }
 
 }, {});
