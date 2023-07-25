@@ -3,7 +3,7 @@
 
   import SvelteMarkdown from 'svelte-markdown'
 
-  const { title, date, body, ...rest } = data;
+  const { title, published, body, ...rest } = data;
 
   const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
 </script>
@@ -16,7 +16,7 @@
 </div>
 <div style="display: flex; width: 100%;">
   <div style="flex-grow: 1; padding: 1em;">
-    {date}
+    {published}
   </div>
   <div style="padding: 1em;">
     {Math.round( wordCount / 200)} mins
