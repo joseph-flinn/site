@@ -4,17 +4,7 @@
   import { page } from '$app/stores';  
   import PageTitle from "$lib/PageTitle.svelte";
 
-  const posts = Object.entries(data)
-    .map(([key, value]) => {
-      return value
-    }).sort((postA, postB) => {
-      const postADate = new Date(postA.published);
-      const postBDate = new Date(postB.published);
-
-      if (postADate < postBDate) return 1;
-      if (postADate > postBDate) return -1;
-      return 0;
-    })
+  const posts = Object.values(data).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 </script>
 
 

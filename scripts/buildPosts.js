@@ -22,7 +22,7 @@ const filenames = fs.readdirSync('./posts/');
 
 // Compile 
 const posts = filenames.reduce((results, filename) => {
-  const requiredMetaDataKeys = ["title", "published", "slug"];
+  const requiredMetaDataKeys = ["title", "published", "slug", "description"];
 
   const fileData = fs.readFileSync(`./posts/${filename}`, 'utf8');
   const [ data, body ] = fileData.split("---\n");
