@@ -1,6 +1,6 @@
 !! title: Scalable Development Processes - Overview
 !! stub: scalable-dev-overview
-!! date: 2023-07-24
+!! published: 2023-07-24
 
 ---
 This is the first of a series of articles on a git provider based flow that scales well from a handful of developers to
