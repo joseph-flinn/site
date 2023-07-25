@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import posts from '../../posts.json';
 
 const SITE_URL = 'https://joseph.flinnlab.com';
