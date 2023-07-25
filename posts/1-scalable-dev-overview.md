@@ -1,5 +1,5 @@
 !! title: Scalable Development Processes - Overview
-!! stub: scalable-dev-overview
+!! slug: scalable-dev-overview
 !! published: 2023-07-24
 
 ---
