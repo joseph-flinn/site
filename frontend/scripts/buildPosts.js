@@ -1,6 +1,9 @@
 import fs from 'fs';
 
 
+const POSTS_DIR = '../posts';
+
+
 const assert = (condition, message) => {
     if (!condition) throw new Error(message || "Assertion failed");
 }
@@ -10,21 +13,21 @@ const extractData = (metadataLines) => {
     .filter(line => line.startsWith("!!"))
     .map(line => {
       const [key, value] = line.substring(3).split(": ");
-      return [key, value]
+      return [key, value];
     })
 
   return Object.fromEntries(data);
 
 }
 
-const filenames = fs.readdirSync('./posts/');
+const filenames = fs.readdirSync(POSTS_DIR);
 
 
 // Compile 
 const posts = filenames.reduce((results, filename) => {
   const requiredMetaDataKeys = ["title", "published", "slug", "description"];
 
-  const fileData = fs.readFileSync(`./posts/${filename}`, 'utf8');
+  const fileData = fs.readFileSync(`./${POSTS_DIR}/${filename}`, 'utf8');
   const [ data, body ] = fileData.split("---\n");
 
   const postMetadata = extractData(data.split("\n"));
@@ -37,12 +40,12 @@ const posts = filenames.reduce((results, filename) => {
   const postData = {
     ...postMetadata,
     "body": body
-  }
+  };
    
   return {
     ...results,
     [postData.slug]: postData
-  }
+  };
 
 }, {});
 
