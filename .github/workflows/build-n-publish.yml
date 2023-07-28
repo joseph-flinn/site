@@ -70,7 +70,12 @@ jobs:
           git show main:data/posts.json > posts.json
           git show main:data/rss.xml > rss.xml
 
-          git add posts.json rss.xml
-          git commit -m "Updating data"
-          git push
+          if [ -n "$(git status --porcelain)" ]; then
+            git add posts.json rss.xml
+            git commit -m "Updating data"
+            git push
+            echo "Static updated"
+          else
+            echo "No changes to commit"
+          fi
 
