@@ -70,6 +70,7 @@ jobs:
           git show main:data/posts.json > posts.json
           git show main:data/rss.xml > rss.xml
 
+          git add posts.json rss.xml
           git commit -m "Updating data"
           git push
 
