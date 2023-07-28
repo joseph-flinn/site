@@ -1,8 +1,8 @@
-//import { postsData } from '../../../data.js';
-import posts from '../../../posts.json';
+import { config } from '$lib/config.json';
 
-export const load = ({ params }) => {
-    return {
-        ...posts[params.post]
-    };
+export const load = ({fetch, params}) => {
+    return fetch(`${config.dataUrl}/posts.json`)
+        .then(response => response.json())
+        .then(resp => resp[params.post]);
+
 }

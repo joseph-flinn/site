@@ -9,18 +9,12 @@ on:
       - main
 
 jobs:
-  # Build job
   build-frontend:
     name: Build Frontend
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
-
-      - name: Build post.json
-        run: |
-          cd frontend
-          npm run build:posts
 
       - name: Build Site
         run: |
@@ -48,3 +42,32 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2.0.0
+
+
+  build-data:
+    name: Build Data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
+      - name: Build data
+        run: |
+          git config --local user.name "site-bot"
+          git config --local user.email "<>"
+
+          cd data
+          npm run build:posts
+          npm run build:rss
+
+          git add posts.json rss.xml
+          git commit -m "Compiling data"
+
+
+          git switch static-data
+          git show main:data/posts.json > posts.json
+          git show main:data/rss.xml > rss.xml
+
+          git commit -m "Updating data"
+          git push
+

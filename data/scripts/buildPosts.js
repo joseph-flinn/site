@@ -1,7 +1,8 @@
 import fs from 'fs';
 
 
-const POSTS_DIR = '../posts';
+const POSTS_DIR = './posts';
+const OUTPUT_DIR = '.';
 
 
 const assert = (condition, message) => {
@@ -51,6 +52,6 @@ const posts = filenames.reduce((results, filename) => {
 
 
 // Save post data to posts.json
-fs.writeFile("./src/posts.json", JSON.stringify(posts, null, 2), (err) => {
+fs.writeFile(`${OUTPUT_DIR}/posts.json`, JSON.stringify(posts, null, 2), (err) => {
   if (err) throw err;
 })
