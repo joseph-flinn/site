@@ -1,5 +1,5 @@
 {
   "config": {
-    "dataUrl": "https://raw.githubusercontent.com/joseph-flinn/site/refactor/static-database/data"
+    "dataUrl": "https://raw.githubusercontent.com/joseph-flinn/site/static-data"
   }
 }
