@@ -1,6 +1,5 @@
 <script>
   export let data;
-
   import SvelteMarkdown from 'svelte-markdown'
 
   const { title, published, body, ...rest } = data;

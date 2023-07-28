@@ -1,8 +1,6 @@
-import { config } from '$lib/config.json';
+import { getPosts } from '$lib/helpers.js';
+
 
 export const load = ({fetch, params}) => {
-    return fetch(`${config.dataUrl}/posts.json`)
-        .then(response => response.json())
-        .then(resp => resp[params.post]);
-
+    return getPosts(fetch)[params.post];
 }
