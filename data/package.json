@@ -1,0 +1,11 @@
+{
+  "name": "posts",
+  "version": "0.0.0",
+  "description": "Static database",
+  "type": "module",
+  "scripts": {
+    "build:posts": "node scripts/buildPosts.js",
+    "build:rss": "node scripts/buildRss.js"
+  },
+  "author": ""
+}
