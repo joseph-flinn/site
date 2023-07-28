@@ -1,6 +1,6 @@
 import { config } from '$lib/config.json';
 
-var POSTS_CACHE = null;
+let POSTS_CACHE = null;
 
 export const getPosts = (fetch) => {
     POSTS_CACHE === null ? console.log("Cache is null: 1") : console.log("Cache NOT null")
