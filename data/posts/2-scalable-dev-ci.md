@@ -14,8 +14,8 @@ increases the stability of the project. All of these things are foundational to 
 
 - Trunk based development
 - Work is integrated to trunk at least once a day
-- Automated testing before integration 
-- Automated testing after integration 
+- Automated testing before code integration 
+- Automated testing after code integration 
 - All feature work stops when build on trunk is red
 - New work does not break delivered work
 
@@ -65,4 +65,47 @@ Let's move on to the next section and see.
 
 
 ## Automated Testing
-Great! Now I'm merging into the trunk 
+
+One of the goals of CI in conjunction with trunk based development is to keep the trunk in an always deployable state.
+This is why all work going into the trunk stops if the trunk is broken. How do we minimize the number of times this
+happens? Automating testing! However there are a few things to keep in mind with automated testing. We want to run
+automated testing with each PR and update to PR. However, running a full test suite will probably take too long to run
+on every commit. How do we effectively segregate the tests in a way that makes sense where the end of the CI is a
+trunk that is not broken?
+
+Martin Fowler does a great job at breaking down a good approach to [AutomatedTesting](https://martinfowler.com/articles/practical-test-pyramid.html). 
+While he mentions the name of the layers don't really matter, taking the approach of the testing pyramid is important.
+The big idea of his article is to write _a lot_ of small fast running tests that don't depend on other services being up
+(mostly known as Unit Tests), write less tests that depend on other services running, and write even less end-to-end
+tests. Each one of these takes more effort, time, and money to run. Running all three types (and possibly others) on
+every commit prior to merging the trunk will defeat the primary goal of CI: minimize the feedback loops for development. 
+
+Unit tests should be run locally by the developer, but will also be run on every latest commit to an open PR. Testing
+that requires other services from being up should also be run on each latest commit to an open PR. An alternative could
+be setting up the unit tests on a pre-push hook to run locally instead of waiting for the code to be pushed and run in
+the cloud. Local machines will probably decrease the feedback loop a bit. End-to-end tests only be run on the trunk. If
+the time to run the end-to-end tests is less than the velocity of merges to trunk, it would be pretty easy to set them
+up to run for each change to trunk. If the velocity starts increasing to where there are many versions of the e2e tests 
+are running simultaneous, more advanced techniques will be needed, something like automated merge queue where testing 
+is done on multiple new commits at the same time before getting merged to trunk (this is the technique that GitHub uses
+to maintain their high velocity and even 
+[have this capability for repos in GitHub](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)).
+Taking a quick peek to CD, these e2e tests need to pass before a deployment kicks off. If they fail, an alert is sent
+out and it needs immediate testing with all new merges blocked.
+
+## End State
+
+The end state of the CI portion of the automation is a build artifact from the trunk that has passed all of the
+automated tests and is ready for direct deployment. When going to deploy, whether it is with CD or with a manual
+deployment process, the artifact should NOT need to be rebuilt. The bits that have been tested are the bits that should
+be deployed. 
+
+## What might this look like?
+
+---
+
+## Conclusion
+
+The primary goal of CI is to minimize the developer feedback loop to increase velocity of value to the trunk branch. The
+techniques of trunk based development and the different automated testing is used to keep the trunk branch stable with
+the increased velocity to keep the trunk in a constantly deployable state.
