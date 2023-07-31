@@ -150,6 +150,8 @@ Whenever a PR is opened or updated, the unit tests will run. The PR is blocked f
 
 
 ```yaml
+# .github/workflows/CI-main.yml
+
 ---
 name: on merge
 run-name: "CI - main"

@@ -29,7 +29,9 @@ const posts = filenames.reduce((results, filename) => {
   const requiredMetaDataKeys = ["title", "published", "slug", "description"];
 
   const fileData = fs.readFileSync(`./${POSTS_DIR}/${filename}`, 'utf8');
-  const [ data, body ] = fileData.split("---\n");
+  const [ data, ...rawBody ] = fileData.split("---\n");
+
+  const body = rawBody.join('\n');
 
   const postMetadata = extractData(data.split("\n"));
 
