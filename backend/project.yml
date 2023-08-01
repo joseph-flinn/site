@@ -10,7 +10,7 @@ packages:
         - name: hello
           binary: false
           main: ""
-          runtime: nodejs:default
+          runtime: go:default
           web: true
           webSecure: false
           parameters: {}
