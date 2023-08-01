@@ -1,0 +1,14 @@
+# https://taskfile.dev
+
+version: '3'
+
+dotenv: ['.env']
+
+tasks:
+  do:
+    cmds:
+      - > 
+        docker run --rm -ti 
+        --env=DIGITALOCEAN_ACCESS_TOKEN=$DO_ACCESS_TOKEN 
+        -v $HOME/.config/doctl:/root/.config/doctl 
+        digitalocean/doctl:latest {{.CLI_ARGS}} 
