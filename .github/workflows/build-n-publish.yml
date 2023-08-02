@@ -54,8 +54,8 @@ jobs:
         uses: actions/checkout@v3.5.0
 
       - name: Build data
+        working-directory: data
         run: |
-          cd data
           npm run build:posts
           npm run build:rss
 
@@ -64,11 +64,9 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.CF_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CF_SECRET_ACCESS_KEY }}
           CF_BUCKET_NAME: 'flinnlab-blog'
-          CF_ACCOUNT: ${{ steps.retrieve-secrets.outputs.cf-prod-account }}
-        working-directory: apps/desktop/artifacts
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT }}
+        working-directory: data
         run: |
-          cd data
-
           aws s3 cp posts.json $CF_BUCKET_NAME \
             --recursive \
             --quiet \
