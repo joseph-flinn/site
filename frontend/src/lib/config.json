@@ -1,5 +1,5 @@
 {
   "config": {
-    "dataUrl": "https://raw.githubusercontent.com/joseph-flinn/site/static-data"
+    "dataUrl": "blog.flinnlab.workers.dev"
   }
 }
