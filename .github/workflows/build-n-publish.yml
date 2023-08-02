@@ -61,14 +61,14 @@ jobs:
 
       - name: Publish posts to R2
         uses: cloudflare/wrangler@v2.0.0
-        working-directory: data
         with:
           apiKey: ${{ secrets.CF_API_KEY }}
+          workingDirectory: ./data
           command: r2 object put flinnlab-blog/posts.json --file posts.json
 
       - name: Publish RSS Feed to R2
         uses: cloudflare/wrangler@v2.0.0
-        working-directory: data
         with:
           apiKey: ${{ secrets.CF_API_KEY }}
+          workingDirectory: ./data
           command: r2 object put flinnlab-blog/rss.xml --file rss.xml
