@@ -29,10 +29,3 @@
     renderers={{ code: CodeComponent }}
   />
 </div>
-
-<style>
-  .code {
-    padding: 1em;
-    background-color: #eee;
-  }
-</style>
