@@ -1,10 +1,12 @@
 <script>
   export let data;
-  import SvelteMarkdown from 'svelte-markdown'
+  import SvelteMarkdown from 'svelte-markdown';
+  import CodeComponent from '$lib/renderers/CodeComponent.svelte';
 
   const { title, published, body, ...rest } = data;
 
   const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
+  const readEstimate = Math.round( wordCount / 200)
 </script>
 
 
@@ -18,9 +20,19 @@
     {published}
   </div>
   <div style="padding: 1em;">
-    {Math.round( wordCount / 200)} mins
+    {readEstimate} mins
   </div>
 </div>
 <div style="padding: 1em;">
-  <SvelteMarkdown source={body} />
+  <SvelteMarkdown 
+    source={body} 
+    renderers={{ code: CodeComponent }}
+  />
 </div>
+
+<style>
+  .code {
+    padding: 1em;
+    background-color: #eee;
+  }
+</style>
