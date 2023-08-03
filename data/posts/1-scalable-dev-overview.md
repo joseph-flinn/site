@@ -22,7 +22,7 @@ optimize for in the value stream. Those metrics are what have become to be known
 change, change failure rate, deployment frequency, mean time to recovery. For definitions around these,
 [Atlassian](https://www.atlassian.com/devops/frameworks/devops-metrics) has a good overview of these metrics.
 
-This is all great, but which CD are we talking about? The different between continuous delivery and continuous
+This is all great, but which CD are we talking about? The difference between continuous delivery and continuous
 deployment is the number of manual steps in the pipeline from the time where a software engineer commits a change to the
 trunk branch and when it appears in Production. Here, Production can be defined as the end state where value is handed
 over to the end user. When talking about Production in the tech sense, most people will automatically think of a hosted
@@ -36,7 +36,7 @@ organization deploys to Production once a month, three of those deployments migh
 rate failure of 25%. Let's assume that the organization is able to update processes to release once a week and maintains
 the same 25% change rate failure. This means that the number of changes that led to a system failure has increased to 
 13. Without digging into the data and what it means, this increase in count can be uncomfortable for executives.
-    Inserting a manual step right before a deployment/release to Production to keep the decision to release a human one.
+Inserting a manual step right before a deployment/release to Production to keep the decision to release a human one.
 
 In addition to the above, continuous delivery might also be the only option depending on the technology being created.
 For example, any client application being uploaded to a store front probably has to go through some sort of approval

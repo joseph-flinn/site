@@ -1,5 +1,5 @@
-!! title: Scalable Development Processes - CI
-!! slug: scalable-dev-ci
+!! title: Scalable Development Processes - Continuous Integration (CI)
+!! slug: scalable-dev-integration
 !! published: 2023-07-31
 !! description: The second article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
 
@@ -99,15 +99,7 @@ Taking a quick peek to CD, these e2e tests need to pass before a deployment kick
 out and it needs immediate testing with all new merges blocked.
 
 
-## End State
-
-The end state of the CI portion of the automation is a build artifact from the trunk that has passed all of the
-automated tests and is ready for direct deployment. When going to deploy, whether it is with CD or with a manual
-deployment process, the artifact should NOT need to be rebuilt. The bits that have been tested are the bits that should
-be deployed. 
-
-
-## What might this look like?
+## Code
 
 I've created an example project to follow along with in this series: [https://github.com/joseph-flinn/scalable-dev-processes-example](https://github.com/joseph-flinn/scalable-dev-processes-example).
 The project itself is a very simple REST api built in Python providing three endpoints to give us a bit more interesting
@@ -226,18 +218,6 @@ jobs:
     with:
       python-version: "3.11"
       version: ${{ needs.version.outputs.version }}
-
-
-  release:
-    needs:
-      - version
-      - test-e2e
-    permissions:
-      contents: write
-    uses: ./.github/workflows/_release.yml
-    with:
-      is-release: ${{ needs.version.outputs.is-release == 'true' }}
-      version: ${{ needs.version.outputs.version }}
 ```
 
 There's quite a bit to go through here, so let's walk through job by job. 
@@ -260,10 +240,6 @@ well. We'll dive deeper into why in the automated version bumping post in a coup
 After we have a build artifact, we need to run our end-to-end tests on it! The next job, `test-e2e` does just that. It
 spins up the newly built container and runs a separate end-to-end test suite against it. This simulates what we'd see in
 a live Production environment.
-
-If all of those tests pass, we feel good about tagging and releasing that version on GitHub. In `release`, we create
-that GitHub Tag, Release and we also update the `latest` container image to point to the versioned container built in
-this flow. With that, we've hit our End State of CI and have a fully tested artifact ready for publishing or deployment.
 
 ---
 
