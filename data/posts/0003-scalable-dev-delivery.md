@@ -7,10 +7,10 @@
 In the last article, we did a deep dive on CI to prep us for the conversation about CD and how it can be implemented. 
 As [MinimumCD](https://minimumcd.org/minimumcd/) shows, CI is required to realize all of the benefits of effective CD.
 If you haven't already, give 
-[_Scalable Development Processes - CI_](https://joseph.flinnlab.com/scalable-dev-integration) a read.
+[_Scalable Development Processes - CI_](https://joseph.flinnlab.com/posts/scalable-dev-integration) a read.
 
 CD has come to mean two different things: Continuous Delivery and Continous Deployment. As we discussed in 
-[_Scalable Development Processes - overview_](https://joseph.flinnlab.com/scalable-dev-overview), the difference between
+[_Scalable Development Processes - overview_](https://joseph.flinnlab.com/posts/scalable-dev-overview), the difference between
 continuous delivery and continuous deployment is the number of manual steps in the pipeline from the time where a
 software engineer commits a change to the trunk branch and when it appears in Production. Here, Production can be
 defined as the end state where value is handed over to the end user. While a hosted application is what is normally
