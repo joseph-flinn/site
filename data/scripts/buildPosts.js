@@ -32,7 +32,7 @@ const posts = filenames.reduce((results, filename) => {
   const fileData = fs.readFileSync(`./${POSTS_DIR}/${filename}`, 'utf8');
   const [ data, ...rawBody ] = fileData.split("---\n");
 
-  const body = rawBody.join('---');
+  const body = rawBody.join('---\n');
   const postMetadata = extractData(data.split("\n"));
 
   requiredMetaDataKeys.map(key => assert(

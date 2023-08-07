@@ -1,4 +1,4 @@
-!! title: Scalable Development Processes - Continuous Integration (CI)
+!! title: Scalable Development Processes - CI
 !! slug: scalable-dev-integration
 !! published: 2023-07-31
 !! description: The second article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
