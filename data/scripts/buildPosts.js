@@ -26,13 +26,13 @@ const filenames = fs.readdirSync(POSTS_DIR);
 
 // Compile 
 const posts = filenames.reduce((results, filename) => {
-  const requiredMetaDataKeys = ["title", "published", "slug", "description"];
+  if (filename.substring(0, 3) == "wip" ) return results;
 
+  const requiredMetaDataKeys = ["title", "published", "slug", "description"];
   const fileData = fs.readFileSync(`./${POSTS_DIR}/${filename}`, 'utf8');
   const [ data, ...rawBody ] = fileData.split("---\n");
 
-  const body = rawBody.join('\n');
-
+  const body = rawBody.join('---');
   const postMetadata = extractData(data.split("\n"));
 
   requiredMetaDataKeys.map(key => assert(
