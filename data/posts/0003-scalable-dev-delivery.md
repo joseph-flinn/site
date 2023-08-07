@@ -6,8 +6,8 @@
 ---
 In the last article, we did a deep dive on CI to prep us for the conversation about CD and how it can be implemented. 
 As [MinimumCD](https://minimumcd.org/minimumcd/) shows, CI is required to realize all of the benefits of effective CD.
-If you haven't already, give [_Scalable Development Processes - CI_](https://joseph.flinnlab.com/scalable-dev-ci) a 
-read.
+If you haven't already, give 
+[_Scalable Development Processes - CI_](https://joseph.flinnlab.com/scalable-dev-integration) a read.
 
 CD has come to mean two different things: Continuous Delivery and Continous Deployment. As we discussed in 
 [_Scalable Development Processes - overview_](https://joseph.flinnlab.com/scalable-dev-overview), the difference between
