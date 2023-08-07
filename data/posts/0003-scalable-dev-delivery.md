@@ -1,4 +1,4 @@
-!! title: Scalable Development Processes - Continuous Delivery (CD)
+!! title: Scalable Development Processes - CD (Delivery)
 !! slug: scalable-dev-delivery
 !! published: 2023-08-07
 !! description: The third article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
