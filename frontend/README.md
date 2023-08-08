@@ -6,6 +6,7 @@ There are two configuration files used: `.env` and `.env.production`. Vite autom
 dev` and uses `.env.production` when running `vite build`.
 
 ### Environment Variables
+
 | Name | Supported Values | Description |
 | ---- | ---------------- | ----------- |
 | `PUBLIC_DATASOURCE_TYPE` | `local`, `network_static`, `network_dynamic` (not yet implemented) | The datasource type
@@ -13,6 +14,9 @@ teslls the `$lib/helper.js:getPosts()` where to load posts from. It is helpful t
 while writing the article to make sure the formatting is as intended |
 | `PUBLIC_DATASOURCE` | `$string` | Where to load the data from with the given type. For `network_*`, an URL is
 expected. for `local`, the post.json filepath is hard coded because of a constraint with the JS `import()` function |
+| `PUBLIC_LOGGING_ENABLED` | `true`, `false` | Enables verbose console logging throughout the app. Anything other than
+`true` will evaluate to `false`|
+
 
 ## Development
 ```bash
