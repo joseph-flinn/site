@@ -1,0 +1,55 @@
+---
+name: CI
+
+on: 
+  workflow_dispatch:
+    inputs: {}
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-frontend:
+    name: Build Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
+      - name: Build Site
+        run: |
+          cd frontend
+          npm ci
+          echo "{}" > src/posts.json
+          npm run build
+
+      - name: Upload Site Artifact
+        uses: actions/upload-pages-artifact@v1.0.8
+        with: 
+          path: frontend/build
+
+
+  build-data:
+    name: Build Data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
+      - name: Build data
+        working-directory: data
+        run: |
+          npm run build:posts
+          npm run build:rss
+
+      - name: Upload Posts Artifact
+        uses: actions/upload-pages-artifact@v1.0.8
+        working-directory: data
+        with: 
+          path: posts.json
+
+      - name: Upload RSS Artifact
+        uses: actions/upload-pages-artifact@v1.0.8
+        working-directory: data
+        with: 
+          path: rss.xml

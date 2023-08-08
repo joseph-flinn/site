@@ -20,6 +20,7 @@ jobs:
         run: |
           cd frontend
           npm ci
+          echo "{}" > src/posts.json
           npm run build
 
       - name: Upload Site Artifact
