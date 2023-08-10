@@ -46,13 +46,14 @@ jobs:
         run: |
           pwd
           ls -atlh
+          ls -atlh data
 
       - name: Upload Posts Artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
         with: 
           path: data/posts.json
 
       - name: Upload RSS Artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
         with: 
           path: data/rss.xml
