@@ -23,11 +23,6 @@ jobs:
           echo "{}" > src/posts.json
           npm run build
 
-      - name: Upload Site Artifact
-        uses: actions/upload-pages-artifact@v1.0.8
-        with: 
-          path: frontend/build
-
 
   build-data:
     name: Build Data
@@ -41,15 +36,3 @@ jobs:
         run: |
           npm run build:posts
           npm run build:rss
-
-      - name: Upload Posts Artifact
-        uses: actions/upload-pages-artifact@v1.0.8
-        working-directory: data
-        with: 
-          path: posts.json
-
-      - name: Upload RSS Artifact
-        uses: actions/upload-pages-artifact@v1.0.8
-        working-directory: data
-        with: 
-          path: rss.xml
