@@ -37,19 +37,17 @@ jobs:
         uses: actions/checkout@v3.5.0
 
       - name: Build data
-        working-directory: data
         run: |
+          cd data
           npm run build:posts
           npm run build:rss
 
       - name: Upload Posts Artifact
         uses: actions/upload-pages-artifact@v1.0.8
-        working-directory: data
         with: 
-          path: posts.json
+          path: data/posts.json
 
       - name: Upload RSS Artifact
         uses: actions/upload-pages-artifact@v1.0.8
-        working-directory: data
         with: 
-          path: rss.xml
+          path: data/rss.xml
