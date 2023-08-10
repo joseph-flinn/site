@@ -42,6 +42,11 @@ jobs:
           npm run build:posts
           npm run build:rss
 
+      - name: Test artifacts
+        run: |
+          pwd
+          ls -atlh
+
       - name: Upload Posts Artifact
         uses: actions/upload-pages-artifact@v1.0.8
         with: 
