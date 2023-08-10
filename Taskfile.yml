@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:posts:
+    silent: true
+    dir: data
+    cmds:
+      - npm run build:posts
+
+  build:rss:
+    silent: true
+    dir: data
+    cmds:
+      - npm run build:rss
+
+  build:frontend:
+    silent: true
+    dir: frontend
+    cmds:
+      - npm run build
+
+  run:frontend: 
+    silent: true
+    dir: frontend
+    cmds:
+      - npm run dev
+
