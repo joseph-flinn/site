@@ -23,11 +23,6 @@ jobs:
           echo "{}" > src/posts.json
           npm run build
 
-      - name: Upload Site Artifact
-        uses: actions/upload-pages-artifact@v1.0.8
-        with: 
-          path: frontend/build
-
 
   build-data:
     name: Build Data
@@ -41,19 +36,3 @@ jobs:
         run: |
           npm run build:posts
           npm run build:rss
-
-      - name: Test artifacts
-        run: |
-          pwd
-          ls -atlh
-          ls -atlh data
-
-      - name: Upload Posts Artifact
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
-        with: 
-          path: data/posts.json
-
-      - name: Upload RSS Artifact
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
-        with: 
-          path: data/rss.xml
