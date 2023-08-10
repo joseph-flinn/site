@@ -1,9 +1,9 @@
-// import { config } from '$lib/config.json';
 import { 
     PUBLIC_DATASOURCE_TYPE,  
     PUBLIC_DATASOURCE,
-    PUBLIC_LOGGING_ENABLED
 } from '$env/static/public';
+
+import { log } from '$lib/utils/logger.js';
 
 
 let POSTS_CACHE = null;
@@ -18,7 +18,7 @@ export const getPosts = (fetch) => {
     };
 
     if (PUBLIC_DATASOURCE_TYPE == 'local') {
-       return import('../posts.json').then(posts => {
+       return import('../../posts.json').then(posts => {
            POSTS_CACHE = posts.default
        }).then(() => POSTS_CACHE);
     }
@@ -29,11 +29,4 @@ export const getPosts = (fetch) => {
             POSTS_CACHE = resp;
         })
         .then(() => POSTS_CACHE);
-};
-
-
-export const log = (obj, message) => {
-    if (PUBLIC_LOGGING_ENABLED == 'true') {
-        console.log(`${obj} => ${message}`)
-    }
 };

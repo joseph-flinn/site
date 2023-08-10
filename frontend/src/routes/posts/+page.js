@@ -1,4 +1,4 @@
-import { getPosts } from '$lib/helpers.js';
+import { getPosts } from '$lib/utils/loader.js';
 
 
 export const load = ({fetch}) => {
