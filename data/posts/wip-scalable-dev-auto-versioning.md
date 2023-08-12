@@ -24,7 +24,7 @@ One might suggest _"to help track when changes are made to the software"_. Some 
 show how up-to-date software is and help build support policies (I'm thinking of Ubuntu). Or maybe _"to help track when
 specific features were changed in the software"_. Hypothetically, if we are updating and releasing the software with
 every change to trunk, our software has the opportunity to be changing very rapidly and with partial features being
-deployed to Production behind feature flags. What about _"showing compatibility between other software and hardeware"_?
+deployed to Production behind feature flags. What about _"showing compatibility between other software and hardware"_?
 It's important to know what is required to run the software as it changes.
 
 Each one of these answers can be accurate in a certain scenario. However, I would like to suggest that they _all_ stem
@@ -36,7 +36,7 @@ Who are the stakeholders for the versioning of the project? There are internal s
 teams that might care about which version their testing and what is different between this version and that version. The
 end user might care about which version of the software they are running to see if their hardware is compatible. And if
 the project is an SDK or library for other engineers to use, they will definitely care about any changes to the
-compatibilty of the project within their own. But in other cases, there are no version stakeholders. This site, while
+compatibility of the project within their own. But in other cases, there are no version stakeholders. This site, while
 under version control, does not have a specific released version.
 
 Once the _who_ has been identified, the _what_ comes next. What is primary message that needs to be communicated to the
@@ -190,7 +190,7 @@ jobs:
           fi
 ```
 
-In the GitHub repo, I have set up four Isssue labels: `version:major`, `version:minor`, `version:patch`, and
+In the GitHub repo, I have set up four Issue labels: `version:major`, `version:minor`, `version:patch`, and
 `version:skip`. The first step of the job is grabbing the label from the PR that triggered this workflow run and setting
 is as an output to use later.
 
@@ -198,9 +198,6 @@ The next step of the job is getting the latest git tag and then calculating the 
 the first job. For example, if the latest git tag is `v1.24.3` and the PR label is `version:minor`, the resulting
 calculated version will be `v1.25.0`. 
 
-Once the version is calculated, it is past back to the `_build.yml` (via the `CI-feature-branch.yml` or `CI-main.yml`
-orchestrating workflows) and is saved and built into the artifact. The version change is not committed or pushed back to
-the codebase in either a detached state or in the trunk.
 
 ```yaml
 ...
@@ -214,4 +211,16 @@ the codebase in either a detached state or in the trunk.
 
 ...
 ```
+
+Once the version is calculated, it is past back to the `_build.yml` (via the `CI-feature-branch.yml` or `CI-main.yml`
+orchestrating workflows) and is saved and built into the artifact. The version change is not committed or pushed back to
+the codebase in either a detached state or in the trunk. The build artifact that was tested does not change, but the
+version configuration does. Combined, the release asset is ready to be published or deployed.
+
+---
+
+Software versioning is a tool used to communicate with project stakeholders. Determining all audiences and the message
+being communicated is important for effective communication. Once the versioning scheme has been designed, treating
+versioning as a configuration, even with frameworks that require a compile time version, allows for automating the
+versioning scheme. And this in turn enables the journey towards Continuous Deployment.
 
