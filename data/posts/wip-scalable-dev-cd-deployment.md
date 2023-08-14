@@ -1,12 +1,12 @@
 !! title: Scalable Development Processes - Continuous Deployment (CD)
 !! slug: scalable-dev-deployment
 !! published: 2000-01-01
-!! description: The fifth article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+!! description: The sixth article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
 
 ---
 
-
-
+The final article in the CI/CD portion of the series on Scalable Development processes. Everything so far has been
+building to this moment.
 
 
 ## Different project types  -- Continuous Deployment
