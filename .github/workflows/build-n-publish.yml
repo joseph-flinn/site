@@ -75,7 +75,7 @@ jobs:
         uses: actions/deploy-pages@v2.0.0
 
 
-  build-data:
+  build-n-deploy-data:
     name: Build Data
     if: ${{ needs.setup.outputs.data-changed == 'true' }}
     needs: [setup]
