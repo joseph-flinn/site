@@ -3,6 +3,7 @@ import fs from 'fs';
 
 const POSTS_DIR = './posts';
 const OUTPUT_DIR = '.';
+const POSTS_REQUIRED_METADATA = ["title", "published", "slug", "description"];
 
 
 const assert = (condition, message) => {
@@ -28,14 +29,13 @@ const filenames = fs.readdirSync(POSTS_DIR);
 const posts = filenames.reduce((results, filename) => {
   if (filename.substring(0, 3) == "wip" ) return results;
 
-  const requiredMetaDataKeys = ["title", "published", "slug", "description"];
   const fileData = fs.readFileSync(`./${POSTS_DIR}/${filename}`, 'utf8');
   const [ data, ...rawBody ] = fileData.split("---\n");
 
   const body = rawBody.join('---\n');
   const postMetadata = extractData(data.split("\n"));
 
-  requiredMetaDataKeys.map(key => assert(
+  PSOTS_REQUIRED_METADATA.map(key => assert(
     key in postMetadata, 
     `${filename} - "${key}" is a required post metadata`
   ));
