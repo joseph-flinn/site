@@ -1,6 +1,7 @@
 import { getPostList } from '$lib/utils/loader.js';
 
+export const ssr = false;
 
-export const load = ({fetch}) => {
+export const load = async ({fetch}) => {
     return getPostList(fetch);
 }

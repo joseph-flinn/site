@@ -37,6 +37,7 @@ export const getPostList = (fetch) => {
     }
 
     if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
+        log('$lib.utils.loader:getPostList().url', `${PUBLIC_DATASOURCE}/posts`)
         return fetch(`${PUBLIC_DATASOURCE}/posts`)
             .then(response => response.json())
             .then(resp => {
