@@ -8,7 +8,13 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-const getRSS = async (key, responseHeaders, env) => {
+const corsHeaders = {
+	'Access-Control-Allow-Origin': '*',
+	'Access-Control-Allow-Methods': 'GET',
+	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+}
+
+const getRSS = async (key, env) => {
 	console.log(`RSS match found`)
 	const rssBlob = await env.BLOG_BUCKET.get(key);
 
@@ -16,23 +22,23 @@ const getRSS = async (key, responseHeaders, env) => {
 		return new Response('Object Not Found', { status: 404 });
 	}
 
-	rssBlob.writeHttpMetadata(responseHeaders);
-	responseHeaders.set('etag', rssBlob.httpEtag);
-
-	return new Response(rssBlob.body, {
-		responseHeaders,
-	});
+	if (env.FLAG_USE_HEADERS) {
+		return new Response(rssBlob.body, { status: 200, headers: {
+			...corsHeaders,
+			'etag': rssBlob.httpEtag,
+			'Content-type': 'application/xml'
+		}});
+	} else {
+		return new Response(rssBlob.body, { status: 200 });
+	}
 };
 
-const getPostList = async (key, responseHeaders, env) => {
+const getPostList = async (key, env) => {
 	const postBlob = await env.BLOG_BUCKET.get('posts.json');
 
 	if (postBlob === null) {
 		return new Response('Object Not Found', { status: 404 });
 	}
-
-	responseHeaders.set('etag', postBlob.httpEtag);
-	responseHeaders.set('Accept', 'application/json');
 
 	return postBlob.json()
 		.then(posts => (
@@ -46,38 +52,51 @@ const getPostList = async (key, responseHeaders, env) => {
 				})
 		))
 		.then(postList => {
-			return new Response(JSON.stringify({ postList: postList }, null, 4), {
-				responseHeaders,
-			});
+			if (env.FLAG_USE_HEADERS) {
+				return new Response(JSON.stringify({ postList: postList }, null, 4), {
+					status: 200,
+					headers: {
+						...corsHeaders,
+						'etag': postBlob.httpEtag,
+						'Content-type': 'application/json'
+					}
+				});
+			} else {
+				return new Response(JSON.stringify({ postList: postList }, null, 4), { status: 200, });
+			}
 		})
 }
 
-const getPost = async (key, responseHeaders, env) => {
+const getPost = async (key, env) => {
 	const postBlob = await env.BLOG_BUCKET.get('posts.json');
 
 	if (postBlob === null) {
 		return new Response('Object Not Found', { status: 404 });
 	}
 
-	responseHeaders.set('etag', postBlob.httpEtag);
-	responseHeaders.set('Accept', 'application/json');
-
 	const postSlug = key.split("/")[1];
 
 	return postBlob.json()
 		.then(posts => posts[postSlug])
 		.then(post => {
-			return new Response(JSON.stringify({ post: post }, null, 4), {
-				responseHeaders,
-			});
+			if (env.FLAG_USE_HEADERS) {
+				return new Response(JSON.stringify({ post: post }, null, 4), {
+					status: 200,
+					headers: {
+						...corsHeaders,
+						'etag': postBlob.httpEtag,
+						'Content-type': 'application/json'
+					}
+				});
+			}
+				return new Response(JSON.stringify({ post: post }, null, 4), {
+					status: 200,
+				});
 		})
 }
 
 export default {
   async fetch(request, env) {
-		const headers = new Headers();
-		headers.set('Access-Control-Allow-Origin', '*');
-
     const url = new URL(request.url);
     const key = url.pathname.slice(1);
 		console.log(`key: ${key}`)
@@ -88,23 +107,29 @@ export default {
 
 		switch (true) {
 			case routeRSS.test(key):
-				return getRSS(key, headers, env);
+				return getRSS(key, env);
 				break;
 			case routePostList.test(key):
-				return getPostList(key, headers, env);
+				return getPostList(key, env);
 				break;
 			case routePost.test(key):
-				return getPost(key, headers, env);
+				return getPost(key, env);
 				break;
 			default:
-				headers.set('Accept', 'application/json')
-				const response = {
-					message: `${key} not found`
+				if (env.FLAG_USE_HEADERS) {
+					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
+						status: 404,
+						headers: {
+							...corsHeaders,
+							'Content-type': 'application/json',
+							'My-Header-test': 'did it come through?'
+						},
+					});
+				} else {
+					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
+						status: 404,
+					});
 				}
-				return new Response(JSON.stringify(response, null, 2), {
-					status: 404,
-					headers,
-				});
 				break;
 		}
   },
