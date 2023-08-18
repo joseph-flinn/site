@@ -46,7 +46,7 @@ const getPostList = async (key, responseHeaders, env) => {
 				})
 		))
 		.then(postList => {
-			return new Response(JSON.stringify(postList, null, 4), {
+			return new Response(JSON.stringify({ postList: postList }, null, 4), {
 				responseHeaders,
 			});
 		})
@@ -67,7 +67,7 @@ const getPost = async (key, responseHeaders, env) => {
 	return postBlob.json()
 		.then(posts => posts[postSlug])
 		.then(post => {
-			return new Response(JSON.stringify(post, null, 4), {
+			return new Response(JSON.stringify({ post: post }, null, 4), {
 				responseHeaders,
 			});
 		})

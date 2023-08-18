@@ -37,7 +37,12 @@ export const getPostList = (fetch) => {
     }
 
     if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
-        return { postList: POST_LIST_CACHE }
+        return fetch(`${PUBLIC_DATASOURCE}/posts`)
+            .then(response => response.json())
+            .then(resp => {
+                POST_LIST_CACHE = buildPostList(posts);
+            })
+            .then(() => ({ postList: POST_LIST_CACHE }));
     }
 
     return fetch(`${PUBLIC_DATASOURCE}/posts.json`)
@@ -65,8 +70,14 @@ export const getPost = (postSlug, fetch) => {
         }).then(() => ({ post: POSTS_CACHE[postSlug] }));
     }
 
-    if (PUBLIC_DATASOURCE_TYPE === 'localfs') {
+    if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
         log('$lib.utils.loader:getPost()', "using network_dynamic")
+        return fetch(`${PUBLIC_DATASOURCE}/posts/${postSlug}`)
+            .then(response => response.json())
+            .then(resp => {
+                POSTS_CACHE[postSlug] = resp;
+            })
+            .then(() => ({ post: POSTS_CACHE[postSlug] }));
     }
 
     return fetch(`${PUBLIC_DATASOURCE}/posts.json`)
