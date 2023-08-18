@@ -46,7 +46,7 @@ const getPostList = async (key, env) => {
 				.map(([slug, post]) => {
 					return {
 						slug: post.slug,
-						publishied: post.published,
+						published: post.published,
 						title: post.title
 					}
 				})

@@ -5,7 +5,7 @@
   import PageTitle from "$lib/PageTitle.svelte";
 
   //const posts = Object.values(data).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
-  console.log(`routes/posts => loadedPostListData: ${JSON.stringify(data, null, 2)}`);
+  console.log(`routes/posts:data => loadedPostListData: ${JSON.stringify(data, null, 2)}`);
   const posts = data.postList.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 </script>
 

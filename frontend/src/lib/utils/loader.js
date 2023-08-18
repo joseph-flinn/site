@@ -40,7 +40,7 @@ export const getPostList = (fetch) => {
         return fetch(`${PUBLIC_DATASOURCE}/posts`)
             .then(response => response.json())
             .then(resp => {
-                POST_LIST_CACHE = buildPostList(posts);
+                POST_LIST_CACHE = resp.postList;
             })
             .then(() => ({ postList: POST_LIST_CACHE }));
     }
@@ -75,7 +75,7 @@ export const getPost = (postSlug, fetch) => {
         return fetch(`${PUBLIC_DATASOURCE}/posts/${postSlug}`)
             .then(response => response.json())
             .then(resp => {
-                POSTS_CACHE[postSlug] = resp;
+                POSTS_CACHE[postSlug] = resp.post;
             })
             .then(() => ({ post: POSTS_CACHE[postSlug] }));
     }
