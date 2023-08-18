@@ -9,7 +9,7 @@ dev` and uses `.env.production` when running `vite build`.
 
 | Name | Supported Values | Description |
 | ---- | ---------------- | ----------- |
-| `PUBLIC_DATASOURCE_TYPE` | `local`, `network_static`, `network_dynamic` (not yet implemented) | The datasource type
+| `PUBLIC_DATASOURCE_TYPE` | `localfs`, `network_static`, `network_dynamic` (not yet implemented) | The datasource type
 teslls the `$lib/helper.js:getPosts()` where to load posts from. It is helpful to load posts from the local machine
 while writing the article to make sure the formatting is as intended |
 | `PUBLIC_DATASOURCE` | `$string` | Where to load the data from with the given type. For `network_*`, an URL is

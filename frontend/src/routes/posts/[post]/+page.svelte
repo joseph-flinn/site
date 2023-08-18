@@ -3,7 +3,7 @@
   import SvelteMarkdown from 'svelte-markdown';
   import CodeComponent from '$lib/renderers/CodeComponent.svelte';
 
-  const { title, published, body, ...rest } = data;
+  const { title, published, body, ...rest } = data.post;
 
   const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
   const readEstimate = Math.round( wordCount / 200)
