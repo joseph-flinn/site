@@ -9,9 +9,42 @@ on:
       - main
 
 jobs:
+  setup:
+    name: Deploy Setup 
+    runs-on: ubuntu-latest
+    outputs:
+      frontend-changed: ${{ steps.changes.outputs.frontend-changed }}
+      data-changed: ${{ steps.changes.outputs.data-changed }}
+      backend-changed: ${{ steps.changes.outputs.backend-changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
+      - name: Detect Changes
+        id: changes
+        run: |
+          FRONTEND_DIFF=$(git diff --name-only origin/main -- frontend/* | wc -l | xargs)
+          DATA_DIFF=$(git diff --name-only origin/main -- data/* | wc -l | xargs)
+          BACKEND_DIFF=$(git diff --name-only origin/main -- backend/* | wc -l | xargs)
+
+          if [[ "$FRONTEND_DIFF" == "1" ]]; then
+            echo "frontend-changed=true" >> $GITHUB_OUTPUT
+          fi
+
+          if [[ "$DATA_DIFF" == "1" ]]; then
+            echo "data-changed=true" >> $GITHUB_OUTPUT
+          fi
+
+          if [[ "$BACKEND_DIFF" == "1" ]]; then
+            echo "backend-changed=true" >> $GITHUB_OUTPUT
+          fi
+
+
   build-frontend:
     name: Build Frontend
+    if: ${{ needs.setup.outputs.frontend-changed == 'true' }}
     runs-on: ubuntu-latest
+    needs: [setup]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
@@ -26,7 +59,9 @@ jobs:
 
   build-data:
     name: Build Data
+    if: ${{ needs.setup.outputs.data-changed == 'true' }}
     runs-on: ubuntu-latest
+    needs: [setup]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
@@ -40,7 +75,9 @@ jobs:
 
   test-backend:
     name: Deploy & Test Backend
+    if: ${{ needs.setup.outputs.backend-changed == 'true' }}
     runs-on: ubuntu-latest
+    needs: [setup]
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
