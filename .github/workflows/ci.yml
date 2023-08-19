@@ -36,3 +36,24 @@ jobs:
         run: |
           npm run build:posts
           npm run build:rss
+
+
+  test-backend:
+    name: Deploy & Test Backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
+      - name: Deploy backend
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_KEY }}
+          accountId: ${{ secrets.CF_ACCOUNT }}
+          workingDirectory: backend
+          command: deploy --env staging
+
+      - name: Run Integration Tests
+        uses: grafana/k6-action@v0.3.0
+        with:
+          filename: backend/test/script.js

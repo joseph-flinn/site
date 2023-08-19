@@ -15,6 +15,7 @@ jobs:
     outputs:
       frontend-changed: ${{ steps.changes.outputs.frontend-changed }}
       data-changed: ${{ steps.changes.outputs.data-changed }}
+      backend-changed: ${{ steps.changes.outputs.backend-changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
@@ -24,6 +25,7 @@ jobs:
         run: |
           FRONTEND_DIFF=$(git diff --name-only origin/main -- frontend/* | wc -l | xargs)
           DATA_DIFF=$(git diff --name-only origin/main -- data/* | wc -l | xargs)
+          BACKEND_DIFF=$(git diff --name-only origin/main -- backend/* | wc -l | xargs)
 
           if [[ "$FRONTEND_DIFF" == "1" ]]; then
             echo "frontend-changed=true" >> $GITHUB_OUTPUT
@@ -31,6 +33,10 @@ jobs:
 
           if [[ "$DATA_DIFF" == "1" ]]; then
             echo "data-changed=true" >> $GITHUB_OUTPUT
+          fi
+
+          if [[ "$BACKEND_DIFF" == "1" ]]; then
+            echo "backend-changed=true" >> $GITHUB_OUTPUT
           fi
 
 
@@ -103,3 +109,21 @@ jobs:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT }}
           command: r2 object put flinnlab-blog/rss.xml --file ./data/rss.xml
+
+
+  deploy-backend:
+    name: Deploy Backend
+    if: ${{ needs.setup.outputs.backend-changed == 'true' }}
+    needs: [setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
+      - name: Deploy Backend
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_KEY }}
+          accountId: ${{ secrets.CF_ACCOUNT }}
+          workingDirectory: backend
+          command: deploy --env production

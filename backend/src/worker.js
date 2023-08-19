@@ -8,25 +8,129 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+const corsHeaders = {
+	'Access-Control-Allow-Origin': '*',
+	'Access-Control-Allow-Methods': 'GET',
+	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+}
+
+const getRSS = async (key, env) => {
+	console.log(`RSS match found`)
+	const rssBlob = await env.BLOG_BUCKET.get(key);
+
+	if (rssBlob === null) {
+		return new Response('Object Not Found', { status: 404 });
+	}
+
+	if (env.FLAG_USE_HEADERS) {
+		return new Response(rssBlob.body, { status: 200, headers: {
+			...corsHeaders,
+			'etag': rssBlob.httpEtag,
+			'Content-type': 'application/xml'
+		}});
+	} else {
+		return new Response(rssBlob.body, { status: 200 });
+	}
+};
+
+const getPostList = async (key, env) => {
+	const postBlob = await env.BLOG_BUCKET.get('posts.json');
+
+	if (postBlob === null) {
+		return new Response('Object Not Found', { status: 404 });
+	}
+
+	return postBlob.json()
+		.then(posts => (
+			Object.entries(posts)
+				.map(([slug, post]) => {
+					return {
+						slug: post.slug,
+						published: post.published,
+						title: post.title
+					}
+				})
+		))
+		.then(postList => {
+			if (env.FLAG_USE_HEADERS) {
+				return new Response(JSON.stringify({ postList: postList }, null, 4), {
+					status: 200,
+					headers: {
+						...corsHeaders,
+						'etag': postBlob.httpEtag,
+						'Content-type': 'application/json'
+					}
+				});
+			} else {
+				return new Response(JSON.stringify({ postList: postList }, null, 4), { status: 200, });
+			}
+		})
+}
+
+const getPost = async (key, env) => {
+	const postBlob = await env.BLOG_BUCKET.get('posts.json');
+
+	if (postBlob === null) {
+		return new Response('Object Not Found', { status: 404 });
+	}
+
+	const postSlug = key.split("/")[1];
+
+	return postBlob.json()
+		.then(posts => posts[postSlug])
+		.then(post => {
+			if (env.FLAG_USE_HEADERS) {
+				return new Response(JSON.stringify({ post: post }, null, 4), {
+					status: 200,
+					headers: {
+						...corsHeaders,
+						'etag': postBlob.httpEtag,
+						'Content-type': 'application/json'
+					}
+				});
+			}
+				return new Response(JSON.stringify({ post: post }, null, 4), {
+					status: 200,
+				});
+		})
+}
+
 export default {
   async fetch(request, env) {
-    // For example, the request URL my-worker.account.workers.dev/image.png
     const url = new URL(request.url);
     const key = url.pathname.slice(1);
-    // Retrieve the key "image.png"
-    const object = await env.BLOG_BUCKET.get(key);
+		console.log(`key: ${key}`)
 
-    if (object === null) {
-      return new Response('Object Not Found', { status: 404 });
-    }
+		const routeRSS = /rss.xml/,
+			    routePostList = /posts$/,
+				  routePost = /posts\/*/;
 
-    const headers = new Headers();
-    object.writeHttpMetadata(headers);
-    headers.set('etag', object.httpEtag);
-    headers.set('Access-Control-Allow-Origin', '*');
-
-    return new Response(object.body, {
-      headers,
-    });
+		switch (true) {
+			case routeRSS.test(key):
+				return getRSS(key, env);
+				break;
+			case routePostList.test(key):
+				return getPostList(key, env);
+				break;
+			case routePost.test(key):
+				return getPost(key, env);
+				break;
+			default:
+				if (env.FLAG_USE_HEADERS) {
+					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
+						status: 404,
+						headers: {
+							...corsHeaders,
+							'Content-type': 'application/json',
+							'My-Header-test': 'did it come through?'
+						},
+					});
+				} else {
+					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
+						status: 404,
+					});
+				}
+				break;
+		}
   },
 };
