@@ -117,6 +117,9 @@ jobs:
     needs: [setup]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
       - name: Deploy Backend
         uses: cloudflare/wrangler-action@2.0.0
         with:

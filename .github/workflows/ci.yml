@@ -42,6 +42,9 @@ jobs:
     name: Deploy & Test Backend
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.0
+
       - name: Deploy backend
         uses: cloudflare/wrangler-action@2.0.0
         with:
@@ -51,6 +54,6 @@ jobs:
           command: deploy --env staging
 
       - name: Run Integration Tests
-        uses: grafana/k6-action@2bd221c807b7cdbe4bb3abc6b3fa4d2da499fa9b #v0.3.0
+        uses: grafana/k6-action@0.3.0
         with:
           filename: backend/test/script.js
