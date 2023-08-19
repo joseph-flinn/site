@@ -39,15 +39,15 @@ jobs:
           DATA_DIFF=$(git diff --name-only HEAD~1 -- data/* | wc -l | xargs)
           BACKEND_DIFF=$(git diff --name-only HEAD~1 -- backend/* | wc -l | xargs)
 
-          if [[ "$FRONTEND_DIFF" == "1" ]]; then
+          if [[ "$FRONTEND_DIFF" != "0" ]]; then
             echo "frontend-changed=true" >> $GITHUB_OUTPUT
           fi
 
-          if [[ "$DATA_DIFF" == "1" ]]; then
+          if [[ "$DATA_DIFF" != "0" ]]; then
             echo "data-changed=true" >> $GITHUB_OUTPUT
           fi
 
-          if [[ "$BACKEND_DIFF" == "1" ]]; then
+          if [[ "$BACKEND_DIFF" != "0" ]]; then
             echo "backend-changed=true" >> $GITHUB_OUTPUT
           fi
 
