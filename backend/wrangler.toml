@@ -1,4 +1,4 @@
-name = "blog"
+name = "blog-backend"
 main = "src/worker.js"
 compatibility_date = "2023-08-01"
 
@@ -18,7 +18,7 @@ upstream_protocol = "https"
 
 
 [env.staging]
-name = "blog-dev"
+name = "blog-backend-dev"
 
 workers_dev = true
 r2_buckets  = [
@@ -38,4 +38,15 @@ r2_buckets  = [
 ]
 
 [env.production.vars]
+FLAG_USE_HEADERS=true
+
+[env.production-new]
+name = "blog-backend"
+
+workers_dev = true
+r2_buckets  = [
+  { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog" }
+]
+
+[env.production-new.vars]
 FLAG_USE_HEADERS=true
