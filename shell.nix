@@ -5,6 +5,7 @@ stdenv.mkDerivation {
     buildInputs = [
         nodejs
         actionlint
+        k6
     ];
     shellHook = ''
         export PATH="$PWD/frontend/node_modules/.bin/:$PATH"

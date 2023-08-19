@@ -2,10 +2,40 @@ name = "blog"
 main = "src/worker.js"
 compatibility_date = "2023-08-01"
 
+workers_dev = true
+r2_buckets  = [
+  { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog-dev", preview_bucket_name = "flinnlab-blog-dev"}
+]
+
 [vars]
 FLAG_USE_HEADERS=true
 
-[[r2_buckets]]
-binding = "BLOG_BUCKET"
-bucket_name = "flinnlab-blog"
-preview_bucket_name = "flinnlab-blog-dev"
+[dev]
+ip = "0.0.0.0"
+local_protocol = "http"
+port = 8787
+upstream_protocol = "https"
+
+
+[env.staging]
+name = "blog-dev"
+
+workers_dev = true
+r2_buckets  = [
+  { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog-dev" }
+]
+
+[env.staging.vars]
+FLAG_USE_HEADERS=true
+
+
+[env.production]
+name = "blog"
+
+workers_dev = true
+r2_buckets  = [
+  { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog" }
+]
+
+[env.production.vars]
+FLAG_USE_HEADERS=true
