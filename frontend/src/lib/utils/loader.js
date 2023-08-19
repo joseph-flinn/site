@@ -29,13 +29,6 @@ export const getPostList = (fetch) => {
         return { postList: POST_LIST_CACHE };
     };
 
-    if (PUBLIC_DATASOURCE_TYPE === 'localfs') {
-        // posts.json must be hardcoded because of Vite
-        return import('../../posts.json').then(posts => {
-            POST_LIST_CACHE = buildPostList(posts.default);
-        }).then(() => ({ postList: POST_LIST_CACHE }));
-    }
-
     if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
         log('$lib.utils.loader:getPostList().url', `${PUBLIC_DATASOURCE}/posts`)
         return fetch(`${PUBLIC_DATASOURCE}/posts`)
@@ -63,13 +56,6 @@ export const getPost = (postSlug, fetch) => {
         log('$lib.utils.loader:getPost()', "posts cache hit")
         return { post: POSTS_CACHE[postSlug] };
     };
-
-    if (PUBLIC_DATASOURCE_TYPE === 'localfs') {
-        // posts.json must be hardcoded because of Vite
-        return import('../../posts.json').then(posts => {
-            POSTS_CACHE[postSlug] = posts.default[postSlug];
-        }).then(() => ({ post: POSTS_CACHE[postSlug] }));
-    }
 
     if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
         log('$lib.utils.loader:getPost()', "using network_dynamic")
