@@ -1,9 +1,12 @@
 <script>
   export let data;
+
+  import { log } from '$lib/utils/logger.js';
   import SvelteMarkdown from 'svelte-markdown';
   import CodeComponent from '$lib/renderers/CodeComponent.svelte';
 
-  const { title, published, body, ...rest } = data;
+  log('routes/posts/[post]', `data: ${JSON.stringify(data, null, 2)}`);
+  const { title, published, body, ...rest } = data.post;
 
   const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
   const readEstimate = Math.round( wordCount / 200)

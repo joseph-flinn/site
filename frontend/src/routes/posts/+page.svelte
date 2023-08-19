@@ -3,8 +3,11 @@
 
   import { page } from '$app/stores';  
   import PageTitle from "$lib/PageTitle.svelte";
+  import { log } from '$lib/utils/logger.js';
 
-  const posts = Object.values(data).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
+  //const posts = Object.values(data).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
+  log('routes/posts', `data: ${JSON.stringify(data, null, 2)}`);
+  const posts = data.postList.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 </script>
 
 

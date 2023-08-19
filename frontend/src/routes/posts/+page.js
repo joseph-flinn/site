@@ -1,7 +1,5 @@
-import { getPosts } from '$lib/utils/loader.js';
+import { getPostList } from '$lib/utils/loader.js';
 
-
-export const load = ({fetch}) => {
-    return getPosts(fetch);
-
+export const load = async ({fetch}) => {
+    return getPostList(fetch);
 }
