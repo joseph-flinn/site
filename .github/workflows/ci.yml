@@ -54,6 +54,6 @@ jobs:
           command: deploy --env staging
 
       - name: Run Integration Tests
-        uses: grafana/k6-action@0.3.0
+        uses: grafana/k6-action@v0.3.0
         with:
           filename: backend/test/script.js
