@@ -30,17 +30,6 @@ FLAG_USE_HEADERS=true
 
 
 [env.production]
-name = "blog"
-
-workers_dev = true
-r2_buckets  = [
-  { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog" }
-]
-
-[env.production.vars]
-FLAG_USE_HEADERS=true
-
-[env.production-new]
 name = "blog-backend"
 
 workers_dev = true
@@ -48,5 +37,5 @@ r2_buckets  = [
   { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog" }
 ]
 
-[env.production-new.vars]
+[env.production.vars]
 FLAG_USE_HEADERS=true
