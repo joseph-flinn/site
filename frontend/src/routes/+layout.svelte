@@ -29,6 +29,7 @@
     width: 100%;
     display: flex;
     overflow-y: scroll;
+    overflow-x: clip;
   }
 
   .side {
@@ -36,7 +37,7 @@
   }
 
   .page {
-    width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -47,9 +48,15 @@
     flex-grow: 1;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) and (min-width: 300px) {
     .page {
       width: 100vw;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .page {
+      width: 800px;
     }
   }
 </style>
