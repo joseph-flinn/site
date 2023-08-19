@@ -15,6 +15,7 @@ jobs:
     outputs:
       frontend-changed: ${{ steps.changes.outputs.frontend-changed }}
       data-changed: ${{ steps.changes.outputs.data-changed }}
+      backend-changed: ${{ steps.changes.outputs.backend-changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
@@ -113,7 +114,7 @@ jobs:
   deploy-backend:
     name: Deploy Backend
     if: ${{ needs.setup.outputs.backend-changed == 'true' }}
-    name: [setup]
+    needs: [setup]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy Backend
