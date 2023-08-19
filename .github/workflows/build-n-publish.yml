@@ -122,4 +122,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT }}
+          workingDirectory: backend
           command: deploy --env production
