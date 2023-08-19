@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.0
+        with:
+          fetch-depth: 0
 
       - name: Detect Changes
         id: changes
@@ -27,15 +29,15 @@ jobs:
           DATA_DIFF=$(git diff --name-only origin/main -- data/* | wc -l | xargs)
           BACKEND_DIFF=$(git diff --name-only origin/main -- backend/* | wc -l | xargs)
 
-          if [[ "$FRONTEND_DIFF" == "1" ]]; then
+          if [[ "$FRONTEND_DIFF" != "0" ]]; then
             echo "frontend-changed=true" >> $GITHUB_OUTPUT
           fi
 
-          if [[ "$DATA_DIFF" == "1" ]]; then
+          if [[ "$DATA_DIFF" != "0" ]]; then
             echo "data-changed=true" >> $GITHUB_OUTPUT
           fi
 
-          if [[ "$BACKEND_DIFF" == "1" ]]; then
+          if [[ "$BACKEND_DIFF" != "0" ]]; then
             echo "backend-changed=true" >> $GITHUB_OUTPUT
           fi
 
