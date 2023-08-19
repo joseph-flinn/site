@@ -39,7 +39,7 @@ the same 25% change rate failure. This means that the number of changes that led
 Inserting a manual step right before a deployment/release to Production to keep the decision to release a human one.
 
 In addition to the above, continuous delivery might also be the only option depending on the technology being created.
-For example, any client application being uploaded to a store front probably has to go through some sort of approval
+For example, any client application being uploaded to a storefront probably has to go through some sort of approval
 process before going live. This normally takes a few days. Continuous deployment won't be helpful because dismissing the
 current review and updating the release asset multiple times a day will result in an application rarely getting through
 the review process before needing to be updated again. Or you will be constrained to how often you can merge an update,
