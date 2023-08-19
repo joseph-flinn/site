@@ -35,7 +35,7 @@ const posts = filenames.reduce((results, filename) => {
   const body = rawBody.join('---\n');
   const postMetadata = extractData(data.split("\n"));
 
-  PSOTS_REQUIRED_METADATA.map(key => assert(
+  POSTS_REQUIRED_METADATA.map(key => assert(
     key in postMetadata, 
     `${filename} - "${key}" is a required post metadata`
   ));
