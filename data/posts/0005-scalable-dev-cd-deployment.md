@@ -5,52 +5,49 @@
 
 ---
 
-The final article in the CI/CD portion of the series on Scalable Development processes. Everything so far has been
+This is the final article in the CI/CD portion of the series on Scalable Development processes. Everything so far has been
 building up to enable Continuous Deployment. This article is going to look at a few things to keep in mind while going
-from Continuous Delivery to Continous Deployment. However, because deployments are very specific and nuanced to the
-project and the target environment, we are not going to walk through a project or platform specific example.
+from Continuous Delivery to Continuous Deployment. However, because deployments are very specific and nuanced to the
+project and the target environment, we are not going to walk through a detailed project or platform specific example.
+Rather, we will take a look at some general ideas that will be shared across any scenario and how they impact the
+automation processes we have built so far.
 
 
 ## Different project types
 
-There are essentially two different types of software projects and they are defined by their model of distribution: web
-applications and installable software. The distribution of web application projects are from some platform into a
-browser. This provides the capability of constant change with the goal of the user not being aware or affected by
-changes. The distribution model of installable software includes things like mobile applications, desktop applications,
-firmware, versioned deployments of web applications for internal or self-hosting hosting capabilities, and anything else
-that requries a distribution model outside of a browser and URL. Continuous Deployment will look different for either
-type of project. 
+There are essentially two different types of software projects, differentiated by their distribution model: web
+applications and installable software. When web applications are updated, the user has no say on when or how that is
+going to happen. The application platform takes on the responsibility for creating updates and making sure those updates
+don't lead to degraded user experience. The installable software is a bit different since the device has to trigger an
+action to pull in the software from where the developer published it. This publishing could be to a third party store or
+as simple as a binary on a GitHub Release. Examples include mobile applications, desktop applications, firmware, and
+anything else. Continuous Deployment may or may not be available for such software.
 
 
-### Installable Software
+### Distribution _with_ user action
 
 Installable software is either distributed directly from an artifact repository from the developer or through a third
 party such as a storefront. When storefronts are involved, there are normally approvals required in the publishing
-process. These approvals are normally on the scale of days, so this will prevent Continous Deployment straight to users.
+process. These approvals are normally on the scale of days, so this will prevent Continuous Deployment straight to users.
 
-In a lot of production scenarios involving installable software, Continuous Deployment is not desired. As a user of
-mobile applications that auto-update, it would be pretty terrible user experience to get notified that a new version of
-the app is avaiable multiple times a day. However, Continuous Deployment might be desired a beta channel. Some more
-advanced storefronts like Apple iOS and Android support continuously publishing to a channel or track for testing.
-However, some of the smaller ones, such as a browser extension stores, don't provide for this granularity.
-
-The main differentiator between Delivery and Deployment is if an action is required by the end user to update their
-application. For example, if a mobile device is configured with auto-updates and a new version of the application is
-published, it will be updated on the end user's device. This would be considered a deployment. However, if an action is
-required by the user to trigger the update, then the pipeline would have stopped at Delivery.
+In a lot of production scenarios involving installable software, Continuous Deployment is not desired. Users of mobile
+applications do not want to get notified and approve a new version of an app multiple times a day. However, Continuous
+Deployment might be desired for different testing approaches. Some more advanced storefronts like Apple iOS and Android
+support continuously publishing to a beta channel or track for testing. But smaller ones, such as the Opera
+browser add-on store, don't provide for this granularity.
 
 There are some cases where installable software keep themselves up-to-date outside of the OS provided update paths or
-package managers. In these cases, installable software has the potential for Continous Deployment. However, the user
-experience of Continous Deployment with an installed application might not be desired. Electron applications can enable
-auto updating. From experience, deploying six updates to an electron app in a single day, requiring restart every time,
-makes users upset.
+package managers. In these cases, installable software has the potential for Continuous Deployment. However, the user
+experience of Continuous Deployment with an installed application might not be desired. Electron applications can enable
+auto updating. From experience, deploying six updates to an Electron app in a single day, requiring user approval and
+restart every time, makes users upset.
 
 
-### Web Applications
+### Distribution _without_ user action
 
 The distribution platforms that host the different parts of web applications are owned and maintained by the developer
 which gives a lot of flexibility on how to update them. The last decade has seen many tools and techniques to do just
-this. These range from custom build scripts to build out projects hosted by web servers to kubernetes to serverless
+this. These range from custom build scripts to build out projects hosted by web servers to Kubernetes to serverless
 platforms. 
 
 All of these platforms allow for push deployments of build artifacts. Once a build artifact has been Delivered--built,
@@ -90,7 +87,7 @@ deployed, and how it is being deployed.
 
 ## A Note on Pull Deployments
 
-While push deployments are really common, kubernetes in addtion to GitOps has helped start a deployment methodology of
+While push deployments are really common, Kubernetes in addition to GitOps has helped start a deployment methodology of
 pull deployments. The idea of pull deployments is to have an agent running inside the deployment target platform
 watching where the build artifacts are pushed, when it detects an update, it pulls it in and switches to the new
 artifact. Pull deployments promote declarative configuration as well as increased security. Deployments to a Production
