@@ -15,6 +15,11 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : base,
+		},
+		csp: {
+			directives: {
+				'script-src': ['self']
+			}
 		}
 	}
 };
