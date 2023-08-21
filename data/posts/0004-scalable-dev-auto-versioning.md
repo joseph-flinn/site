@@ -139,7 +139,8 @@ jobs:
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer $GH_TOKEN" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
-              https://api.github.com/repos/${{ github.repository }}/issues/${{ inputs.pull-request-number }}/labels | \
+              https://api.github.com/repos/${{ github.repository }}/issues/\
+              ${{ inputs.pull-request-number }}/labels | \
             jq -r ".[].name" | grep "version"
           )
 
@@ -174,17 +175,17 @@ jobs:
             echo "  latest_patch_version: $latest_patch_version"
 
             if [[ "$VERSION_TYPE" == "major" ]]; then
-              next_version="$(($latest_major_version + 1)).${latest_minor_version}.${latest_patch_version}"
+              next="$(($latest_major_version + 1)).${latest_minor_version}.${latest_patch_version}"
             elif [[ "$VERSION_TYPE" == "minor" ]]; then
-              next_version="${latest_major_version}.$(($latest_minor_version + 1)).${latest_patch_version}"
+              next="${latest_major_version}.$(($latest_minor_version + 1)).${latest_patch_version}"
             elif [[ "$VERSION_TYPE" == "patch" ]]; then
-              next_version="${latest_major_version}.${latest_minor_version}.$(($latest_patch_version + 1))"
+              next="${latest_major_version}.${latest_minor_version}.$(($latest_patch_version + 1))"
             else
-              next_version="${latest_major_version}.${latest_minor_version}.${latest_patch_version}"
+              next="${latest_major_version}.${latest_minor_version}.${latest_patch_version}"
             fi
 
-            echo "Next Version: $next_version"
-            echo "version=$next_version" >> $GITHUB_OUTPUT
+            echo "Next Version: $next"
+            echo "version=$next" >> $GITHUB_OUTPUT
           else
             echo "version=$latest_version+${{ inputs.pull-request-number }}" >> $GITHUB_OUTPUT
           fi
