@@ -41,17 +41,26 @@ jobs:
 
           if [[ "$FRONTEND_DIFF" != "0" ]]; then
             echo "frontend-changed=true" >> $GITHUB_OUTPUT
-            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Frontend: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
+          else 
+            echo "frontend-changed=false" >> $GITHUB_OUTPUT
+            echo "Frontend: :x:" >> $GITHUB_STEP_SUMMARY
           fi
 
           if [[ "$DATA_DIFF" != "0" ]]; then
             echo "data-changed=true" >> $GITHUB_OUTPUT
-            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Data: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "data-changed=false" >> $GITHUB_OUTPUT
+            echo "Data: :x:" >> $GITHUB_STEP_SUMMARY
           fi
 
           if [[ "$BACKEND_DIFF" != "0" ]]; then
             echo "backend-changed=true" >> $GITHUB_OUTPUT
-            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Backend: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "backend-changed=false" >> $GITHUB_OUTPUT
+            echo "Backend: :x:" >> $GITHUB_STEP_SUMMARY
           fi
 
 
