@@ -70,12 +70,6 @@ jobs:
           echo "{}" > src/posts.json
           npm run build
 
-      - name: Upload Zipped Site Artifact
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: cf-site
-          path: frontend/build
-
       - name: Upload Site Artifact
         uses: actions/upload-pages-artifact@v1.0.8
         with: 
@@ -99,41 +93,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2.0.0
-
-
-  deploy-frontend-new:
-    name: Deploy Frontend (Cloudflare Pages)
-    if: ${{ needs.setup.outputs.frontend-changed == 'true' || inputs.deploy-frontend }}
-    runs-on: ubuntu-latest
-    needs: 
-      - setup
-      - build-frontend
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-    environment:
-      name: cloudflare-pages
-      url: https://blog-frontend.flinnlab.workers.dev
-    steps:
-      - uses: actions/download-artifact@v3.0.2
-        with:
-          name: cf-site
-          path: frontend/build
-
-      - name: Test path
-        run: ls -alh frontend/build
-
-      - name: Deploy to CloudFlare Pages
-        id: deployment
-        uses: cloudflare/pages-action@v1.5.0
-        with:
-          workingDirectory: frontend
-          apiToken: ${{ secrets.CF_API_KEY }}
-          accountId: ${{ secrets.CF_ACCOUNT }}
-          projectName: blog-frontend
-          directory: build
-          gitHubToken: ${{ github.token }}
-          branch: main
 
 
   build-n-deploy-data:
