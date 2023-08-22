@@ -33,35 +33,23 @@ jobs:
       - name: Detect Changes
         id: changes
         run: |
-          FRONTEND_DIFF=$(git diff --name-only HEAD~1 -- frontend/* | wc -l | xargs)
-          DATA_DIFF=$(git diff --name-only HEAD~1 -- data/* | wc -l | xargs)
-          BACKEND_DIFF=$(git diff --name-only HEAD~1 -- backend/* | wc -l | xargs)
-
           echo "## Deploy" >> $GITHUB_STEP_SUMMARY
+          echo "| project | deploying |" >> $GITHUB_STEP_SUMMARY
+          echo "| ------- | --------- |" >> $GITHUB_STEP_SUMMARY
 
-          if [[ "$FRONTEND_DIFF" != "0" ]]; then
-            echo "frontend-changed=true" >> $GITHUB_OUTPUT
-            echo "Frontend: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
-          else 
-            echo "frontend-changed=false" >> $GITHUB_OUTPUT
-            echo "Frontend: :x:" >> $GITHUB_STEP_SUMMARY
-          fi
+          monorepo_projects=( frontend backend data )
+          for i in "${monorepo_projects[@]}"
+          do
+              DIFF=$(git diff --name-only HEAD~1 -- backend/* | wc -l | xargs)
 
-          if [[ "$DATA_DIFF" != "0" ]]; then
-            echo "data-changed=true" >> $GITHUB_OUTPUT
-            echo "Data: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "data-changed=false" >> $GITHUB_OUTPUT
-            echo "Data: :x:" >> $GITHUB_STEP_SUMMARY
-          fi
-
-          if [[ "$BACKEND_DIFF" != "0" ]]; then
-            echo "backend-changed=true" >> $GITHUB_OUTPUT
-            echo "Backend: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "backend-changed=false" >> $GITHUB_OUTPUT
-            echo "Backend: :x:" >> $GITHUB_STEP_SUMMARY
-          fi
+              if [[ "$DIFF" != "0" ]]; then
+                echo "$i-changed=true" >> $GITHUB_OUTPUT
+                echo "$i: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
+              else 
+                echo "$i-changed=false" >> $GITHUB_OUTPUT
+                echo "$i: :x:" >> $GITHUB_STEP_SUMMARY
+              fi
+          done
 
 
   build-frontend:
