@@ -44,10 +44,10 @@ jobs:
 
               if [[ "$DIFF" != "0" ]]; then
                 echo "$i-changed=true" >> $GITHUB_OUTPUT
-                echo "$i: :heavy_check_mark:" >> $GITHUB_STEP_SUMMARY
+                echo "| $i | :heavy_check_mark: |" >> $GITHUB_STEP_SUMMARY
               else 
                 echo "$i-changed=false" >> $GITHUB_OUTPUT
-                echo "$i: :x:" >> $GITHUB_STEP_SUMMARY
+                echo "| $i | :x: |" >> $GITHUB_STEP_SUMMARY
               fi
           done
 
