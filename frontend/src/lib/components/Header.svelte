@@ -1,7 +1,7 @@
 <script>
   export let pages;
 
-  import NavBar from "$lib/NavBar.svelte";
+  import NavBar from "$lib/components/NavBar.svelte";
 
   import { base } from "$app/paths";
   import logo from "$lib/assets/jf-icon.svg";

@@ -2,7 +2,7 @@
   export let data;
 
   import { page } from '$app/stores';  
-  import PageTitle from "$lib/PageTitle.svelte";
+  import PageTitle from "$lib/components/PageTitle.svelte";
   import { log } from '$lib/utils/logger.js';
 
   //const posts = Object.values(data).sort((postA, postB) => postA.published > postB.published ? -1 : 1)

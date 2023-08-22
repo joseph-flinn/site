@@ -1,10 +1,10 @@
 <script>
-  import PageTitle from "$lib/PageTitle.svelte";
-  import Card from "$lib/Card.svelte";
-  import Toggle from "$lib/Toggle.svelte";
+  import PageTitle from "$lib/components/PageTitle.svelte";
+  import Card from "$lib/components/Card.svelte";
+  import Toggle from "$lib/components/Toggle.svelte";
 
-  import TabbedCard from "$lib/TabbedCard.svelte";
-  import UnderConstruction from "$lib/UnderConstruction.svelte";
+  import TabbedCard from "$lib/components/TabbedCard.svelte";
+  import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 
   import data from '../data.json';
 

@@ -1,9 +1,9 @@
 <script>
   import "../public/global.css";
   import "../public/fonts.css";
-  import NavBar from '$lib/NavBar.svelte';
-  import Header from '$lib/Header.svelte';
-  import Footer from '$lib/Footer.svelte';
+  import NavBar from '$lib/components/NavBar.svelte';
+  import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 
   import data from '../data.json';
 </script>

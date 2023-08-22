@@ -1,6 +1,6 @@
 <script>
-  import PageTitle from "$lib/PageTitle.svelte";
-  import UnderConstruction from "$lib/UnderConstruction.svelte";
+  import PageTitle from "$lib/components/PageTitle.svelte";
+  import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 </script>
 
 

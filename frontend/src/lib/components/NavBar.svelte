@@ -15,5 +15,9 @@
   a {
     padding: 1em;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
 </style>
 
