@@ -3,7 +3,7 @@
   export let defaultTab = Object.keys(data)[0];
   export let justify = "left";
 
-  import Card from "$lib/Card.svelte";
+  import Card from "$lib/components/Card.svelte";
 
   let selectedTab = defaultTab;
 

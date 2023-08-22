@@ -2,8 +2,8 @@
   export let skillArea;
   export let skills;
 
-  import Card from "$lib/Card.svelte";
-  import Toggle from "$lib/Toggle.svelte";
+  import Card from "$lib/components/Card.svelte";
+  import Toggle from "$lib/components/Toggle.svelte";
 </script>
 
 
