@@ -132,7 +132,7 @@ jobs:
           accountId: ${{ secrets.CF_ACCOUNT }}
           projectName: blog-frontend
           directory: build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          gitHubToken: ${{ github.token }}
           branch: main
 
 
