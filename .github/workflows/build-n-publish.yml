@@ -40,7 +40,7 @@ jobs:
           monorepo_projects=( frontend backend data )
           for i in "${monorepo_projects[@]}"
           do
-              DIFF=$(git diff --name-only HEAD~1 -- backend/* | wc -l | xargs)
+              DIFF=$(git diff --name-only HEAD~1 -- $i/* | wc -l | xargs)
 
               if [[ "$DIFF" != "0" ]]; then
                 echo "$i-changed=true" >> $GITHUB_OUTPUT
