@@ -24,6 +24,9 @@ workers_dev = true
 r2_buckets  = [
   { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog-dev" }
 ]
+d1_databases = [
+  { binding = "DB", database_name = "blog-trickle-dev",  database_id = "b3e160c5-bcb4-4c1b-80d0-03d0c56bc8b9" }
+]
 
 [env.staging.vars]
 FLAG_USE_HEADERS=true
