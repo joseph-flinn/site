@@ -1,0 +1,93 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  TESTING: false
+  MIGRATION_DIR: 
+    sh: |
+      if [[ "{{.TESTING}}" == "true" ]]; then
+        echo "./tests"
+      else
+        echo "./"
+      fi
+  CURRENT_INCREMENT:
+    sh: |
+      for f in {{.MIGRATION_DIR}}/migrations/*.sql; do
+        basename $f | awk '{split($0,a,"_"); print a[1]}'
+      done | sort | tail -1
+  NEXT_INCREMENT:
+    sh: |
+      echo "$(({{.CURRENT_INCREMENT}} + 1))" | sed -e :a -e 's/^.\{1,3\}$/0&/;ta'
+
+
+tasks:
+  create:
+    dir: "{{.MIGRATION_DIR}}"
+    requires:
+      vars: [title]
+    cmds:
+      - |
+        migration_file=migrations/{{.NEXT_INCREMENT}}_$(echo {{.title}} | awk '{print tolower($0)}' | sed -r "s/[ ]+/_/g").sql
+        printf "%s\n" "/*" "SELECT * FROM migrations;" "*/" > $migration_file
+        echo "Migration created > {{.MIGRATION_DIR}}/$migration_file"
+
+        if [[ "{{.finalization}}" == "true" ]]; then
+          finalization_migration_file=finalization_migrations/{{.NEXT_INCREMENT}}_finalize+$(echo {{.title}} | awk '{print tolower($0)}' | sed -r "s/[ ]+/_/g").sql
+          printf "%s\n" "/*" "SELECT * FROM finalization_migrations;" "*/" > $finalization_migration_file
+          echo "Finalization migration created > {{.MIGRATION_DIR}}/$finalization_migration_file"
+        fi
+    silent: true
+
+  list:
+    dir: "{{.MIGRATION_DIR}}"
+    cmds:
+      - for: ["Migrations", "Transition Migrations", "Finalization Migrations"]
+        cmd: |
+          migration_dir=$(echo "{{.ITEM}}" | awk '{print tolower($0)}' | sed -r "s/[ ]+/_/g")
+          echo "$migration_dir"
+          if [[ $(ls $migration_dir | wc -l | xargs) > 0 ]]; then
+            for f in $migration_dir/*; do
+              echo "  $(basename $f)"
+            done
+          else
+            echo "  None"
+          fi
+          echo
+    silent: true
+
+  finalize:
+    dir: "{{.MIGRATION_DIR}}"
+    requires: 
+      vars: [id]
+    cmds:
+      - |
+        for f in finalization_migrations/*; do
+          if [[ $(basename $f) =~ "^{{.id}}" ]]; then
+            echo "Finalizing $f"
+            mv $f migrations/$(echo $(basename $f) | sed 's/finalize[+]//g')
+          fi
+        done
+      - task: apply
+    silent: true
+
+  apply:
+    cmds:
+      - echo "wrangler d1 migrations apply"
+    silent: true
+
+  test:clean:
+    dir: ./tests/
+    cmds:
+      - |
+          if [ -f finalization_migrations/* ]; then
+            rm finalization_migrations/*
+          fi
+          echo "cleaned tests/finalization_migrations"
+      - |
+          if [ -f migrations/*world.sql ]; then
+            rm migrations/*world.sql;
+          fi
+          echo "cleaned tests/migraitons"
+    silent: true
+    
