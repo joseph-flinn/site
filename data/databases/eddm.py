@@ -33,14 +33,33 @@ def get_inc(directory):
     return inc
 
 
-def create_migration_file(migration_file, migration_number, timestamp, init=False):
+def write_migration_file(
+    migration_dir,
+    migration_file,
+    migration_number,
+    timestamp,
+    migration_type='',
+    finalization_body=None
+):
     migration_contents = f"-- Migration number: {migration_number} \t {timestamp}\n"
 
-    if init:
-        migration_contents += "-- Initialize the eddm_migration table\n"
+    if migration_type == "init":
+        migration_contents += (
+            "\nCREATE TABLE IF NOT EXISTS eddm_migrations (\n"
+            "    migration VARCHAR(50),\n"
+            "    timestamp DATE\n"
+            ");\n\n"
+            f"INSERT INTO eddm_migrations (migration, timestamp) values ({migration_file}, datetime('now'));"
+        )
+
+    elif migration_type == "":
+        if finalization_body:
+            migration_contents += f"\n{finalization_body}\n\n"
+        migration_contents += "\n\n\n-- DO NOT REMOVE --\n"
+        migration_contents += f"INSERT INTO eddm_migrations (migration, timestamp) values ('{migration_file}', datetime('now'));\n"
 
     try:
-        with open(migration_file, "w") as new_migration:
+        with open(f"{migration_dir}/{migration_file}", "w") as new_migration:
             new_migration.write(migration_contents)
     except e:
         err(f"Error writing to {migration_file}\n\n{e}")
@@ -132,19 +151,24 @@ def create(ctx, title, finalization_migration):
         )
 
     migration_filename = f"{inc}_{title.replace(' ', '_')}.sql"
-    logger.debug(f"New Migration: {migration_filename}")
-    create_migration_file(
-        f"{ctx.obj['MIGRATIONS']}/{migration_filename}", inc, ctx.obj["TIMESTAMP"]
+    write_migration_file(
+        ctx.obj['MIGRATIONS'],
+        migration_filename,
+        inc,
+        ctx.obj["TIMESTAMP"]
     )
+    click.echo(f"Created new migration: {ctx.obj['MIGRATIONS']}/{migration_filename}")
 
     if finalization_migration:
         finalization_migration_filename = f"{inc}+finalize_{title.replace(' ', '_')}.sql"
-        logger.debug(f"Finalization Migration: {finalization_migration_filename}")
-        create_migration_file(
-            f"{ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}",
+        write_migration_file(
+            ctx.obj['FINALIZATIONS'],
+            finalization_migration_filename,
             inc,
             ctx.obj["TIMESTAMP"],
+            migration_type="finalization"
         )
+        click.echo(f"Created new finaliztaion migration: {ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}")
 
 
 @cli.command()
@@ -182,21 +206,24 @@ def finalize(ctx, migration_id):
 
     inc = get_inc(f"./{ctx.obj['MIGRATIONS']}")
     finalization_migration_path = f"{ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}"
-    migration_path = f"{ctx.obj['MIGRATIONS']}/{inc}_{finalization_migration_filename.split('+')[1]}"
+    migration_path = f"{ctx.obj['FINALIZATIONS']}/{inc}_{finalization_migration_filename.split('+')[1]}"
 
-    create_migration_file(
-        migration_path,
-        inc,
-        ctx.obj["TIMESTAMP"]
-    )
 
     with open(finalization_migration_path, 'r') as f_migration_file:
         f_migration_sql = "\n".join(f_migration_file.read().split("\n")[1:])
 
-    with open(migration_path, 'a') as migration_file:
-        migration_file.write(f"{f_migration_sql}\n")
+    write_migration_file(
+        ctx.obj['MIGRATIONS'],
+        f"{inc}_{finalization_migration_filename.split('+')[1]}",
+        inc,
+        ctx.obj["TIMESTAMP"],
+        finalization_body=f_migration_sql
+    )
+
+    click.echo(f"Created new migration: {migration_path}")
 
     os.remove(finalization_migration_path)
+    click.echo(f"Removed finaliztaion migration: {finalization_migration_path}")
 
 
 @cli.command()
@@ -226,11 +253,12 @@ def init(ctx):
         ]):
                err("Migrator already initialized")
     migration_filename = f"{inc}_init_migrator.sql"
-    create_migration_file(
-        f"{ctx.obj['DB']}/migrations/{migration_filename}",
+    write_migration_file(
+        ctx.obj['MIGRATIONS'],
+        migration_filename,
         inc,
         ctx.obj["TIMESTAMP"],
-        init=True
+        migration_type="init"
     )
 
     click.echo("Migration tracking initalized")
