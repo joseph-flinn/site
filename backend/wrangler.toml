@@ -25,7 +25,7 @@ r2_buckets  = [
   { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog-dev" }
 ]
 d1_databases = [
-  { binding = "DB", database_name = "blog-trickle-dev",  database_id = "b3e160c5-bcb4-4c1b-80d0-03d0c56bc8b9" }
+  { binding = "DB", database_name = "blog-drip-dev", database_id = "d898dfc0-f641-425c-8c6a-e25da2cf7468", migrations_dir = "../data/drip-db/migrations" }
 ]
 
 [env.staging.vars]

@@ -1,6 +1,11 @@
 with import <nixpkgs> {};
 let
-  pythonEnv = python310.withPackages(ps: [
+  pythonEnv = python311.withPackages(ps: [
+    ps.click
+    ps.click-log
+
+    ps.black
+    ps.pytest
   ]);
 
 in stdenv.mkDerivation {
