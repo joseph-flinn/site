@@ -91,17 +91,19 @@ def get_status(env, env_db):
 
 @click.group()
 @click_log.simple_verbosity_option(logger)
-@click.option("--testing", is_flag=True)
+@click.option("--testing", is_flag=True, help="Use the local /test migrations")
 @click.option(
     "--config",
     "-c",
     default="./wrangler.toml",
+    help="Path to wrangler config (default: ./wrangler.toml)"
 )
 @click.option(
     "--env",
     "-e",
+    help="Cloudflare environment; configured in wrangler.toml"
 )
-@click.option("--db", "-d")
+@click.option("--db", "-d", help="Directory containing migrations; matches DB in wrangler.toml; <db>-dev used for non-production")
 @click.pass_context
 def cli(ctx, testing, config, env, db):
     # ensure that ctx.obj exists and is a dict (in case `cli()` is called
@@ -158,6 +160,9 @@ def cli(ctx, testing, config, env, db):
 @click.argument("title")
 @click.option("--finalization-migration", "-fm", is_flag=True)
 def create(ctx, title, finalization_migration):
+    """
+    Create a migration file and optional finalization migration file
+    """
     logger.debug(f"Running create...")
 
     try:
@@ -193,6 +198,9 @@ def create(ctx, title, finalization_migration):
 @cli.command()
 @click.pass_context
 def list(ctx):
+    """
+    List all local migrations across the three migration directories
+    """
     logger.debug(f"Running list...")
 
     migration_dirs = ["migrations", "transition_migrations", "finalization_migrations"]
@@ -209,6 +217,9 @@ def list(ctx):
 @click.argument("migration_id")
 @click.pass_context
 def finalize(ctx, migration_id):
+    """
+    Finalize a migration that is in a Transition Phase
+    """
     logger.debug(f"Running finalize...")
 
     finalization_migration_filename = None
@@ -246,36 +257,56 @@ def finalize(ctx, migration_id):
 
 
 @cli.command()
+@click.option("--all", "all_migrations", is_flag=True)
+@click.option("--new", "only_new", is_flag=True)
+@click.option("--previous", "only_previous", is_flag=True)
 @click.pass_context
-def status(ctx):
+def status(ctx, all_migrations, only_new, only_previous):
+    """
+    Check the migrations status between local files and DB state
+    """
     logger.debug(f"Running apply...")
-    logger.debug(f"DB: {ctx.obj['DB']}")
-    logger.debug(f"ENV: {ctx.obj.get('ENV', None)}")
-    logger.debug(f"D1_DB: {ctx.obj.get('D1_DB', None)}")
+
+    if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
+        err("--env and --db are required for apply")
+
+    if all_migrations is None and only_new is None and only_previous is None:
+        all_migrations = True
 
     current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB']))
+    migrations = sorted(get_migrations(ctx.obj['MIGRATIONS']))
 
     logger.debug(f"Current status: {current_status}")
 
-    migrations = sorted(get_migrations(ctx.obj['MIGRATIONS']))
 
-    click.echo(f"[New Migrations]")
-    for migration in migrations:
-        if migration not in current_status:
-            print(migration)
+    if all_migrations or only_new:
+        click.echo(f"[New Migrations]")
+        for migration in migrations:
+            if migration not in current_status:
+                print(migration)
 
-    click.echo()
+    if all_migrations:
+        click.echo()
 
-    click.echo(f"[Previous Migrations]")
-    for migration in migrations:
-        if migration in current_status:
-            print(migration)
+    if all_migrations or only_new:
+        click.echo(f"[Previous Migrations]")
+        for migration in migrations:
+            if migration in current_status:
+                print(migration)
 
 
 @cli.command()
 @click.pass_context
 def apply(ctx):
+    """
+    Apply new migrations
+
+    Query the eddm_migration table and run any new migrations in order
+    """
     logger.debug(f"Running apply...")
+
+    if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
+        err("--env and --db are required for apply")
 
     current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB']))
     migrations = sorted(get_migrations(ctx.obj['MIGRATIONS']))
@@ -307,7 +338,9 @@ def apply(ctx):
 @click.pass_context
 def init(ctx):
     """
-    Create the SQL for the eddm_migrations table. Loop through all migrations in the /migrations directory
+    Create the migration to initalize the migrations tracking table
+
+    Loop through all migrations in the /migrations directory
     and ask the user if it has been run for the initial population of the table. Dump to the
     <id>_init_migrations.sql file
     """
