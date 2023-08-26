@@ -1,6 +1,8 @@
 import datetime
+import json
 import logging
 import os
+import subprocess
 import tomllib
 
 import click
@@ -46,23 +48,45 @@ def write_migration_file(
     if migration_type == "init":
         migration_contents += (
             "\nCREATE TABLE IF NOT EXISTS eddm_migrations (\n"
-            "    migration VARCHAR(50),\n"
-            "    timestamp DATE\n"
+            "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
+            "    name TEXT UNIQUE,\n"
+            "    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n"
             ");\n\n"
-            f"INSERT INTO eddm_migrations (migration, timestamp) values ({migration_file}, datetime('now'));"
+            f"INSERT INTO eddm_migrations (name) values ('{migration_file}');\n"
         )
 
     elif migration_type == "":
         if finalization_body:
             migration_contents += f"\n{finalization_body}\n\n"
         migration_contents += "\n\n\n-- DO NOT REMOVE --\n"
-        migration_contents += f"INSERT INTO eddm_migrations (migration, timestamp) values ('{migration_file}', datetime('now'));\n"
+        migration_contents += f"INSERT INTO eddm_migrations (name) values ('{migration_file}');\n"
 
     try:
         with open(f"{migration_dir}/{migration_file}", "w") as new_migration:
             new_migration.write(migration_contents)
     except e:
         err(f"Error writing to {migration_file}\n\n{e}")
+
+
+def get_migrations(migration_dir):
+    return [filename for filename in os.listdir(migration_dir)]
+
+
+def get_status(env, env_db):
+    migration_status_cli = subprocess.run(
+        [
+            "wrangler", "--env", env, "d1", "execute", env_db,
+            "--command",  "SELECT * FROM eddm_migrations;", "--json"
+        ],
+        text=True,
+        capture_output=True
+    )
+
+    migration_status = migration_status_cli.stdout
+    if migration_status_cli.returncode == 1:
+        return []
+
+    return [migration['name'] for migration in json.loads(migration_status)[0]["results"]]
 
 
 @click.group()
@@ -135,11 +159,6 @@ def cli(ctx, testing, config, env, db):
 @click.option("--finalization-migration", "-fm", is_flag=True)
 def create(ctx, title, finalization_migration):
     logger.debug(f"Running create...")
-    logger.debug(f"Timestamp: {ctx.obj['TIMESTAMP']}")
-
-    logger.debug(f"DB: {ctx.obj['DB']}")
-    logger.debug(f"ENV: {ctx.obj.get('ENV', None)}")
-    logger.debug(f"D1_DB: {ctx.obj.get('D1_DB', None)}")
 
     try:
         inc = get_inc(f"./{ctx.obj['DB']}/migrations")
@@ -228,8 +247,60 @@ def finalize(ctx, migration_id):
 
 @cli.command()
 @click.pass_context
+def status(ctx):
+    logger.debug(f"Running apply...")
+    logger.debug(f"DB: {ctx.obj['DB']}")
+    logger.debug(f"ENV: {ctx.obj.get('ENV', None)}")
+    logger.debug(f"D1_DB: {ctx.obj.get('D1_DB', None)}")
+
+    current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB']))
+
+    logger.debug(f"Current status: {current_status}")
+
+    migrations = sorted(get_migrations(ctx.obj['MIGRATIONS']))
+
+    click.echo(f"[New Migrations]")
+    for migration in migrations:
+        if migration not in current_status:
+            print(migration)
+
+    click.echo()
+
+    click.echo(f"[Previous Migrations]")
+    for migration in migrations:
+        if migration in current_status:
+            print(migration)
+
+
+@cli.command()
+@click.pass_context
 def apply(ctx):
     logger.debug(f"Running apply...")
+
+    current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB']))
+    migrations = sorted(get_migrations(ctx.obj['MIGRATIONS']))
+
+    if len(current_status) == len(migrations):
+        click.echo(f"No new migrations to execute")
+    else:
+        click.echo(f"[Executing Migrations]")
+        for migration in migrations:
+            if migration not in current_status:
+                print(migration)
+                execute_migration_cli = subprocess.run(
+                    [
+                        "wrangler", "--env", ctx.obj['ENV'], "d1", "execute", ctx.obj['D1_DB'],
+                        "--file",  f"{ctx.obj['MIGRATIONS']}/{migration}", "--json"
+                    ],
+                    text=True,
+                    capture_output=True
+                )
+
+                if execute_migration_cli.returncode == 1:
+                    err(f"Error executing {migration} on env.{env}.{env_db}")
+
+                migration_execution = execute_migration_cli.stdout
+                logger.debug(f"migration execution: {migration}\n\n{json.loads(migration_execution)}")
 
 
 @cli.command()
