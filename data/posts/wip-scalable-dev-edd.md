@@ -32,9 +32,16 @@ upgrade. For these specific cases, we'll look at orchestrating _Transition State
 ## Implementation Example
 
 The approach that I take in implementation is to separate each type of migration into its own directory until it is time
-to run the migration. The caveat being that these are pure SQL migrations and not using an ORM. Once it is time, the 
-migration is moved into the main migration directory and run with the migrator tool of choice (if the _Transition State_
-edge cases do not apply).
+to run the migration. There is a caveat of the migrations being pure SQL migrations and not using an ORM. Once it is
+time, the migration is moved into the main migration directory--either manually or with automation if the approach to
+deployments support it--and it run with the migrator tool of choice. If the _Transition State_ migrations edge cases 
+apply, a custom migrator may be required.
 
-I am going to deviate from using the [example project](https://github.com/joseph-flinn/scalable-dev-processes-example) we
-have been using so far and use a real life example of the EDD automation I am using for this [site](https://github.com/joseph-flinn/site).
+I am going to deviate from using the [example project](https://github.com/joseph-flinn/scalable-dev-processes-example)
+we have been using so far and use a real life example of the EDD automation I am using for this
+[site](https://github.com/joseph-flinn/site). I've chosen Cloudflare D1 databases to limit the maintenance overhead, but
+the general processes will be the same. The [custom tool](https://github.com/joseph-flinn/site/blob/main/data/databases/eddm.py) 
+that I created for myself and my dev flow will work for other databases with pure SQL migrations with some tweaking to
+the setup and a few of the commands.
+
+
