@@ -1,0 +1,23 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  test:clean:
+    dir: ./tests/
+    cmds:
+      - |
+          for f in $(ls finalization_migrations); do
+            rm $f
+          done
+
+          echo "cleaned tests/finalization_migrations"
+      - |
+          for f in $(ls migrations); do
+            if [[ $(basename $f) =~ "world" ]]; then
+              rm $f
+            fi
+          done
+          echo "cleaned tests/migraitons"
+    silent: true
+    

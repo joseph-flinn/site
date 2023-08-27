@@ -24,6 +24,9 @@ workers_dev = true
 r2_buckets  = [
   { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog-dev" }
 ]
+d1_databases = [
+  { binding = "DB", database_name = "blog-drip-dev", database_id = "d898dfc0-f641-425c-8c6a-e25da2cf7468", migrations_dir = "../data/drip-db/migrations" }
+]
 
 [env.staging.vars]
 FLAG_USE_HEADERS=true
@@ -35,6 +38,9 @@ name = "blog-backend"
 workers_dev = true
 r2_buckets  = [
   { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog" }
+]
+d1_databases = [
+  { binding = "DB", database_name = "blog-drip", database_id = "b8dc883c-78e0-4687-bfe2-45401ae32813", migrations_dir = "../data/databases/blog-drip/migrations" }
 ]
 
 [env.production.vars]
