@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS drip (
 
 
 -- DO NOT REMOVE --
-INSERT INTO eddm_migrations (name) values ('0001_create_drips.sql');
+INSERT INTO eddm_migrations (name) values ('0001_create_drip.sql');

@@ -257,11 +257,9 @@ def finalize(ctx, migration_id):
 
 
 @cli.command()
-@click.option("--all", "all_migrations", is_flag=True)
-@click.option("--new", "only_new", is_flag=True)
-@click.option("--previous", "only_previous", is_flag=True)
+@click.option("--which", "-w", type=click.Choice(["all", "new", "previous"], case_sensitive=False), default="all")
 @click.pass_context
-def status(ctx, all_migrations, only_new, only_previous):
+def status(ctx, which):
     """
     Check the migrations status between local files and DB state
     """
@@ -270,25 +268,22 @@ def status(ctx, all_migrations, only_new, only_previous):
     if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
         err("--env and --db are required for apply")
 
-    if all_migrations is None and only_new is None and only_previous is None:
-        all_migrations = True
-
     current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB']))
     migrations = sorted(get_migrations(ctx.obj['MIGRATIONS']))
 
     logger.debug(f"Current status: {current_status}")
 
 
-    if all_migrations or only_new:
+    if which in ["all", "new"]:
         click.echo(f"[New Migrations]")
         for migration in migrations:
             if migration not in current_status:
                 print(migration)
 
-    if all_migrations:
+    if which == "all":
         click.echo()
 
-    if all_migrations or only_new:
+    if which in ["all", "previous"]:
         click.echo(f"[Previous Migrations]")
         for migration in migrations:
             if migration in current_status:
