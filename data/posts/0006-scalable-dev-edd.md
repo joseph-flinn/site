@@ -12,14 +12,14 @@ REST api? How does one approach changing applications that rely on a changing da
 
 The answer is Evolutionary Database Design (EDD). I highly recommend reading through the deep examination of the topic by
 Martin Fowler et al. [[1](https://martinfowler.com/articles/evodb.html)]. There are quite a few summaries written, but
-the original has a lot more intrecacies and nuance required in the implemention. The big idea is to use mulitple phases of
+the original has a lot more intricacies and nuance required in the implementation. The big idea is to use multiple phases of
 change to make destructive changes in a database schema which allows backwards compatibility between application code
 and database schema changes.
 
 
 ## EDD Automation
 
-As a team grows, tooling is required to fascilitate EDD; especially if there is more than a single environment. Tracking
+As a team grows, tooling is required to facilitate EDD; especially if there is more than a single environment. Tracking
 the state of a database with migrations with different timing requirements is tricky. The core problem that EDD
 Automation needs to solve is orchestrating the timing of when migrations should be run.
 
@@ -72,7 +72,7 @@ Commands:
 ```
 
 `edda init` creates the `XXXX_init_migrator.sql` migration to add the migration tracking table to the database, as seen
-in the directory heirarchy above, replacing whatever built-in migration tracking that might be used to execute the SQL
+in the directory hierarchy above, replacing whatever built-in migration tracking that might be used to execute the SQL
 scripts. For instance, `wrangler` comes along with `wrangler d1 migrations` which will track the migrations in a table,
 but it doesn't provide some of the other tools that `edda` provides that are helpful with automating EDD. `edda` also
 sets me up for implementing the _Transition State_ migrations which will not be compatible with the `wrangler d1
@@ -93,7 +93,7 @@ If a new migration is needed that relies on a previous migration being finalized
 the _Finalization_ migration (ie, created after `edda finalize` has been run. This command can also be added to a CI
 pipeline to automate migration finalization if release strategy supports it.
 
-`init`, `create`, `finalize`, and `list` commands only depend on the local filesystem and having the correct SQL
+`init`, `create`, `finalize`, and `list` commands only depend on the local file system and having the correct SQL
 language for the corresponding relational database. `apply` and `status` interact with the database, so will require
 more tweaking to work for a non-D1 database. Tweaking to the default SQL to set up and track will also be needed until I
 get to abstracting `edda` to work on the major relational databases and provide a plugin system for the rest.
