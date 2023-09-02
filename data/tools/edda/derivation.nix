@@ -12,6 +12,7 @@ buildPythonApplication {
     click-log
 
     setuptools
+    pytest
   ];
 
   meta = with lib; {

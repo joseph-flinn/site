@@ -1,150 +1,19 @@
-import datetime
 import json
-import logging
 import os
-import subprocess
-import tomllib
 
 import click
 import click_log
 
 
-logger = logging.getLogger(__name__)
+from src.about import _version
+from src.log import logger
+from src.utils import *
+
+
 click_log.basic_config(logger)
 
 
 MIGRATION_TABLE="edda_migrations"
-
-
-def err(message: str) -> None:
-    logger.error(message)
-    exit(1)
-
-
-def get_inc(database):
-    logger.debug(f"database: {database}")
-    files = [
-        *[
-            filename for filename in os.listdir(f"{database}/migrations")
-            if os.path.isfile(os.path.join(directory, filename))
-        ],
-        *[
-            filename for filename in os.listdir(f"{database}/transition_migrations")
-            if os.path.isfile(os.path.join(directory, filename))
-        ],
-    ]
-
-    filename.split("_")[0]
-
-    curr = sorted(files)[-1].split("_")[0]
-    logger.debug(f"Current ID: {curr}")
-
-    inc = str(int(curr) + 1).rjust(4, "0")
-    logger.debug(f"Next ID: {inc}")
-
-    return inc
-
-
-def write_migration_file(
-    migration_dir,
-    migration_file,
-    migration_number,
-    timestamp,
-    migration_type='',
-    finalization_body=None
-):
-    migration_contents = f"-- Migration number: {migration_number} \t {timestamp}\n"
-
-    if migration_type == "init":
-        migration_contents += (
-            f"\nCREATE TABLE IF NOT EXISTS {MIGRATION_TABLE}(\n"
-            "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
-            "    name TEXT UNIQUE,\n"
-            "    is_transition BOOLEAN DEFAULT FALSE NOT NULL,\n"
-            "    in_transition_state BOOLEAN DEFAULT FALSE NOT NULL,\n"
-            "    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n"
-            ");\n\n"
-            f"INSERT INTO {MIGRATION_TABLE} (name) values ('{migration_file}');\n"
-        )
-
-    elif migration_type == "" and finalization_body:
-        migration_contents += f"\n{finalization_body}\n\n"
-
-    try:
-        with open(f"{migration_dir}/{migration_file}", "w") as new_migration:
-            new_migration.write(migration_contents)
-    except e:
-        err(f"Error writing to {migration_file}\n\n{e}")
-
-
-def get_local_migrations(migration_dir):
-    return [filename for filename in os.listdir(migration_dir)]
-
-
-def execute_sql_file(migration_file, migration_dir, env, env_db) -> str:
-    client = subprocess.run(
-        [
-            "wrangler", "--env", env, "d1", "execute", env_db,
-            "--file",  f"{migration_dir}/{migration_file}", "--json"
-        ],
-        text=True,
-        capture_output=True
-    )
-
-    return (client.stdout, client.returncode)
-
-
-def execute_sql_command(command, env, env_db) -> str:
-    client = subprocess.run(
-        [
-            "wrangler", "--env", env, "d1", "execute", env_db,
-            f"--command",  f"{command}", "--json"
-        ],
-        text=True,
-        capture_output=True
-    )
-
-    return (client.stdout, client.returncode)
-
-
-def get_status(env, env_db):
-    sql_command = f"SELECT * FROM {MIGRATION_TABLE};"
-    results, results_code = execute_sql_command(sql_command, env, env_db)
-
-    if results_code == 1:
-        return []
-
-    return [migration['name'] for migration in json.loads(results)[0]["results"]]
-
-
-def log_migration(migration_file, env, env_db, is_transition=False, is_transitioning=False):
-    sql_command = f"""
-        DECLARE
-          @name TEXT='{migration_file}',
-          @is_transition BOOLEAN={int(is_transition)},
-          @in_transition_state={int(is_transitioning)}
-
-        IF ((select count(*) from edda_migrations where name=@name) = 1)
-          BEGIN
-            UPDATE edda_migrations
-            SET Name = @name, age = @age
-            WHERE ID = @id;
-          END
-        ELSE
-          BEGIN
-            INSERT INTO edda_migrations (name,is_transition,in_transition_state)
-            VALUES (@name,@is_transition,@in_transition_state)
-          END
-    """
-
-   #f"INSERT INTO {MIGRATION_TABLE} (name) values ('{migration_file}');\n"
-
-    results, results_code = execute_sql_command(sql_command, env, env_db)
-
-    if results_code == 1:
-        err(f"Error executing log of {migration_file} on env.{env}.{env_db}")
-
-    logger.debug(f"{migration_file} successfully logged")
 
 
 @click.group()
@@ -167,50 +36,10 @@ def cli(ctx, testing, config, env, db):
     # ensure that ctx.obj exists and is a dict (in case `cli()` is called
     # by means other than the `if` block below)
     ctx.ensure_object(dict)
-
-    ctx.obj["TESTING"] = testing
-    ctx.obj["TIMESTAMP"] = (
-        datetime.datetime.utcnow().isoformat(timespec="milliseconds") + "Z"
-    )
-
-    # Setup Wrangler config (symlinked to current directory)
-    try:
-        with open(config, mode="rb") as fp:
-            ctx.obj["WRANGLER_CONFIG"] = tomllib.load(fp)
-    except:
-        err(f"{config} does not exist")
-
-    # Setup local database migration directory heirarchy
-    if testing:
-        db = "test"
-
-    dbs = [filename for filename in os.listdir("./") if os.path.isdir(filename)]
-    if db and db in dbs:
-        ctx.obj["DB"] = db
-        ctx.obj["MIGRATIONS"] = f"{db}/migrations"
-        ctx.obj["TRANSITIONS"] = f"{db}/transition_migrations"
-        ctx.obj["FINALIZATIONS"] = f"{db}/finalization_migrations"
-    else:
-        err(f"{db} migrations not found\nDBs found: {dbs}")
-
-    # Setup Wrangler Environment from config
-    if env:
-        if env not in ctx.obj["WRANGLER_CONFIG"]["env"]:
-            err(f"{env} is not configured in {config}")
-        else:
-            ctx.obj["ENV"] = env
-
-            # Setup Wrangler database name and connection depending on the environment
-            env_db = db if env.lower() in ["production", "prod"] else f"{db}-dev"
-            env_dbs = [
-                env_db["database_name"]
-                for env_db in ctx.obj["WRANGLER_CONFIG"]["env"][env]["d1_databases"]
-            ]
-
-            if env_db not in env_dbs:
-                err(f"{db} D1 is not bound to env.{env}")
-
-            ctx.obj["D1_DB"] = env_db
+    ctx.obj['TESTING'] = testing
+    ctx.obj['CONFIG_PATH'] = config
+    ctx.obj['ENV'] = env
+    ctx.obj['DB'] = db
 
 
 @cli.command()
@@ -221,10 +50,13 @@ def create(ctx, title, finalization_migration):
     """
     Create a migration file and optional finalization migration file
     """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
     logger.debug(f"Running create...")
 
     try:
-        inc = get_inc(f"./{ctx.obj['DB']}/migrations")
+        inc = get_inc(ctx.obj["MIGRATIONS"], ctx.obj["TRANSITIONS"])
     except:
         err(
             "Cannot compute the next migration. No migrations exist."
@@ -259,6 +91,9 @@ def list_migrations(ctx):
     """
     List all local migrations across the three migration directories
     """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
     logger.debug(f"Running list...")
 
     migration_dirs = ["migrations", "transition_migrations", "finalization_migrations"]
@@ -278,6 +113,9 @@ def finalize(ctx, migration_id):
     """
     Finalize a migration that is in a Transition Phase
     """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
     logger.debug(f"Running finalize...")
 
     finalization_migration_filename = None
@@ -292,7 +130,7 @@ def finalize(ctx, migration_id):
         err(f"Did not find a finalization migration for migration {migration_id}")
 
 
-    inc = get_inc(f"./{ctx.obj['MIGRATIONS']}")
+    inc = get_inc(ctx.obj["MIGRATIONS"], ctx.obj["TRANSITIONS"])
     finalization_migration_path = f"{ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}"
     migration_path = f"{ctx.obj['FINALIZATIONS']}/{inc}_{finalization_migration_filename.split('+')[1]}"
 
@@ -321,6 +159,9 @@ def status(ctx, which):
     """
     Check the migrations status between local files and DB state
     """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
     logger.debug(f"Running status...")
 
     if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
@@ -357,6 +198,9 @@ def apply(ctx, mode):
 
     Query the eddm_migration table and run any new migrations in order
     """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
     logger.debug(f"Running apply in {mode} mode...")
 
     if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
@@ -404,9 +248,12 @@ def init(ctx):
     and ask the user if it has been run for the initial population of the table. Dump to the
     <id>_init_migrations.sql file
     """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
     logger.debug(f"Running init...")
     try:
-        inc = get_inc(f"./{ctx.obj['MIGRATIONS']}")
+        inc = get_inc(ctx.obj["MIGRATIONS"], ctx.obj["TRANSITIONS"])
     except:
         inc = "0000"
 
@@ -427,6 +274,10 @@ def init(ctx):
 
     click.echo("Migration tracking initalized")
 
+
+@cli.command()
+def version():
+    click.echo(f"version: {_version}")
 
 if __name__ == "__main__":
     cli(obj={})

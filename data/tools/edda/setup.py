@@ -1,13 +1,14 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+
+from src import about
 
 setup(
     name='edda',
-    version='0.1.0',
+    version=about._version,
     description='Evolutionary Database Design Automator',
     author='Joseph Flinn',
     author_email='joseph.s.flinn@gmail.com',
-    #url='https://www.python.org/sigs/distutils-sig/',
-    packages=['src'],
+    packages=find_packages(exclude=('tests')),
     install_requires=[
         'Click',
     ],
