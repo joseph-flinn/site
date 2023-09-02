@@ -3,7 +3,7 @@
 version: '3'
 
 tasks:
-  test:clean:
+  clean:test:
     dir: ./tests/
     cmds:
       - |
@@ -20,4 +20,9 @@ tasks:
           done
           echo "cleaned tests/migraitons"
     silent: true
+  clean:staging:
+    cmds:
+      - wrangler --env staging d1 execute blog-drip-dev --command "DROP TABLE drip; DROP TABLE edda_migrations;"
+    silent: true
+    
     

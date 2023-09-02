@@ -21,15 +21,22 @@ def err(message: str) -> None:
     exit(1)
 
 
-def get_inc(directory):
-    logger.debug(f"Directory: {directory}")
+def get_inc(database):
+    logger.debug(f"database: {database}")
     files = [
-        filename.split("_")[0]
-        for filename in os.listdir(directory)
-        if os.path.isfile(os.path.join(directory, filename))
+        *[
+            filename for filename in os.listdir(f"{database}/migrations")
+            if os.path.isfile(os.path.join(directory, filename))
+        ],
+        *[
+            filename for filename in os.listdir(f"{database}/transition_migrations")
+            if os.path.isfile(os.path.join(directory, filename))
+        ],
     ]
 
-    curr = sorted(files)[-1]
+    filename.split("_")[0]
+
+    curr = sorted(files)[-1].split("_")[0]
     logger.debug(f"Current ID: {curr}")
 
     inc = str(int(curr) + 1).rjust(4, "0")
@@ -110,8 +117,28 @@ def get_status(env, env_db):
     return [migration['name'] for migration in json.loads(results)[0]["results"]]
 
 
-def log_migration(migration_file, env, env_db):
-    sql_command = f"INSERT INTO {MIGRATION_TABLE} (name) values ('{migration_file}');\n"
+def log_migration(migration_file, env, env_db, is_transition=False, is_transitioning=False):
+    sql_command = f"""
+        DECLARE
+          @name TEXT='{migration_file}',
+          @is_transition BOOLEAN={int(is_transition)},
+          @in_transition_state={int(is_transitioning)}
+
+        IF ((select count(*) from edda_migrations where name=@name) = 1)
+          BEGIN
+            UPDATE edda_migrations
+            SET Name = @name, age = @age
+            WHERE ID = @id;
+          END
+        ELSE
+          BEGIN
+            INSERT INTO edda_migrations (name,is_transition,in_transition_state)
+            VALUES (@name,@is_transition,@in_transition_state)
+          END
+    """
+
+   #f"INSERT INTO {MIGRATION_TABLE} (name) values ('{migration_file}');\n"
+
     results, results_code = execute_sql_command(sql_command, env, env_db)
 
     if results_code == 1:
