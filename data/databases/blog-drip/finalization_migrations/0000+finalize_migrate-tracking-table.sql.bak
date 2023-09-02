@@ -1,4 +1,0 @@
--- Migration number: 0002	 2023-08-29T13:47:53.387Z
-
-
-DROP TABLE IF EXISTS eddm_migrations;

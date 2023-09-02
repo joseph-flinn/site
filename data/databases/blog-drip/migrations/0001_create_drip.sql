@@ -8,8 +8,3 @@ CREATE TABLE IF NOT EXISTS drip (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
-
-
-
--- DO NOT REMOVE --
-INSERT INTO eddm_migrations (name) values ('0001_create_drip.sql');
