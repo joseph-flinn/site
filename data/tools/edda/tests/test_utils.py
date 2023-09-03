@@ -55,10 +55,10 @@ def ctx(migration_dirs):
 def test_load_migrations(migration_dirs):
     db_migrations = load_migrations(*migration_dirs.values())
 
-    assert db_migrations.migration.to_simple_list() == ["0000_init_migrator.sql", "0001_create_drip.sql"]
-    assert db_migrations.transition.to_simple_list() == ["0002_test_transition.sql"]
-    assert db_migrations.finalization.to_simple_list() == ["0001+finalize_create_drip.sql"]
-    assert db_migrations.manual.to_simple_list() == []
+    assert db_migrations.migration.names() == ["0000_init_migrator.sql", "0001_create_drip.sql"]
+    assert db_migrations.transition.names() == ["0002_test_transition.sql"]
+    assert db_migrations.finalization.names() == ["0001+finalize_create_drip.sql"]
+    assert db_migrations.manual.names() == []
 
 
 def test_get_inc(ctx):

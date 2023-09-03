@@ -159,7 +159,7 @@ def finalize(ctx, migration_id):
 
 @cli.command()
 @click.pass_context
-def status(ctx, mode):
+def status(ctx):
     """
     Check the migrations status between local files and DB state
     """
@@ -178,10 +178,10 @@ def status(ctx, mode):
     db_migrations = ctx.obj["DB_MIGRATIONS"]
 
     migrations = [
-        [m for m in db_migrations.migration.to_simple_list() if m not in current_status],
-        db_migrations.transition.to_simple_list(),
-        db_migrations.finalization.to_simple_list(),
-        db_migrations.manual.to_simple_list()
+        [m for m in db_migrations.migration.names() if m not in current_status],
+        db_migrations.transition.names(),
+        db_migrations.finalization.names(),
+        db_migrations.manual.names()
     ]
 
     num_rows = len(max(migrations, key=lambda k: len(k)))
@@ -221,24 +221,33 @@ def apply(ctx, mode):
     env = ctx.obj['ENV']
     env_db = ctx.obj['D1_DB']
     migration_table = ctx.obj['MIGRATION_TABLE']
+    db_migrations = ctx.obj['DB_MIGRATIONS']
+
+    is_transition=False
+    is_transitioning=False
 
     if mode == "transition":
-        migration_dir = ctx.obj['TRANSITIONS']
-        migration_to_run = sorted(get_local_migrations(migration_dir))
-        logger.debug(f"Migrations to run: {migration_files}")
-    if mode == "manual":
+        migration_dir = db_migrations.transition.path
+        migrations_to_run = db_migrations.transition.names()
+        is_transition=True
+        is_transitioning=True
+        logger.debug(f"Migration directory: {migration_dir}")
+        logger.debug(f"Migrations to run: {migrations_to_run}")
+    elif mode == "manual":
         err("`edda apply --mode manual` is not yet implemented")
     else:
-        migration_dir = ctx.obj['MIGRATIONS']
         current_status = set(get_status(env, env_db, migration_table))
         logger.debug(f"Current status: {current_status}")
-        migrations_to_run = sorted(list(set(get_local_migrations(migration_dir)) - current_status))
+
+        migration_dir = db_migrations.migration.path
+        migrations_to_run = sorted(set(db_migrations.migration.names()) - current_status)
         logger.debug(f"Migrations to run: {migrations_to_run}")
 
     if len(migrations_to_run) == 0:
-        click.echo(f"No migrations to execute. Run `edda list` to confirm")
+        click.echo(f"No migrations to execute. Run `edda status` to confirm")
     else:
         logger.debug(f"Running {len(migrations_to_run)} migrations...")
+
         click.echo(f"[Executing Migrations]")
         for migration in migrations_to_run:
             print(migration)
@@ -248,7 +257,67 @@ def apply(ctx, mode):
                 err(f"Error executing {migration} on env.{env}.{env_db}")
 
             logger.debug(f"migration execution: {migration}\n\n{json.loads(results)}")
-            log_migration(migration, env, env_db)
+            log_migration(migration, env, env_db, is_transition=is_transition, is_transitioning=is_transitioning)
+
+
+@cli.command()
+@click.option("--file", "-f", "sql_file")
+@click.option("--command", "-c")
+@click.option("--migration", "-m", "is_migration", is_flag=True)
+@click.pass_context
+def execute(ctx, sql_file, command, is_migration):
+    """
+    Apply new migrations
+
+    Query the eddm_migration table and run any new migrations in order
+    """
+    ctx = build_context(ctx)
+    ctx.ensure_object(dict)
+
+    logger.debug(f"Running execute ...")
+
+    if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
+        err("--env and --db are required for apply")
+
+    env = ctx.obj['ENV']
+    env_db = ctx.obj['D1_DB']
+    migration_table = ctx.obj['MIGRATION_TABLE']
+
+    if command:
+        click.echo(f"Executing SQL command...")
+        results, results_code = execute_sql(command, env, env_db, verbose=True)
+        logger.debug(f"command: {command} => {'success' if results_code == 0 else 'failure'}")
+        click.echo(f"{results}")
+    elif sql_file:
+        if not os.path.exists(sql_file):
+            err(f"{sql_file} not found")
+
+        path_elements = sql_file.split("/")
+        filename = path_elements[-1]
+        directory = f'./{"/".join(path_elements[1:-1]) if path_elements[0] == "." else "/".join(path_elements[0:-1])}'
+
+        if is_migration:
+            current_status = set(get_status(env, env_db, migration_table))
+            logger.debug(f"Current status: {current_status}")
+            is_transition = False
+            is_transitioning = False
+
+            if "transition_migrations/" in directory:
+                is_transition = True
+                is_transitioning= True
+
+        click.echo(f"Executing SQL file...")
+        results, results_code = execute_sql_file(filename, directory, env, env_db, verbose=True)
+
+        if results_code == 1:
+            err(f"Error executing {directory}/{filename} on env.{env}.{env_db}\n\nstdout:\n{results}")
+
+        logger.debug(f"sql file: {directory}/{filename} => {'success' if results_code == 0 else 'failure'}")
+        click.echo(f"{results}")
+        if is_migration:
+            log_migration(file, env, env_db, is_transition=is_transition, is_transitioning=is_transitioning)
+    else:
+        err("Please supply either --file or --command")
 
 
 @cli.command()

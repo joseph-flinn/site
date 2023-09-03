@@ -15,5 +15,6 @@ in pkgs.mkShell {
   ];
 
   shellHook = ''
+    export PATH=$PWD/result/bin:$PATH
   '';
 }

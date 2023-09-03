@@ -25,7 +25,7 @@ class Migrations:
     path: str
     migrations: list[Migration]
 
-    def to_simple_list(self):
+    def names(self):
         return [ m.__repr__() for m in self.migrations ]
 
 
@@ -61,11 +61,11 @@ def build_context(ctx):
     dbs = [filename for filename in os.listdir("./") if os.path.isdir(filename)]
     if db and db in dbs:
         migrations_dir = f"{db}/migrations"
-        finalizations_dir = f"{db}/finalization_migrations"
         transitions_dir = f"{db}/transition_migrations"
+        finalizations_dir = f"{db}/finalization_migrations"
         manual_dir = f"{db}/manual_migrations"
 
-        db_migrations = load_migrations(migrations_dir, finalizations_dir, transitions_dir, manual_dir)
+        db_migrations = load_migrations(migrations_dir, transitions_dir, finalizations_dir, manual_dir)
 
     else:
         err(f"{db} migrations not found\nDBs found: {dbs}")
@@ -173,35 +173,36 @@ def write_migration_file(
         err(f"Error writing to {migration_file}\n\n{e}")
 
 
-def execute_sql_file(migration_file, migration_dir, env, env_db) -> str:
-    client = subprocess.run(
-        [
-            "wrangler", "--env", env, "d1", "execute", env_db,
-            "--file",  f"{migration_dir}/{migration_file}", "--json"
-        ],
-        text=True,
-        capture_output=True
-    )
-
-    return (client.stdout, client.returncode)
+def execute_sql_file(migration_file, migration_dir, env, env_db, verbose=False) -> str:
+    command = [
+        "wrangler", "--env", env, "d1", "execute", env_db,
+        "--file",  f"{migration_dir}/{migration_file}"
+    ]
+    if not verbose:
+        command.append('--json')
+    return execute_command(command)
 
 
-def execute_sql_command(command, env, env_db) -> str:
-    client = subprocess.run(
-        [
-            "wrangler", "--env", env, "d1", "execute", env_db,
-            f"--command",  f"{command}", "--json"
-        ],
-        text=True,
-        capture_output=True
-    )
+def execute_sql(sql, env, env_db, verbose=False) -> (str, int):
+    command = [
+        "wrangler", "--env", env, "d1", "execute", env_db,
+        f"--command",  f"{sql}"
+    ]
+    if not verbose:
+        command.append('--json')
+    return execute_command(command)
+
+
+def execute_command(command):
+    logger.debug(f'Shell Execution: {" ".join(command)}')
+    client = subprocess.run(command, text=True, capture_output=True)
 
     return (client.stdout, client.returncode)
 
 
 def get_status(env, env_db, migration_table):
-    sql_command = f"SELECT * FROM {migration_table};"
-    results, results_code = execute_sql_command(sql_command, env, env_db)
+    sql = f"SELECT * FROM {migration_table};"
+    results, results_code = execute_sql(sql, env, env_db)
 
     if results_code == 1:
         return []
@@ -210,28 +211,15 @@ def get_status(env, env_db, migration_table):
 
 
 def log_migration(migration_file, env, env_db, is_transition=False, is_transitioning=False):
-    sql_command = f"""
-        DECLARE
-          @name TEXT='{migration_file}',
-          @is_transition BOOLEAN={int(is_transition)},
-          @in_transition_state={int(is_transitioning)}
+    sql = (
+        f"INSERT INTO edda_migrations (name,is_transition,in_transition_state) "
+        f"VALUES ('{migration_file}',{int(is_transition)},{int(is_transitioning)}) "
+        f"ON CONFLICT(name) DO UPDATE SET "
+        f"is_transition={int(is_transition)}, "
+        f"in_transition_state={int(is_transitioning)} "
+    )
 
-        IF ((select count(*) from edda_migrations where name=@name) = 1)
-          BEGIN
-            UPDATE edda_migrations
-            SET Name = @name, age = @age
-            WHERE ID = @id;
-          END
-        ELSE
-          BEGIN
-            INSERT INTO edda_migrations (name,is_transition,in_transition_state)
-            VALUES (@name,@is_transition,@in_transition_state)
-          END
-    """
-
-   #f"INSERT INTO {MIGRATION_TABLE} (name) values ('{migration_file}');\n"
-
-    results, results_code = execute_sql_command(sql_command, env, env_db)
+    results, results_code = execute_sql(sql, env, env_db, verbose=True)
 
     if results_code == 1:
         err(f"Error executing log of {migration_file} on env.{env}.{env_db}")
