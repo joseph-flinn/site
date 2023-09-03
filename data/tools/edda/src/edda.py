@@ -350,22 +350,26 @@ def init(ctx):
     ctx.ensure_object(dict)
 
     logger.debug(f"Running init...")
-    try:
-        inc = get_next_id(ctx)
-    except:
-        inc = "0000"
 
-    if inc != "0000":
+    db_migrations = ctx.obj["DB_MIGRATIONS"]
+
+    try:
+        next_id = get_next_id(ctx)
+    except:
+        next_id = "0000"
+
+    if next_id != "0000":
         if any([
-            "init_migrator" in filename
-            for filename in os.listdir(f"./{ctx.obj['DB']}/migrations")
+            "init_migrator" in m
+            for m in db_migrations.migration.names()
         ]):
-               err("Migrator already initialized")
-    migration_filename = f"{inc}_init_migrator.sql"
+            err("Migrator already initialized")
+
+    migration_filename = f"{next_id}_init_migrator.sql"
     write_migration_file(
-        ctx.obj['MIGRATIONS'],
+        db_migrations.migration.path,
         migration_filename,
-        inc,
+        next_id,
         ctx.obj["TIMESTAMP"],
         ctx.obj["MIGRATION_TABLE"],
         migration_type="init"
