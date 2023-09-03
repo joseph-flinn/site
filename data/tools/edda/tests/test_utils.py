@@ -61,9 +61,14 @@ def test_load_migrations(migration_dirs):
     assert db_migrations.manual.names() == []
 
 
-def test_get_inc(ctx):
-    next_id = get_inc(ctx)
+def test_get_latest_id(ctx):
+    assert get_latest_id(ctx) == "0002"
 
-    assert next_id == "0003"
+
+def test_increment_id():
+    assert increment_id("0000") == "0001"
+    assert increment_id("0003") == "0004"
+    assert increment_id("0009") == "0010"
+
 
 

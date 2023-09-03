@@ -39,6 +39,22 @@ class DBMigrations:
     manual: Migrations
 
 
+def to_table(columnar_data):
+    num_rows = len(max(columnar_data, key=lambda k: len(k)))
+
+    table = []
+    for row_index in range(num_rows):
+        row = []
+        for column in columnar_data:
+            if row_index < len(column):
+                row.append(column[row_index])
+            else:
+                row.append("")
+        table.append(row)
+
+    return table
+
+
 def err(message: str) -> None:
     logger.error(message)
     exit(1)
@@ -125,7 +141,7 @@ def load_migrations(migrations_dir, transitions_dir, finalizations_dir, manual_d
     )
 
 
-def get_inc(ctx):
+def get_latest_id(ctx):
     migrations = ctx.obj["DB_MIGRATIONS"].migration.migrations
     transitions= ctx.obj["DB_MIGRATIONS"].transition.migrations
 
@@ -137,7 +153,16 @@ def get_inc(ctx):
     curr = sorted(all_migrations, key=lambda k: k.id)[-1].id
     logger.debug(f"Current ID: {curr}")
 
-    inc = str(int(curr) + 1).rjust(4, "0")
+    return curr
+
+
+def get_next_id(ctx):
+    latest_id = get_latest_id(ctx)
+    return increment_id(latest_id)
+
+
+def increment_id(migration_id):
+    inc = str(int(migration_id) + 1).rjust(4, "0")
     logger.debug(f"Next ID: {inc}")
 
     return inc
@@ -148,7 +173,7 @@ def write_migration_file(
     migration_file,
     migration_number,
     timestamp,
-    migration_table,
+    migration_table='edda_migrations',
     migration_type='',
     finalization_body=None
 ):
@@ -164,7 +189,6 @@ def write_migration_file(
             "    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n"
             ");"
         )
-
     elif migration_type == "" and finalization_body:
         migration_contents += f"\n{finalization_body}\n\n"
 

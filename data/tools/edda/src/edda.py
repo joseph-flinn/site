@@ -47,8 +47,9 @@ def cli(ctx, testing, config, env, db):
 @cli.command()
 @click.pass_context
 @click.argument("name")
-@click.option("--finalization-migration", "-fm", "requires_finalization", is_flag=True)
-def create(ctx, name, requires_finalization):
+@click.option("--include-finalization-migration", "-f", "include_finalization", is_flag=True)
+@click.option("--include-transition-migration", "-t", "include_transition", is_flag=True)
+def create(ctx, name, include_finalization, include_transition):
     """
     Create a migration file and optional finalization migration file
     """
@@ -58,7 +59,7 @@ def create(ctx, name, requires_finalization):
     logger.debug(f"Running create...")
 
     try:
-        inc = get_inc(ctx.obj["MIGRATIONS"], ctx.obj["TRANSITIONS"])
+        next_id = get_next_id(ctx)
     except:
         err(
             "Cannot compute the next migration. No migrations exist."
@@ -66,27 +67,40 @@ def create(ctx, name, requires_finalization):
             "  python eddm.py init"
         )
 
-    migration_filename = f"{inc}_{name.replace(' ', '_')}.sql"
+    db_migrations = ctx.obj["DB_MIGRATIONS"]
+    migration_table = ctx.obj[""]
+
+    migration_basename = f"{name.replace(' ', '_')}.sql"
+    migration_filename = f"{next_id}_{migration_basename}"
     write_migration_file(
-        ctx.obj["MIGRATIONS"],
+        db_migrations.migration.path,
         migration_filename,
-        inc,
-        ctx.obj["TIMESTAMP"],
-        ctx.obj["MIGRATION_TABLE"]
+        next_id,
+        ctx.obj["TIMESTAMP"]
     )
     click.echo(f"Created new migration: {ctx.obj['MIGRATIONS']}/{migration_filename}")
 
-    if requires_finalization:
-        finalization_migration_filename = f"{inc}+finalize_{name.replace(' ', '_')}.sql"
+    if include_transition:
+        transition_migration_filename = f"{increment_id(next_id)}_{migration_basename}"
         write_migration_file(
-            ctx.obj["FINALIZATIONS"],
-            finalization_migration_filename,
-            inc,
+            db_migrations.transition.path,
+            transition_migration_filename,
+            increment_id(next_id),
             ctx.obj["TIMESTAMP"],
-            ctx.obj["MIGRATION_TABLE"],
+            migration_type="transition"
+        )
+        click.echo(f"Created new transition migration: {db_migrations.transition.path}/{transition_migration_filename}")
+
+    if include_finalization:
+        finalization_migration_filename = f"{next_id}+finalize_{migration_basename}"
+        write_migration_file(
+            db_migrations.finalization.path,
+            finalization_migration_filename,
+            next_id,
+            ctx.obj["TIMESTAMP"],
             migration_type="finalization"
         )
-        click.echo(f"Created new finaliztaion migration: {ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}")
+        click.echo(f"Created new finaliztaion migration: {db_migrations.finalization.path}/{finalization_migration_filename}")
 
 
 @cli.command('list')
@@ -100,14 +114,18 @@ def list_migrations(ctx):
 
     logger.debug(f"Running list...")
 
-    migration_dirs = ["migrations", "transition_migrations", "finalization_migrations"]
+    db_migrations = ctx.obj["DB_MIGRATIONS"]
 
-    for directory in migration_dirs:
-        click.echo(f"[{directory}]")
-        for migration in sorted(os.listdir(f"./{ctx.obj['DB']}/{directory}")):
-            if migration[-4:] == ".sql":
-                click.echo(f"{migration}")
-        click.echo()
+    migrations = [
+        db_migrations.migration.names(),
+        db_migrations.transition.names(),
+        db_migrations.finalization.names(),
+        db_migrations.manual.names()
+    ]
+
+    table = to_table(migrations)
+
+    click.echo(tabulate(table, headers=["migration", "transition", "finalization", "manual"]))
 
 
 @cli.command()
@@ -134,7 +152,7 @@ def finalize(ctx, migration_id):
         err(f"Did not find a finalization migration for migration {migration_id}")
 
 
-    inc = get_inc(ctx.obj["MIGRATIONS"], ctx.obj["TRANSITIONS"])
+    inc = get_next_id(ctx)
     finalization_migration_path = f"{ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}"
     migration_path = f"{ctx.obj['FINALIZATIONS']}/{inc}_{finalization_migration_filename.split('+')[1]}"
 
@@ -184,18 +202,7 @@ def status(ctx):
         db_migrations.manual.names()
     ]
 
-    num_rows = len(max(migrations, key=lambda k: len(k)))
-    num_columns = 4
-
-    table = []
-    for row_index in range(num_rows):
-        row = []
-        for column in migrations:
-            if row_index < len(column):
-                row.append(column[row_index])
-            else:
-                row.append("")
-        table.append(row)
+    table = to_table(migrations)
 
     click.echo(tabulate(table, headers=["migration", "transition", "finalization", "manual"]))
 
@@ -341,7 +348,7 @@ def init(ctx):
 
     logger.debug(f"Running init...")
     try:
-        inc = get_inc(ctx.obj["MIGRATIONS"], ctx.obj["TRANSITIONS"])
+        inc = get_next_id(ctx)
     except:
         inc = "0000"
 
