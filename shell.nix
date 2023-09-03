@@ -1,21 +1,17 @@
-with import <nixpkgs> {};
+with (import <nixpkgs> {});
 let
-  pythonEnv = python311.withPackages(ps: [
-    ps.click
-    ps.click-log
-
-    ps.black
-    ps.pytest
+  pythonEnv = python311.withPackages(ps: with ps; [
   ]);
 
-in stdenv.mkDerivation {
+in pkgs.mkShell {
   name = "blog";
   buildInputs = [
     nodejs
     actionlint
     k6
-    pythonEnv
+    (import ./data/tools/edda/derivation.nix { lib = lib; python311Packages = python311Packages; })
   ];
+
   shellHook = ''
       export PATH="$PWD/frontend/node_modules/.bin/:$PWD/backend/node_modules/.bin/:$PATH"
   '';

@@ -4,8 +4,8 @@
   "description": "Static database",
   "type": "module",
   "scripts": {
-    "build:posts": "node scripts/buildPosts.js",
-    "build:rss": "node scripts/buildRss.js"
+    "build:posts": "node tools/buildPosts.js",
+    "build:rss": "node tools/buildRss.js"
   },
   "author": ""
 }

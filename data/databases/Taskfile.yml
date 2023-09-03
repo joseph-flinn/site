@@ -3,21 +3,31 @@
 version: '3'
 
 tasks:
-  test:clean:
-    dir: ./tests/
+  clean:test:
     cmds:
       - |
-          for f in $(ls finalization_migrations); do
-            rm $f
+          for f in $(ls ./test/finalization_migrations); do
+            echo "removing: ./test/finalization_migrations/$f"
+            rm ./test/finalization_migrations/$f
           done
 
-          echo "cleaned tests/finalization_migrations"
+          echo "cleaned test/finalization_migrations"
       - |
-          for f in $(ls migrations); do
-            if [[ $(basename $f) =~ "world" ]]; then
-              rm $f
-            fi
+          for f in $(ls ./test/transition_migrations); do
+            echo "removing: ./test/transition_migrations/$f"
+            rm ./test/transition_migrations/$f
           done
-          echo "cleaned tests/migraitons"
+          echo "cleaned test/migraitons"
+      - |
+          for f in $(ls ./test/migrations); do
+            echo "removing: ./test/migrations/$f"
+            rm ./test/migrations/$f
+          done
+          echo "cleaned test/migraitons"
     silent: true
+  clean:staging:
+    cmds:
+      - wrangler --env staging d1 execute blog-drip-dev --command "DROP TABLE drip; DROP TABLE edda_migrations;"
+    silent: true
+    
     
