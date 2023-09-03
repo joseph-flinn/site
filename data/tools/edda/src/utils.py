@@ -9,7 +9,6 @@ from dataclasses import dataclass
 from src.log import logger
 
 
-
 @dataclass
 class Migration:
     id: str
@@ -28,7 +27,7 @@ class Migrations:
     migrations: list[Migration]
 
     def names(self):
-        return [ m.__repr__() for m in self.migrations ]
+        return [m.__repr__() for m in self.migrations]
 
 
 @dataclass
@@ -62,8 +61,8 @@ def err(message: str) -> None:
 
 def build_context(ctx):
     config_path = ctx.obj["CONFIG_PATH"]
-    db = ctx.obj['DB']
-    env = ctx.obj['ENV']
+    db = ctx.obj["DB"]
+    env = ctx.obj["ENV"]
     env_db = None
 
     # Setup Wrangler config (symlinked to current directory)
@@ -84,7 +83,9 @@ def build_context(ctx):
         finalizations_dir = f"{db}/finalization_migrations"
         manual_dir = f"{db}/manual_migrations"
 
-        db_migrations = load_migrations(migrations_dir, transitions_dir, finalizations_dir, manual_dir)
+        db_migrations = load_migrations(
+            migrations_dir, transitions_dir, finalizations_dir, manual_dir
+        )
 
     else:
         err(f"{db} migrations not found\nDBs found: {dbs}")
@@ -118,8 +119,6 @@ def build_context(ctx):
     return ctx
 
 
-
-
 def get_local_migrations(migration_dir: str) -> list:
     try:
         return Migrations(
@@ -127,7 +126,7 @@ def get_local_migrations(migration_dir: str) -> list:
             [
                 Migration(filename[0:4], filename, f"{migration_dir}/{filename}")
                 for filename in sorted(os.listdir(migration_dir))
-            ]
+            ],
         )
     except:
         return Migrations(migration_dir, [])
@@ -138,13 +137,13 @@ def load_migrations(migrations_dir, transitions_dir, finalizations_dir, manual_d
         get_local_migrations(migrations_dir),
         get_local_migrations(transitions_dir),
         get_local_migrations(finalizations_dir),
-        get_local_migrations(manual_dir)
+        get_local_migrations(manual_dir),
     )
 
 
 def get_latest_id(ctx):
     migrations = ctx.obj["DB_MIGRATIONS"].migration.migrations
-    transitions= ctx.obj["DB_MIGRATIONS"].transition.migrations
+    transitions = ctx.obj["DB_MIGRATIONS"].transition.migrations
 
     logger.debug(f"migrations: {migrations}")
     logger.debug(f"transitions: {transitions}")
@@ -174,9 +173,9 @@ def write_migration_file(
     migration_file,
     migration_number,
     timestamp,
-    migration_table='edda_migrations',
-    migration_type='',
-    finalization_body=None
+    migration_table="edda_migrations",
+    migration_type="",
+    finalization_body=None,
 ):
     migration_contents = f"-- Migration number: {migration_number} \t {timestamp}\n"
 
@@ -202,21 +201,33 @@ def write_migration_file(
 
 def execute_sql_file(migration_file, migration_dir, env, env_db, verbose=False) -> str:
     command = [
-        "wrangler", "--env", env, "d1", "execute", env_db,
-        "--file",  f"{migration_dir}/{migration_file}"
+        "wrangler",
+        "--env",
+        env,
+        "d1",
+        "execute",
+        env_db,
+        "--file",
+        f"{migration_dir}/{migration_file}",
     ]
     if not verbose:
-        command.append('--json')
+        command.append("--json")
     return execute_command(command)
 
 
 def execute_sql(sql, env, env_db, verbose=False) -> (str, int):
     command = [
-        "wrangler", "--env", env, "d1", "execute", env_db,
-        f"--command",  f"{sql}"
+        "wrangler",
+        "--env",
+        env,
+        "d1",
+        "execute",
+        env_db,
+        f"--command",
+        f"{sql}",
     ]
     if not verbose:
-        command.append('--json')
+        command.append("--json")
     return execute_command(command)
 
 
@@ -234,13 +245,23 @@ def get_status(env, env_db, migration_table) -> Migrations:
     if results_code == 1:
         return []
 
-    return Migrations("remote", [
-        Migration(migration['id'], migration['name'], migration['is_transition'], migration['in_transition_state'])
-        for migration in json.loads(results)[0]["results"]
-    ])
+    return Migrations(
+        "remote",
+        [
+            Migration(
+                migration["id"],
+                migration["name"],
+                migration["is_transition"],
+                migration["in_transition_state"],
+            )
+            for migration in json.loads(results)[0]["results"]
+        ],
+    )
 
 
-def log_migration(migration_file, env, env_db, is_transition=False, is_transitioning=False):
+def log_migration(
+    migration_file, env, env_db, is_transition=False, is_transitioning=False
+):
     sql = (
         f"INSERT INTO edda_migrations (name,is_transition,in_transition_state) "
         f"VALUES ('{migration_file}',{int(is_transition)},{int(is_transitioning)}) "
