@@ -4,7 +4,37 @@ import os
 import tomllib
 import subprocess
 
+from dataclasses import dataclass
+
 from src.log import logger
+
+
+
+@dataclass
+class Migration:
+    id: str
+    name: str
+    path: str
+
+    def __repr__(self):
+        return self.name
+
+
+@dataclass
+class Migrations:
+    path: str
+    migrations: list[Migration]
+
+    def to_simple_list(self):
+        return [ m.__repr__() for m in self.migrations ]
+
+
+@dataclass
+class DBMigrations:
+    migration: Migrations
+    transition: Migrations
+    finalization: Migrations
+    manual: Migrations
 
 
 def err(message: str) -> None:
@@ -13,10 +43,6 @@ def err(message: str) -> None:
 
 
 def build_context(ctx):
-    ctx.obj["TIMESTAMP"] = (
-        datetime.datetime.utcnow().isoformat(timespec="milliseconds") + "Z"
-    )
-
     config_path = ctx.obj["CONFIG_PATH"]
     db = ctx.obj['DB']
     env = ctx.obj['ENV']
@@ -24,7 +50,7 @@ def build_context(ctx):
     # Setup Wrangler config (symlinked to current directory)
     try:
         with open(config_path, mode="rb") as fp:
-            ctx.obj["WRANGLER_CONFIG"] = tomllib.load(fp)
+            wrangler_config = tomllib.load(fp)
     except Exception as e:
         err(f"{config_path} does not exist\ncwd: {os.getcwd()}\nError: {e}")
 
@@ -34,47 +60,79 @@ def build_context(ctx):
 
     dbs = [filename for filename in os.listdir("./") if os.path.isdir(filename)]
     if db and db in dbs:
-        ctx.obj["MIGRATIONS"] = f"{db}/migrations"
-        ctx.obj["TRANSITIONS"] = f"{db}/transition_migrations"
-        ctx.obj["FINALIZATIONS"] = f"{db}/finalization_migrations"
+        migrations_dir = f"{db}/migrations"
+        finalizations_dir = f"{db}/finalization_migrations"
+        transitions_dir = f"{db}/transition_migrations"
+        manual_dir = f"{db}/manual_migrations"
+
+        db_migrations = load_migrations(migrations_dir, finalizations_dir, transitions_dir, manual_dir)
+
     else:
         err(f"{db} migrations not found\nDBs found: {dbs}")
 
     # Setup Wrangler Environment from config
     if env:
-        if env not in ctx.obj["WRANGLER_CONFIG"]["env"]:
+        if env not in wrangler_config["env"]:
             err(f"{env} is not configured in {config_path}")
         else:
             # Setup Wrangler database name and connection depending on the environment
             env_db = db if env.lower() in ["production", "prod"] else f"{db}-dev"
             env_dbs = [
                 env_db["database_name"]
-                for env_db in ctx.obj["WRANGLER_CONFIG"]["env"][env]["d1_databases"]
+                for env_db in wrangler_config["env"][env]["d1_databases"]
             ]
 
             if env_db not in env_dbs:
                 err(f"{db} D1 is not bound to env.{env}")
 
-            ctx.obj["D1_DB"] = env_db
+    ctx.obj["WRANGLER_CONFIG"] = wrangler_config
+    ctx.obj["DB_MIGRATIONS"] = db_migrations
+    ctx.obj["D1_DB"] = env_db
+    ctx.obj["TIMESTAMP"] = (
+        datetime.datetime.utcnow().isoformat(timespec="milliseconds") + "Z"
+    )
+
+    ctx.obj["MIGRATIONS"] = migrations_dir
+    ctx.obj["TRANSITIONS"] = migrations_dir
+    ctx.obj["FINALIZATIONS"] = migrations_dir
 
     return ctx
 
 
-def get_inc(migrations, transitions):
+
+
+def get_local_migrations(migration_dir: str) -> list:
+    try:
+        return Migrations(
+            migration_dir,
+            [
+                Migration(filename[0:4], filename, f"{migration_dir}/{filename}")
+                for filename in sorted(os.listdir(migration_dir))
+            ]
+        )
+    except:
+        return Migrations(migration_dir, [])
+
+
+def load_migrations(migrations_dir, transitions_dir, finalizations_dir, manual_dir):
+    return DBMigrations(
+        get_local_migrations(migrations_dir),
+        get_local_migrations(transitions_dir),
+        get_local_migrations(finalizations_dir),
+        get_local_migrations(manual_dir)
+    )
+
+
+def get_inc(ctx):
+    migrations = ctx.obj["DB_MIGRATIONS"].migration.migrations
+    transitions= ctx.obj["DB_MIGRATIONS"].transition.migrations
+
     logger.debug(f"migrations: {migrations}")
     logger.debug(f"transitions: {transitions}")
-    files = [
-        *[
-            filename for filename in os.listdir(migrations)
-            if os.path.isfile(os.path.join(migrations, filename))
-        ],
-        *[
-            filename for filename in os.listdir(transitions)
-            if os.path.isfile(os.path.join(transitions, filename))
-        ],
-    ]
 
-    curr = sorted(files)[-1].split("_")[0]
+    all_migrations = [*migrations, *transitions]
+
+    curr = sorted(all_migrations, key=lambda k: k.id)[-1].id
     logger.debug(f"Current ID: {curr}")
 
     inc = str(int(curr) + 1).rjust(4, "0")
@@ -88,6 +146,7 @@ def write_migration_file(
     migration_file,
     migration_number,
     timestamp,
+    migration_table,
     migration_type='',
     finalization_body=None
 ):
@@ -95,14 +154,13 @@ def write_migration_file(
 
     if migration_type == "init":
         migration_contents += (
-            f"\nCREATE TABLE IF NOT EXISTS {MIGRATION_TABLE}(\n"
+            f"\nCREATE TABLE IF NOT EXISTS {migration_table}(\n"
             "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
             "    name TEXT UNIQUE,\n"
             "    is_transition BOOLEAN DEFAULT FALSE NOT NULL,\n"
             "    in_transition_state BOOLEAN DEFAULT FALSE NOT NULL,\n"
             "    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n"
-            ");\n\n"
-            f"INSERT INTO {MIGRATION_TABLE} (name) values ('{migration_file}');\n"
+            ");"
         )
 
     elif migration_type == "" and finalization_body:
@@ -113,10 +171,6 @@ def write_migration_file(
             new_migration.write(migration_contents)
     except e:
         err(f"Error writing to {migration_file}\n\n{e}")
-
-
-def get_local_migrations(migration_dir):
-    return [filename for filename in os.listdir(migration_dir)]
 
 
 def execute_sql_file(migration_file, migration_dir, env, env_db) -> str:
@@ -145,8 +199,8 @@ def execute_sql_command(command, env, env_db) -> str:
     return (client.stdout, client.returncode)
 
 
-def get_status(env, env_db):
-    sql_command = f"SELECT * FROM {MIGRATION_TABLE};"
+def get_status(env, env_db, migration_table):
+    sql_command = f"SELECT * FROM {migration_table};"
     results, results_code = execute_sql_command(sql_command, env, env_db)
 
     if results_code == 1:

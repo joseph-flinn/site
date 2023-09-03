@@ -4,6 +4,7 @@ import os
 import click
 import click_log
 
+from tabulate import tabulate
 
 from src.about import _version
 from src.log import logger
@@ -30,7 +31,7 @@ MIGRATION_TABLE="edda_migrations"
     "-e",
     help="Cloudflare environment; configured in wrangler.toml"
 )
-@click.option("--db", "-d", help="Directory containing migrations; matches DB in wrangler.toml; <db>-dev used for non-production")
+@click.option("--db", "-d", help="Directory containing all migrations; matches DB in wrangler.toml; <db>-dev used for non-production")
 @click.pass_context
 def cli(ctx, testing, config, env, db):
     # ensure that ctx.obj exists and is a dict (in case `cli()` is called
@@ -40,13 +41,14 @@ def cli(ctx, testing, config, env, db):
     ctx.obj['CONFIG_PATH'] = config
     ctx.obj['ENV'] = env
     ctx.obj['DB'] = db
+    ctx.obj['MIGRATION_TABLE'] = MIGRATION_TABLE
 
 
 @cli.command()
 @click.pass_context
-@click.argument("title")
-@click.option("--finalization-migration", "-fm", is_flag=True)
-def create(ctx, title, finalization_migration):
+@click.argument("name")
+@click.option("--finalization-migration", "-fm", "requires_finalization", is_flag=True)
+def create(ctx, name, requires_finalization):
     """
     Create a migration file and optional finalization migration file
     """
@@ -64,22 +66,24 @@ def create(ctx, title, finalization_migration):
             "  python eddm.py init"
         )
 
-    migration_filename = f"{inc}_{title.replace(' ', '_')}.sql"
+    migration_filename = f"{inc}_{name.replace(' ', '_')}.sql"
     write_migration_file(
-        ctx.obj['MIGRATIONS'],
+        ctx.obj["MIGRATIONS"],
         migration_filename,
         inc,
-        ctx.obj["TIMESTAMP"]
+        ctx.obj["TIMESTAMP"],
+        ctx.obj["MIGRATION_TABLE"]
     )
     click.echo(f"Created new migration: {ctx.obj['MIGRATIONS']}/{migration_filename}")
 
-    if finalization_migration:
-        finalization_migration_filename = f"{inc}+finalize_{title.replace(' ', '_')}.sql"
+    if requires_finalization:
+        finalization_migration_filename = f"{inc}+finalize_{name.replace(' ', '_')}.sql"
         write_migration_file(
-            ctx.obj['FINALIZATIONS'],
+            ctx.obj["FINALIZATIONS"],
             finalization_migration_filename,
             inc,
             ctx.obj["TIMESTAMP"],
+            ctx.obj["MIGRATION_TABLE"],
             migration_type="finalization"
         )
         click.echo(f"Created new finaliztaion migration: {ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}")
@@ -143,6 +147,7 @@ def finalize(ctx, migration_id):
         f"{inc}_{finalization_migration_filename.split('+')[1]}",
         inc,
         ctx.obj["TIMESTAMP"],
+        ctx.obj["MIGRATION_TABLE"],
         finalization_body=f_migration_sql
     )
 
@@ -153,9 +158,8 @@ def finalize(ctx, migration_id):
 
 
 @cli.command()
-@click.option("--which", "-w", type=click.Choice(["all", "new", "previous"], case_sensitive=False), default="all")
 @click.pass_context
-def status(ctx, which):
+def status(ctx, mode):
     """
     Check the migrations status between local files and DB state
     """
@@ -167,26 +171,34 @@ def status(ctx, which):
     if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
         err("--env and --db are required for status")
 
-    current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB']))
-    migrations = sorted(get_local_migrations(ctx.obj['MIGRATIONS']))
+    current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB'], ctx.obj['MIGRATION_TABLE']))
 
     logger.debug(f"Current status: {current_status}")
 
+    db_migrations = ctx.obj["DB_MIGRATIONS"]
 
-    if which in ["all", "new"]:
-        click.echo(f"[New Migrations]")
-        for migration in migrations:
-            if migration not in current_status:
-                print(migration)
+    migrations = [
+        [m for m in db_migrations.migration.to_simple_list() if m not in current_status],
+        db_migrations.transition.to_simple_list(),
+        db_migrations.finalization.to_simple_list(),
+        db_migrations.manual.to_simple_list()
+    ]
 
-    if which == "all":
-        click.echo()
+    num_rows = len(max(migrations, key=lambda k: len(k)))
+    num_columns = 4
 
-    if which in ["all", "previous"]:
-        click.echo(f"[Previous Migrations]")
-        for migration in migrations:
-            if migration in current_status:
-                print(migration)
+    table = []
+    for row_index in range(num_rows):
+        row = []
+        for column in migrations:
+            if row_index < len(column):
+                row.append(column[row_index])
+            else:
+                row.append("")
+        table.append(row)
+
+    click.echo(tabulate(table, headers=["migration", "transition", "finalization", "manual"]))
+
 
 
 @cli.command()
@@ -208,6 +220,7 @@ def apply(ctx, mode):
 
     env = ctx.obj['ENV']
     env_db = ctx.obj['D1_DB']
+    migration_table = ctx.obj['MIGRATION_TABLE']
 
     if mode == "transition":
         migration_dir = ctx.obj['TRANSITIONS']
@@ -217,7 +230,7 @@ def apply(ctx, mode):
         err("`edda apply --mode manual` is not yet implemented")
     else:
         migration_dir = ctx.obj['MIGRATIONS']
-        current_status = set(get_status(env, env_db))
+        current_status = set(get_status(env, env_db, migration_table))
         logger.debug(f"Current status: {current_status}")
         migrations_to_run = sorted(list(set(get_local_migrations(migration_dir)) - current_status))
         logger.debug(f"Migrations to run: {migrations_to_run}")
@@ -269,6 +282,7 @@ def init(ctx):
         migration_filename,
         inc,
         ctx.obj["TIMESTAMP"],
+        ctx.obj["MIGRATION_TABLE"],
         migration_type="init"
     )
 
