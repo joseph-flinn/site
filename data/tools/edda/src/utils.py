@@ -15,6 +15,8 @@ class Migration:
     id: str
     name: str
     path: str
+    is_transition: bool = False
+    in_transition_state: bool = False
 
     def __repr__(self):
         return self.name
@@ -200,14 +202,17 @@ def execute_command(command):
     return (client.stdout, client.returncode)
 
 
-def get_status(env, env_db, migration_table):
+def get_status(env, env_db, migration_table) -> Migrations:
     sql = f"SELECT * FROM {migration_table};"
     results, results_code = execute_sql(sql, env, env_db)
 
     if results_code == 1:
         return []
 
-    return [migration['name'] for migration in json.loads(results)[0]["results"]]
+    return Migrations("remote", [
+        Migration(migration['id'], migration['name'], migration['is_transition'], migration['in_transition_state'])
+        for migration in json.loads(results)[0]["results"]
+    ])
 
 
 def log_migration(migration_file, env, env_db, is_transition=False, is_transitioning=False):
@@ -215,9 +220,10 @@ def log_migration(migration_file, env, env_db, is_transition=False, is_transitio
         f"INSERT INTO edda_migrations (name,is_transition,in_transition_state) "
         f"VALUES ('{migration_file}',{int(is_transition)},{int(is_transitioning)}) "
         f"ON CONFLICT(name) DO UPDATE SET "
-        f"is_transition={int(is_transition)}, "
-        f"in_transition_state={int(is_transitioning)} "
+        f"in_transition_state={int(is_transitioning)}"
     )
+    if is_transition:
+        sql += f", is_transition={int(is_transition)} "
 
     results, results_code = execute_sql(sql, env, env_db, verbose=True)
 

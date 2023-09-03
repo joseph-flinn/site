@@ -171,7 +171,7 @@ def status(ctx):
     if ctx.obj['ENV'] is None or ctx.obj['D1_DB'] is None:
         err("--env and --db are required for status")
 
-    current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB'], ctx.obj['MIGRATION_TABLE']))
+    current_status = sorted(get_status(ctx.obj['ENV'], ctx.obj['D1_DB'], ctx.obj['MIGRATION_TABLE']).names())
 
     logger.debug(f"Current status: {current_status}")
 
@@ -236,11 +236,17 @@ def apply(ctx, mode):
     elif mode == "manual":
         err("`edda apply --mode manual` is not yet implemented")
     else:
-        current_status = set(get_status(env, env_db, migration_table))
+        current_status = get_status(env, env_db, migration_table)
         logger.debug(f"Current status: {current_status}")
 
+        current_status_without_transitions = set([
+            migration.name
+            for migration in current_status.migrations
+            if not migration.is_transition
+        ])
+
         migration_dir = db_migrations.migration.path
-        migrations_to_run = sorted(set(db_migrations.migration.names()) - current_status)
+        migrations_to_run = sorted(set(db_migrations.migration.names()) - current_status_without_transitions)
         logger.debug(f"Migrations to run: {migrations_to_run}")
 
     if len(migrations_to_run) == 0:
