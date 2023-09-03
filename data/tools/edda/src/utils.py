@@ -64,6 +64,7 @@ def build_context(ctx):
     config_path = ctx.obj["CONFIG_PATH"]
     db = ctx.obj['DB']
     env = ctx.obj['ENV']
+    env_db = None
 
     # Setup Wrangler config (symlinked to current directory)
     try:
@@ -195,7 +196,7 @@ def write_migration_file(
     try:
         with open(f"{migration_dir}/{migration_file}", "w") as new_migration:
             new_migration.write(migration_contents)
-    except e:
+    except Exception as e:
         err(f"Error writing to {migration_file}\n\n{e}")
 
 

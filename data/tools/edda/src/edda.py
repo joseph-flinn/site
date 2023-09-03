@@ -68,7 +68,7 @@ def create(ctx, name, include_finalization, include_transition):
         )
 
     db_migrations = ctx.obj["DB_MIGRATIONS"]
-    migration_table = ctx.obj[""]
+    migration_table = ctx.obj["MIGRATION_TABLE"]
 
     migration_basename = f"{name.replace(' ', '_')}.sql"
     migration_filename = f"{next_id}_{migration_basename}"
@@ -91,7 +91,7 @@ def create(ctx, name, include_finalization, include_transition):
         )
         click.echo(f"Created new transition migration: {db_migrations.transition.path}/{transition_migration_filename}")
 
-    if include_finalization:
+    if include_finalization or include_transition:
         finalization_migration_filename = f"{next_id}+finalize_{migration_basename}"
         write_migration_file(
             db_migrations.finalization.path,
@@ -140,36 +140,39 @@ def finalize(ctx, migration_id):
 
     logger.debug(f"Running finalize...")
 
-    finalization_migration_filename = None
+    if len(migration_id) != 4:
+        err(f"Incorrect migration id format: {migration_id}")
 
-    logger.debug("Finalization migrations")
-    for filename in os.listdir(ctx.obj['FINALIZATIONS']):
-        logger.debug(f"  {filename}")
-        if f"{migration_id}+finalize" in filename:
-            finalization_migration_filename = filename
+    db_migrations = ctx.obj["DB_MIGRATIONS"]
 
-    if not finalization_migration_filename:
+    if migration_id not in [m.id for m in db_migrations.finalization.migrations]:
         err(f"Did not find a finalization migration for migration {migration_id}")
 
+    finalization_migration = list(filter(
+        lambda l: l.id == migration_id,
+        db_migrations.finalization.migrations
+    ))[0]
 
-    inc = get_next_id(ctx)
-    finalization_migration_path = f"{ctx.obj['FINALIZATIONS']}/{finalization_migration_filename}"
-    migration_path = f"{ctx.obj['FINALIZATIONS']}/{inc}_{finalization_migration_filename.split('+')[1]}"
+    logger.debug(f"Finalization Migration: {finalization_migration}")
+
+    next_id = get_next_id(ctx)
+    finalization_migration_path = f"{db_migrations.finalization.path}/{finalization_migration.name}"
+    migration_basename = f"{finalization_migration.name.split('+')[1]}"
+    new_migration_name = f"{next_id}_{migration_basename}"
 
 
     with open(finalization_migration_path, 'r') as f_migration_file:
         f_migration_sql = "\n".join(f_migration_file.read().split("\n")[1:])
 
     write_migration_file(
-        ctx.obj['MIGRATIONS'],
-        f"{inc}_{finalization_migration_filename.split('+')[1]}",
-        inc,
+        db_migrations.migration.path,
+        new_migration_name,
+        next_id,
         ctx.obj["TIMESTAMP"],
-        ctx.obj["MIGRATION_TABLE"],
         finalization_body=f_migration_sql
     )
 
-    click.echo(f"Created new migration: {migration_path}")
+    click.echo(f"Created new migration: {db_migrations.migration.path}/{new_migration_name}")
 
     os.remove(finalization_migration_path)
     click.echo(f"Removed finaliztaion migration: {finalization_migration_path}")
