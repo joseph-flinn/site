@@ -39,7 +39,7 @@ the migrations being pure SQL migrations and not using an ORM. Once it is time, 
 migration directory--either manually or with automation if the approach to deployments support it--and it run with the
 migrator tool of choice. If the _Transition State_ migrations edge cases apply, a custom migrator may be required.
 
-I am going to deviate from using the [example project](https://github.com/joseph-flinn/scalable-dev-processes-example)
+I am going to deviate from using the [example project](https://github.com/joseph-flinn/scalable-dev-practices-example)
 we have been using so far and use a real life example of the EDD automation I am using for this
 [site](https://github.com/joseph-flinn/site). I've chosen Cloudflare D1 databases to limit the maintenance overhead, but
 the general processes will be the same. The [custom tool](https://github.com/joseph-flinn/site/blob/main/data/databases/edda.py)

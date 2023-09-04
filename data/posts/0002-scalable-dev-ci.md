@@ -101,7 +101,7 @@ out and it needs immediate testing with all new merges blocked.
 
 ## Code
 
-I've created an example project to follow along with in this series: [https://github.com/joseph-flinn/scalable-dev-processes-example](https://github.com/joseph-flinn/scalable-dev-processes-example).
+I've created an example project to follow along with in this series: [https://github.com/joseph-flinn/scalable-dev-practices-example](https://github.com/joseph-flinn/scalable-dev-practices-example).
 The project itself is a very simple REST api built in Python providing three endpoints to give us a bit more interesting
 things to test than just a hard coded value. Under the `tests` directory, there are two suites of tests: `unit` and
 `e2e`. As described above, they each test different parts of the application. Since this example is only a REST api, the
