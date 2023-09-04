@@ -81,8 +81,8 @@ migrations` command.
 `edda apply` queries the migration tracking table and the `migrations` directory and applies all migrations that are in
 `migrations`, in order, that are not in the table. After each application, the success is logged in the table.
 
-`edda create` creates a templated migration and has an optional `--finalization-migration` or `-fm` flag to create a
-corresponding _Finalization_ migration for any destructive changes. This migration is placed into the
+`edda create` creates a templated migration and has an optional `--include-finalization-migration` or `-f` flag to
+create a corresponding _Finalization_ migration for any destructive changes. This migration is placed into the
 `finalization_migrations` directory and shares the same migration ID as the _Initial_ migration that it finalizes.
 
 `edda finalize` takes in the ID of the migration to finalize, gets the corresponding _Finalization_ migration, and
