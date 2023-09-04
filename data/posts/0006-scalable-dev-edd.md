@@ -1,4 +1,4 @@
-!! title: Scalable Development Processes - Evolutionary Database Automation
+!! title: Scalable Development Practices - Evolutionary Database Automation
 !! slug: scalable-dev-edd
 !! published: 2023-08-27
 !! description: The seventh article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user

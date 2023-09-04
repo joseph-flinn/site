@@ -1,4 +1,4 @@
-!! title: Scalable Development Processes - Overview
+!! title: Scalable Development Practices - Overview
 !! slug: scalable-dev-overview
 !! published: 2023-07-24
 !! description: The first article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
