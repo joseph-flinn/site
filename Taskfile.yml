@@ -27,3 +27,9 @@ tasks:
     cmds:
       - npm run dev
 
+
+  install:hooks:
+    silent: true
+    cmds:
+      - rm -rf .git/hooks
+      - ln -s $PWD/tools/git-hooks .git/hooks
