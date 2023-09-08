@@ -2,22 +2,23 @@
   "pages": [
     {"name": "home", "path": "/"},
     {"name": "posts", "path": "/posts"},
-    {"name": "stream", "path": "/stream"}
+    {"name": "drip", "path": "/drip"}
   ],
   "skillsData": {
     "technical": [ 
+      "linux",
       "ci/cd",
       "kubernetes",
-      "docker",
+      "containerization",
       "python",
-      "javascript",
-      "linux"
+      "javascript"
     ],
-    "managerial": [
+    "leadership": [
+      "lean management",
+      "organizational alignment",
       "managing for high performance: purpose + expectations + feedback",
       "effective feedback with PSBIQ model",
-      "budding coach",
-      "aggressive organizational alignment"
+      "coach"
     ]
   }
 }
