@@ -99,30 +99,37 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const key = url.pathname.slice(1);
+		const method = request.method;
 		console.log(`key: ${key}`)
 
 		const routeRSS = /rss.xml/,
 			    routePostList = /posts$/,
-				  routePost = /posts\/*/;
+				  routePost = /posts\/*/,
+			    routeDrip = /drip$/;
 
 		switch (true) {
 			case routeRSS.test(key):
 				return getRSS(key, env);
-				break;
 			case routePostList.test(key):
 				return getPostList(key, env);
-				break;
 			case routePost.test(key):
 				return getPost(key, env);
-				break;
+			case routeDrip.test(key):
+				switch (method) {
+					case 'GET':
+						return new Response(JSON.stringify({message: `GET called on /${key}`}, null, 2), {status: 200});
+					case 'POST':
+						return new Response(JSON.stringify({message: `POST called on /${key}`}, null, 2), {status: 200});
+					default:
+						return new Response(JSON.stringify({message: `Error: ${method} not supported on /${key}`}, null, 2), {status: 404});
+			}
 			default:
 				if (env.FLAG_USE_HEADERS) {
 					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
 						status: 404,
 						headers: {
 							...corsHeaders,
-							'Content-type': 'application/json',
-							'My-Header-test': 'did it come through?'
+							'Content-type': 'application/json'
 						},
 					});
 				} else {
@@ -130,7 +137,6 @@ export default {
 						status: 404,
 					});
 				}
-				break;
 		}
   },
 };
