@@ -5,6 +5,13 @@
     {"name": "drip", "path": "/drip"}
   ],
   "skillsData": {
+    "leadership": [
+      "lean management",
+      "organizational alignment",
+      "managing for high performance: purpose + expectations + feedback",
+      "effective feedback with PSBIQ model",
+      "coach"
+    ],
     "technical": [ 
       "linux",
       "ci/cd",
@@ -12,13 +19,6 @@
       "containerization",
       "python",
       "javascript"
-    ],
-    "leadership": [
-      "lean management",
-      "organizational alignment",
-      "managing for high performance: purpose + expectations + feedback",
-      "effective feedback with PSBIQ model",
-      "coach"
     ]
   }
 }
