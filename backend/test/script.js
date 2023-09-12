@@ -14,10 +14,13 @@ export const options = {
 
 //let shortenLink
 
-const BASE_URL = "https://blog-dev.flinnlab.workers.dev"
+//const BASE_URL = "https://blog-dev.flinnlab.workers.dev"
+const BASE_URL = "http://localhost:8787"
+
 
 export default function () {
-	group('rss feed', function () {
+	// GROUP: rss
+	group('rss', function () {
 		const res = http.get(`${BASE_URL}/rss.xml`)
 
 		check(res, {
@@ -28,13 +31,15 @@ export default function () {
     sleep(1) // second
   })
 
-	group('list of posts', function () {
+
+	// GROUP: post
+	group('post', function () {
 		const res = http.get(`${BASE_URL}/posts`)
 
 		check(res, {
-			'is status 200': (r) => r.status === 200,
-			'is formatted correctly': (r) => 'postList' in r.json(),
-			'is not empty': (r) => r.json()['postList'].length != 0
+			'postsPage: status is 200': (r) => r.status === 200,
+			'postsPage: formatted correctly': (r) => 'postList' in r.json(),
+			'postsPage: is not empty': (r) => r.json()['postList'].length != 0
 		})
 
     sleep(1) // second
@@ -44,15 +49,40 @@ export default function () {
 		const res = http.get(`${BASE_URL}/posts/git-monorepo`)
 
 		check(res, {
-			'is status 200': (r) => r.status === 200,
-			'is formatted correctly': (r) => 'post' in r.json(),
-			'contains all metadata': (r) => {
+			'postPage: status is 200': (r) => r.status === 200,
+			'postPage: formatted correctly': (r) => 'post' in r.json(),
+			'postPage: contains all metadata': (r) => {
 				return ['slug', 'title', 'published', 'description', 'body']
 					.map(key =>
 						key in r.json()['post']
 					)
 					.reduce((allMetaDataExists, metadataExists) => allMetaDataExists && metadataExists, true);
 			}
+		})
+
+    sleep(1) // second
+  })
+
+
+	// GROUP: drip
+	group('drip', function () {
+		const res = http.get(`${BASE_URL}/drip`)
+
+		check(res, {
+			'GET: status is 200': (r) => r.status === 200,
+			'GET: verify body': (r) => r.body.includes('GET called on /drip')
+		})
+
+    sleep(1) // second
+  })
+
+	// GROUP: drip
+	group('drip', function () {
+		const res = http.post(`${BASE_URL}/drip`)
+
+		check(res, {
+			'POST: status is 200': (r) => r.status === 200,
+			'POST: verify body': (r) => r.body.includes('POST called on /drip')
 		})
 
     sleep(1) // second
