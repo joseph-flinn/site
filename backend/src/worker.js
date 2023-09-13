@@ -10,9 +10,36 @@
 
 const corsHeaders = {
 	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Methods': 'GET',
+	'Access-Control-Allow-Methods': 'GET, POST',
 	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 }
+
+
+const isAuthorized = request => {
+	const psk = request.headers.get("X-Custom-PSK")
+	return psk == "THIS_IS_A_SECRET" ? true : false
+}
+
+
+const isValidData = request => {
+	const contentType = request.headers.get("content-type")
+	return contentType == "application/json" ? true : false
+}
+
+
+const validatePostRequest = request => {
+	const authorized = isAuthorized(request)
+	const validData = isValidData(request)
+
+	if (!authorized) {
+		return [false, {message: "Not Authorized", status: 403}]
+	} else if (!validData) {
+		return [false, {message: "Please see POST /drip docs", status: 400}]
+	} else {
+		return [true, {}]
+	}
+}
+
 
 const getRSS = async (key, env) => {
 	console.log(`RSS match found`)
@@ -33,7 +60,8 @@ const getRSS = async (key, env) => {
 	}
 };
 
-const getPostList = async (key, env) => {
+
+const getPostList = async (env) => {
 	const postBlob = await env.BLOG_BUCKET.get('posts.json');
 
 	if (postBlob === null) {
@@ -67,6 +95,7 @@ const getPostList = async (key, env) => {
 		})
 }
 
+
 const getPost = async (key, env) => {
 	const postBlob = await env.BLOG_BUCKET.get('posts.json');
 
@@ -95,12 +124,38 @@ const getPost = async (key, env) => {
 		})
 }
 
+
+const getDrip = async (key, env) => {}
+
+
+const postDrip = async (request, env) => {
+	const [requestIsValid, error] = validatePostRequest(request)
+
+	if (!requestIsValid) {
+		return new Response(JSON.stringify({message: error.message}, null, 2), {status: error.status})
+	}
+
+	const reqBody = await request.json()
+
+	if (!("message" in reqBody)) {
+		return new Response(JSON.stringify({message: "Please see POST /drip docs"}, null, 2), {status: 400})
+	}
+
+	return new Response(
+		JSON.stringify({
+			message: `POST called on /drip`,
+			data: reqBody
+		}, null, 2),
+		{status: 200}
+	);
+}
+
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const key = url.pathname.slice(1);
 		const method = request.method;
-		console.log(`key: ${key}`)
 
 		const routeRSS = /rss.xml/,
 			    routePostList = /posts$/,
@@ -111,15 +166,20 @@ export default {
 			case routeRSS.test(key):
 				return getRSS(key, env);
 			case routePostList.test(key):
-				return getPostList(key, env);
+				return getPostList(env);
 			case routePost.test(key):
 				return getPost(key, env);
 			case routeDrip.test(key):
 				switch (method) {
 					case 'GET':
-						return new Response(JSON.stringify({message: `GET called on /${key}`}, null, 2), {status: 200});
+						return new Response(
+							JSON.stringify({
+								message: `GET called on /${key}`
+							}, null, 2),
+							{status: 200}
+						);
 					case 'POST':
-						return new Response(JSON.stringify({message: `POST called on /${key}`}, null, 2), {status: 200});
+						return postDrip(request, env);
 					default:
 						return new Response(JSON.stringify({message: `Error: ${method} not supported on /${key}`}, null, 2), {status: 404});
 			}
