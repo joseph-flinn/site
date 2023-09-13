@@ -49,15 +49,11 @@ const getRSS = async (key, env) => {
 		return new Response('Object Not Found', { status: 404 });
 	}
 
-	if (env.FLAG_USE_HEADERS) {
-		return new Response(rssBlob.body, { status: 200, headers: {
-			...corsHeaders,
-			'etag': rssBlob.httpEtag,
-			'Content-type': 'application/xml'
-		}});
-	} else {
-		return new Response(rssBlob.body, { status: 200 });
-	}
+	return new Response(rssBlob.body, { status: 200, headers: {
+		...corsHeaders,
+		'etag': rssBlob.httpEtag,
+		'Content-type': 'application/xml'
+	}});
 };
 
 
@@ -80,18 +76,14 @@ const getPostList = async (env) => {
 				})
 		))
 		.then(postList => {
-			if (env.FLAG_USE_HEADERS) {
-				return new Response(JSON.stringify({ postList: postList }, null, 4), {
-					status: 200,
-					headers: {
-						...corsHeaders,
-						'etag': postBlob.httpEtag,
-						'Content-type': 'application/json'
-					}
-				});
-			} else {
-				return new Response(JSON.stringify({ postList: postList }, null, 4), { status: 200, });
-			}
+			return new Response(JSON.stringify({ postList: postList }, null, 4), {
+				status: 200,
+				headers: {
+					...corsHeaders,
+					'etag': postBlob.httpEtag,
+					'Content-type': 'application/json'
+				}
+			});
 		})
 }
 
@@ -108,24 +100,26 @@ const getPost = async (key, env) => {
 	return postBlob.json()
 		.then(posts => posts[postSlug])
 		.then(post => {
-			if (env.FLAG_USE_HEADERS) {
-				return new Response(JSON.stringify({ post: post }, null, 4), {
-					status: 200,
-					headers: {
-						...corsHeaders,
-						'etag': postBlob.httpEtag,
-						'Content-type': 'application/json'
-					}
-				});
-			}
-				return new Response(JSON.stringify({ post: post }, null, 4), {
-					status: 200,
-				});
+			return new Response(JSON.stringify({ post: post }, null, 4), {
+				status: 200,
+				headers: {
+					...corsHeaders,
+					'etag': postBlob.httpEtag,
+					'Content-type': 'application/json'
+				}
+			});
 		})
 }
 
 
-const getDrip = async (key, env) => {}
+const getDrip = async (key, env) => {
+	return new Response(
+		JSON.stringify({
+			message: `GET called on /${key}`
+		}, null, 2),
+		{status: 200}
+	);
+}
 
 
 const postDrip = async (request, env) => {
@@ -172,31 +166,20 @@ export default {
 			case routeDrip.test(key):
 				switch (method) {
 					case 'GET':
-						return new Response(
-							JSON.stringify({
-								message: `GET called on /${key}`
-							}, null, 2),
-							{status: 200}
-						);
+						return getDrip(key, env);
 					case 'POST':
 						return postDrip(request, env);
 					default:
 						return new Response(JSON.stringify({message: `Error: ${method} not supported on /${key}`}, null, 2), {status: 404});
 			}
 			default:
-				if (env.FLAG_USE_HEADERS) {
-					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
-						status: 404,
-						headers: {
-							...corsHeaders,
-							'Content-type': 'application/json'
-						},
-					});
-				} else {
-					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
-						status: 404,
-					});
-				}
+				return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
+					status: 404,
+					headers: {
+						...corsHeaders,
+						'Content-type': 'application/json'
+					},
+				});
 		}
   },
 };
