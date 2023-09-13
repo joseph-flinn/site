@@ -8,7 +8,7 @@ r2_buckets  = [
 ]
 
 [vars]
-FLAG_USE_HEADERS=true
+#FLAG_USE_HEADERS=true
 
 [dev]
 ip = "0.0.0.0"
@@ -29,7 +29,7 @@ d1_databases = [
 ]
 
 [env.staging.vars]
-FLAG_USE_HEADERS=true
+#FLAG_USE_HEADERS=true
 
 
 [env.production]
@@ -44,4 +44,4 @@ d1_databases = [
 ]
 
 [env.production.vars]
-FLAG_USE_HEADERS=true
+#FLAG_USE_HEADERS=true
