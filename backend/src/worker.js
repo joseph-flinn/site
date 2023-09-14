@@ -10,35 +10,10 @@
 
 const corsHeaders = {
 	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Methods': 'GET, POST',
+	'Access-Control-Allow-Methods': 'GET, POST, DELETE',
 	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 }
 
-
-const isAuthorized = request => {
-	const psk = request.headers.get("X-Custom-PSK")
-	return psk == "THIS_IS_A_SECRET" ? true : false
-}
-
-
-const isValidData = request => {
-	const contentType = request.headers.get("content-type")
-	return contentType == "application/json" ? true : false
-}
-
-
-const validatePostRequest = request => {
-	const authorized = isAuthorized(request)
-	const validData = isValidData(request)
-
-	if (!authorized) {
-		return [false, {message: "Not Authorized", status: 403}]
-	} else if (!validData) {
-		return [false, {message: "Please see POST /drip docs", status: 400}]
-	} else {
-		return [true, {}]
-	}
-}
 
 
 const getRSS = async (key, env) => {
@@ -112,7 +87,71 @@ const getPost = async (key, env) => {
 }
 
 
-const getDrip = async (key, env) => {
+const validateHeaders = headers => {
+	const expectedHeaders = [
+		{"name": "X-Custom-PSK", "value": "THIS_IS_A_SECRET", "errorMessage": "Not Authorized", "status": 403},
+		{"name": "content-type", "value": "application/json", "errorMessage": "Please see docs", "status": 400}
+	]
+
+	for (const header of expectedHeaders) {
+		if (headers.get(header.name) != header.value) {
+			return [false, {message: header.errorMessage, status: header.status}]
+		}
+	}
+
+	return [true, {}]
+}
+
+
+const validateBody = (body, requiredData) => {
+	for (const datum of requiredData) {
+		if (!(datum in body)) {
+			return [false, {message: `Missing data: ${datum}`, status: 400}]
+		}
+	}
+
+	return [true, {}]
+}
+
+
+const validateRequest = async (request, requiredData) => {
+	const [headersAreValid, headersError] = validateHeaders(request.headers)
+	if (!headersAreValid) return [false, null, headersError]
+
+	try {
+		const body = await request.json()
+		console.log(`body: ${JSON.stringify(body, null, 2)}`)
+		const [bodyIsValid, bodyError] = validateBody(body, requiredData)
+		if (!bodyIsValid) return [false, null, bodyError]
+
+		return [true, body, {}]
+	} catch {
+		return [false, null, {message: "missing request body", status: 400}]
+	}
+}
+
+
+const createOrUpdateDrip = async (request, env) => {
+	const [requestIsValid, body, error] = await validateRequest(request, ["message"])
+
+	if (!requestIsValid) {
+		return new Response(JSON.stringify({message: error.message}, null, 2), {status: error.status})
+	}
+
+	const action = "id" in body ? "update drip" : "create drip"
+	const message = `POST called on /drip. Action: ${action}`
+
+	return new Response(
+		JSON.stringify({
+			message: message,
+			data: body
+		}, null, 2),
+		{status: 200}
+	);
+}
+
+
+const readDrip = async (key, env) => {
 	return new Response(
 		JSON.stringify({
 			message: `GET called on /${key}`
@@ -122,23 +161,17 @@ const getDrip = async (key, env) => {
 }
 
 
-const postDrip = async (request, env) => {
-	const [requestIsValid, error] = validatePostRequest(request)
+const deleteDrip = async (request, env) => {
+	const [requestIsValid, body, error] = await validatePostRequest(request)
 
 	if (!requestIsValid) {
 		return new Response(JSON.stringify({message: error.message}, null, 2), {status: error.status})
 	}
 
-	const reqBody = await request.json()
-
-	if (!("message" in reqBody)) {
-		return new Response(JSON.stringify({message: "Please see POST /drip docs"}, null, 2), {status: 400})
-	}
-
 	return new Response(
 		JSON.stringify({
-			message: `POST called on /drip`,
-			data: reqBody
+			message: `DELETE called on /drip`,
+			data: body
 		}, null, 2),
 		{status: 200}
 	);
@@ -165,10 +198,12 @@ export default {
 				return getPost(key, env);
 			case routeDrip.test(key):
 				switch (method) {
-					case 'GET':
-						return getDrip(key, env);
 					case 'POST':
-						return postDrip(request, env);
+						return createOrUpdateDrip(request, env);
+					case 'GET':
+						return readDrip(key, env);
+					case 'DELETE':
+						return deleteDrip(request, env);
 					default:
 						return new Response(JSON.stringify({message: `Error: ${method} not supported on /${key}`}, null, 2), {status: 404});
 			}

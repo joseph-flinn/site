@@ -81,8 +81,52 @@ export default function () {
 		const res = http.post(`${BASE_URL}/drip`)
 
 		check(res, {
-			'POST: status is 200': (r) => r.status === 200,
-			'POST: verify body': (r) => r.body.includes('POST called on /drip')
+			'POST - auth: status is 200': (r) => r.status === 403,
+			'POST - auth: verify body': (r) => r.body.includes('Not Authorized')
+		})
+
+    sleep(1) // second
+  })
+
+	// GROUP: drip
+	group('drip', function () {
+		const payload = JSON.stringify({
+			message: 'hello',
+		});
+
+		const params = {
+			headers: {
+				'X-Custom-PSK': __ENV.PSK,
+				'Content-Type': 'application/json',
+			},
+		};
+
+		const res = http.post(`${BASE_URL}/drip`, payload, params)
+		check(res, {
+			'POST - create: status is 200': (r) => r.status === 200,
+			'POST - create: verify body': (r) => r.body.includes('create drip')
+		})
+
+    sleep(1) // second
+  })
+
+	group('drip', function () {
+		const payload = JSON.stringify({
+			id: 0,
+			message: 'hello',
+		});
+
+		const params = {
+			headers: {
+				'X-Custom-PSK': __ENV.PSK,
+				'Content-Type': 'application/json',
+			},
+		};
+
+		const res = http.post(`${BASE_URL}/drip`, payload, params)
+		check(res, {
+			'POST - update: status is 200': (r) => r.status === 200,
+			'POST - update: verify body': (r) => r.body.includes('update drip')
 		})
 
     sleep(1) // second
