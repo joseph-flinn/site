@@ -1,12 +1,7 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+import { Hono } from 'hono'
+
+
+const app = new Hono()
 
 const corsHeaders = {
 	'Access-Control-Allow-Origin': '*',
@@ -15,10 +10,8 @@ const corsHeaders = {
 }
 
 
-
-const getRSS = async (key, env) => {
-	console.log(`RSS match found`)
-	const rssBlob = await env.BLOG_BUCKET.get(key);
+app.get('/rss.xml', async c => {
+	const rssBlob = await c.env.BLOG_BUCKET.get('rss.xml');
 
 	if (rssBlob === null) {
 		return new Response('Object Not Found', { status: 404 });
@@ -29,192 +22,8 @@ const getRSS = async (key, env) => {
 		'etag': rssBlob.httpEtag,
 		'Content-type': 'application/xml'
 	}});
-};
+
+})
 
 
-const getPostList = async (env) => {
-	const postBlob = await env.BLOG_BUCKET.get('posts.json');
-
-	if (postBlob === null) {
-		return new Response('Object Not Found', { status: 404 });
-	}
-
-	return postBlob.json()
-		.then(posts => (
-			Object.entries(posts)
-				.map(([slug, post]) => {
-					return {
-						slug: post.slug,
-						published: post.published,
-						title: post.title
-					}
-				})
-		))
-		.then(postList => {
-			return new Response(JSON.stringify({ postList: postList }, null, 4), {
-				status: 200,
-				headers: {
-					...corsHeaders,
-					'etag': postBlob.httpEtag,
-					'Content-type': 'application/json'
-				}
-			});
-		})
-}
-
-
-const getPost = async (key, env) => {
-	const postBlob = await env.BLOG_BUCKET.get('posts.json');
-
-	if (postBlob === null) {
-		return new Response('Object Not Found', { status: 404 });
-	}
-
-	const postSlug = key.split("/")[1];
-
-	return postBlob.json()
-		.then(posts => posts[postSlug])
-		.then(post => {
-			return new Response(JSON.stringify({ post: post }, null, 4), {
-				status: 200,
-				headers: {
-					...corsHeaders,
-					'etag': postBlob.httpEtag,
-					'Content-type': 'application/json'
-				}
-			});
-		})
-}
-
-
-const validateHeaders = headers => {
-	const expectedHeaders = [
-		{"name": "X-Custom-PSK", "value": "THIS_IS_A_SECRET", "errorMessage": "Not Authorized", "status": 403},
-		{"name": "content-type", "value": "application/json", "errorMessage": "Please see docs", "status": 400}
-	]
-
-	for (const header of expectedHeaders) {
-		if (headers.get(header.name) != header.value) {
-			return [false, {message: header.errorMessage, status: header.status}]
-		}
-	}
-
-	return [true, {}]
-}
-
-
-const validateBody = (body, requiredData) => {
-	for (const datum of requiredData) {
-		if (!(datum in body)) {
-			return [false, {message: `Missing data: ${datum}`, status: 400}]
-		}
-	}
-
-	return [true, {}]
-}
-
-
-const validateRequest = async (request, requiredData) => {
-	const [headersAreValid, headersError] = validateHeaders(request.headers)
-	if (!headersAreValid) return [false, null, headersError]
-
-	try {
-		const body = await request.json()
-		console.log(`body: ${JSON.stringify(body, null, 2)}`)
-		const [bodyIsValid, bodyError] = validateBody(body, requiredData)
-		if (!bodyIsValid) return [false, null, bodyError]
-
-		return [true, body, {}]
-	} catch {
-		return [false, null, {message: "missing request body", status: 400}]
-	}
-}
-
-
-const createOrUpdateDrip = async (request, env) => {
-	const [requestIsValid, body, error] = await validateRequest(request, ["message"])
-
-	if (!requestIsValid) {
-		return new Response(JSON.stringify({message: error.message}, null, 2), {status: error.status})
-	}
-
-	const action = "id" in body ? "update drip" : "create drip"
-	const message = `POST called on /drip. Action: ${action}`
-
-	return new Response(
-		JSON.stringify({
-			message: message,
-			data: body
-		}, null, 2),
-		{status: 200}
-	);
-}
-
-
-const readDrip = async (key, env) => {
-	return new Response(
-		JSON.stringify({
-			message: `GET called on /${key}`
-		}, null, 2),
-		{status: 200}
-	);
-}
-
-
-const deleteDrip = async (request, env) => {
-	const [requestIsValid, body, error] = await validatePostRequest(request)
-
-	if (!requestIsValid) {
-		return new Response(JSON.stringify({message: error.message}, null, 2), {status: error.status})
-	}
-
-	return new Response(
-		JSON.stringify({
-			message: `DELETE called on /drip`,
-			data: body
-		}, null, 2),
-		{status: 200}
-	);
-}
-
-
-export default {
-  async fetch(request, env) {
-    const url = new URL(request.url);
-    const key = url.pathname.slice(1);
-		const method = request.method;
-
-		const routeRSS = /rss.xml/,
-			    routePostList = /posts$/,
-				  routePost = /posts\/*/,
-			    routeDrip = /drip$/;
-
-		switch (true) {
-			case routeRSS.test(key):
-				return getRSS(key, env);
-			case routePostList.test(key):
-				return getPostList(env);
-			case routePost.test(key):
-				return getPost(key, env);
-			case routeDrip.test(key):
-				switch (method) {
-					case 'POST':
-						return createOrUpdateDrip(request, env);
-					case 'GET':
-						return readDrip(key, env);
-					case 'DELETE':
-						return deleteDrip(request, env);
-					default:
-						return new Response(JSON.stringify({message: `Error: ${method} not supported on /${key}`}, null, 2), {status: 404});
-			}
-			default:
-				return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
-					status: 404,
-					headers: {
-						...corsHeaders,
-						'Content-type': 'application/json'
-					},
-				});
-		}
-  },
-};
+export default app
