@@ -26,4 +26,35 @@ app.get('/rss.xml', async c => {
 })
 
 
+app.get('/posts', async c => {
+	const postBlob = await c.env.BLOG_BUCKET.get('posts.json');
+
+	if (postBlob === null) {
+		return new Response('Object Not Found', { status: 404 });
+	}
+
+	return postBlob.json()
+		.then(posts => (
+			Object.entries(posts)
+				.map(([slug, post]) => {
+					return {
+						slug: post.slug,
+						published: post.published,
+						title: post.title
+					}
+				})
+		))
+		.then(postList => {
+			return new Response(JSON.stringify({ postList: postList }, null, 4), {
+				status: 200,
+				headers: {
+					...corsHeaders,
+					'etag': postBlob.httpEtag,
+					'Content-type': 'application/json'
+				}
+			});
+		})
+})
+
+
 export default app
