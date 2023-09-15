@@ -88,13 +88,20 @@ app.get('/posts/:slug', async c => {
 app.post(
 	'/drip',
 	bearerAuth({ token }),
+	validator('header', (value, c) => {
+		if (!value["content-type"] || value["content-type"] != "application/json") {
+			return c.text("Invalid headers", 400)
+		}
+		return value
+	}),
 	validator('json', (value, c) => {
 		if (!("message" in value)) return c.text('Invalid body', 400)
 
 		return value
 	}),
 	async c => {
-		const body = await c.req.json()
+		const headers = c.req.valid('header')
+		const body = c.req.valid('json')
 
 		const action = 'id' in body ? 'update drip' : 'create drip'
 		const response = `POST called on /drip. Action: ${action}`
