@@ -57,4 +57,28 @@ app.get('/posts', async c => {
 })
 
 
+app.get('/posts/:slug', async c => {
+	const { slug } = c.req.param()
+
+	const postBlob = await c.env.BLOG_BUCKET.get('posts.json');
+
+	if (postBlob === null) {
+		return new Response('Object Not Found', { status: 404 });
+	}
+
+	return postBlob.json()
+		.then(posts => posts[slug])
+		.then(post => {
+			return new Response(JSON.stringify({ post: post }, null, 4), {
+				status: 200,
+				headers: {
+					...corsHeaders,
+					'etag': postBlob.httpEtag,
+					'Content-type': 'application/json'
+				}
+			});
+		})
+})
+
+
 export default app
