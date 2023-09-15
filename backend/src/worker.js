@@ -117,4 +117,43 @@ app.post(
 )
 
 
+app.get('/drip', async c => {
+	return c.text(
+		JSON.stringify({
+			message: `GET called on /drip`
+		}, null, 2),
+		200
+	);
+
+})
+
+
+app.delete(
+	'/drip',
+	bearerAuth({ token }),
+	validator('header', (value, c) => {
+		if (!value["content-type"] || value["content-type"] != "application/json") {
+			return c.text("Invalid headers", 400)
+		}
+		return value
+	}),
+	validator('json', (value, c) => {
+		if (!("message" in value)) return c.text('Invalid body', 400)
+
+		return value
+	}),
+	async c => {
+		const headers = c.req.valid('header')
+		const body = c.req.valid('json')
+
+		return c.text(
+			JSON.stringify({
+				message: 'DELETE called on /drip',
+				data: body
+			}, null, 2),
+			200
+		)
+	}
+)
+
 export default app
