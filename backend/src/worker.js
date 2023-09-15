@@ -1,4 +1,6 @@
 import { Hono } from 'hono'
+import { validator } from 'hono/validator'
+import { bearerAuth } from 'hono/bearer-auth'
 
 
 const app = new Hono()
@@ -8,6 +10,8 @@ const corsHeaders = {
 	'Access-Control-Allow-Methods': 'GET, POST, DELETE',
 	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 }
+
+const token = "THIS_IS_A_SECRET"
 
 
 app.get('/rss.xml', async c => {
@@ -79,6 +83,31 @@ app.get('/posts/:slug', async c => {
 			});
 		})
 })
+
+
+app.post(
+	'/drip',
+	bearerAuth({ token }),
+	validator('json', (value, c) => {
+		if (!("message" in value)) return c.text('Invalid body', 400)
+
+		return value
+	}),
+	async c => {
+		const body = await c.req.json()
+
+		const action = 'id' in body ? 'update drip' : 'create drip'
+		const response = `POST called on /drip. Action: ${action}`
+
+		return c.text(
+			JSON.stringify({
+				message: response,
+				data: body
+			}, null, 2),
+			200
+		)
+	}
+)
 
 
 export default app
