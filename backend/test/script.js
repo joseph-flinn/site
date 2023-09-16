@@ -106,7 +106,7 @@ export default function () {
 		const res = http.post(`${BASE_URL}/drip`, payload, params)
 		check(res, {
 			'POST - create: status is 200': (r) => r.status === 200,
-			'POST - create: verify body': (r) => r.body.includes('create drip')
+			'POST - create: verify body': (r) => r.body.includes('create')
 		})
 
     sleep(SLEEP_TIME) // second
@@ -128,7 +128,7 @@ export default function () {
 		const res = http.post(`${BASE_URL}/drip`, payload, params)
 		check(res, {
 			'POST - update: status is 200': (r) => r.status === 200,
-			'POST - update: verify body': (r) => r.body.includes('update drip')
+			'POST - update: verify body': (r) => r.body.includes('update')
 		})
 
     sleep(SLEEP_TIME) // second

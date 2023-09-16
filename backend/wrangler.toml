@@ -7,6 +7,10 @@ r2_buckets  = [
   { binding = "BLOG_BUCKET", bucket_name = "flinnlab-blog-dev", preview_bucket_name = "flinnlab-blog-dev"}
 ]
 
+d1_databases = [
+  { binding = "DB_DRIP", database_name = "blog-drip-dev", database_id = "d898dfc0-f641-425c-8c6a-e25da2cf7468", migrations_dir = "../data/drip-db/migrations" }
+]
+
 [vars]
 #FLAG_USE_HEADERS=true
 

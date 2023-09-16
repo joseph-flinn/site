@@ -1,15 +1,15 @@
 import { Hono } from 'hono'
 import { validator } from 'hono/validator'
 import { bearerAuth } from 'hono/bearer-auth'
+import { cors } from 'hono/cors'
+import { etag } from 'hono/etag'
 
 
 const app = new Hono()
 
-const corsHeaders = {
-	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Methods': 'GET, POST, DELETE',
-	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-}
+app.use('/*', cors());
+app.use('/*', etag());
+
 
 const token = "THIS_IS_A_SECRET"
 
@@ -17,16 +17,11 @@ const token = "THIS_IS_A_SECRET"
 app.get('/rss.xml', async c => {
 	const rssBlob = await c.env.BLOG_BUCKET.get('rss.xml');
 
-	if (rssBlob === null) {
-		return new Response('Object Not Found', { status: 404 });
-	}
+	if (rssBlob === null) return c.text('Object not found', 404)
 
-	return new Response(rssBlob.body, { status: 200, headers: {
-		...corsHeaders,
-		'etag': rssBlob.httpEtag,
-		'Content-type': 'application/xml'
-	}});
-
+	c.header('content-type', 'application/xml')
+	c.header('etag', rssBlob.httpEtag)
+	return c.text(rssBlob.body, 200)
 })
 
 
@@ -49,14 +44,9 @@ app.get('/posts', async c => {
 				})
 		))
 		.then(postList => {
-			return new Response(JSON.stringify({ postList: postList }, null, 4), {
-				status: 200,
-				headers: {
-					...corsHeaders,
-					'etag': postBlob.httpEtag,
-					'Content-type': 'application/json'
-				}
-			});
+			c.header('content-type', 'application/json')
+			c.header('etag', postBlob.httpEtag)
+			return c.text(JSON.stringify({ postList: postList }), 200)
 		})
 })
 
@@ -73,14 +63,9 @@ app.get('/posts/:slug', async c => {
 	return postBlob.json()
 		.then(posts => posts[slug])
 		.then(post => {
-			return new Response(JSON.stringify({ post: post }, null, 4), {
-				status: 200,
-				headers: {
-					...corsHeaders,
-					'etag': postBlob.httpEtag,
-					'Content-type': 'application/json'
-				}
-			});
+			c.header('content-type', 'application/json')
+			c.header('etag', postBlob.httpEtag)
+			return c.text(JSON.stringify({ post: post}), 200)
 		})
 })
 
@@ -103,21 +88,35 @@ app.post(
 		const headers = c.req.valid('header')
 		const body = c.req.valid('json')
 
-		const action = 'id' in body ? 'update drip' : 'create drip'
+		const action = 'id' in body ? 'update' : 'create'
 		const response = `POST called on /drip. Action: ${action}`
 
-		return c.text(
-			JSON.stringify({
-				message: response,
-				data: body
-			}, null, 2),
-			200
-		)
+		if (action == "update") {
+			if (!("message" in body)) return c.text('Invalid body for update', 400)
+
+			const { success } = await c.env.DB_DRIP.prepare(`
+				update drip set message=? where id=?
+			`).bind(body['message'], body['id']).run()
+
+		} else {
+			console.log(`c.env: ${JSON.stringify(c.env, null, 2)}`)
+			const { success } = await c.env.DB_DRIP.prepare(`
+				insert into drip (message) values (?)
+			`).bind(body['message']).run()
+		}
+
+		if (success) return c.text(JSON.stringify({ message: 'drip created' }, null, 2), 201)
+
+		return c.text(JSON.stringify({ message: 'something went wrong'}, null, 2), 500)
 	}
 )
 
 
 app.get('/drip', async c => {
+	const { success } = await c.env.DB_DRIP.prepare(`
+		select * from drip LIMIT=1
+	`).bind(body['message']).run()
+
 	return c.text(
 		JSON.stringify({
 			message: `GET called on /drip`
@@ -126,7 +125,6 @@ app.get('/drip', async c => {
 	);
 
 })
-
 
 app.delete(
 	'/drip',
