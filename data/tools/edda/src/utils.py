@@ -243,7 +243,7 @@ def get_status(env, env_db, migration_table) -> Migrations:
     results, results_code = execute_sql(sql, env, env_db)
 
     if results_code == 1:
-        return []
+        return Migrations('remote', [])
 
     return Migrations(
         "remote",

@@ -97,15 +97,13 @@ app.post(
 			const { success } = await c.env.DB_DRIP.prepare(`
 				update drip set message=? where id=?
 			`).bind(body['message'], body['id']).run()
-
+			if (success) return c.text(JSON.stringify({ message: 'drip updated' }, null, 2), 201)
 		} else {
-			console.log(`c.env: ${JSON.stringify(c.env, null, 2)}`)
 			const { success } = await c.env.DB_DRIP.prepare(`
 				insert into drip (message) values (?)
 			`).bind(body['message']).run()
+			if (success) return c.text(JSON.stringify({ message: 'drip created' }, null, 2), 201)
 		}
-
-		if (success) return c.text(JSON.stringify({ message: 'drip created' }, null, 2), 201)
 
 		return c.text(JSON.stringify({ message: 'something went wrong'}, null, 2), 500)
 	}
@@ -113,44 +111,29 @@ app.post(
 
 
 app.get('/drip', async c => {
-	const { success } = await c.env.DB_DRIP.prepare(`
-		select * from drip LIMIT=1
-	`).bind(body['message']).run()
+	const { success, results } = await c.env.DB_DRIP.prepare(`
+		select * from drip ORDER BY created_at DESC LIMIT 1
+	`).bind().all()
 
-	return c.text(
-		JSON.stringify({
-			message: `GET called on /drip`
-		}, null, 2),
-		200
-	);
+	if (!success) return c.text(JSON.stringify({ message: "something went wrong"}), 400)
+
+	return c.text( JSON.stringify({ data: results }, null, 2), 200);
 
 })
 
+
 app.delete(
-	'/drip',
+	'/drip/:id',
 	bearerAuth({ token }),
-	validator('header', (value, c) => {
-		if (!value["content-type"] || value["content-type"] != "application/json") {
-			return c.text("Invalid headers", 400)
-		}
-		return value
-	}),
-	validator('json', (value, c) => {
-		if (!("message" in value)) return c.text('Invalid body', 400)
-
-		return value
-	}),
 	async c => {
-		const headers = c.req.valid('header')
-		const body = c.req.valid('json')
+		const { id } = c.req.param()
+		const { success } = await c.env.DB_DRIP.prepare(`
+			delete from drip where id=?
+		`).bind(id).run()
 
-		return c.text(
-			JSON.stringify({
-				message: 'DELETE called on /drip',
-				data: body
-			}, null, 2),
-			200
-		)
+		if (success) return c.text(JSON.stringify({ message: `drip deleted` }, null, 2), 201)
+
+		return c.text('something went wrong', 400)
 	}
 )
 
