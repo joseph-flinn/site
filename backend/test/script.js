@@ -12,6 +12,8 @@ export const options = {
 }
 */
 
+const SLEEP_TIME = 0.5
+
 //let shortenLink
 
 //const BASE_URL = "https://blog-dev.flinnlab.workers.dev"
@@ -28,7 +30,7 @@ export default function () {
 			'verify RSS feed': (r) => r.body.includes('flinnlab.com')
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 
 
@@ -42,7 +44,7 @@ export default function () {
 			'postsPage: is not empty': (r) => r.json()['postList'].length != 0
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 
 	group('post', function () {
@@ -60,7 +62,7 @@ export default function () {
 			}
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 
 
@@ -73,7 +75,7 @@ export default function () {
 			'GET: verify body': (r) => r.body.includes('GET called on /drip')
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 
 	// GROUP: drip
@@ -81,11 +83,11 @@ export default function () {
 		const res = http.post(`${BASE_URL}/drip`)
 
 		check(res, {
-			'POST - auth: status is 200': (r) => r.status === 403,
-			'POST - auth: verify body': (r) => r.body.includes('Not Authorized')
+			'POST - auth: status is 403': (r) => r.status === 401,
+			'POST - auth: verify body': (r) => r.body.includes('Unauthorized')
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 
 	// GROUP: drip
@@ -96,7 +98,7 @@ export default function () {
 
 		const params = {
 			headers: {
-				'X-Custom-PSK': __ENV.PSK,
+				'Authorization': `Bearer ${__ENV.PSK}`,
 				'Content-Type': 'application/json',
 			},
 		};
@@ -107,7 +109,7 @@ export default function () {
 			'POST - create: verify body': (r) => r.body.includes('create drip')
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 
 	group('drip', function () {
@@ -118,7 +120,7 @@ export default function () {
 
 		const params = {
 			headers: {
-				'X-Custom-PSK': __ENV.PSK,
+				'Authorization': `Bearer ${__ENV.PSK}`,
 				'Content-Type': 'application/json',
 			},
 		};
@@ -129,6 +131,6 @@ export default function () {
 			'POST - update: verify body': (r) => r.body.includes('update drip')
 		})
 
-    sleep(1) // second
+    sleep(SLEEP_TIME) // second
   })
 }
