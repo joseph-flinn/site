@@ -1,5 +1,5 @@
 !! title: PLG - The Product Triad
-!! slug: plg-product-triade
+!! slug: plg-product-triad
 !! published: 2023-09-18
 !! description: Examining and defining the roles of the core product triad in a PLG company
 
@@ -10,7 +10,7 @@ management fits extremely well with the PLG business model. Lean management look
 while minimizing waste.
 
 Every department, team, and individual shares the same goal of improving the product and is aligned with the lean
-management priciples. And each one of these entities brings a unique and important perspective in this alignment and
+management principles. And each one of these entities brings a unique and important perspective in this alignment and
 plays a specific role in the makeup of the organization.
 
 
@@ -49,15 +49,16 @@ marketplace.
 
 The organization structure should be such that it promotes PLG and lean management. The lean management principles
 should be applied to the communication channel creation as well: maximize the delivery of value in communication while
-minimizing waste of uneeded communication. Organization communication is the hardest problems to solve. 
-[Conway's Law](https://www.melconway.com/Home/Committees_Paper.html), the 
-[Inverse Conway Maneuver reference](https://yoan-thirion.gitbook.io/knowledge-base/xtrem-reading/resources/book-notes/team-topologies#conways-law) 
-to [Accelerate's](https://www.oreilly.com/library/view/accelerate/9781457191435/) findings in relation to the Inverse
-Conway Maneuver and the [implications of misexecuting such a maneuver](https://medium.com/@Cyrdup/icm-1-say-no-to-the-inverse-conway-maneuver-6672ba2373cb).
+minimizing waste of unneeded communication. Organization communication is the hardest problems to solve. [Conway's
+Law](https://www.melconway.com/Home/Committees_Paper.html), the [Inverse Conway Maneuver
+reference](https://yoan-thirion.gitbook.io/knowledge-base/xtrem-reading/resources/book-notes/team-topologies#conways-law)
+to the findings in [Accelerate](https://www.oreilly.com/library/view/accelerate/9781457191435/) in relation to the
+Inverse Conway Maneuver and the [implications of executing such a
+maneuver incorrectly](https://medium.com/@Cyrdup/icm-1-say-no-to-the-inverse-conway-maneuver-6672ba2373cb).
 
 
 ---
 
-In PLG organizations, the Core product groups each have a complimentray roles and responsibilities to play in order to
+In PLG organizations, the Core product groups each have a complimentary roles and responsibilities to play in order to
 be the most effective. Each business function relies heavily on each other to make up the whole of the core product 
 group to optimize the Lean management goals: maximizing value delivery to the end user and minimizing waste.
