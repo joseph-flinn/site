@@ -70,15 +70,15 @@ export default function () {
 	group('drip', function () {
 		const res = http.get(`${BASE_URL}/drip`)
 
+		const json = res.json()
 		check(res, {
 			'GET: status is 200': (r) => r.status === 200,
-			'GET: verify body': (r) => r.body.includes('GET called on /drip')
+			'GET: verify body': (r) => "data" in json
 		})
 
     sleep(SLEEP_TIME) // second
   })
 
-	// GROUP: drip
 	group('drip', function () {
 		const res = http.post(`${BASE_URL}/drip`)
 
@@ -90,7 +90,6 @@ export default function () {
     sleep(SLEEP_TIME) // second
   })
 
-	// GROUP: drip
 	group('drip', function () {
 		const payload = JSON.stringify({
 			message: 'hello',
@@ -105,7 +104,7 @@ export default function () {
 
 		const res = http.post(`${BASE_URL}/drip`, payload, params)
 		check(res, {
-			'POST - create: status is 200': (r) => r.status === 200,
+			'POST - create: status is 201': (r) => r.status === 201,
 			'POST - create: verify body': (r) => r.body.includes('create')
 		})
 
@@ -127,7 +126,7 @@ export default function () {
 
 		const res = http.post(`${BASE_URL}/drip`, payload, params)
 		check(res, {
-			'POST - update: status is 200': (r) => r.status === 200,
+			'POST - update: status is 201': (r) => r.status === 201,
 			'POST - update: verify body': (r) => r.body.includes('update')
 		})
 

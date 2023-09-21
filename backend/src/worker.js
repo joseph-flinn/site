@@ -137,7 +137,7 @@ app.delete('/drip/*', async(c, next) => {
 
 app.delete(
 	'/drip/:id',
-	async (c, next) => {
+	async c => {
 		const { id } = c.req.param()
 		const { success } = await c.env.DB_DRIP.prepare(`
 			delete from drip where id=?
