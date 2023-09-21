@@ -11,9 +11,6 @@ app.use('/*', cors());
 app.use('/*', etag());
 
 
-const token = "THIS_IS_A_SECRET"
-
-
 app.get('/rss.xml', async c => {
 	const rssBlob = await c.env.BLOG_BUCKET.get('rss.xml');
 
@@ -59,7 +56,6 @@ app.get('/posts/:slug', async c => {
 	if (postBlob === null) {
 		return new Response('Object Not Found', { status: 404 });
 	}
-
 	return postBlob.json()
 		.then(posts => posts[slug])
 		.then(post => {
@@ -70,9 +66,17 @@ app.get('/posts/:slug', async c => {
 })
 
 
+app.post('/drip', async(c, next) => {
+	const token = c.env.TOKEN
+	const auth = bearerAuth({
+		token
+	})
+	return auth(c, next)
+})
+
+
 app.post(
 	'/drip',
-	bearerAuth({ token }),
 	validator('header', (value, c) => {
 		if (!value["content-type"] || value["content-type"] != "application/json") {
 			return c.text("Invalid headers", 400)
@@ -122,10 +126,18 @@ app.get('/drip', async c => {
 })
 
 
+app.delete('/drip/*', async(c, next) => {
+	const token = c.env.TOKEN
+	const auth = bearerAuth({
+		token
+	})
+	return auth(c, next)
+})
+
+
 app.delete(
 	'/drip/:id',
-	bearerAuth({ token }),
-	async c => {
+	async (c, next) => {
 		const { id } = c.req.param()
 		const { success } = await c.env.DB_DRIP.prepare(`
 			delete from drip where id=?
