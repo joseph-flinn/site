@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "wrangler dev --remote",
+		"test": "k6 -e ENV=dev -e PSK=${TOKEN} run/script.js",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {

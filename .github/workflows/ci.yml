@@ -106,5 +106,8 @@ jobs:
 
       - name: Run Integration Tests
         uses: grafana/k6-action@v0.3.0
+        env:
+          ENV: staging
+          PSK: ${{ secrets.BLOG_ADMIN_TOKEN }}
         with:
           filename: backend/test/script.js
