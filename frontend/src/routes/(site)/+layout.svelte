@@ -1,6 +1,5 @@
 <script>
-  import NavBar from '$lib/components/NavBar.svelte';
-  import Header from '$lib/components/Header.svelte';
+  import HorizontalNav from '$lib/components/HorizontalNav.svelte';
   import Footer from '$lib/components/Footer.svelte';
 
   import data from '$lib/assets/data.json';
@@ -10,7 +9,7 @@
 <div class="fullh-container">
   <div class="side"/>
   <div class="page">
-    <Header pages={data.pages}/>
+    <HorizontalNav pages={data.pages.site}/>
     <div class="page-content">
       <slot></slot>
     </div>

@@ -1,8 +1,6 @@
 <script>
   export let pages;
 
-  import NavBar from "$lib/components/NavBar.svelte";
-
   import { base } from "$app/paths";
   import logo from "$lib/assets/jf-icon.svg";
 </script>
@@ -12,7 +10,11 @@
   <a href="{base}/">
     <img src={logo} alt="JF Brand Icon" class="svg"/>
   </a>
-  <NavBar pages={pages}/>
+  <div style="padding: 0.5em;">
+    {#each pages as page}
+      <a href="{base}{page.path}"><b>{page.name}</b></a>
+    {/each}
+  </div>
 </div>
 <div class="spacer"/>
 
@@ -26,6 +28,14 @@
   .spacer {
     width: 100%;
     padding: 1em 0em 1em 0em;
+  }
+
+  a {
+    padding: 1em;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   @media only screen and (max-width: 600px) {

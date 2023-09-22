@@ -1,9 +1,14 @@
 {
-  "pages": [
-    {"name": "home", "path": "/"},
-    {"name": "posts", "path": "/posts"},
-    {"name": "drip", "path": "/drip"}
-  ],
+  "pages": {
+    "site": [
+      {"name": "home", "path": "/"},
+      {"name": "posts", "path": "/posts"},
+      {"name": "drip", "path": "/drip"}
+    ],
+    "cms": [
+      {"name": "drip"}
+    ]
+  },
   "skillsData": {
     "leadership": [
       "lean management",
