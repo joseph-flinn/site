@@ -6,7 +6,7 @@
   import TabbedCard from "$lib/components/TabbedCard.svelte";
   import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 
-  import data from '../data.json';
+  import data from '$lib/assets/data.json';
 
 </script>
 
