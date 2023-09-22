@@ -14,7 +14,7 @@ export const options = {
 
 const SLEEP_TIME = 0.5
 
-const BASE_URL = __ENV.ENV == "staging" ? "https://blog-dev.flinnlab.workers.dev" : "http://localhost:8787"
+const BASE_URL = __ENV.ENV == "staging" ? "https://blog-backend-dev.flinnlab.workers.dev" : "http://localhost:8787"
 
 
 export default function () {
