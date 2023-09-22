@@ -12,14 +12,14 @@
     <img src={logo} alt="JF Brand Icon" class="svg"/>
   </a>
   </div>
-  <div class="vritem" style="text-align: right;">
+  <div class="vitem">
     {#each pages as page}
       <div>{page.name}</div>
     {/each}
   </div>
   <div style="margin-top: auto">
-    <div class="vlitem">Settings</div>
-    <div class="vlitem">Logout</div>
+    <div class="vitem">Settings</div>
+    <div class="vitem">Logout</div>
   </div>
 </div>
 
@@ -33,16 +33,10 @@
     flex-direction: column;
   }
 
-  .vlitem {
+  .vitem {
     padding: 0.5em; 
     margin-left: 1.5em;
     text-align: left;
-  }
-
-  .vritem {
-    padding: 0.5em; 
-    margin-right: 1.5em;
-    text-align: right;
   }
 
   a {
