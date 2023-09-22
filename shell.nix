@@ -13,6 +13,6 @@ in pkgs.mkShell {
   ];
 
   shellHook = ''
-      export PATH="$PWD/frontend/node_modules/.bin/:$PWD/backend/node_modules/.bin/:$PATH"
+      export PATH="$PWD/frontend/node_modules/.bin/:$PWD/backend/node_modules/.bin/:$PWD/data/tools/edda/result/bin:$PATH"
   '';
 }

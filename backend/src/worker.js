@@ -1,40 +1,29 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+import { Hono } from 'hono'
+import { validator } from 'hono/validator'
+import { bearerAuth } from 'hono/bearer-auth'
+import { cors } from 'hono/cors'
+import { etag } from 'hono/etag'
 
-const corsHeaders = {
-	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Methods': 'GET',
-	'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-}
 
-const getRSS = async (key, env) => {
-	console.log(`RSS match found`)
-	const rssBlob = await env.BLOG_BUCKET.get(key);
+const app = new Hono()
 
-	if (rssBlob === null) {
-		return new Response('Object Not Found', { status: 404 });
-	}
+app.use('/*', cors());
+app.use('/*', etag());
 
-	if (env.FLAG_USE_HEADERS) {
-		return new Response(rssBlob.body, { status: 200, headers: {
-			...corsHeaders,
-			'etag': rssBlob.httpEtag,
-			'Content-type': 'application/xml'
-		}});
-	} else {
-		return new Response(rssBlob.body, { status: 200 });
-	}
-};
 
-const getPostList = async (key, env) => {
-	const postBlob = await env.BLOG_BUCKET.get('posts.json');
+app.get('/rss.xml', async c => {
+	const rssBlob = await c.env.BLOG_BUCKET.get('rss.xml');
+
+	if (rssBlob === null) return c.text('Object not found', 404)
+
+	c.header('content-type', 'application/xml')
+	c.header('etag', rssBlob.httpEtag)
+	return c.text(rssBlob.body, 200)
+})
+
+
+app.get('/posts', async c => {
+	const postBlob = await c.env.BLOG_BUCKET.get('posts.json');
 
 	if (postBlob === null) {
 		return new Response('Object Not Found', { status: 404 });
@@ -52,85 +41,112 @@ const getPostList = async (key, env) => {
 				})
 		))
 		.then(postList => {
-			if (env.FLAG_USE_HEADERS) {
-				return new Response(JSON.stringify({ postList: postList }, null, 4), {
-					status: 200,
-					headers: {
-						...corsHeaders,
-						'etag': postBlob.httpEtag,
-						'Content-type': 'application/json'
-					}
-				});
-			} else {
-				return new Response(JSON.stringify({ postList: postList }, null, 4), { status: 200, });
-			}
+			c.header('content-type', 'application/json')
+			c.header('etag', postBlob.httpEtag)
+			return c.text(JSON.stringify({ postList: postList }), 200)
 		})
-}
+})
 
-const getPost = async (key, env) => {
-	const postBlob = await env.BLOG_BUCKET.get('posts.json');
+
+app.get('/posts/:slug', async c => {
+	const { slug } = c.req.param()
+
+	const postBlob = await c.env.BLOG_BUCKET.get('posts.json');
 
 	if (postBlob === null) {
 		return new Response('Object Not Found', { status: 404 });
 	}
-
-	const postSlug = key.split("/")[1];
-
 	return postBlob.json()
-		.then(posts => posts[postSlug])
+		.then(posts => posts[slug])
 		.then(post => {
-			if (env.FLAG_USE_HEADERS) {
-				return new Response(JSON.stringify({ post: post }, null, 4), {
-					status: 200,
-					headers: {
-						...corsHeaders,
-						'etag': postBlob.httpEtag,
-						'Content-type': 'application/json'
-					}
-				});
-			}
-				return new Response(JSON.stringify({ post: post }, null, 4), {
-					status: 200,
-				});
+			c.header('content-type', 'application/json')
+			c.header('etag', postBlob.httpEtag)
+			return c.text(JSON.stringify({ post: post}), 200)
 		})
-}
+})
 
-export default {
-  async fetch(request, env) {
-    const url = new URL(request.url);
-    const key = url.pathname.slice(1);
-		console.log(`key: ${key}`)
 
-		const routeRSS = /rss.xml/,
-			    routePostList = /posts$/,
-				  routePost = /posts\/*/;
+app.post('/drip', async(c, next) => {
+	const token = c.env.TOKEN
+	const auth = bearerAuth({
+		token
+	})
+	return auth(c, next)
+})
 
-		switch (true) {
-			case routeRSS.test(key):
-				return getRSS(key, env);
-				break;
-			case routePostList.test(key):
-				return getPostList(key, env);
-				break;
-			case routePost.test(key):
-				return getPost(key, env);
-				break;
-			default:
-				if (env.FLAG_USE_HEADERS) {
-					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
-						status: 404,
-						headers: {
-							...corsHeaders,
-							'Content-type': 'application/json',
-							'My-Header-test': 'did it come through?'
-						},
-					});
-				} else {
-					return new Response(JSON.stringify({ message: `/${key} not found`}, null, 2), {
-						status: 404,
-					});
-				}
-				break;
+
+app.post(
+	'/drip',
+	validator('header', (value, c) => {
+		if (!value["content-type"] || value["content-type"] != "application/json") {
+			return c.text("Invalid headers", 400)
 		}
-  },
-};
+		return value
+	}),
+	validator('json', (value, c) => {
+		if (!("message" in value)) return c.text('Invalid body', 400)
+
+		return value
+	}),
+	async c => {
+		const headers = c.req.valid('header')
+		const body = c.req.valid('json')
+
+		const action = 'id' in body ? 'update' : 'create'
+		const response = `POST called on /drip. Action: ${action}`
+
+		if (action == "update") {
+			if (!("message" in body)) return c.text('Invalid body for update', 400)
+
+			const { success } = await c.env.DB_DRIP.prepare(`
+				update drip set message=? where id=?
+			`).bind(body['message'], body['id']).run()
+			if (success) return c.text(JSON.stringify({ message: 'drip updated' }, null, 2), 201)
+		} else {
+			const { success } = await c.env.DB_DRIP.prepare(`
+				insert into drip (message) values (?)
+			`).bind(body['message']).run()
+			if (success) return c.text(JSON.stringify({ message: 'drip created' }, null, 2), 201)
+		}
+
+		return c.text(JSON.stringify({ message: 'something went wrong'}, null, 2), 500)
+	}
+)
+
+
+app.get('/drip', async c => {
+	const { success, results } = await c.env.DB_DRIP.prepare(`
+		select * from drip ORDER BY created_at DESC LIMIT 1
+	`).bind().all()
+
+	if (!success) return c.text(JSON.stringify({ message: "something went wrong"}), 400)
+
+	return c.text( JSON.stringify({ data: results }, null, 2), 200);
+
+})
+
+
+app.delete('/drip/*', async(c, next) => {
+	const token = c.env.TOKEN
+	const auth = bearerAuth({
+		token
+	})
+	return auth(c, next)
+})
+
+
+app.delete(
+	'/drip/:id',
+	async c => {
+		const { id } = c.req.param()
+		const { success } = await c.env.DB_DRIP.prepare(`
+			delete from drip where id=?
+		`).bind(id).run()
+
+		if (success) return c.text(JSON.stringify({ message: `drip deleted` }, null, 2), 201)
+
+		return c.text('something went wrong', 400)
+	}
+)
+
+export default app

@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "start": "wrangler dev --remote"
+    "dev": "wrangler dev --remote",
+		"test": "k6 -e ENV=dev -e PSK=${TOKEN} run/script.js",
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
-    "wrangler": "^3.6.0"
+    "wrangler": "^3.7.0"
+  },
+  "dependencies": {
+    "hono": "^3.6.1"
   }
 }
