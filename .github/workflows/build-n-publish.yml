@@ -108,6 +108,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.0
 
+      - name: Set up Node
+        uses: actions/setup-node@v3.6.0
+        with:
+          cache: 'npm'
+          cache-dependency-path: 'backend/package-lock.json'
+          node-version: '18'
+
+      - name: Install dependencies
+        run: | 
+          cd backend
+          npm ci
+
       - name: Deploy Backend
         uses: cloudflare/wrangler-action@2.0.0
         with:
