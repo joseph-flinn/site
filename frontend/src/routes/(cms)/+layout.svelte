@@ -1,7 +1,20 @@
 <script>
-  import VerticalNav from '$lib/components/VerticalNav.svelte';
+  import { goto } from '$app/navigation';
+  import { base } from "$app/paths";
 
   import data from '$lib/assets/data.json';
+  import VerticalNav from '$lib/components/VerticalNav.svelte';
+  import { token } from '$lib/store.js'
+
+  let authToken = '';
+
+  token.subscribe((value) => {
+    if ( value === '' ) {
+      goto(`${base}/cms/login`)
+    }
+    authToken = value;
+  })
+
 </script>
 
 <div class="fullh-container">
