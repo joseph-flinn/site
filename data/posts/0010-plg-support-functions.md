@@ -1,11 +1,11 @@
 !! title: Product Led Growth - Support Functions
 !! slug: plg-support-functions
-!! published: 2023-09-24
+!! published: 2023-09-25
 !! description: Examining and defining the roles of the organization groups outside of the core product groups in PLG company
 
 ---
 
-In the [last PLG post](./plg-product-triad), we examined the unique roles and perspectives that each of the core groups
+In the [last PLG post](https://joseph.flinnlab.com/posts/plg-product-triad), we examined the unique roles and perspectives that each of the core groups
 have: Product, Design, and Engineering Development. This post, we're going to look at how the rest of the organization
 supports the Product Led Growth. 
 
