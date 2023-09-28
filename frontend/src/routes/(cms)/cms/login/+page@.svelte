@@ -1,25 +1,26 @@
 <script>
-  import { goto } from '$app/navigation';
-  import { base } from "$app/paths";
+  import { goto } from '$app/navigation'
+  import { base } from "$app/paths"
 
-  import CentralColumn from '$lib/layouts/CentralColumn.svelte';
+  import CentralColumn from '$lib/layouts/CentralColumn.svelte'
 
-  import Button from '$lib/components/Button.svelte';
-  import Card from '$lib/components/Card.svelte';
-  import UnderConstruction from "$lib/components/UnderConstruction.svelte";
+  import Button from '$lib/components/Button.svelte'
+  import Card from '$lib/components/Card.svelte'
+  import UnderConstruction from '$lib/components/UnderConstruction.svelte'
 
-  import { token } from '$lib/store.js'
+  import { token, cmsPath } from '$lib/store.js'
 
-  let tokenData = '';
+  let tokenData = ''
+  let previousPath = ''
 
   const handleClick = () => {
-    console.log('got clicked')
     token.set(tokenData);
-    console.log(`login:token: ${tokenData}`)
 
-    goto(`${base}/cms`).then(() => {
-      console.log('got navigated!')
+    cmsPath.subscribe((value) => {
+      previousPath = value === '' ? '/cms' : value
     })
+
+    goto(`${base}${previousPath}`).then(() => {})
   }
 </script>
 
@@ -33,7 +34,7 @@
             <div style='margin-top: auto; margin-bottom: auto'>
               token:
             </div>
-            <input bind:value={tokenData} name='token' type='text'>
+            <input bind:value={tokenData} name='token' type='password'>
           </label>
         </div>
         <Button 
@@ -58,7 +59,7 @@
     margin: 1em;
   }
 
-  input[type=text] {
+  input[type=password] {
     padding: 0.5em;
     flex-grow: 1;
     margin: 1em;
@@ -68,7 +69,7 @@
     border-bottom: 2px solid #5c5955;
   }
 
-  input[type=text]:focus {
+  input[type=password]:focus {
     background-color: #f8f8f8f8;
     outline: none;
     border-bottom: 2px solid #5c5955;

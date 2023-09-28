@@ -1,8 +1,37 @@
 <script>
-  export let pages;
+  import { base } from '$app/paths';
+  import { goto } from '$app/navigation';
+  import logo from '$lib/assets/jf-icon.svg';
 
-  import { base } from "$app/paths";
-  import logo from "$lib/assets/jf-icon.svg"
+  import VerticalNavButton from '$lib/components/VerticalNavButton.svelte';
+  import { token, cmsPath } from '$lib/store.js'
+
+
+  const handleDrip = () => {
+    goto(`${base}/cms/drips`)
+  }
+
+  const handleSettings = () => {
+    goto(`${base}/cms/settings`)
+  }
+
+  const handleLogout = () => {
+    token.set('');
+    cmsPath.set('');
+
+    goto(`${base}/cms/login`).then(() => {})
+  }
+
+  const buttons = {
+    pages: [
+      { name: "drip", handler: handleDrip},
+    ],
+    utilities: [
+      { name: "Settings", handler: handleSettings},
+      { name: "Logout", handler: handleLogout}
+    ]
+  }
+
 </script>
 
 
@@ -12,14 +41,13 @@
     <img src={logo} alt="JF Brand Icon" class="svg"/>
   </a>
   </div>
-  <div class="vitem">
-    {#each pages as page}
-      <div>{page.name}</div>
-    {/each}
-  </div>
+  {#each buttons.pages as page}
+    <VerticalNavButton name={page.name} handleClick={page.handler}/>
+  {/each}
   <div style="margin-top: auto">
-    <div class="vitem">Settings</div>
-    <div class="vitem">Logout</div>
+    {#each buttons.utilities as utility}
+      <VerticalNavButton name={utility.name} handleClick={utility.handler}/>
+    {/each}
   </div>
 </div>
 
@@ -31,12 +59,6 @@
     color: #fffefb;
     display: flex; 
     flex-direction: column;
-  }
-
-  .vitem {
-    padding: 0.5em; 
-    margin-left: 1.5em;
-    text-align: left;
   }
 
   a {

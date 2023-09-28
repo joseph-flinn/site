@@ -4,9 +4,6 @@
       {"name": "home", "path": "/"},
       {"name": "posts", "path": "/posts"},
       {"name": "drip", "path": "/drip"}
-    ],
-    "cms": [
-      {"name": "drip"}
     ]
   },
   "skillsData": {

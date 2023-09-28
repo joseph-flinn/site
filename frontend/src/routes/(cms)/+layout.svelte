@@ -1,24 +1,24 @@
 <script>
-  import { goto } from '$app/navigation';
-  import { base } from "$app/paths";
+  import { goto } from '$app/navigation'
+  import { base } from "$app/paths"
 
-  import data from '$lib/assets/data.json';
-  import VerticalNav from '$lib/components/VerticalNav.svelte';
-  import { token } from '$lib/store.js'
+  import VerticalNav from '$lib/components/VerticalNav.svelte'
+  import { token, cmsPath } from '$lib/store.js'
 
-  let authToken = '';
+  let authToken = ''
 
   token.subscribe((value) => {
     if ( value === '' ) {
+      cmsPath.set(window.location.pathname)
       goto(`${base}/cms/login`)
     }
-    authToken = value;
+    authToken = value
   })
 
 </script>
 
 <div class="fullh-container">
-  <VerticalNav pages={data.pages.cms} />
+  <VerticalNav />
   <div style="display: flex; flex-direction: column; flex-grow: 1;">
     <div style="height: 50px; background-color: #eee;" />
     <slot></slot>
