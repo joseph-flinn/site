@@ -17,7 +17,7 @@
     token.set(tokenData);
 
     cmsPath.subscribe((value) => {
-      previousPath = value === '' ? '/cms' : value
+      previousPath = value === '' ? '/cms/drips' : value
     })
 
     goto(`${base}${previousPath}`).then(() => {})

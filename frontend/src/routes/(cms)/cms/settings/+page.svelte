@@ -4,5 +4,5 @@
 </script>
 
 
-<PageTitle name="CMS Settings"/>
+<PageTitle name="Settings"/>
 <UnderConstruction/>

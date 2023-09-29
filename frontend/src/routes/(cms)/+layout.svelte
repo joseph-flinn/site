@@ -20,7 +20,7 @@
 <div class="fullh-container">
   <VerticalNav />
   <div style="display: flex; flex-direction: column; flex-grow: 1;">
-    <div style="height: 50px; background-color: #eee;" />
+    <div style="height: 50px; background-color: #E7E7E6;" />
     <slot></slot>
   </div>
 </div>
