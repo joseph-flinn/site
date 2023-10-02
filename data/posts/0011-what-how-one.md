@@ -9,7 +9,7 @@ I am in the middle of moving, so the next few posts might be on the shorter side
 
 ---
 
-These two words, "What" and "How", have been the most impactful words with me this year. They have chnaged how I look
+These two words, "What" and "How", have been the most impactful words with me this year. They have changed how I look
 at, and move through, the world. In almost every human interaction, these are the most important tools that one can use,
 and they are just getting more valuable and important as the world continues on its digital path.
 
@@ -26,7 +26,7 @@ answer those questions themselves (wow, talk about idea Inception!).
 
 After we explore how these words align and maintain an organization's alignment, we'll see how these words are the most
 important tools in a manager's toolbox. They can be used to find the best solution to any problem in a collaborative
-way. And they are a manager's goto when coaching Strategic Thinking in their direct reports.
+way. And they are a manager's go-to when coaching Strategic Thinking in their direct reports.
 
 
 To wrap up the mini-series, we'll examine the underlying themes in why these words are so impactful in these situations.
