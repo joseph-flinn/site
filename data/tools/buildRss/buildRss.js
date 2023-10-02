@@ -1,5 +1,5 @@
 import fs from 'fs';
-import posts from '../posts.json' assert {type: "json"};
+import posts from '../../posts.json' assert {type: "json"};
 
 
 const SITE_URL = 'https://joseph.flinnlab.com';
