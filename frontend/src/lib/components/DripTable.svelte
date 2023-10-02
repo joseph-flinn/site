@@ -13,19 +13,21 @@
     dropEdit.set(data.filter(datum => datum.id === id)[0])
     goto(`${base}/cms/drips/${id}`)
   }
+
+  const drips = data.sort((postA, postB) => new Date(postA.timestamp) > new Date(postB.timestamp) ? -1 : 1)
 </script>
 
 
 <Card>
   <table>
     <tr>
-      <th style="width: 200px">date</th>
+      <th style="width: 200px">timestamp</th>
       <th>drip</th>
     </tr>
     {#each data as datum}
       <tr class="row" on:click={handleDripClick(datum.id)}>
-        <td>{datum.date}</td>
-        <td>{datum.drop}</td>
+        <td>{datum.timestamp}</td>
+        <td>{datum.body}</td>
       </tr>
     {/each}
   </table>
@@ -41,7 +43,6 @@
   td, th {
     padding: 1em;
     border: 0px;
-    border-bottom: 1px solid #555;
   }
 
   .row {
