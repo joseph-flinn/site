@@ -11,10 +11,10 @@
   const handleDripClick = (id) => {
     console.log(`clicked row ${id}`)
     dropEdit.set(data.filter(datum => datum.id === id)[0])
-    goto(`${base}/cms/drips/${id}`)
+    goto(`${base}/cms/drip/${id}`)
   }
 
-  const drips = data.sort((postA, postB) => new Date(postA.timestamp) > new Date(postB.timestamp) ? -1 : 1)
+  const drip = data.sort((dropA, dropB) => new Date(dropA.timestamp) > new Date(dropB.timestamp) ? -1 : 1)
 </script>
 
 

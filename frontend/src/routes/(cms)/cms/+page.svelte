@@ -1,8 +1,6 @@
 <script>
-  import PageTitle from "$lib/components/PageTitle.svelte";
-  import UnderConstruction from "$lib/components/UnderConstruction.svelte";
+  import { goto } from '$app/navigation'
+  import { base } from '$app/paths'
+
+  goto(`${base}/cms/drip`)
 </script>
-
-
-<PageTitle name="CMS"/>
-<UnderConstruction/>

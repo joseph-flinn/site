@@ -17,6 +17,7 @@
 
 </script>
 
+{#if authToken != ''}
 <div class="fullh-container">
   <VerticalNav />
   <div style="display: flex; flex-direction: column; flex-grow: 1;">
@@ -24,6 +25,7 @@
     <slot></slot>
   </div>
 </div>
+{/if}
 
 <style>
   .fullh-container {

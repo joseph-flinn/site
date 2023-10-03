@@ -8,7 +8,7 @@
 
 
   const handleDrip = () => {
-    goto(`${base}/cms/drips`)
+    goto(`${base}/cms/drip`)
   }
 
   const handleSettings = () => {
