@@ -43,7 +43,7 @@ app.get('/posts', async c => {
 		.then(postList => {
 			c.header('content-type', 'application/json')
 			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ postList: postList }), 200)
+			return c.text(JSON.stringify({ data: postList }), 200)
 		})
 })
 
@@ -61,7 +61,7 @@ app.get('/posts/:slug', async c => {
 		.then(post => {
 			c.header('content-type', 'application/json')
 			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ post: post}), 200)
+			return c.text(JSON.stringify({ data: post}), 200)
 		})
 })
 

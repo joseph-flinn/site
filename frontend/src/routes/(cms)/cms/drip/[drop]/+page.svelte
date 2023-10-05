@@ -1,21 +1,57 @@
 <script>
+  import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
+
+  import { 
+      PUBLIC_DATASOURCE_TYPE,  
+      PUBLIC_DATASOURCE,
+  } from '$env/static/public';
+
   import Button from '$lib/components/Button.svelte';
   import Card from '$lib/components/Card.svelte';
   import PageTitle from '$lib/components/PageTitle.svelte';
   import UnderConstruction from '$lib/components/UnderConstruction.svelte';
-  import { dropEdit } from '$lib/store.js';
+  import { token, dropEdit } from '$lib/store.js';
 
 
+  let authToken = '';
   let drop = {}
 
   dropEdit.subscribe((value) => {
     drop = value
   })
 
-  let dropBody = drop.body;
+  token.subscribe((value) => {
+    authToken = value
+  })
 
-  const handleCancel = () => {}
-  const handleSave = () => {}
+  let dropBody = drop.message
+
+  const handleCancel = () => {
+    goto(`${base}/cms/drip`)
+  }
+
+  const handleSave = () => {
+    const res = fetch(`${PUBLIC_DATASOURCE}/drip`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${authToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: drop.id,
+        message: dropBody
+      })
+    }).then((resp) => {
+      return resp.text()
+    }).then((respText) => {
+      console.log(respText)
+      goto(`${base}/cms/drip`)
+    })
+  }
+
+  
+ 
 </script>
 
 
@@ -34,11 +70,11 @@
     <Button 
       text='Cancel'
       primary={false}
-      on:click={handleCancel}
+      handleClick={handleCancel}
     />
     <Button
       text='Save'
-      on:click={handleSave}
+      handleClick={handleSave}
     />
   </div>
 </div>

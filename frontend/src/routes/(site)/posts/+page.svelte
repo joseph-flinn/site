@@ -7,7 +7,7 @@
 
   //const posts = Object.values(data).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
   log('routes/posts', `data: ${JSON.stringify(data, null, 2)}`);
-  const posts = data.postList.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
+  const posts = data.data.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 </script>
 
 

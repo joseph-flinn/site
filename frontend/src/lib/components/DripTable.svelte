@@ -10,11 +10,11 @@
 
   const handleDripClick = (id) => {
     console.log(`clicked row ${id}`)
-    dropEdit.set(data.filter(datum => datum.id === id)[0])
+    dropEdit.set(data.data.filter(datum => datum.id === id)[0])
     goto(`${base}/cms/drip/${id}`)
   }
 
-  const drip = data.sort((dropA, dropB) => new Date(dropA.timestamp) > new Date(dropB.timestamp) ? -1 : 1)
+  const drip = data.data.sort((dropA, dropB) => new Date(dropA.timestamp) > new Date(dropB.timestamp) ? -1 : 1)
 </script>
 
 
@@ -24,10 +24,10 @@
       <th style="width: 200px">timestamp</th>
       <th>drip</th>
     </tr>
-    {#each data as datum}
-      <tr class="row" on:click={handleDripClick(datum.id)}>
-        <td>{datum.timestamp}</td>
-        <td>{datum.body}</td>
+    {#each data.data as datum}
+      <tr class="row" on:click={() => handleDripClick(datum.id)}>
+        <td>{datum.created_at}</td>
+        <td>{datum.message}</td>
       </tr>
     {/each}
   </table>
