@@ -47,6 +47,21 @@
       goto(`${base}/cms/drip`)
     })
   }
+
+  const handleDelete = () => {
+    const res = fetch(`${PUBLIC_DATASOURCE}/drip/${drop.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${authToken}`,
+        'Content-Type': 'application/json'
+      },
+    }).then((resp) => {
+      return resp.text()
+    }).then((respText) => {
+      console.log(respText)
+      goto(`${base}/cms/drip`)
+    })
+  }
 </script>
 
 
@@ -61,6 +76,13 @@
   </Card>
 </div>
 <div class='actionBar'>
+  <div>
+    <Button 
+      text='Delete'
+      primary={false}
+      handleClick={handleDelete}
+    />
+  </div>
   <div style='margin-left: auto'>
     <Button 
       text='Cancel'

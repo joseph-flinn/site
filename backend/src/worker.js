@@ -135,18 +135,15 @@ app.delete('/drip/*', async(c, next) => {
 })
 
 
-app.delete(
-	'/drip/:id',
-	async c => {
-		const { id } = c.req.param()
-		const { success } = await c.env.DB_DRIP.prepare(`
-			delete from drip where id=?
-		`).bind(id).run()
+app.delete( '/drip/:id', async c => {
+	const id = c.req.param('id')
+	const { success } = await c.env.DB_DRIP.prepare(`
+		delete from drip where id=?
+	`).bind(id).run()
 
-		if (success) return c.text(JSON.stringify({ message: `drip deleted` }, null, 2), 201)
+	if (success) return c.text(JSON.stringify({ message: `drip deleted` }), 201)
 
-		return c.text('something went wrong', 400)
-	}
-)
+	return c.text('something went wrong', 400)
+})
 
 export default app

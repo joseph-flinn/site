@@ -64,6 +64,7 @@ export default function () {
 
 
 	// GROUP: drip
+	let newDripId = null;
 	group('drip', function () {
 		const res = http.get(`${BASE_URL}/drip`)
 
@@ -104,6 +105,8 @@ export default function () {
 			'POST - create: status is 201': (r) => r.status === 201,
 			'POST - create: verify body': (r) => r.body.includes('create')
 		})
+
+		// newPostId = r.body.
 
     sleep(SLEEP_TIME) // second
   })
