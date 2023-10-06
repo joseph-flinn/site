@@ -76,6 +76,7 @@
   </Card>
 </div>
 <div class='actionBar'>
+  {#if drop.id !== 'new'}
   <div>
     <Button 
       text='Delete'
@@ -83,6 +84,7 @@
       handleClick={handleDelete}
     />
   </div>
+  {/if}
   <div style='margin-left: auto'>
     <Button 
       text='Cancel'
