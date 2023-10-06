@@ -1,5 +1,4 @@
 <script>
-  export let headers;
   export let data;
 
   import { goto } from "$app/navigation";
@@ -22,7 +21,7 @@
   <table>
     <tr>
       <th style="width: 200px">timestamp</th>
-      <th>drip</th>
+      <th>drop</th>
     </tr>
     {#each data.data as datum}
       <tr class="row" on:click={() => handleDripClick(datum.id)}>

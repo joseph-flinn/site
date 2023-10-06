@@ -32,16 +32,14 @@
   }
 
   const handleSave = () => {
+    const bodyData = drop.id !== 'new' ? { id: drop.id, message: dropBody } : { message: dropBody }
     const res = fetch(`${PUBLIC_DATASOURCE}/drip`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${authToken}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        id: drop.id,
-        message: dropBody
-      })
+      body: JSON.stringify(bodyData)
     }).then((resp) => {
       return resp.text()
     }).then((respText) => {
@@ -49,9 +47,6 @@
       goto(`${base}/cms/drip`)
     })
   }
-
-  
- 
 </script>
 
 

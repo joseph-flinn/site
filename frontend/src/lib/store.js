@@ -4,4 +4,4 @@ export const token = writable('')
 
 export const cmsPath = writable('')
 
-export const dropEdit = writable('')
+export const dropEdit = writable({})
