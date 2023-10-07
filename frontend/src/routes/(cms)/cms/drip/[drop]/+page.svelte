@@ -43,7 +43,6 @@
     }).then((resp) => {
       return resp.text()
     }).then((respText) => {
-      console.log(respText)
       goto(`${base}/cms/drip`)
     })
   }
@@ -58,7 +57,6 @@
     }).then((resp) => {
       return resp.text()
     }).then((respText) => {
-      console.log(respText)
       goto(`${base}/cms/drip`)
     })
   }

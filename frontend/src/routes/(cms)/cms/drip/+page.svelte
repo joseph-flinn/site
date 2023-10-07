@@ -20,7 +20,6 @@
   <Button 
     text='+ New' 
     handleClick={handleNewClick} 
-    class='newButton'
   />
 </div>
 <DripTable data={data} />
