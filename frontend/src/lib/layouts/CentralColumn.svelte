@@ -1,22 +1,7 @@
-<script>
-  import "../public/global.css";
-  import "../public/fonts.css";
-  import NavBar from '$lib/components/NavBar.svelte';
-  import Header from '$lib/components/Header.svelte';
-  import Footer from '$lib/components/Footer.svelte';
-
-  import data from '../data.json';
-</script>
-
-
 <div class="fullh-container">
   <div class="side"/>
   <div class="page">
-    <Header pages={data.pages}/>
-    <div class="page-content">
-      <slot></slot>
-    </div>
-    <Footer />
+    <slot></slot>
   </div>
   <div class="side"/>
 </div>
@@ -40,12 +25,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  .page-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
   }
 
   @media only screen and (max-width: 600px) and (min-width: 300px) {

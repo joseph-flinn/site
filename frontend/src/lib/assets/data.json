@@ -1,16 +1,18 @@
 {
-  "pages": [
-    {"name": "home", "path": "/"},
-    {"name": "posts", "path": "/posts"},
-    {"name": "drip", "path": "/drip"}
-  ],
+  "pages": {
+    "site": [
+      {"name": "home", "path": "/"},
+      {"name": "posts", "path": "/posts"},
+      {"name": "drip", "path": "/drip"}
+    ]
+  },
   "skillsData": {
     "leadership": [
       "lean management",
       "organizational alignment",
       "managing for high performance: purpose + expectations + feedback",
       "effective feedback with PSBIQ model",
-      "coach"
+      "coaching"
     ],
     "technical": [ 
       "linux",

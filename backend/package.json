@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "wrangler dev --remote",
-		"test": "k6 -e ENV=dev -e PSK=${TOKEN} run/script.js",
-    "deploy": "wrangler deploy"
+		"test": "k6 -e ENV=dev -e PSK=${TOKEN} run test/script.js",
+		"test:staging": "k6 -e ENV=staging -e PSK=${TOKEN} run test/script.js",
+    "deploy:staging": "wrangler --env staging deploy"
   },
   "devDependencies": {
     "wrangler": "^3.7.0"

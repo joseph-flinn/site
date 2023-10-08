@@ -43,7 +43,7 @@ app.get('/posts', async c => {
 		.then(postList => {
 			c.header('content-type', 'application/json')
 			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ postList: postList }), 200)
+			return c.text(JSON.stringify({ data: postList }), 200)
 		})
 })
 
@@ -61,7 +61,7 @@ app.get('/posts/:slug', async c => {
 		.then(post => {
 			c.header('content-type', 'application/json')
 			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ post: post}), 200)
+			return c.text(JSON.stringify({ data: post}), 200)
 		})
 })
 
@@ -116,7 +116,7 @@ app.post(
 
 app.get('/drip', async c => {
 	const { success, results } = await c.env.DB_DRIP.prepare(`
-		select * from drip ORDER BY created_at DESC LIMIT 1
+		select * from drip ORDER BY created_at DESC LIMIT 10
 	`).bind().all()
 
 	if (!success) return c.text(JSON.stringify({ message: "something went wrong"}), 400)
@@ -135,18 +135,15 @@ app.delete('/drip/*', async(c, next) => {
 })
 
 
-app.delete(
-	'/drip/:id',
-	async c => {
-		const { id } = c.req.param()
-		const { success } = await c.env.DB_DRIP.prepare(`
-			delete from drip where id=?
-		`).bind(id).run()
+app.delete( '/drip/:id', async c => {
+	const id = c.req.param('id')
+	const { success } = await c.env.DB_DRIP.prepare(`
+		delete from drip where id=?
+	`).bind(id).run()
 
-		if (success) return c.text(JSON.stringify({ message: `drip deleted` }, null, 2), 201)
+	if (success) return c.text(JSON.stringify({ message: `drip deleted` }), 201)
 
-		return c.text('something went wrong', 400)
-	}
-)
+	return c.text('something went wrong', 400)
+})
 
 export default app

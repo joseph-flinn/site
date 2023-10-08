@@ -6,8 +6,20 @@ import {
 import { log } from '$lib/utils/logger.js';
 
 
-let POST_LIST_CACHE = null;
-let POSTS_CACHE = {};
+let MEMOIZATION = {}
+
+
+const memoizedFetch = (fetch, path, useMemoization = true) => {
+    if ((useMemoization === true) && ((MEMOIZATION[path] ?? null) !== null)) {
+        return MEMOIZATION[path]
+    }
+    return fetch(`${PUBLIC_DATASOURCE}${path}`)
+        .then(response => response.json())
+        .then(resp => {
+            MEMOIZATION[path] = {data: resp.data};
+        })
+        .then(() => (MEMOIZATION[path]));
+}
 
 
 const buildPostList = (postsData) => {
@@ -23,54 +35,17 @@ const buildPostList = (postsData) => {
 
 export const getPostList = (fetch) => {
     log('$lib.utils.loader:getPostList()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
-
-    if (POST_LIST_CACHE !== null) {
-        log('$lib.utils.loader:getPostList()', "posts cache hit")
-        return { postList: POST_LIST_CACHE };
-    };
-
-    if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
-        log('$lib.utils.loader:getPostList().url', `${PUBLIC_DATASOURCE}/posts`)
-        return fetch(`${PUBLIC_DATASOURCE}/posts`)
-            .then(response => response.json())
-            .then(resp => {
-                POST_LIST_CACHE = resp.postList;
-            })
-            .then(() => ({ postList: POST_LIST_CACHE }));
-    }
-
-    return fetch(`${PUBLIC_DATASOURCE}/posts.json`)
-        .then(response => response.json())
-        .then(resp => {
-            POST_LIST_CACHE = buildPostList(posts);
-        })
-        .then(() => ({ postList: POST_LIST_CACHE }));
-
+    return memoizedFetch(fetch, '/posts')
 };
 
 
 export const getPost = (postSlug, fetch) => {
     log('$lib.utils.loader:getPost()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
+    return memoizedFetch(fetch, `/posts/${postSlug}`)
+};
 
-    if (postSlug in POSTS_CACHE) {
-        log('$lib.utils.loader:getPost()', "posts cache hit")
-        return { post: POSTS_CACHE[postSlug] };
-    };
 
-    if (PUBLIC_DATASOURCE_TYPE === 'network_dynamic') {
-        log('$lib.utils.loader:getPost()', "using network_dynamic")
-        return fetch(`${PUBLIC_DATASOURCE}/posts/${postSlug}`)
-            .then(response => response.json())
-            .then(resp => {
-                POSTS_CACHE[postSlug] = resp.post;
-            })
-            .then(() => ({ post: POSTS_CACHE[postSlug] }));
-    }
-
-    return fetch(`${PUBLIC_DATASOURCE}/posts.json`)
-        .then(response => response.json())
-        .then(resp => {
-            POSTS_CACHE = resp;
-        })
-        .then(() => ({ post: POSTS_CACHE[postSlug] }));
+export const getDropList = (fetch) => {
+    log('$lib.utils.loader:getDropList()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
+    return memoizedFetch(fetch, '/drip', false)
 };

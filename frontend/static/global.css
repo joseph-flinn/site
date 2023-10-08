@@ -1,3 +1,15 @@
+body {
+  font-family: "Monoid", monospace;
+  background-color: #fffefb; 
+  color: #5c5955;
+  margin: 0em;
+}
+
+a {
+  text-decoration: none;
+  color: #5c5955;
+}
+
 /* fonts.css */
 
 @font-face {

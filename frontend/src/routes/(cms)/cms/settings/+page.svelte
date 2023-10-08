@@ -4,5 +4,5 @@
 </script>
 
 
-<PageTitle name="drip"/>
+<PageTitle name="Settings"/>
 <UnderConstruction/>
