@@ -8,8 +8,11 @@
   }));
 
   const myDateFormat = (date) => {
-    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}\n` +
-           `${date.getHours()}:${date.getMinutes()}`
+    const [pdate, pfulltime] = date.toISOString().split('T')
+    const [ptime, other]= pfulltime.split('.')
+    const [hours, minutes, seconds] = ptime.split(':')
+
+    return `${pdate}\n${hours}:${minutes}`
   }
 </script>
 
@@ -20,7 +23,7 @@
   {#each drip as drop}
     <div class='dropView'>
       <div class='dropTime'>
-        {myDateFormat(drop.created_at)}
+        <b><i>{myDateFormat(drop.created_at)}</i></b>
       </div>
       <div class='dropMessage'>
         {drop.message}
@@ -35,18 +38,40 @@
     display: flex;
     flex-direction: column;
   }
+
   .dropView {
     display: flex;
-    flex-direction: row;
   }
+
   .dropTime {
-    width: 100px;
     font-size: 14px;
-    border-right: 2px solid #9b9894; 
-    padding: 0.5em;
+    color: #a1a09d;
   }
+
   .dropMessage {
-    flex: auto;
-    padding: 0.5em;
+    font-size: 16px;
+    padding: 0.75em;
+  }
+
+  @media only screen and (max-width: 800px) and (min-width: 300px) {
+    .dropView {
+      flex-direction: column;
+    }
+    .dropTime {
+      padding: 1em 0.75em 0em 0.75em;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .dropView {
+      flex-direction: row;
+    }
+
+    .dropTime {
+      flex-basis: 100px;
+      flex-shrink: 0;
+      border-right: 2px solid #9b9894; 
+      padding: 0.75em;
+    }
   }
 </style>

@@ -55,4 +55,8 @@
   th {
     text-align: left;
   }
+
+  td {
+    vertical-align: top;
+  }
 </style>
