@@ -1,8 +1,9 @@
 <script>
   export let data;
 
-  import { log } from '$lib/utils/logger.js';
   import SvelteMarkdown from 'svelte-markdown';
+
+  import { log } from '$lib/utils/logger.js';
   import CodeComponent from '$lib/renderers/CodeComponent.svelte';
 
   const { title, published, body, ...rest } = data.data;
