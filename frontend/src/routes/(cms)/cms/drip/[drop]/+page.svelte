@@ -9,34 +9,22 @@
 
   import Button from '$lib/components/Button.svelte';
   import Card from '$lib/components/Card.svelte';
+  import Modal from '$lib/components/Modal.svelte';
   import PageTitle from '$lib/components/PageTitle.svelte';
-  import UnderConstruction from '$lib/components/UnderConstruction.svelte';
   import { token, dropEdit } from '$lib/store.js';
 
-
-  let authToken = '';
-  let drop = {}
-
-  dropEdit.subscribe((value) => {
-    drop = value
-  })
-
-  token.subscribe((value) => {
-    authToken = value
-  })
-
-  let dropBody = drop.message
+  let dropBody = $dropEdit.message
 
   const handleCancel = () => {
     goto(`${base}/cms/drip`)
   }
 
   const handleSave = () => {
-    const bodyData = drop.id !== 'new' ? { id: drop.id, message: dropBody } : { message: dropBody }
+    const bodyData = $dropEdit.id !== 'new' ? { id: $dropEdit.id, message: dropBody } : { message: dropBody }
     const res = fetch(`${PUBLIC_DATASOURCE}/drip`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${authToken}`,
+        'Authorization': `Bearer ${$token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(bodyData)
@@ -47,11 +35,13 @@
     })
   }
 
-  const handleDelete = () => {
-    const res = fetch(`${PUBLIC_DATASOURCE}/drip/${drop.id}`, {
+  let showModal = false;
+
+   const handleAffirmDelete = () => {
+    const res = fetch(`${PUBLIC_DATASOURCE}/drip/${$dropEdit.id}`, {
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${authToken}`,
+        'Authorization': `Bearer ${$token}`,
         'Content-Type': 'application/json'
       },
     }).then((resp) => {
@@ -59,7 +49,7 @@
     }).then((respText) => {
       goto(`${base}/cms/drip`)
     })
-  }
+   }
 </script>
 
 
@@ -68,26 +58,27 @@
   <Card>
     <textarea 
       placeholder='Write drop body...' 
+      autofocus
       rows=25
       bind:value={dropBody}
     />
   </Card>
 </div>
 <div class='actionBar'>
-  {#if drop.id !== 'new'}
+  {#if $dropEdit.id !== 'new'}
   <div>
     <Button 
-      text='Delete'
+      text='Cancel'
       primary={false}
-      handleClick={handleDelete}
+      handleClick={handleCancel}
     />
   </div>
   {/if}
   <div style='margin-left: auto'>
     <Button 
-      text='Cancel'
+      text='Delete'
       primary={false}
-      handleClick={handleCancel}
+      handleClick={() => {showModal = true}}
     />
     <Button
       text='Save'
@@ -95,6 +86,28 @@
     />
   </div>
 </div>
+
+<Modal bind:showModal>
+  <div style='display: flex; flex-direction: column; padding: 1em;'>
+    <div style='color: #5c5955; padding: 1em'>
+      Are you sure you want to delete this drop?
+    </div>
+    <div style='display: flex; flex-direction: row; padding-top: 1em;'>
+      <div style='margin-left: auto; padding: 1em;'>
+      <Button 
+        text='No'
+        primary={false}
+        handleClick={() => {showModal = false}}
+      />
+    </div>
+    <div style='margin-right: auto; padding: 1em;'>
+      <Button 
+        text='Yes'
+        handleClick={handleAffirmDelete}
+      />
+    </div>
+  </div>
+</Modal>
 
 
 <style>
