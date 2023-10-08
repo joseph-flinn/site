@@ -55,6 +55,7 @@
   .vbar {
     height: 100%;
     width: 300px;
+    flex-shrink: 0;
     background-color: #5c5955; 
     color: #fffefb;
     display: flex; 
