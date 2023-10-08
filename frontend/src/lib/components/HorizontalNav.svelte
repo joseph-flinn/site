@@ -32,10 +32,8 @@
 
   a {
     padding: 1em;
-  }
-
-  a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #5c5955;
   }
 
   @media only screen and (max-width: 600px) {

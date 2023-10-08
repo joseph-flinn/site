@@ -1,5 +1,8 @@
 <script>
   export let data;
+
+  import SvelteMarkdown from 'svelte-markdown';
+
   import PageTitle from "$lib/components/PageTitle.svelte";
 
   const drip = data.data.map((drop) => ({
@@ -26,7 +29,9 @@
         <b><i>{myDateFormat(drop.created_at)}</i></b>
       </div>
       <div class='dropMessage'>
-        {drop.message}
+        <SvelteMarkdown 
+          source={drop.message} 
+        />
       </div>
     </div>
   {/each}
