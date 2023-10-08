@@ -32,10 +32,14 @@
 
   a {
     padding: 1em;
+<<<<<<< Updated upstream
   }
 
   a:hover {
     text-decoration: underline;
+=======
+    color: #5c5955;
+>>>>>>> Stashed changes
   }
 
   @media only screen and (max-width: 600px) {
