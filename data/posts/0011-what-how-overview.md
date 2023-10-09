@@ -1,7 +1,7 @@
-!! title: The Power of What & How: Overview
+!! title: The Power of WHAT & HOW - Overview
 !! slug: what-how-overview
 !! published: 2023-10-02
-!! description: Explore the power of What & How
+!! description: Explore the power of WHAT & HOW
 
 ---
 
@@ -9,18 +9,18 @@ I am in the middle of moving, so the next few posts might be on the shorter side
 
 ---
 
-These two words, "What" and "How", have been the most impactful words with me this year. They have changed how I look
+These two words, WHAT and HOW, have been the most impactful words with me this year. They have changed how I look
 at, and move through, the world. In almost every human interaction, these are the most important tools that one can use,
 and they are just getting more valuable and important as the world continues on its digital path.
 
 
-Over the next few weeks, we'll see how "What" and "How" plays an important role in Organizational Leadership. They are the
+Over the next few weeks, we'll see how WHAT and HOW plays an important role in Organizational Leadership. They are the
 foundation of building a compelling organization, mission, and brand. We'll examine Simon Sinek's Golden Circle idea,
 expand on it with what we'll call Silver Rings. These drive the all important alignment across the organization.
 
 
-Next we'll examine the power of "What" and "How" in the tangentially related topic of persuasion or negotiation. While
-answering the Golden Circle questions, "What" and "How" play a vital role in the process of aligning perspectives to
+Next we'll examine the power of WHAT and HOW in the tangentially related topic of persuasion or negotiation. While
+answering the Golden Circle questions, WHAT and HOW play a vital role in the process of aligning perspectives to
 answer those questions themselves (wow, talk about idea Inception!). 
 
 
