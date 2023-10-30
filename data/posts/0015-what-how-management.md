@@ -23,10 +23,10 @@ Dr. Timothy Clark's book,
 [_The 4 Stages of Psychological Safety_](https://www.penguinrandomhouse.com/books/617259/the-4-stages-of-psychological-safety-by-tim-clark), 
 define the 4 stages of psychological safety as:
 
-1. feel included
-2. Able to learn
-3. Safe to contribute
-4. Safe to challenge the status quo
+1. included
+2. able to learn
+3. safe to contribute
+4. safe to challenge the status quo
 
 _Inclusion_ is being brought in, asked to participate, and being actively listened to; no matter who you are, no matter
 seniority, no matter your background. Bridewater Associates takes it to the next level by leaning into "idea
@@ -104,5 +104,5 @@ culture, and pushing for continuous improvement.
 
 1. [Harvard Business Review: The Neuroscience of Trust](https://hbr.org/2017/01/the-neuroscience-of-trust)
 2. [Dr. Timothy Clark: The 4 Stages of Psychological Safety](https://www.penguinrandomhouse.com/books/617259/the-4-stages-of-psychological-safety-by-tim-clark/)
-3. [MindTools: The Situation-Behavior-Impact :tm: Tool](https://www.mindtools.com/ay86376/the-situation-behavior-impact-feedback-tool)
+3. [MindTools: The Situation-Behavior-Impact(TM) Tool](https://www.mindtools.com/ay86376/the-situation-behavior-impact-feedback-tool)
 3. [Lara Hogan: The Feedback Equation](https://larahogan.me/blog/feedback-equation/)
