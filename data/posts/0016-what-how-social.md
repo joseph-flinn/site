@@ -11,12 +11,12 @@ something in a vacuum. Human connection is a need. Building a strong social circ
 things:  1) creating social or business opportunities that wouldn't otherwise be there, and 2) increasing a person's
 natural resources of Community (_Your Money or Your Life_ [[1](https://yourmoneyoryourlife.com/book-summary/)].
 
-In her book _Captivate: The Science of Succeeding with People_[[1](https://www.scienceofpeople.com/captivate/)], Vanessa
-Van Edwards discusses skills and techniques to prevent being awkward at networking events or other social gatherings
-(among a great many other things). One of those tools that she explores is something that she calls a Spark: that piqued
-curiosity between two people that connect them and fosters a desire to learn more about the other. Using "Sparky
-questions"--open ended and unexpected questions--to create a Spark and start and initiate the human connection. The
-human brain is wired to seek out novelty [[3](https://www.ciis.edu/news/novelty-keeps-your-brain-healthy)], so these
+In her book _Captivate: The Science of Succeeding with People_ [[1](https://www.scienceofpeople.com/captivate/)],
+Vanessa Van Edwards discusses skills and techniques to overcome awkwardness at networking events or other social
+gatherings (among a great many other things). One of those tools that she explores is something that she calls a Spark:
+the piqued curiosity between two people that connect them and fosters a desire to learn more about the other. Using
+"Sparky questions"--open ended and unexpected questions--to create a Spark and start and initiate the human connection.
+The human brain is wired to seek out novelty [[3](https://www.ciis.edu/news/novelty-keeps-your-brain-healthy)], so these
 types of open ended question _spark_ the curiosity that starts that creates an immediate interest in the conversation.
 
 Connecting Van Edward's work to Chris Voss's work in _Never Split the Difference_
@@ -33,18 +33,18 @@ Social community is super important for a healthy human. A study found that a ra
 self-administers drugs, but when joined with other rats, chooses not to self-administer
 [[5](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386559/)]. Addiction in humans is not dissimilar. 
 
-Past the basic need for human connection and community, Vicki Robin explores the idea of differences between national
-resources (money and assets) and natural resources (Community, Love)
+Moving beyond the basic need for human connection and community, Vicki Robin explores the idea of differences between
+national resources (money and assets) and natural resources (Community, Love)
 [[1](https://yourmoneyoryourlife.com/book-summary/)]. Being a billionaire living in a windowless room with no outside
-connection is pointless. And from a financial perspective, Community decreases the financial needs of normal life. Doing
-everything solo costs a lot of money. Becoming a pilot and buying a plane costs hundreds of thousands of dollars, but an
-airplane ticket only costs a few hundred. Similarly, county snow removal is a part of what the country provides and
-costs a lot less in taxes (a few dollars a year) than purchasing a tractor and keeping the road clear (tens of thousands
-of dollars). This can go for just about everything.
+connection is pointless. In addition, from a financial perspective, Community decreases the financial needs of normal
+life. Doing everything solo costs a lot of money. Becoming a pilot and buying a plane costs hundreds of thousands of
+dollars, but an airplane ticket only costs a few hundred. Similarly, county snow removal is a part of what the country
+provides and costs a lot less in taxes (a few dollars a year) than purchasing a tractor and keeping the road clear (tens
+of thousands of dollars). This can go for just about everything.
 
 Community also builds purpose. Purpose for one's self is a fruitless endeavour 
 [[6](https://simonsinek.com/books/find-your-why/)]. _Enough_ will never be enough. However, purpose for a broader
-community brings motivation and working long days in is not as painful because there is a larger goal than one's self;
+community brings motivation and working long days is not as painful because there is a larger goal than one's self;
 leaving the world better than you found it.
 
 Human connection is a necessary part of the human experience. It fills basic human needs, but also opens up social
