@@ -17,3 +17,6 @@
 
 
 - Social status
+
+
+- Conclusion: WHAT & HOW paired with curiosity is just human connection
