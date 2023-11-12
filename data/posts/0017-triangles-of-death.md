@@ -1,5 +1,5 @@
-!! title: Triangles of Death - Organizational Communication
-!! slug: triangles-of-death
+!! title: Organizational Communication - Triangles of Death
+!! slug: org-comm-triangles-of-death
 !! published: 2023-11-13
 !! description: Discuss the triangling communication pattern in remote organization culture
 
@@ -7,7 +7,7 @@
 
 
 I am observing a growing communication pattern in remote communication culture that is a cause for great concern.
-Inforamtion is not flowing evenly throughout the organization; both in timing and source of information. Organizational
+Information is not flowing evenly throughout the organization; both in timing and source of information. Organizational
 communication is the hardest problem to solve. In the past few years with the rise in remote work, the patterns that we
 have become used to have been flipped on their heads and might not be effective anymore.
 
@@ -15,17 +15,17 @@ Timing by itself is not the issue. As the world has started to adopt a more dist
 become more asynchronous. This means that information does not flow through the organization at the same rate. A CEO
 might send out an email, but every employee might read it at slightly different times. All company meetings are an
 example of when all of the employees receive information at the same time (synchronous communication). With either of
-these communication strategies in a traditional in-office company, all of the employees would evetnually receive the
+these communication strategies in a traditional in-office company, all of the employees would eventually receive the
 information. One employee who doesn't read their emails might hear the information from another employee, but most
 likely in the form of "Have you read the latest All Company email?" which essentially quotes the source of the
 information.
 
 As our workforces get more distributed across different timezones, sometimes with timezones that have little to no
-overlap, the use of asynchronous communication techniques has drastically risen. This increase in asnychronous
-communication has caused a need in any syncrhonous communication to first level-set and make sure everyone is caught up
+overlap, the use of asynchronous communication techniques has drastically risen. This increase in asynchronous
+communication has caused a need in any synchronous communication to first level-set and make sure everyone is caught up
 before proceeding with the agenda. This level-setting has led to what I am calling the _Triangles of Death_. If I
 received information in a meeting that someone else was not in, and I share my interpretation of what was shared, there
-is a high liklihood that the people that I am sharing it with will want to confirm it in some way. Without an email or
+is a high likelihood that the people that I am sharing it with will want to confirm it in some way. Without an email or
 notes to point back to for that decision, they have to go get that information the original person and this starts the
 triangle. There might be more conversation, perspective or decisions discussed in that chat and that doesn't get back to
 the original meeting. This is the start of the _Triangle of Death_. 
@@ -44,8 +44,8 @@ there.
 
 It seems that the lack of trust is the common denominator of _Triangles of Death_. And the kicker is that being in a
 _Triangle of Death_ grows the lack of trust. Any system that grows itself is a compounding growth system and has the
-capability of exponetial growth. Exponential growth of _lack of trust_ is not a system that we want to see grow
-exponetially. _"Compound interest is the eighth wonder of the world. [They] who understand it, earns it...[they] who
+capability of exponential growth. Exponential growth of _lack of trust_ is not a system that we want to see grow
+exponentially. _"Compound interest is the eighth wonder of the world. [They] who understand it, earns it...[they] who
 doesn't...pays it"_ [[2](https://www.goodreads.com/quotes/76863-compound-interest-is-the-eighth-wonder-of-the-world-he)].
 
 
@@ -55,7 +55,7 @@ doesn't...pays it"_ [[2](https://www.goodreads.com/quotes/76863-compound-interes
 communication is a necessary process in any organization. Left on its own, it will evolve as everyone sees fit which
 will most likely get chaotic as the company changes.
 
-*Use transparent communication channels first, only reserving DMs for personal, private, or sensative information*.
+*Use transparent communication channels first, only reserving DMs for personal, private, or sensitive information*.
 Using public communication channels helps share information out to the rest of the team, department, or organization.
 There is a risk of information overload, but the guidelines in the above point should be able to help. 
 GitHub Engineering [3](https://github.com/github/how-engineering-communicates) has a great example of how they create
