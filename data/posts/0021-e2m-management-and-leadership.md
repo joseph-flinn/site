@@ -52,3 +52,9 @@ group direction towards the purpose, it builds strong and lasting cohesion in th
 In short, Leaders align groups on a greater purpose, provide protection, and are the _first_ into danger and the
 unknown. Managers set behavior expectations of what it means to be a member of the group and delivers supportive
 feedback on how to improve as a member. Managers are Leaders and so is every other member of the group.
+
+---
+
+## Resources
+
+1. [Simon Sinek: Leaders Eat Last](https://simonsinek.com/books/leaders-eat-last/)
