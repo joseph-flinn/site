@@ -1,4 +1,4 @@
-!! title: Engineer to Manager Part 1 - Marbles & Leadership Capital
+!! title: Engineer to Manager - Marbles & Leadership Capital
 !! slug: e2m-marbles
 !! published: 2023-12-03
 !! description: Two weeks into my new career as a people manager, I had to make one of the toughest choices that I have had to make as a leader: deliver business value or build team trust
