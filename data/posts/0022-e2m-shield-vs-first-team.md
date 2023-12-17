@@ -50,9 +50,9 @@ of an organization.
 So if prioritization and the act of shielding aren't inputs to change organizational health, what is? What do both of
 these have in common? _Trust_. The more _Trust_ in an organization, the more aligned that organization will be across
 all First Teams. The more alignment in an organization, the less internal shielding is necessary to maintain _Trust_
-inside of each Second Team. How do you build _Trust_? Put both your First Team and Second Team before your needs and
-desires. Never sacrifice team members for self gain. Be the first into the Unknown. Be a
-[Leader](./posts/e2m-management-and-leadership)
+inside of each Second Team. How do you build _Trust_? With [every action and every decision](./posts/e2m-marbles). Put
+both your First Team and Second Team before your needs and desires. Never sacrifice team members for self gain. Be the
+first into the Unknown. Be a [Leader](./posts/e2m-management-and-leadership)
 
 
 ---
