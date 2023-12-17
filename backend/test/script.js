@@ -37,8 +37,8 @@ export default function () {
 
 		check(res, {
 			'postsPage: status is 200': (r) => r.status === 200,
-			'postsPage: formatted correctly': (r) => 'postList' in r.json(),
-			'postsPage: is not empty': (r) => r.json()['postList'].length != 0
+			'postsPage: formatted correctly': (r) => 'data' in r.json(),
+			'postsPage: is not empty': (r) => r.json()['data'].length != 0
 		})
 
     sleep(SLEEP_TIME) // second
@@ -49,11 +49,11 @@ export default function () {
 
 		check(res, {
 			'postPage: status is 200': (r) => r.status === 200,
-			'postPage: formatted correctly': (r) => 'post' in r.json(),
+			'postPage: formatted correctly': (r) => 'data' in r.json(),
 			'postPage: contains all metadata': (r) => {
 				return ['slug', 'title', 'published', 'description', 'body']
 					.map(key =>
-						key in r.json()['post']
+						key in r.json()['data']
 					)
 					.reduce((allMetaDataExists, metadataExists) => allMetaDataExists && metadataExists, true);
 			}
@@ -105,8 +105,6 @@ export default function () {
 			'POST - create: status is 201': (r) => r.status === 201,
 			'POST - create: verify body': (r) => r.body.includes('create')
 		})
-
-		// newPostId = r.body.
 
     sleep(SLEEP_TIME) // second
   })

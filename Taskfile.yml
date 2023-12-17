@@ -27,6 +27,12 @@ tasks:
     cmds:
       - npm run dev
 
+  deploy:data:staging:
+    silent: true
+    dir: backend
+    cmds:
+      - wrangler r2 object put flinnlab-blog-dev/posts.json --file ../data/posts.json
+
 
   install:hooks:
     silent: true
