@@ -21,6 +21,7 @@ TOKEN=${TOKEN}
 ### Testing
 
 ```
+export TOKEN=<TOKEN FROM BITWARDEN>
 k6 -e PSK=${TOKEN} test/script.js
 
 ```

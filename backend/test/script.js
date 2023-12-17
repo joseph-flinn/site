@@ -106,8 +106,6 @@ export default function () {
 			'POST - create: verify body': (r) => r.body.includes('create')
 		})
 
-		// newPostId = r.body.
-
     sleep(SLEEP_TIME) // second
   })
 
