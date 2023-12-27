@@ -8,19 +8,35 @@
   },
   "skillsData": {
     "leadership": [
-      "lean management",
+      "curiosity first",
+      "psychological saftey",
       "organizational alignment",
-      "managing for high performance: purpose + expectations + feedback",
-      "effective feedback with PSBIQ model",
-      "coaching"
+      "strategic thinking",
+      "systems thinking"
+    ],
+    "poeple management": [
+      "psychological saftey",
+      "output oriented",
+      "high performance: purpose + expectations + feedback",
+      "effective feedback with the PSBIQ model",
+      "situational leadership: delagate, support, coach, or direct"
+    ],
+    "project management": [
+      "lean",
+      "continuous improvement (kaizen)",
+      "scrum",
+      "kanban",
+      "SAFe"
     ],
     "technical": [ 
-      "linux",
       "ci/cd",
       "kubernetes",
       "containerization",
       "python",
-      "javascript"
+      "javascript",
+      "linux",
+      "azure",
+      "aws"
     ]
   }
 }
