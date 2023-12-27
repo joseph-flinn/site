@@ -15,7 +15,7 @@
 <div class="tabs {justify === 'right' ? 'tabs-right' : 'tabs-left'}">
   {#each Object.keys(data) as tab}
     <div 
-      class="tab-button {tab === selectedTab ? 'tab-active': ''}"
+      class="tab-button tab-button-divider {tab === selectedTab ? 'tab-active': ''}"
       on:click={() => handleClick(tab)}
     >
       {tab}
@@ -50,6 +50,10 @@
     padding: 1em;
     cursor: pointer;
     background-color: #eee;
+  }
+
+  :not(:last-child) .tab-button-divider {
+    border-right: 2px solid #fff;
   }
 
   .tab-button:hover {

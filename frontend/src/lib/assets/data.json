@@ -23,9 +23,10 @@
     ],
     "project management": [
       "lean",
-      "continuous improvement (Kaizen)",
+      "continuous improvement (kaizen)",
       "scrum",
-      "kanban"
+      "kanban",
+      "SAFe"
     ],
     "technical": [ 
       "ci/cd",
