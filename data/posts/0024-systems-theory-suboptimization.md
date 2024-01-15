@@ -7,9 +7,9 @@
 
 I was recently talking with a Director of a Foundations Engineering group which contained the Platform, SRE, and Data
 teams. We got to talking about what leads to dysfunction in an organization. [My recent thoughts built from Simon Sinek's
-perspective on leadership](./posts/e2m-management-and-leadership) really drove my perspective in the conversation. I
+perspective on leadership](./e2m-management-and-leadership) really drove my perspective in the conversation. I
 briefly discussed my thoughts on the tension between 
-[shielding and Patrick Lencioni's idea of "First Team"](./posts/e2m-shield-vs-first-team). From my interpretation, the
+[shielding and Patrick Lencioni's idea of "First Team"](./e2m-shield-vs-first-team). From my interpretation, the
 Director's point of view was built mostly from Patrick Lencioni's idea of the "First Team". As we discussed some of the
 alignment issues at my current organization and how it was affecting my team, my conversational counterpart mentioned
 that he thought I'd really like Will Larson's thoughts on Value Oases (today I learned the plural of oasis). 
@@ -40,7 +40,7 @@ people manager felt a lot more natural than I was expecting. I went from a very 
 style to a supportive one. Overnight, my success criteria went from implementing elegant and resilient solutions to
 solve technical problems to my success being my team's success. And in those first two weeks, my beliefs in the value of
 perspective was put to the test in addition to the opportunity to add or remove trust from this new position (as the
-topic of this post is not on building trust or the value of perspectives, [this post](./posts/e2m-marbles)
+topic of this post is not on building trust or the value of perspectives, [this post](./e2m-marbles)
 goes into more details).
 
 Somewhere in my childhood or adolescence I developed an ego problem. I first became aware of it in university where I
@@ -48,22 +48,21 @@ caught myself thinking that I was smarter than most of my computer science profe
 wrong with the phrase "was smarter", but the theories of intelligence in psychology is a topic for another post.
 Breaking the number one rule of studying psychology--do not psycho-analyze yourself--there are two main sources that I
 believe led to the building of this ego. The first is praise for "being smart" instead of praise for the behavior that
-led to the specific outcome
-[2](https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve?language=en). The second is a
-particular way of "seeing the big picture" in a way that people around me couldn't see. Together, these worked in a
-vicious loop to build that ego. 
+led to the specific outcome [[2](https://www.penguinrandomhouse.com/books/44330/mindset-by-carol-s-dweck-phd/)]. The
+second is a particular way of "seeing the big picture" in a way that people around me couldn't see. Together, these
+worked in a vicious loop to build that ego. 
 
 After I matured as a human and had built better control of my ego through the theory of multiple intelligences
-[3](https://en.wikipedia.org/wiki/Theory_of_multiple_intelligences) and seeing how diverse perspectives could solve
+[[3](https://en.wikipedia.org/wiki/Theory_of_multiple_intelligences)] and seeing how diverse perspectives could solve
 issues in more creative and robust ways, I started searching for why I was different. This search wasn't to bolster my
 ego, it was to find the why so that I could then translate what I was seeing to language that someone else could see and
 understand. Having a great idea or having a great perspective but not having the skills to translate and communicate it
-is what Jocko Willink and Leif Babin call a "tortured genius" [4](https://echelonfront.com/books/extreme-ownership/). It
+is what Jocko Willink and Leif Babin call a "tortured genius" [[4](https://echelonfront.com/books/extreme-ownership/)]. It
 doesn't matter how good the idea is or how big of an impact it will have, if a group of people cannot be organized
 around it because they don't understand it, the idea will not take off.
 
 Last year in my search I stumbled upon a book that I think contains the answer: _Thinking in Systems_ by Donella H.
-Meadows [5](https://www.chelseagreen.com/product/thinking-in-systems/). The skill of abstracting and simplifying the
+Meadows [[5](https://www.chelseagreen.com/product/thinking-in-systems/)]. The skill of abstracting and simplifying the
 world into stocks, flows, and feedback loops is the mindset that I use to perceive the world. I have been doing this
 without the training in Systems Theory; stumbling my way through without the correct terms or shared jargon. I could see
 the abstract ideas, but could only communicate through allegory and description because I did not know the name of the
@@ -112,7 +111,7 @@ extinction?
 ## Resources
 
 1. [Patrick Lencioni - First Team](https://www.youtube.com/watch?v=BjE_mPoZPSg)
-2. [Carol Dweck - Mindset](https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve?language=en)
+2. [Carol Dweck - Mindset](https://www.penguinrandomhouse.com/books/44330/mindset-by-carol-s-dweck-phd/)
 3. [Theory of Multiple Intelligences](https://en.wikipedia.org/wiki/Theory_of_multiple_intelligences)
 4. [Jocko Willink & Leif Babin - Extreme Ownership](https://echelonfront.com/books/extreme-ownership/)
 2. [Donella H. Meadows - Thinking in Systems](https://www.chelseagreen.com/product/thinking-in-systems/)
