@@ -7,13 +7,12 @@
 
 I have become a student of System Dynamics. Or maybe I always have been without knowing that there was a field devoted
 to the study. Through my recent learnings, I have discovered that there is a systems trap that my team has been battling
-to get out of for the last two years: shifting the burden to the intervenor (also known as addiction in some systems).
+to get out of for the last two years: shifting the burden to the intervenor (also known as addiction in some systems)
 [[1](https://www.chelseagreen.com/product/thinking-in-systems/)]. 
 
 > The structure [of the trap] includes a stock with in-flows and out-flows...The stock is maintained by an actor
 > adjusting a balancing feedback loop--either altering the in-flows or out-flows. The actor has a goal and compares it
-> with a perception of the actual state of the stock to determine what action to take. -- _Thinking in Systems_
-> [[1](https://www.chelseagreen.com/product/thinking-in-systems/)]
+> with a perception of the actual state of the stock to determine what action to take. -- Thinking in Systems [1]
 
 It is not the structure of the system itself that creates the trap. Meadows goes on to show that intervenors are
 sometimes necessary to maintain a desirable state of the system. Doctors are a necessary part of the biophysical system
@@ -38,10 +37,10 @@ However, the trap comes when the temporary intervenor becomes the permanent solu
 >
 > The trap is formed if the intervention, whether by active destruction or simple neglect, undermines the original
 > capacity of the system to maintain itself. If that capacity atrophies, then more of the intervention is needed to
-> achieve the desired effect. That weakens the capability of the original system still more. The intervenor picks up 
+> achieve the desired effect. That weakens the capability of the original system still more. The intervenor picks up
 > the slack. And so forth.
 > 
-> _Thinking in Systems_ [[1](https://www.chelseagreen.com/product/thinking-in-systems/)]
+> Thinking in Systems [1]
 
 On any engineering team, capacity to do work is a stock. For the purposes of this analysis, let's abstract the capacity
 to be a constant equal to the number of human-hours that a team has (8 hours times the number of team members), in a
@@ -74,8 +73,7 @@ ineffectiveness was "just don't put on the technical hat".
 > stresses, and constraints impinging on that actor--may or may not lead to decisions that further the welfare of the
 > system as a whole. If they do not, putting new actors into the same system will not improve the system's performance.
 > What makes a difference is redesigning the system to improve the information, incentives, disincentives, goals,
-> stresses, and constraints that have an effect on specific actors -- _Thinking in Systems_ 
-> [[1](https://www.chelseagreen.com/product/thinking-in-systems/)]
+> stresses, and constraints that have an effect on specific actors -- Thinking in Systems [1]
 
 The bounded rationality of the information, incentives, disincentives, goals, stresses and constraints on the current
 system is leading to the cycles of decisions of switching hats from people manager to engineer and back. "Just don't do
@@ -84,8 +82,7 @@ it" is not an effective solution to relieving the load and stress on the system 
 > No one deliberately creates [these] problems, no one wants them to persist, but they persist nonetheless. That is
 > because they are intrinsically system problems--undesirable behaviors characteristic of the system structures that
 > produce them. They will yield only as we reclaim our intuition, stop casting blame, see the system as the source of
-> its own problems, and find the courage and wisdom to _restructure_ it. -- _Thinking in Systems_
-> [[1](https://www.chelseagreen.com/product/thinking-in-systems/)]
+> its own problems, and find the courage and wisdom to restructure it. -- Thinking in Systems [1]
 
 The system needs an overhaul and a redesign. Maybe not to the extent of an "org restructure". Or maybe to the extent
 of an "org restructure". There are other points of leverage than the physical structure of the parts of the system. But
