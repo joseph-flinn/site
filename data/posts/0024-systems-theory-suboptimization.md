@@ -1,4 +1,4 @@
-!! title: Engineer to Manager - Team Suboptimization
+!! title: System Dynamics - Team Suboptimization
 !! slug: e2m-st-suboptimization
 !! published: 2024-01-15
 !! description: Discussing Will Larson's Value Oasis in the context of Systems Theory
@@ -114,4 +114,4 @@ extinction?
 2. [Carol Dweck - Mindset](https://www.penguinrandomhouse.com/books/44330/mindset-by-carol-s-dweck-phd/)
 3. [Theory of Multiple Intelligences](https://en.wikipedia.org/wiki/Theory_of_multiple_intelligences)
 4. [Jocko Willink & Leif Babin - Extreme Ownership](https://echelonfront.com/books/extreme-ownership/)
-2. [Donella H. Meadows - Thinking in Systems](https://www.chelseagreen.com/product/thinking-in-systems/)
+5. [Donella H. Meadows - Thinking in Systems](https://www.chelseagreen.com/product/thinking-in-systems/)
