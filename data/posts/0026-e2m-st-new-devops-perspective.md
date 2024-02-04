@@ -17,7 +17,7 @@ it means. With this in mind, what does DevOps mean to you?" Unsurprisingly, each
 
 Since reading Accelerate [[1](https://itrevolution.com/product/accelerate/)] a few years ago, my working for any
 discussion around DevOps has been: _"DevOps is a collection of engineering practices and methodologies to deliver more
-value, faster, in a more stable way to the end user."_ I have not been satisfied with this definition ore perspective
+value, faster, in a more stable way to the end user."_ I have not been satisfied with this definition or perspective
 and recently I have found it lacking. A quick follow up question asking about the specific engineering practices and
 methodologies can quickly lead to a opinion heavy debate over Trunk Based Development vs GitFlow, Continuous Delivery vs
 Continuous Deployment, and how much testing is needed, where it's needed and what needs to be tested.
