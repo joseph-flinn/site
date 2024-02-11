@@ -44,7 +44,7 @@ to 15 minutes every deploy. The current solution? Deploy after hours to minimize
 
 In addition to the culture issues of defending corners, skills, and tools that Skelton and Pais present for separate and
 siloed DevOps Team (Skelton & Pais, 2016), siloed DevOps teams present the "Shift the Burden" Systems Dynamics
-archetype. There is a high risk of them becoming the solution to the underlying problem and becoming a silo themselves,
+archetype (Kim, 1992). There is a high risk of them becoming the solution to the underlying problem and becoming a silo themselves,
 as Skelton and Pais discuss. After hours deploys are indications that the DevOps/Release team is the solution that is
 hiding a larger systemic issue on the overall technology organization processes, how software is being designed,
 implemented, and delivered.
@@ -60,4 +60,4 @@ identify the high leverage points in the system to achieve systemic and lasting 
 1. [Fowler - Evolutionary Database Design](https://martinfowler.com/articles/evodb.html)
 2. [Bitwarden - Evolutionary Database Design](https://contributing.bitwarden.com/contributing/database-migrations/edd)
 3. [Skelton & Pais - What Team Structure is right for DevOps to flourish?](https://web.devopstopologies.com)
-
+4. [Kim - Systems Archetypes I: Diagnosing Systemic Issues and Designing Interventions](https://thesystemsthinker.com/systems-archetypes-i-diagnosing-systemic-issues-and-designing-interventions/)
