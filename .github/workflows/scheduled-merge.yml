@@ -1,0 +1,24 @@
+name: Merge Schedule
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+  schedule:
+    # https://crontab.guru: Mondays at 0900
+    - cron: '0 9 * * 1'
+
+jobs:
+  merge_schedule:
+    runs-on: ubuntu-2022
+    steps:
+      - uses: gr2m/merge-schedule-action@b00191bec092ae480b63bf466fb94b5474b71cdd  # v2.4.3
+        with:
+          merge_method: squash
+          time_zone: 'America/Los_Angeles'
+          require_statuses_success: 'true'
+          automerge_fail_label: 'merge-schedule-failed'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
