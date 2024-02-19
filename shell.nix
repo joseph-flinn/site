@@ -9,6 +9,7 @@ in pkgs.mkShell {
     nodejs
     actionlint
     k6
+    rclone
     (import ./data/tools/edda/derivation.nix { lib = lib; python311Packages = python311Packages; })
   ];
 

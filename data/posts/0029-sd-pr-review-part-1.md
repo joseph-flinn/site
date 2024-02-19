@@ -16,7 +16,7 @@ the flow of work should only be left to right with no cycles or rework in the sy
 right. This might be the correct assumption and some of our other team processes are not set up correctly to support the
 strict left-to-right flow. Our current board looks like this:
 
-![Team Kanban Board](/assets/posts/0029/kanban-board-v0_1.png)
+![Team Kanban Board](/posts/0029/kanban-board-v0_1.png)
 
 The kanban board does its job of visualizing the work pretty well. However, expecting it to solve the problems for the
 team has been a mistake. It isn't the board itself that solves the WIP and flow problems, it is the team policies and
@@ -58,7 +58,7 @@ and have landed in the archetype.
 Instead, let's use Systems Dynamics to model the problem, collect data to verify the model and run policy experiments on
 the model in compressed time instead of in realtime in the actual system.
 
-![PR Review Flow v0.1](/assets/posts/0029/flow-diagram-v0_1.png)
+![PR Review Flow v0.1](/posts/0029/flow-diagram-v0_1.png)
 
 The above flow diagram models the team PR process. Work is ingested from stakeholders and gets put into the `To Do`
 state. When there is capacity, work is picked up and moves to the `In Progress` state. Once the work is ready for

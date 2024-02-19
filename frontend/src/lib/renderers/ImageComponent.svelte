@@ -3,11 +3,11 @@
   export let title = undefined;
   export let text = "";
 
-  //const imgUrl = href.startsWith("http") ? href : `/src/lib${href}`
-  const imgUrl = href.startsWith("http") ? href : `/src/lib${href}`
+  import { getImageUrl } from '$lib/utils/loader.js'
 
-  const testImgUrl = new URL(`/src/lib${href}`, import.meta.url).href
-  console.log(`imgUrl: ${imgUrl}\ntestImgUrl: ${testImgUrl}`)
+  const imgUrl = href.startsWith("/posts") ? getImageUrl(href) : href
+
+  console.log(`imgUrl: ${imgUrl}`)
 </script>
 
 <div>
