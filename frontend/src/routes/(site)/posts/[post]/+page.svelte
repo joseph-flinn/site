@@ -5,6 +5,7 @@
 
   import { log } from '$lib/utils/logger.js';
   import CodeComponent from '$lib/renderers/CodeComponent.svelte';
+  import ImageComponent from '$lib/renderers/ImageComponent.svelte';
   import QuoteComponent from '$lib/renderers/QuoteComponent.svelte';
 
   const { title, published, body, ...rest } = data.data;
@@ -31,8 +32,9 @@
   <SvelteMarkdown 
     source={body} 
     renderers={{ 
+      blockquote: QuoteComponent,
       code: CodeComponent,
-      blockquote: QuoteComponent
+      image: ImageComponent
     }}
   />
 </div>
