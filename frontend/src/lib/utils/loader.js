@@ -1,6 +1,7 @@
 import { 
     PUBLIC_DATASOURCE_TYPE,  
     PUBLIC_DATASOURCE,
+    PUBLIC_IMAGESOURCE,
 } from '$env/static/public';
 
 import { log } from '$lib/utils/logger.js';
@@ -49,3 +50,8 @@ export const getDropList = (fetch) => {
     log('$lib.utils.loader:getDropList()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
     return memoizedFetch(fetch, '/drip', false)
 };
+
+
+export const getImageUrl = (imageMarkdownUrl) => {
+    return `${PUBLIC_IMAGESOURCE}${imageMarkdownUrl}`
+}

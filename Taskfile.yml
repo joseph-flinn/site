@@ -29,9 +29,10 @@ tasks:
 
   deploy:data:staging:
     silent: true
-    dir: backend
+    dir: data
     cmds:
-      - wrangler r2 object put flinnlab-blog-dev/posts.json --file ../data/posts.json
+      - rclone sync posts.json r2:flinnlab-blog-dev/posts.json
+      - rclone sync images/ r2:flinnlab-blog-images-dev
 
   install:hooks:
     silent: true
