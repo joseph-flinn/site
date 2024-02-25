@@ -1,7 +1,7 @@
 !! title: PR Review Delays - Problem Description
 !! slug: sd-pr-review-part-1
 !! published: 2024-02-19
-!! description: An exercise of System Dynamics to solve a problem with delays in our PR review process.
+!! description: Part two of an exercise of System Dynamics to solve a problem with delays in our PR review process.
 
 ---
 
@@ -60,7 +60,7 @@ the model in compressed time instead of in realtime in the actual system.
 
 ![PR Review Flow v0.1](/posts/0029/flow-diagram-v0_1.png)
 
-The above flow diagram models the team PR process. Work is ingested from stakeholders and gets put into the `To Do`
+The above diagram models the team PR process. Work is ingested from stakeholders and gets put into the `To Do`
 state. When there is capacity, work is picked up and moves to the `In Progress` state. Once the work is ready for
 review, a PR is created. When capacity is free or is used to review the PR (the same capacity that would be used to
 further other team work), there are two things that could happen. The first case is that the work is understood by the
