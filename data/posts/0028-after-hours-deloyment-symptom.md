@@ -36,11 +36,12 @@ have started), but at the end of the day, the solution is still the same: deploy
 the effects of the resiliency issues for the majority of our end users.
 
 Since this after-hours deployment strategy has seemed effective to decreasing the amount of service degradation
-experienced, it has started to drift into other stateless applications. To decrease cloud egress costs, we've started
-using a cache on the edge to serve our web app client. The client code is not generationally aware (aware of previous or
-future versions) so does not know how to handle updating itself with the new version when available or alerting the user
-to reload. Instead, the experience has been missing files resulting in 404s and the unavailability of the web app for up
-to 15 minutes every deploy. The current solution? Deploy after hours to minimize user impact.
+experienced, it has started to drift into other stateless applications. We have recently migrated our web app proxy
+solution to the edge to solve a scaling issue with the original design. The client code is not generationally aware
+(aware of previous or future versions) so does not know how to handle updating itself with the new version when
+available or alerting the user to reload. Between the cache, the edge, and the client code, the experience has been
+missing files resulting in 404s and the unavailability of the web app for up to 15 minutes every deploy. The current
+solution? Deploy after hours to minimize user impact.
 
 In addition to the culture issues of defending corners, skills, and tools that Skelton and Pais present for separate and
 siloed DevOps Team (Skelton & Pais, 2016), siloed DevOps teams present the "Shift the Burden" Systems Dynamics

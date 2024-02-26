@@ -31,8 +31,15 @@ tasks:
     silent: true
     dir: data
     cmds:
-      - rclone sync posts.json r2:flinnlab-blog-dev/posts.json
+      - rclone copyto posts.json r2:flinnlab-blog-dev/posts.json
       - rclone sync images/ r2:flinnlab-blog-images-dev
+
+  deploy:data:production:
+    silent: true
+    dir: data
+    cmds:
+      #- rclone copyto posts.json r2:flinnlab-blog-dev/posts.json
+      - rclone sync images/ r2:flinnlab-blog-images
 
   install:hooks:
     silent: true
@@ -42,11 +49,12 @@ tasks:
 
   new:post:
     silent: true
+    dir: ./data/posts
     cmds:
-      - |
-        latest_post=$(ls {{.USER_WORKING_DIR}}/[0-9][0-9][0-9][0-9]* | sort | tail -n 1)
+      - | 
+        latest_post=$(ls ./[0-9][0-9][0-9][0-9]* | sort | tail -n 1)
         latest_post_file=$(basename $latest_post)
         latest_post_id=$(echo "${latest_post_file:0:4}")
-        next_id=$( printf "%04d" $((latest_post_id + 1)))
+        next_id=$( printf "%04d" $((latest_post_id + 1)) )
 
-        cp {{.USER_WORKING_DIR}}/wip-template.md {{.USER_WORKING_DIR}}/$next_id-slug.md
+        cp wip-template.md $next_id-slug.md
