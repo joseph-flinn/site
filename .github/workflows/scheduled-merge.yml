@@ -8,7 +8,7 @@ on:
       - synchronize
   schedule:
     #- cron: '0 * * * *'   # Every Hour
-    - cron: '* * * * *'   # Once a day at 7AM PST
+    - cron: '0 15 * * *'   # Once a day at 7AM PST
 
 jobs:
   merge_schedule:
