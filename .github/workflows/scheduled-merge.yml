@@ -8,7 +8,7 @@ on:
       - synchronize
   schedule:
     #- cron: '0 * * * *'   # Every Hour
-    - cron: '0 15 * * *'   # Once a day at 7AM PST
+    - cron: '* * * * *'   # Once a day at 7AM PST
 
 jobs:
   merge_schedule:
@@ -21,4 +21,4 @@ jobs:
           require_statuses_success: 'true'
           automerge_fail_label: 'merge-schedule-failed'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SCHEDULED_MERGE_PAT }}
