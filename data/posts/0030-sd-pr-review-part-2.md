@@ -1,4 +1,4 @@
-!! title: PR Review Delays - FLow Diagram with Delays
+!! title: PR Review Delays - Flow Diagram with Delays
 !! slug: sd-pr-review-part-2
 !! published: 2024-02-26
 !! description: Part two of an exercise of System Dynamics to solve a problem with delays in our PR review process.
@@ -46,11 +46,3 @@ How does PR Quality affect Review Effort? How does Review Effort affect Review R
 Defect Creation Rate? How does Pressure affect quality? How does Task Definition Quality affect the PR Quality? These
 are all important questions to consider while analyzing possible policy changes to make sure that any changes that are
 considered will not have a drastically negative effect in the overall system. So...back to the drawing board!
-
-
----
-
-## Resources
-
-1.
-
