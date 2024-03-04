@@ -1,5 +1,5 @@
 !! title: Systems Dynamics and AI
-!! slug: sd-and-ai 
+!! slug: sd-and-ai
 !! published: 2024-03-04
 !! description: A discussion on why AI is not currently a replacement for Systems Dynamics
 
