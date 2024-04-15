@@ -26,7 +26,7 @@ jobs:
       backend-changed: ${{ steps.changes.outputs.backend-changed }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@4.1.1
         with:
           fetch-depth: 0
 
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v4.1.1
 
       - name: Build Site
         run: |
@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v4.1.1
 
       - name: Build data
         working-directory: data
@@ -85,14 +85,14 @@ jobs:
           npm run build:rss
 
       - name: Publish posts to R2
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3.4.1
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT }}
           command: r2 object put flinnlab-blog/posts.json --file ./data/posts.json
 
       - name: Publish RSS Feed to R2
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3.4.1
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT }}
@@ -106,10 +106,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v4.1.1
 
       - name: Set up Node
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v4.0.2
         with:
           cache: 'npm'
           cache-dependency-path: 'backend/package-lock.json'
@@ -121,7 +121,7 @@ jobs:
           npm ci
 
       - name: Deploy Backend
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3.4.1
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT }}
