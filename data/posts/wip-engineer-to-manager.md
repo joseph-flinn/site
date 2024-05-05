@@ -1,12 +1,39 @@
 # Stories and learnings from Engineer to Manager
 
+
+## Achievements
+
+- [ ] Fostering a psychologically safe space on the team
+- [ ] Few decisions were made that required expending leadership capital
+- [ ] Decreasing the complexity of executing a cloud deploy
+- [ ] Production-like testing environment
+- [ ] Designed and implemented new ways of deploying the server software
+- [ ] Solved countless number of problems for other teams
+
+
+## Failures
+
+- [ ] Failure by sacrificing personal friendships for an organization (but also cultivating new
+      friendships)
+- [ ] Failure by creating a Value Oasis
+- [ ] Failure to finish migrations before starting on something else
+- [ ] Failure to thoroughly enact policy change leads to half-baked systems that don't work
+- [ ] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
+- [ ] Failure in effective feedback: constantly asking/reminding people to do things instead of
+      communicating the impact of the behavior (storytelling)
+- [ ] Failure to influence, even in my area of expertise
+      + WHAT and HOW
+- [ ] Failure to understand the role the expertise and ego play (or the lack thereof)
+      + WHAT and HOW
+- [ ] Failure to grow leaders on the team
+- [ ] Failure to communicate effectively with sister team to lessen friction points
+- [ ] Failure to create high performing teamwork--trust and support--between the team memebers
+
+
 ## Past Lessons
 
 - [x] Marbles & Leadership Capital
 - [x] People Management vs Technical Leadership
-- [ ] Policy requires support/enforcement
-- [ ] IC hats and People Management hats
-- [ ] Leading from the bottom
 
 
 ## Current Problems
