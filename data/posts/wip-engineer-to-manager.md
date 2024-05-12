@@ -1,7 +1,7 @@
 # Stories and learnings from Engineer to Manager
 
 
-## Achievements
+## Successes
 
 - [ ] Fostering a psychologically safe space on the team
 - [ ] Few decisions were made that required expending leadership capital
