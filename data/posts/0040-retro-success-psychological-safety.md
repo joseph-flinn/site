@@ -1,7 +1,7 @@
 !! title: [Manager Retro] Success - Psychological Safety 
 !! slug: retro-success-psychological-safety
 !! published: 2024-05-13
-!! description: {{ RSS DESCRIPTION }}
+!! description: Reflection and gratitude for the psychological safe environment on the team
 
 ---
 
