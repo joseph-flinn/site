@@ -55,11 +55,3 @@ environment needed to be deployed to multiple times a day. If it took half a day
 non-production, it would useless half of the time. We were able to solve the multi-hour deploy time
 in non-production and then apply the same solution to production. This pattern repeated itself with
 other processes between the two environments over the next few years.
-
-
----
-
-## Resources
-
-1.
-
