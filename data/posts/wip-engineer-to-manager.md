@@ -5,8 +5,8 @@
 
 - [x] Fostering a psychologically safe space on the team
 - [x] Few decisions were made that required expending leadership capital
-- [ ] Production-like testing environment
-- [ ] Decreasing the complexity of executing a cloud deploy
+- [x] Production-like testing environment
+- [x] Decreasing the complexity of executing a cloud deploy
       + Designed and implemented new ways of deploying the server software
 - [ ] Solved countless number of problems for other teams
 
