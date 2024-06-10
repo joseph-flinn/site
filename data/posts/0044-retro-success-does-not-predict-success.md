@@ -1,4 +1,4 @@
-!! title: [Manager Retro] - Past Success Does Not Predict Future Success
+!! title: [Manager Retro] Past Success Does Not Predict Future Success
 !! slug: retro-success-does-not-predict-success
 !! published: 2024-06-10
 !! description: Wrapping up the initial collection successes and intro into the long list of failures and lessons.
