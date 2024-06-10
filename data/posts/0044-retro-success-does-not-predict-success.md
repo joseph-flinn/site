@@ -26,34 +26,40 @@ requires simplified models of reality (Sterman 2009). If the model contained all
 reality, it would be just as complicated and not useful in helping humans with understanding the
 outcomes.
 
-The danger attempting to provide such a map to success is that it is often from only the author's
+The danger in attempting to provide such a map to success is that it is often from only the author's
 mental model. The complexity of the reality that led to the success cannot be accurately condensed
 into a linear story. The parts chosen to tell are only that which the author thinks impacted the
 success. It may not include the half-forgotten challenges that required perseverance to work
 through. It may not include the flash of inspiration that came out of nothing at all. It may not
-include the small buildup of impacts by all of the people around and what they contributed.
+include the small buildup of impacts from all of the people around and what they contributed.
 
-Past success does not predict future success. Accurate maps to success cannot exist because the
-reality that led to past successes cannot be fully understood. Even if it could be fully understood,
-it would not be able to be recreated. However, past success predicting future success is core
-business belief. While hiring, companies and teams are looking for past success to bring to the
-team. Companies and organizations are looking for leaders that have been successful in the past to
-come help them be successful. This false belief sets up the individual and the organization for
+Past success does not predict future success. Accurate maps to success cannot exist because the full
+reality that led to past successes cannot be fully understood. Even if it could be understood, it
+would not be able to be recreated. Some of the parts of the system will never be the same again. As
+an example, timing is really important. When something is before its time it will not catch on
+because the timing is not right. However, tried again at the right time, it might take off.
+
+Even though past success does not predict future success, this is a core business belief. While
+hiring, companies and teams are looking for past success to bring to the team. Companies and
+organizations are looking for leaders that have been successful in the past to come help them be
+successful now and in the future. This false belief sets up the individual and the organization for
 failure. 
 
-As an example, let's say we have a small company of ten people that was built and sold ten years
-from founding at exit for a considerable amount of money. This would be considered a business
-success. And now the same founders create a brand new business with all of the same people. One
-would assume that the failures previously ran into would be learned from and bypassed the second
-time around. However, wouldn't bypassing the failure change the actions that were taken to get to
-success the first time? How would we know it was not the failure itself that contributed to the
-success rather than the specific actions taken after?
+As an example of what this looks like in the business world, let's say we have a small company of
+ten people that was built and sold ten years from founding at exit for a considerable amount of
+money. This would be considered a business success. And now the same founders create a brand new
+business with all of the same people. One would assume that the failures previously ran into would
+be learned from and bypassed the second time around. However, wouldn't bypassing the failure change
+the actions that were taken to get to success the first time? How would we know it was not the
+failure itself that contributed to the success rather than the specific actions taken after?
 
-The most impactful stories are the ones that serve others, not the ones that build up and sell the
-hero (Quesada 2024). If someone needs to be inspired to overcome challenges in front of them, tell a
-story that they need to hear. Focusing on the outcomes rather than the process to get there is worth
-little. As cliché as it is, the journey is more important than the destination. Enjoy the journey
-and the destination will not matter. 
+There are no easy ways to success. The ones that have achieved it say that it only comes when not
+pursuing it.  Success stories can really only be used positively to inspire others, but have not
+value in showing the way. The most impactful stories are the ones that serve others, not the ones
+that build up and sell the hero (Quesada 2024). If someone needs to be inspired to overcome
+challenges in front of them, tell a story that they need to hear. Focusing on the outcomes rather
+than the process to get there is worth little. As cliché as it is, the journey is more important
+than the destination. Enjoy the journey and the destination will not matter. 
 
 
 ---
