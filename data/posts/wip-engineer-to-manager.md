@@ -12,9 +12,9 @@
 
 ## Failures
 
-- [ ] Failure by sacrificing personal friendships for an organization (but also cultivating new
+- [x] Failure by sacrificing personal friendships for an organization (but also cultivating new
       friendships)
-- [ ] Failure by creating a Value Oasis
+- [x] Failure by creating a Value Oasis
 - [ ] Failure to finish migrations before starting on something else
 - [ ] Failure to thoroughly enact policy change leads to half-baked systems that don't work
 - [ ] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
