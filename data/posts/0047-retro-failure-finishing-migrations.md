@@ -5,24 +5,26 @@
 
 ---
 
-The next failure we are going to examine is the failure to focus on and finish migrations. Will
+The next failure we are going to discuss is the failure to focus on and finish migrations. Will
 Larson changed my view on migrations in _An Elegant Puzzle_. Migrations are the only way to manage
-tech debt as an organization grows (Larson 2019).
+tech debt effectively as an organization grows (Larson 2019).
 
 As I write this, the organization is days away from completing a migration that has been off-and-on
-again for the last three years. This has been one of our largest and most important migrations.
-However, with a small team and a lot of different work to do outside of this single initiative,
-there has been a lot of "single-threaded" interrupts.
+again for the last three years. This has been one of our largest and most important migrations to
+enable more reliable delivery of value to the end users. However, with a small team and a lot of
+different work to do outside of this single initiative, there has been a lot of "single-threaded"
+interrupts.
 
 The primary perspective of a failed migration is an attempt and an active failure which resulted in
-reverting to the original solution. However, there is another more dangerous version: the migration
-that is currently on pause to work on other higher priority initiatives.
+reverting to the original solution. However, an alternative perspective of failure is the migration
+that is constantly on pause to work on other higher priority initiatives.
 
-The large migration that is just about to finish up spent half of its life on pause. In 2022, my
-team made little progress forward on any initiatives, let alone the infrastructure migration. Half
-of the team was new and onboarding, about a quarter of the capacity was being used for keeping the
-lights on, and the other quarter was being used on higher urgency initiatives (which were deprecated
-in favor of other higher priority initiatives and are still not done in 2024). 
+The large value delivery migration that is just about to finish up spent half of its life on pause.
+In 2022, my team made little value impact on any initiative, let alone the infrastructure
+migration, because we switched to higher priority initiatives before the previous ones could be
+finished and the value delivered. Half of the team was new and onboarding, about a quarter of the
+capacity was being used for keeping the lights on, and the other quarter was being used on higher
+urgency initiatives (most which are still not done in 2024). 
 
 What felt like a near-constant change in priority through the sense of urgency from whatever was on
 fire that week led to whiplash across the engineering department and on my team. When the fire was
@@ -36,7 +38,7 @@ deprioritized. Planning and strategy suffers in highly Agile and DevOps focused 
 While it could be said that the sense of urgency and the whiplash came from multiple upstream issues
 around perceived lack of alignment on mission, values, strategy, and planning, that is shifting
 blame for a problem and prevents lessons learned. It is easy to manage a team in a perfect
-environment, but those do not exist.
+environment, but those perfect environments do not exist.
 
 Where did I go wrong? I failed to understand that all problems are people problems and not technical
 problems (Atwood 2008). My core lie of human value being tied to knowledge was a large catalyst in
@@ -53,9 +55,10 @@ black boxes that pass in inputs and get outputs back. The processes to make thes
 is difficult to visualize because they are also intangible. There is not a factory floor to observe
 to see where raw materials or parts are stacking up if there is a bottleneck in the stream.
 
-In addition to the people problem failure and the visible work, I exacerbated these issues by not
-successfully migrating the technical IC decisions off of my plate so that I could focus on solving
-these problems. 
+In addition to the people problem failure and the visibility of work, I exacerbated these issues by
+not successfully migrating the technical IC decisions off of my plate so that I could focus on
+solving these problems. I kept putting the technical IC hat back on as fires broke out around us
+which prevented others from learning how to put out those fires.
 
 
 ## Gratitude
