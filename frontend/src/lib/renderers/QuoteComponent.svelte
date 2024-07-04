@@ -4,11 +4,8 @@
 
   const tokenizedText = text.replace(/(?:\r\n|\r|\n)/g, " ")
   const formattedText = tokenizedText.replace(/  /g, "@@").replace(/--/g, "—")
-  //const formattedText = tokenizedText.replace(/  /g, "<br><br>")
   const newText = formattedText.substring(formattedText.length - 2) == "@@" ? formattedText.substring(0, formattedText.length - 2) : formattedText
   const paragraphs = newText.split("@@")
-
-  console.log(paragraphs)
 </script>
 
 
