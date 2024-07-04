@@ -6,6 +6,7 @@
   import { log } from '$lib/utils/logger.js';
   import CodeComponent from '$lib/renderers/CodeComponent.svelte';
   import ImageComponent from '$lib/renderers/ImageComponent.svelte';
+  import ParagraphComponent from '$lib/renderers/ParagraphComponent.svelte';
   import QuoteComponent from '$lib/renderers/QuoteComponent.svelte';
 
   const { title, published, body, ...rest } = data.data;
@@ -34,7 +35,8 @@
     renderers={{ 
       blockquote: QuoteComponent,
       code: CodeComponent,
-      image: ImageComponent
+      image: ImageComponent,
+      paragraph: ParagraphComponent
     }}
   />
 </div>

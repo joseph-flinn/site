@@ -26,10 +26,10 @@ tasks:
 
   deploy:data:staging:
     silent: true
-    dir: data
     cmds:
-      - rclone copyto posts.json r2:flinnlab-blog-dev/posts.json
-      - rclone sync images/ r2:flinnlab-blog-images-dev
+      - rclone copyto dist/posts.json r2:flinnlab-blog-dev/posts.json
+      - rclone copyto dist/rss.xml r2:flinnlab-blog-dev/rss.xml
+      - rclone sync data/images/ r2:flinnlab-blog-images-dev
 
   deploy:data:production:
     silent: true
