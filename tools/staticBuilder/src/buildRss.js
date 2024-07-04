@@ -1,9 +1,9 @@
 import fs from 'fs';
-import posts from '../../posts.json' assert {type: "json"};
+import posts from '../../../dist/posts.json' assert {type: "json"};
 
 
 const SITE_URL = 'https://joseph.flinnlab.com';
-const OUTPUT_DIR = '.';
+const OUTPUT_DIR = '../../dist';
 
 const rssPosts = Object.values(posts).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 

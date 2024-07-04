@@ -3,17 +3,14 @@
 version: '3'
 
 tasks:
-  build:posts:
+  build:data:
     silent: true
-    dir: data
     cmds:
-      - npm run build:posts
-
-  build:rss:
-    silent: true
-    dir: data
-    cmds:
-      - npm run build:rss
+      - if ! [ -d ./dist ]; then mkdir dist; fi
+      - |
+        cd tools/staticBuilder
+        npm run build:posts
+        npm run build:rss
 
   build:frontend:
     silent: true

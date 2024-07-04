@@ -1,9 +1,12 @@
 import fs from 'fs';
 
 
-const POSTS_DIR = './posts';
-const OUTPUT_DIR = '.';
+const POSTS_DIR = '../../data/posts';
+const OUTPUT_DIR = '../../dist';
 const POSTS_REQUIRED_METADATA = ["title", "published", "slug", "description"];
+
+
+const filenames = fs.readdirSync(POSTS_DIR);
 
 
 const assert = (condition, message) => {
@@ -21,8 +24,6 @@ const extractData = (metadataLines) => {
   return Object.fromEntries(data);
 
 }
-
-const filenames = fs.readdirSync(POSTS_DIR);
 
 
 // Compile 
