@@ -47,7 +47,7 @@ jobs:
                 echo "| $i | :heavy_check_mark: |" >> $GITHUB_STEP_SUMMARY
               else 
                 echo "$i-changed=false" >> $GITHUB_OUTPUT
-                echo "| $i | :x: |" >> $GITHUB_STEP_SUMMARY
+                echo "| $i ||" >> $GITHUB_STEP_SUMMARY
               fi
           done
 
