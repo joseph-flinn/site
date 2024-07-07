@@ -16,7 +16,7 @@
       friendships)
 - [x] Failure by creating a Value Oasis
 - [x] Failure to finish migrations before starting on something else
-- [ ] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
+- [x] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
 - [ ] Failure to thoroughly enact policy change leads to half-baked systems that don't work
 - [ ] Failure in effective feedback: constantly asking/reminding people to do things instead of
       communicating the impact of the behavior (storytelling)
