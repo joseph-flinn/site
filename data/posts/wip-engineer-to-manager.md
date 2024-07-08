@@ -16,8 +16,8 @@
       friendships)
 - [x] Failure by creating a Value Oasis
 - [x] Failure to finish migrations before starting on something else
+- [x] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
 - [ ] Failure to thoroughly enact policy change leads to half-baked systems that don't work
-- [ ] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
 - [ ] Failure in effective feedback: constantly asking/reminding people to do things instead of
       communicating the impact of the behavior (storytelling)
 - [ ] Failure to influence, even in my area of expertise
@@ -27,6 +27,7 @@
 - [ ] Failure to grow leaders on the team
 - [ ] Failure to communicate effectively with sister team to lessen friction points
 - [ ] Failure to create high performing teamwork--trust and support--between the team memebers
+      + using 1:1s to ask for perspective and garner support for an idea rather than the team sync
 
 
 ## Past Lessons
