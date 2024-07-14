@@ -8,6 +8,8 @@
 - [x] Production-like testing environment
 - [x] Decreasing the complexity of executing a cloud deploy
       + Designed and implemented new ways of deploying the server software
+- [ ] Deprecating the DevOps Team
+- [ ] Maximizing my departure to modernize process
 
 
 ## Failures
