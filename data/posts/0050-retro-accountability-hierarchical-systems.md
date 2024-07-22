@@ -106,8 +106,6 @@ put the pack first and are no longer are able to be the first into the fray.
 
 ## Resources
 
-### Bibliogrpahy
-
 1. Karlsson, Henrik. How to Think in Writing. 17 Jan. 2023, https://www.henrikkarlsson.xyz/p/writing-to-think.
 2. Sinek, Simon. Leaders Eat Last: Why Some Teams Pull Together and Others Don’t. Paperback edition, Portfolio/Penguin, 2017.
 3. Willink, Jocko, and Leif Babin. Extreme Ownership: How U.S. Navy SEALs Lead and Win. First edition, St. Martin’s Press, 2015.
