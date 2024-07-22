@@ -27,6 +27,7 @@
     margin-left: auto;
     margin-top: 2em;
     margin-bottom: 0.5em;
+    width: 100%;
   }
 
   .imgTitle {
