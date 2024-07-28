@@ -19,12 +19,11 @@
 - [x] Failure by creating a Value Oasis
 - [x] Failure to finish migrations before starting on something else
 - [x] Failure to fully remove IC hat leads to becoming the solution (the Trap of the intervenor)
-- [ ] Failure to thoroughly enact policy change leads to half-baked systems that don't work
-- [ ] Failure in effective feedback: constantly asking/reminding people to do things instead of
+- [x] Failure to thoroughly enact policy change leads to half-baked systems that don't work
+- [x] Failure in effective feedback: constantly asking/reminding people to do things instead of
       communicating the impact of the behavior (storytelling)
 - [ ] Failure to influence, even in my area of expertise
-      + WHAT and HOW
-- [ ] Failure to understand the role the expertise and ego play (or the lack thereof)
+      + Failed to understand the role of expertise and ego
       + WHAT and HOW
 - [ ] Failure to grow leaders on the team
 - [ ] Failure to communicate effectively with sister team to lessen friction points
@@ -43,7 +42,7 @@
 These problems should start scoped to what I currently have power to control
 
 Project Management
-- Scrum vs Kanban vs Waterfall
+- Scrum vs Kanban vs Waterfall vs Impact
 - Initiative Work Breakdown
   + How do I effectively step out of the technical architect role while I am still breaking down technical work?
   + How do make sure that we do not run out of planned/brokendown work to work on as a team?
