@@ -45,9 +45,9 @@ had understood what I was _trying_ to communicate." That common denominator that
 was my inability to effectively communicate what I was thinking or how it would impact the problem
 we were trying to solve.
 
-The Navy SEALs have a term for ignoring . Being a "tortured genius" is defined as someone failing to
-take responsibility for one's actions in a situation and instead blaming it on everyone else because
-they cannot see the genius of the plan and execute it (Willink 2015). Applied to solving problems,
+The Navy SEALs have a term for this. Being a "tortured genius" is defined as someone failing to take
+responsibility for one's actions in a situation and instead blaming it on everyone else because they
+cannot see the genius of the plan and execute it (Willink 2015). Applied to solving problems,
 ineffective communication leads to the same thing: blaming everyone else for not being able to
 understand the genius or even the expertise that one brings to the table. 
 
