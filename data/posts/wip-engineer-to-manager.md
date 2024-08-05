@@ -9,7 +9,6 @@
 - [x] Decreasing the complexity of executing a cloud deploy
       + Designed and implemented new ways of deploying the server software
 - [ ] Deprecating the DevOps Team
-- [ ] Maximizing my departure to modernize process
 
 
 ## Failures
@@ -22,13 +21,12 @@
 - [x] Failure to thoroughly enact policy change leads to half-baked systems that don't work
 - [x] Failure in effective feedback: constantly asking/reminding people to do things instead of
       communicating the impact of the behavior (storytelling)
-- [ ] Failure to influence, even in my area of expertise
+- [x] Failure to influence, even in my area of expertise
       + Failed to understand the role of expertise and ego
       + WHAT and HOW
-- [ ] Failure to grow leaders on the team
-- [ ] Failure to communicate effectively with sister team to lessen friction points
 - [ ] Failure to create high performing teamwork--trust and support--between the team memebers
-      + using 1:1s to ask for perspective and garner support for an idea rather than the team sync
+      + Defaulting to my comfort zone of one-on-one conversations rather than growing and improving
+        in team discussions and collaborations
 
 
 ## Past Lessons
