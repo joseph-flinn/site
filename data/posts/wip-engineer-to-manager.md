@@ -24,7 +24,7 @@
 - [x] Failure to influence, even in my area of expertise
       + Failed to understand the role of expertise and ego
       + WHAT and HOW
-- [ ] Failure to create high performing teamwork--trust and support--between the team memebers
+- [x] Failure to create high performing teamwork--trust and support--between the team members
       + Defaulting to my comfort zone of one-on-one conversations rather than growing and improving
         in team discussions and collaborations
 
