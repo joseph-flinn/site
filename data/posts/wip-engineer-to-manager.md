@@ -8,7 +8,7 @@
 - [x] Production-like testing environment
 - [x] Decreasing the complexity of executing a cloud deploy
       + Designed and implemented new ways of deploying the server software
-- [ ] Deprecating the DevOps Team
+- [x] Deprecating the DevOps Team
 
 
 ## Failures
@@ -74,5 +74,5 @@ Technical
 
 ## Theoretics
 
-- [ ] Thinking in Systems: Highly functional systems [Chapter 3 - Page 85] 
-- [ ] Value Oasis => System Thinking suboptimization
+- [x] Thinking in Systems: Highly functional systems [Chapter 3 - Page 85] 
+- [x] Value Oasis => System Thinking suboptimization
