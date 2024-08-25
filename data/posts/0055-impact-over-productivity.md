@@ -31,19 +31,19 @@ week.
 
 However, I need to squash this feeling of pride. It comes from the trap of self-value from
 productivity: the more a human produces, the more value they have. This is the entire point of the
-ancient Jewish story. YHWY reminds the Israelites that human value is infinite, for just being, while
-the Egyptian's story of Empire was that human value was correlated to their output (Solomon).
+ancient Jewish story. YHWY reminds the Israelites that human value is infinite, for just being,
+while the Egyptian's story of Empire was that human value was correlated to their output (Solomon).
 
 There is another trap in productivity: productivity metrics becoming the objective rather than
 keeping the goal or project the objective. Any time metrics are added to a process in which business
 optimization is applied, there is a risk that the metrics will be over-fit and/or misused. Lean
 Management shows us that flow metrics can be used to identify the main bottleneck in a process
-target and remove (Forsgren et al 2018). However, if the flow metrics are then used to set quota, the
-overall system goal changes slightly from continuous improvement--which has the potential for
-exponential growth of output via its reinforcing feedback loop (Sterman 2009)--to a goal of specific output per
-time period. Under the primary goal of continuous improvement, shutting down the system for a week
-to double the output would be easily considered. Under a primary goal of quota it would be a lot
-harder to consider.
+target and remove (Forsgren et al 2018). However, if the flow metrics are then used to set quota,
+the overall system goal changes slightly from continuous improvement--which has the potential for
+exponential growth of output via its reinforcing feedback loop (Sterman 2009)--to a goal of specific
+output per time period. Under the primary goal of continuous improvement, shutting down the system
+for a week to double the output would be easily considered. Under a primary goal of quota it would
+be a lot harder to consider.
 
 This being said, it is important to have productivity metrics (tasks per time unit). They are
 extremely useful in finding those bottlenecks in the processes to optimize the flow of work through
