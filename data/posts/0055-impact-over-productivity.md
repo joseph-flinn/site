@@ -30,7 +30,7 @@ bit worse, the first list was done in about 90 hours; working about six hours a 
 week.
 
 However, I need to squash this feeling of pride. There are three major risks that come from the idea
-of productivity. I have previously discussed the dangers in optimizing for [peronsal (or team)
+of productivity. I have previously discussed the dangers in optimizing for [personal (or team)
 productivity over organizational productivity](./posts/personal-vs-org-productivity) as the
 summation of personal productivity does not equate to organizational productivity. The other two
 risks are that productivity metrics risks long-term collapse of the system by creating friction for
@@ -158,7 +158,7 @@ of the ongoing project that will work marginally better.
 The updated picture looks like:
 
 - Set up a new daily journal system to track notes on tasks (project logs) and notes on thoughts
-  (fleeting notes for my Zettelkasten)
+  (fleeting notes for my zettelkasten)
 - Wrapped up my reflection on the last four years to prepare to move forward into the next chapter
 
 Value, outcomes, and impact are all more important that outputs or inputs. The value, outcomes, and
