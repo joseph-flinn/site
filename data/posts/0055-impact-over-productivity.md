@@ -5,11 +5,11 @@
 
 ---
 
-I have been on sabbatical for exactly three weeks today and school starts in a few days. Looking
-back over the last three weeks, I have:
+I have been on sabbatical for just over three weeks and school starts tomorrow. Looking back over
+the last three weeks, I have:
 
 - Learned the ins and outs of booting the Le Potato v1 board from Libre Computer
-- Set up a new daily journal
+- Set up a new daily journal practice
 - Learned how to create packages for Nixpkgs
 - Learned how to create modules for NixOS
 - Learned how to set up and configure a production OpenBao instance
@@ -29,33 +29,75 @@ list, there is a large part of me that starts swelling with contentment and prid
 bit worse, the first list was done in about 90 hours; working about six hours a day, five days a
 week.
 
-However, I need to squash this feeling of pride. It comes from the trap of self-value from
-productivity: the more a human produces, the more value they have. This is the entire point of the
-ancient Jewish story. YHWY reminds the Israelites that human value is infinite, for just being,
-while the Egyptian's story of Empire was that human value was correlated to their output (Solomon).
+However, I need to squash this feeling of pride. There are three major risks that come from the idea
+of productivity. I have previously discussed the dangers in optimizing for [peronsal (or team)
+productivity over organizational productivity](./posts/personal-vs-org-productivity) as the
+summation of personal productivity does not equate to organizational productivity. The other two
+risks are that productivity metrics risks long-term collapse of the system by creating friction for
+innovation, and risks a world view that human value is correlated to what they produce.
 
-There is another trap in productivity: productivity metrics becoming the objective rather than
-keeping the goal or project the objective. Any time metrics are added to a process in which business
+
+### Risks with Productivity Metrics
+
+Whenever metrics are collected and monitored, there is an elevated risk that those metrics become
+the target of optimization rather than continuing to focus on optimizing for the overall gaol.
+Productivity metrics are especially vulnerable to this over-optimization over the last few decades. 
+
+The over-optimization of productivity can be attributed to the fallacy that the summation of all
+individuals' productivity equates exactly to the overall productivity of the organization; that the
+whole is the sum of the parts. This fallacy stems from the mechanistic worldview that has been
+popular--and useful--since the 16th century (Capra and Pier 2016). 
+
+
+Any time metrics are added to a process in which business
 optimization is applied, there is a risk that the metrics will be over-fit and/or misused. Lean
 Management shows us that flow metrics can be used to identify the main bottleneck in a process
-target and remove (Forsgren et al 2018). However, if the flow metrics are then used to set quota,
+target and remove it (Forsgren et al 2018). However, if the flow metrics are then used to set quota,
 the overall system goal changes slightly from continuous improvement--which has the potential for
-exponential growth of output via its reinforcing feedback loop (Sterman 2009)--to a goal of specific
-output per time period. Under the primary goal of continuous improvement, shutting down the system
-for a week to double the output would be easily considered. Under a primary goal of quota it would
-be a lot harder to consider.
+exponential growth of output via its reinforcing feedback loop (Sterman 2009)--to a goal of a specific
+output per time period. 
 
-This being said, it is important to have productivity metrics (tasks per time unit). They are
-extremely useful in finding those bottlenecks in the processes to optimize the flow of work through
-an organization. However, it is imperative that these metrics are only used as system health
-indicators and not directly optimized. There is high risk that a local minima will be found while
-compromising organization sustainability.
+Under the primary goal of continuous improvement, shutting down the system for a week to double the
+output would be easily considered. Under a primary goal of quota it would be a lot harder to
+consider. Both of these goals are sub-team goals--the goals of a factory floor--rather than the
+primary goal of the organization (the organization's WHY). One may better align to the
+organization's primary goal--hopefully longevity in the infinite game (Sinek 2019)--while the other
+creates more tension. No matter which is the primary goal of the sub-team, the behavior of the
+sub-system will change to match the goals, pressures, and incentives which may no longer be fully
+aligned with the overall system goal. This is referred to as suboptimization in systems thinking
+(Meadows 2009).
+
+With the awareness of all of these risks, it is still important to have productivity metrics (tasks
+per time unit). They are required in finding those bottlenecks in the processes to optimize
+the flow of work through an organization. However, it is imperative that these metrics are only used
+as system health indicators and not directly optimized, where there is high risk that a local minima
+will be found while compromising organization longevity.
 
 Organizations are complex non-linear social systems with many inputs and many outputs. System
 Dynamics can be used to run simulations to experiment with policy changes--changes to inputs--to see
 if they bring the desired system outputs. Done in simulation, time can be compressed to examine
 long-term effects of the policy changes and many experiments can be run over short periods of time
 to test different policy changes. Experiments done in real-time are a lot slower.
+
+
+### Productivity and Human Value
+
+Focusing on productivity runs a high risk of developing a worldview that I have come to believe is
+not healthy for humanity as a whole: a human's value is directly correlated to what they produce.
+
+On an individual level, when this worldview is internalized, any time spent not producing is seen as
+a waste of time. Rest and sleep are important parts of a healthy life, but they do not result in any
+production. Often rest and downtime are traded for hustle and production. The longevity of the
+individual is compromised.
+
+While the individual level compromises individual longevity, the more dangerous risk comes from the
+societal level. When productivity is the core indicator of human value, society moves to stack rank
+individuals in a hierarchy based on their output. Individuals that produce a lot are afforded status
+and power where those that do not are often looked down upon with disgust. We draw lines and label
+one side "us" and the other side "them". And in this division, we forget to see--or justify not
+seeing--the human in "other".
+
+---
 
 Looking back through the lists of things that have been completed over the last three weeks, I can
 see the inputs (90 hours of work) and the outputs (the list of completed tasks). But there is
@@ -127,10 +169,13 @@ focus on and on which to monitor metrics.
 
 ## Resources
 
-1. Solomon, Marty, host. The BEMA Podcast, season 1, https://www.bemadiscipleship.com. Accessed 2020.
+1. Capra, Fritjof, and Pier Luigi Luisi. The Systems View of Life: A Unifying Vision. Paperback edition first published 2016 with corrections, Cambridge University Press, 2016.
 2. Forsgren, Nicole, et al. Accelerate: The Science behind DevOps: Building and Scaling High Performing Technology Organizations. First edition, IT Revolution, 2018.
 3. Sterman, John D. Business Dynamics: Systems Thinking and Modeling for a Complex World. Nachdr., Irwin/McGraw-Hill, 2009.
-4. Karlsson, Henrik. How to Think in Writing. 17 Jan. 2023, https://www.henrikkarlsson.xyz/p/writing-to-think.
-5. Koch, Richard. The 80/20 Manager: The Secret to Working Less and Achieving More. 1st North American ed, Little, Brown and Company, 2013.
+4. Sinek, Simon. The Infinite Game. Portfolio/Penguin, 2019.
+5. Meadows, Donella H., and Diana Wright. Thinking in Systems: A Primer. Earthscan, 2009.
+6. Karlsson, Henrik. How to Think in Writing. 17 Jan. 2023, https://www.henrikkarlsson.xyz/p/writing-to-think.
+7. Koch, Richard. The 80/20 Manager: The Secret to Working Less and Achieving More. 1st North American ed, Little, Brown and Company, 2013.
+
 
 
