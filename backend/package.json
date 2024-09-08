@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev --remote",
+    "dev": "wrangler dev",
     "test": "k6 -e ENV=dev -e PSK=${TOKEN} run test/script.js",
     "test:staging": "k6 -e ENV=staging -e PSK=${TOKEN} run test/script.js",
     "deploy:staging": "wrangler --env staging deploy"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.14.20",
-    "wrangler": "^3.63.1"
+    "npm-check-updates": "^16.14.20"
   },
   "dependencies": {
     "hono": "^4.4.11"
