@@ -10,6 +10,7 @@ in pkgs.mkShell {
     actionlint
     k6
     rclone
+    wrangler
     (import ./data/tools/edda/derivation.nix { lib = lib; python311Packages = python311Packages; })
   ];
 
