@@ -122,7 +122,7 @@ the report.
 
 Project-driven teams need a different communication framework than operations teams.  Air Traffic
 Control (ATC), who conduct more operational type work, has a list of communication protocols (found
-[here](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_2.html). Scrum
+[here](https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_2.html)). Scrum
 project management contains some frameworks for specific types of project communication. There are a
 number of ceremonies with set agendas on what to communicate when. The PMBOK sets Communications
 Management as one of the ten complete Knowledge Bodies in project management (PMI, 2017). Every
