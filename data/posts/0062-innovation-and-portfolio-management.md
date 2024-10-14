@@ -34,7 +34,7 @@ prioritize projects. Some of these projects are among the biggest in my career. 
 hiring people with intuition in their fields rather than designing and implementing a portfolio
 management system for the entire organization to use for all projects.
 
-Cooper defined an effective new product development process with his Stage-Gate &reg; system (p.95).
+Cooper defined an effective new product development process with his Stage-Gate® [1] system (p.95).
 The product development process is broken down into five phases. Each phase has a review and
 approval gate before the product can progress onto the next phase. All of the work in prior phase
 must be completed across multiple categories to be approved to continue. 
@@ -58,13 +58,13 @@ cost of the project to increase significantly. The majority of the costs of a pr
 development execution phase. While speed is important, the rest of the new product development
 processes cannot be sacrificed to gain more speed. 
 
-The genius of the Stage-Gate &reg; system is that it builds in escape routes. New product
+The genius of the Stage-Gate® system is that it builds in escape routes. New product
 development is a high-risk high-reward activity. Gate reviews help manage risk by making sure that
 product development is progressing well in a quantifiable way across all categories. The system
 helps make sure that the right products are being developed at the right time and provides a robust
 system to kill the ones that are not making progress in order to maximize the firm's resources.
 
-A Stage-Gate &reg; system is the central piece to successful portfolio management systems.
+A Stage-Gate® system is the central piece to successful portfolio management systems.
 Successful firms rebalance their project portfolios to make sure that they are investing their
 limited resources in the areas that align with their business objectives. It also helps keep the
 number of projects low and focused to avoid over-allocating limited resources. Any projects that are
@@ -72,8 +72,11 @@ given resources that are not aligned with business objectives or that take away 
 priority projects are all risks to staying in the infinite game of business.
 
 One of the most important parts of innovation is having a strategy and a process to support it. A
-version of the Stage-Gate &reg; needs to make a comeback in the software industry to make sure that
+version of the Stage-Gate® needs to make a comeback in the software industry to make sure that
 the firm's portfolio of projects is aligned with the firm's strategy and objectives.
+
+
+[1] Stage-Gate® is a registered trademark of Stage-Gate International; see www.stage-gate.com.
 
 ---
 
