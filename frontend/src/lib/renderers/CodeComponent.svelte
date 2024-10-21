@@ -10,17 +10,19 @@
 
 
 <pre style="width: 100%; display: flex;">
-  <div style="flex-grow: 1;">
 {#if lang == "katex"}
-  {@html katex.renderToString(text, {displayMode: true})}
+  <div style="flex-grow: 1;">
+    {@html katex.renderToString(text, {displayMode: true})}
+  </div>
 {:else if lang == "mermaid"}
-  <CodeDiagramComponent diagram={text} />
+  <div style="flex-grow: 1;">
+    <CodeDiagramComponent diagram={text} />
+  </div>
 {:else}
-  <code style="background: #eee; padding: 1em;">
+  <code style="flex-grow: 1; background: #eee; padding: 1em;">
 {text}
   </code>
 {/if}
-  </div>
 </pre>
 
 
