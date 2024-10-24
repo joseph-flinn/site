@@ -4,21 +4,20 @@
   import Toggle from "$lib/components/Toggle.svelte";
 
   import TabbedCard from "$lib/components/TabbedCard.svelte";
+  import Socials from "$lib/components/Socials.svelte";
   import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 
   import data from '$lib/assets/data.json';
 
 </script>
 
-
-
-<div class="titleWrapper">
-  <PageTitle name="skills"/>
+<div>
+  <div class="titleWrapper">
+    <PageTitle name="skills"/>
+  </div>
+  <TabbedCard data={data.skillsData}/>
 </div>
-<TabbedCard data={data.skillsData}>
-</TabbedCard>
-<div style="padding: 2em;"/>
-<div class="titleWrapper">
-  <PageTitle name="popular"/>
-</div>
-<UnderConstruction/>
+
+<div style="flex-grow: 1;"/>
+
+<Socials/>

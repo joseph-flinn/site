@@ -7,35 +7,29 @@
     ]
   },
   "skillsData": {
-    "leadership": [
-      "curiosity first",
-      "systems thinking",
-      "psychological safety",
-      "organizational alignment",
-      "strategic thinking"
+    "Leadership": [
+      "Curiosity",
+      "Systems Thinking",
+      "Psychological Safety",
+      "Strategic Thinking",
+      "Situational Leadership: Delegate, Support, Coach, or Direct"
     ],
-    "people management": [
-      "psychological safety",
-      "high performance: purpose + expectations + feedback",
-      "effective feedback with the PSBIQ model",
-      "situational leadership: delegate, support, coach, or direct"
+    "Management": [
+      "Psychological Safety",
+      "Organizational Alignment",
+      "High Performance = Purpose + Expectations + Feedback",
+      "Effective feedback with the PSBIQ model",
+      "Continuous Improvement",
+      "Lean, Scrum, SAFe"
     ],
-    "project management": [
-      "lean",
-      "continuous improvement (kaizen)",
-      "scrum",
-      "kanban",
-      "SAFe"
-    ],
-    "technical": [ 
-      "ci/cd",
-      "kubernetes",
-      "containerization",
-      "python",
-      "javascript",
-      "linux",
-      "azure",
-      "aws"
+    "Technical": [ 
+      "CI/CD",
+      "Kubernetes & Containerization",
+      "Python",
+      "Javascript",
+      "Linux",
+      "Azure",
+      "AWS"
     ]
   }
 }

@@ -48,7 +48,6 @@
 
   .tab-button {
     padding: 1em;
-    cursor: pointer;
     background-color: #eee;
   }
 
@@ -58,6 +57,7 @@
 
   .tab-button:hover {
     background-color: #ddd;
+    cursor: pointer;
   }
 
   .tab-active {
