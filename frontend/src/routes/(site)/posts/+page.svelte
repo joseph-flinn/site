@@ -45,7 +45,6 @@
 
   .post-title {
     color: #8A8885;
-
   }
 
   .post-title:hover {
