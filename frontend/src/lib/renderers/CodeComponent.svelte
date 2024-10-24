@@ -19,7 +19,7 @@
     <CodeDiagramComponent diagram={text} />
   </div>
 {:else}
-  <code style="flex-grow: 1; background: #eee; padding: 1em;">
+  <code style="flex-grow: 1; background: #eee; padding: 1em; overflow-x: scroll;">
 {text}
   </code>
 {/if}
