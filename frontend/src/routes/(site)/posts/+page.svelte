@@ -25,11 +25,13 @@
     }}
   >
     {#if screenSize > 800}
-      <b>{post.published}</b>
-      <a href=""> - {post.title}</a>
+      <div style="display: flex">
+        <div style="font-weight: 900; padding: 0em 1.5em 0em 0em;">{post.published}</div>
+        <div class="post-title">{post.title}</div>
+      </div>
     {:else}
       <div style="font-size: 12px;"><b>{post.published}</b></div>
-      <div style="font-size: 14px; color: #8a8885;">{post.title}</div>
+      <div style="font-size: 14px;" class="post-title">{post.title}</div>
     {/if}
   </div>
 {/each}
@@ -39,6 +41,15 @@
 <style>
   .post-item {
     padding: 0.5em;
+  }
+
+  .post-title {
+    color: #8A8885;
+
+  }
+
+  .post-title:hover {
+    text-decoration: underline;
   }
 
   a:hover {
