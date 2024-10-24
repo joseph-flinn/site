@@ -22,7 +22,7 @@ tasks:
     silent: true
     dir: frontend
     cmds:
-      - npm run dev
+      - npm run dev -- --host
 
   deploy:data:staging:
     silent: true
