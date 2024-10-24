@@ -17,8 +17,8 @@
 </div>
 <TabbedCard data={data.skillsData}>
 </TabbedCard>
-<div style="padding: 2em;"/>
-<div class="titleWrapper">
-  <PageTitle name="popular"/>
+
+<div style="padding: 2em; text-align: right;">
+    <a href="https://blog-images.flinnlab.com/resume-joseph-flinn.pdf">Resume (PDF)</a>
 </div>
-<UnderConstruction/>
+
