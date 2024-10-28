@@ -1,7 +1,7 @@
 !! title: Engineering Portfolio Management - Part 1
 !! slug: engineering-portfolio-management-part1
 !! published: 2024-10-28
-!! description: Part one of the class summary for Engineering Portfolio Management and the lessons learned applied to the software industry
+!! description: Part one of the Engineering Portfolio Management series: a class summary and the lessons learned applied to the software industry
 
 ---
 
@@ -9,7 +9,7 @@ Until the first day of class this semester, I associated the word "portfolio" wi
 financial investments. Learning about portfolio management in relation to a project management
 function has changed how I see the business world.
 
-Portfolio management was introducd on the first day of class in two of my grad school classes:
+Portfolio management was introduced on the first day of class in two of my grad school classes:
 Engineering Portfolio Management and Foundations of Project Management. Coming from the
 Software-as-a-Service (SaaS) industry, these more traditional work management theories are foreign.
 The Agile Manifesto was penned in 2002 (Beck et al.) which turned project management strategies in
@@ -70,13 +70,13 @@ The most important part of portfolio management is the alignment of projects to 
 strategic objectives of a firm. A firm's strategic objectives are derived from the firm's mission,
 values, and vision. The mission answers the question "Why do we exist?". The values answer the
 question "What is important to us?". And the vision answers the question "Where do we want to be?".
-Only after the first three are defined can a firm condsider its strategic drivers. Strategic drivers
+Only after the first three are defined can a firm consider its strategic drivers. Strategic drivers
 answer the question "How do we get there?". From the strategic drivers, strategic objectives are
 born.
 
 ![Organizational Strategic Alignment Diagram](/posts/0064/organization-strategic-alignment.png)
 
-Strategic objectives should be defined in the initiation phase a portfolio and continously updated
+Strategic objectives should be defined in the initiation phase a portfolio and continuously updated
 as the portfolio continues through its life-cycle (Wu & Chatzipanos, p.23). For a startup, the
 initiation phase of a portfolio may be the same as the creation of the firm or maybe it comes after
 the initial idea shows promise and the firm grows to have more than one project. 
