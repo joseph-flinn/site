@@ -5,38 +5,45 @@
 
 ---
 
-Until the first day of class, my association of the word "portfolio" was in terms of an artist's
-portfolio or an investment portfolio. Learning about portfolio management in terms of the project
-management function has changed how I see the business world.
+Until the first day of class this semester, I associated the word "portfolio" with artists or
+financial investments. Learning about portfolio management in relation to a project management
+function has changed how I see the business world.
 
-I was introduced to portfolio management on the first day of class in two of my grad school classes:
+Portfolio management was introducd on the first day of class in two of my grad school classes:
 Engineering Portfolio Management and Foundations of Project Management. Coming from the
-Software-as-a-Service (SaaS) industry, both of these areas a really foreign. The Agile Manifesto was
-penned in 2002 (Beck et al.) which has turned project management strategies in the SaaS and cloud
-software industries on their head. Then along came DevOps and Lean Software Development which pushed
-the velocity boundaries of software development even further, delivering software development
-practices to streamline value delivery to the end user in safer ways.
+Software-as-a-Service (SaaS) industry, these more traditional work management theories are foreign.
+The Agile Manifesto was penned in 2002 (Beck et al.) which turned project management strategies in
+the SaaS and cloud software industries on their head. Then around 2012, DevOps and Lean Software
+Development emerged to push the boundaries software development velocity even further; creating
+software development practices to streamline value delivery to the end user in safer ways.
 
-Before moving too much further, I do want to recognize the my bias in the software industry being
-mostly in the startup Software-as-a-Service space. I know that there are more stringent requirements
-in industries like aerospace where Agile is taboo and "test in production" cannot be used.
+Before moving too much further, I do want to recognize the my bias in the software industry is from
+the startup Software-as-a-Service space. I know that there are more stringent requirements in
+industries like aerospace where Agile project management is taboo and "test in production" cannot be
+used.
 
 As the majority of the software industry has kept pushing towards faster value delivery, "waterfall"
-or "traditional project management" have become terms that are avoided at all costs. With the taboo
-came the social pressures to also avoid tools that had been traditionally used (*cough* Gantt charts
-*cough*). From my experience, Gantt charts are synonymous with waterfall and the general feeling was
-that they should never be used; especially in DevOps circles. Tensions seem to continue to rise
-between business functions that want to know when a project is going to be delivered and engineering
-functions who are very uncomfortable giving quantitative estimates on timelines for deliverables
-which contain high levels of uncertainty (one of the original reasons that the Agile Manifesto was
-penned). This tension is heightened with any current or historical experiences of timelines being
-weaponized against the engineers when their estimates were off.
+or "traditional project management" have become terms that seem to be avoided. With this taboo came
+the social pressures to also avoid tools that had been traditionally used with these practices (ie.
+Gantt charts). The term "waterfall" comes from the visual that a Gantt chart creates. The farther
+one gets into cutting edge software development practices, the more tension there is when seeing a
+Gantt chart.
 
-Now, it might seem like I am starting down an anti-Agile path, but I am not whatsoever. I fully
-agree with the philosophies of Agile and Lean Development, with the caveat that they are applied to
-only project management. It will be helpful to define a few terms as they seem to be rarely used in
-the SaaS industry. The following definitions come from the *A Guide to the Project Management Body
-of Knowledge* (Project Management Institute, p.4). 
+Tensions seem to continue to rise between business functions and engineering functions; those that
+want to know when a project is going to be delivered and those who are uncomfortable giving
+quantitative estimates on timelines for deliverables which contain high levels of uncertainty. The
+high uncertainty of software development is one of the original reasons that the Agile Manifesto was
+written. The tension between business and engineering is heightened with any current or historical
+experiences of estimated timelines being weaponized against the engineers when their estimates were
+off.
+
+Now, it might seem like I am starting down an anti-Agile path, but I am not. I fully agree with the
+philosophies of Agile and Lean Development and have observed the benefits in the teams that use
+them, with the caveat that they are applied to only project management. To help with the nuance
+between using Agile for project management versus other types of project work, it will be helpful to
+define a few terms as they seem to be rarely used in the SaaS industry. The following definitions
+come from the *A Guide to the Project Management Body of Knowledge* (Project Management Institute,
+p.4). 
 
 **Project:** A temporary endeavor undertaken to create a unique product, service, or result. The
 temporary nature of projects indicate a beginning and an end to the project work or a phase of the
@@ -48,32 +55,37 @@ coordinated manner to obtain a benefit not available from managing them individu
 **Portfolio:** Projects, programs, subsidiary portfolios, and operations managed as a group to
 achieve strategic objectives.
 
-I will argue that every firm has portfolio management. All projects a firm conducts is trying to
-achieve some strategic objective. Now the question is whether or not the portfolio management is
-being conducted in an effective way. If there is not a portfolio management system with transparent
-processes, the answer to this question would be a "no". This is where a lot of growing startups--and
-even established firms--seem to fail. Any firm that has more than a single project that is ongoing
-needs a portfolio management system.
+I would like to claim that every firm has portfolio management. All projects a firm conducts is
+trying to achieve some strategic objective. Now the question is whether or not the portfolio
+management is effective. If projects are chosen and killed by executives' guts or investors'
+feelings, the firm's portfolio management is not effective. Portfolio management needs clearly
+defined and transparent processes in order to be effective. This is where a lot of growing
+startups--and even established firms--seem to fail. Any firm that has more than a single project
+that is ongoing needs a portfolio management system.
 
 
 ## Portfolio Management Overview
 
-The most important part of portfolio management is alignment of projects to the overall strategic
-objectives of a firm. A firm's strategic objectives are derived from the firm's mission, values, and
-vision. The mission answers the question "Why do we exist?". A firm's values answers the question
-"What is important to us?". And a firm's vision answers the question "Where do we want to be?".
-Strategic drivers answer the question "How do we get there?". From the strategic drivers, strategic
-objectives are born.
+The most important part of portfolio management is the alignment of projects to the overall
+strategic objectives of a firm. A firm's strategic objectives are derived from the firm's mission,
+values, and vision. The mission answers the question "Why do we exist?". The values answer the
+question "What is important to us?". And the vision answers the question "Where do we want to be?".
+Only after the first three are defined can a firm condsider its strategic drivers. Strategic drivers
+answer the question "How do we get there?". From the strategic drivers, strategic objectives are
+born.
 
 ![Organizational Strategic Alignment Diagram](/posts/0064/organization-strategic-alignment.png)
 
 Strategic objectives should be defined in the initiation phase a portfolio and continously updated
-as the portfolio continues through its life-cycle (Wu & Chatzipanos, p.23) . During portfolio
-optimization activities, if a project cannot be tied back to on of the firm's strategic objective,
-it should be killed immediately. Any project that is not in alignment is a waste of investment and
-is working against the success of the firm. A portfolio management system is the key to optimizing a
-firm's investment towards their strategic objectives. Such a system will be discussed in [Part 3]()
-of this series.
+as the portfolio continues through its life-cycle (Wu & Chatzipanos, p.23). For a startup, the
+initiation phase of a portfolio may be the same as the creation of the firm or maybe it comes after
+the initial idea shows promise and the firm grows to have more than one project. 
+
+During portfolio optimization activities, if a project cannot be tied back to on of the firm's
+strategic objective, it should be killed immediately. Any project that is not in alignment is a
+waste of investment and is working against the success of the firm. A portfolio management system is
+the key to optimizing a firm's investment towards their strategic objectives. Such a system will be
+discussed in [Part 3]() of this _Engineering Portfolio Management_ series.
 
 In addition to strategic alignment, portfolio management also brings a balance of investment to a
 firm's project portfolio. Continuous innovation is important in today's business climate. Innovation
@@ -82,14 +94,14 @@ time horizons to make sure that they are capitalizing on both the short-term gai
 available to continuously improve and the long-term gains in innovation to keep the firm relevant. 
 
 From a product and process perspective, these time horizons are categorized as derivative, platform,
-and breakthrough. Derivative projects can be defined as projects that look to increase one or two
-variables. For the software industry, this might be adding a new feature to a product or using
-caching in the CI pipelines to achieve an 15% increase in speed. Platform projects are projects that
-improve multiple key metrics and are scalable past the specific product or process where initially
-applied. Examples of a software platform project includes Microsoft Office where a suite of products
-can be mixed and matched to meet many customers' needs. Breakthrough projects significantly disrupt
-an industry or economy. Two areas where there have been breakthrough projects recently are in the
-LLM space and Apple's unified memory design of their M-series chips (especially for the local LLM
+and breakthrough. Derivative projects are projects that look to optimize one or two variables. For
+the software industry, this might be adding a new feature to a product or using caching in the CI
+pipelines to achieve an 15% increase in speed. Platform projects are projects that improve multiple
+key metrics and are scalable to more than the initial product or process where it was developed.
+Examples of a software platform project includes Microsoft Office where a suite of products can be
+mixed and matched to meet many customers' needs. Breakthrough projects significantly disrupt an
+industry or economy. Two areas where there have recently been breakthrough projects are in the LLM
+space and Apple's unified memory design of their M-series chips (especially for the local LLM
 space).
 
 A balanced portfolio is one that invests 70% in derivative projects, 20% in platform projects, and
@@ -101,6 +113,13 @@ Many software companies run their entire life-cycle in the time span of "short-t
 like aerospace where firms like Boeing have existed for over 100 years. At a software company, these
 project definitions should be written down and transparent so that everyone is on the same page at
 how time and money are invested over a balanced time-horizon.
+
+Engineering portfolio management is one of the most important systems to create at any company that
+is developing technology. It provides a framework to make sure the right investments are made at the
+right time. And it helps foster a culture of innovation while making sure that all projects and team
+members are aligned with the firm's mission, values, and vision. Next week we will take a look at a
+two tools that are core to physical engineering portfolio management, _Technology Readiness Levels_
+and _Manufacturing Readiness Levels_, and how they can be related to the software industry.
 
 ---
 
