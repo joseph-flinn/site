@@ -1,5 +1,6 @@
 <script>
     const data = [
+        {"link":"https://joseph.flinnlab.com/rss.xml", "icon": "fa-rss", "extra": ""},
         {"link":"https://linkedin.com/in/joseph-flinn", "icon": "fa-linkedin-square", "extra": ""},
         {"link":"https://github.com/joseph-flinn", "icon": "fa-github", "extra": ""},
         {"link":"https://blog-images.flinnlab.com/resume-joseph-flinn.pdf", "icon": "fa-download", "extra": "CV"},
