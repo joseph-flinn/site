@@ -10,19 +10,19 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.2.2",
-		"@sveltejs/adapter-static": "^3.0.2",
-		"@sveltejs/kit": "^2.5.18",
-		"npm-check-updates": "^16.14.20",
-		"svelte": "^4.2.18",
-		"svelte-check": "^3.8.4",
-		"typescript": "^5.5.3",
-		"vite": "^5.3.3"
+		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/kit": "^2.7.4",
+		"npm-check-updates": "^17.1.10",
+		"svelte": "^5.1.9",
+		"svelte-check": "^4.0.5",
+		"typescript": "^5.6.3",
+		"vite": "^5.4.10"
 	},
 	"type": "module",
 	"dependencies": {
 		"katex": "^0.16.11",
-		"mermaid": "^11.1.1",
+		"mermaid": "^11.4.0",
 		"svelte-markdown": "^0.4.1"
 	}
 }
