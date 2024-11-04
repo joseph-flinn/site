@@ -4,7 +4,7 @@
 
   import katex from 'katex';
 
-  import CodeDiagramComponent from './CodeDiagramComponent.svelte';
+  import CodeDiagramRenderer from './CodeDiagramRenderer.svelte';
 
 </script>
 
