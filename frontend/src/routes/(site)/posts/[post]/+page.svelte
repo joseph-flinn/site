@@ -42,7 +42,9 @@
       code: CodeRenderer,
       image: ImageRenderer,
       paragraph: ParagraphRenderer,
-      table: TableRenderer
+      table: TableRenderer,
+      tablehead: TableHeadRenderer,
+      tablecell: TableCellRenderer
     }}
   />
 </div>

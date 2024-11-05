@@ -55,9 +55,9 @@ provide. Staying in the physical engineering realm, such an expansion could look
 
 | Level | Product Definition | Form of Physical Realization | Technical Requirements | Testing & Validation | Regulatory Approval | Phase |
 | ----- | ------------------ | ---------------------------- | ---------------------- | -------------------- | ------------------- | ----- |
-| TRL 1 | Idea | Hand-made/mock-up | | Calculations| | Research |
+| TRL 1 | Idea | Hand-made/mock-up | | Calculations | | Research |
 | TRL 2 | Sketches & narrative description | | Scientific principles in lab or published literature | | | Research |
-| TRL 3 | | Operational prototype demonstrated | | Key features demoed by test/analysis | Computer models lab test | Regulations identified; ID need for new standards | Research |
+| TRL 3 | | Operational prototype demonstrated | Key features demoed by test/analysis | Computer models lab test | Regulations identified; ID need for new standards | Research |
 | TRL 4 | Schematics, models; limited change control | | Test/validation plan in place | | | Development | 
 | TRL 5 | Design rules & operation environment defined | Production unit validation & verification plan defined | | Design for Manufacturing; Failure Mode & Effects Analysis | | Development |
 | TRL 6 | Form change control in place | | Inspection, service, repair methods demoed | Accelerated/extreme testing | Approach to regulatory approval defined | Development |

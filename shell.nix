@@ -6,7 +6,7 @@ let
 in pkgs.mkShell {
   name = "blog";
   buildInputs = [
-    nodejs
+    nodejs_20
     actionlint
     k6
     rclone

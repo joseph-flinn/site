@@ -5,7 +5,6 @@
   import katex from 'katex';
 
   import CodeDiagramRenderer from './CodeDiagramRenderer.svelte';
-
 </script>
 
 
