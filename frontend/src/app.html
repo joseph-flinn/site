@@ -13,8 +13,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
             (function () {
-                window.counterscale = {
-                    q: [["set", "siteId", "joseph.flinnlab.com"], ["trackPageview"]],
+                if (window.location.href.includes("joseph.flinnlab.com")) {
+                    window.counterscale = {
+                        q: [["set", "siteId", "joseph.flinnlab.com"], ["trackPageview"]],
+                    };
                 };
             })();
         </script>
