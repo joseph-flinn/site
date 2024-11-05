@@ -4,10 +4,15 @@
   import SvelteMarkdown from 'svelte-markdown';
 
   import { log } from '$lib/utils/logger.js';
-  import CodeComponent from '$lib/renderers/CodeComponent.svelte';
-  import ImageComponent from '$lib/renderers/ImageComponent.svelte';
-  import ParagraphComponent from '$lib/renderers/ParagraphComponent.svelte';
-  import QuoteComponent from '$lib/renderers/QuoteComponent.svelte';
+  import CodeRenderer from '$lib/renderers/CodeRenderer.svelte';
+  import ImageRenderer from '$lib/renderers/ImageRenderer.svelte';
+  import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
+  import QuoteRenderer from '$lib/renderers/QuoteRenderer.svelte';
+  import TableRenderer from '$lib/renderers/TableRenderer.svelte';
+  import TableHeadRenderer from '$lib/renderers/TableHeadRenderer.svelte';
+  import TableBodyRenderer from '$lib/renderers/TableBodyRenderer.svelte';
+  import TableRowRenderer from '$lib/renderers/TableRowRenderer.svelte';
+  import TableCellRenderer from '$lib/renderers/TableCellRenderer.svelte';
 
   const { title, published, body, ...rest } = data.data;
 
@@ -33,10 +38,14 @@
   <SvelteMarkdown 
     source={body} 
     renderers={{ 
-      blockquote: QuoteComponent,
-      code: CodeComponent,
-      image: ImageComponent,
-      paragraph: ParagraphComponent
+      blockquote: QuoteRenderer,
+      code: CodeRenderer,
+      image: ImageRenderer,
+      paragraph: ParagraphRenderer,
+      table: TableRenderer,
+      tablehead: TableHeadRenderer,
+      tablecell: TableCellRenderer
     }}
   />
 </div>
+
