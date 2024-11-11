@@ -6,18 +6,14 @@
 ---
 
 Without a product or service application, technology is worth little more than to satisfy curiosity
-(Flinn, p.8). Manufacturing is a key process to create products from technology for distribution and
-sale. As such an important piece, the US Department of Defense came up with similar readiness levels
-to NASA's Technology Readiness Levels discussed in [Part 2](): Manufacturing Readiness Levels (MRLs)
-(Flinn p.43). 
-
-TRLs and MRLs are used together in portfolio management systems to monitor and control the progress
-of technology projects. 
+(Flinn, p.8). Manufacturing is a key process in developing products from technology. As such, the US
+Department of Defense came up readiness levels for their suppliers that are similar to NASA's TRLs
+discussed in [Part 2](./posts/0065-engineering-portfolio-management-part2). They are known as Manufacturing Readiness Levels (MRLs) (Flinn p.43). 
 
 Similar to TRLs, MRLs exist to assist in considering the overall readiness of a technology project
 during the different phases of development. For instance, is a technology worth developing all the
-way to TRL 9 if it costs significantly more than a customer is willing to purchase it for? If not,
-the development of the technology may need to be put on hold.
+way to TRL 9 if it costs significantly more than a customer is willing to pay? If not, the
+development of the technology may need to be put on hold.
 
 The US DoD defines the MRLs as the following (Flinn p.44-45):
 
@@ -35,9 +31,9 @@ The US DoD defines the MRLs as the following (Flinn p.44-45):
 | MRL 10 | Full Rate Production demonstrated and lean production practices in place |
 
 With such vague descriptions, it is helpful to break these up into multiple categories to provide a
-more robust framework. Rememeber, every organization is a unique blend of people, process, and
-product. Each organization may have different MRL categoiries. A good example to start from would be
-the following (Weber, 2024):
+more robust framework for determining the overall MRL of a product. Rememeber, every organization is
+a unique blend of people, process, and product, so ach organization may need different MRL
+categoiries. A good base example to start from would be the following (Weber, 2024):
 
 | Level | Process description / definition | Skill required to produce | Production Facilities | Cost management | Supply Chain Management | Phase |
 | ----- | -------------------------------- | ------------------------- | --------------------- | --------------- | ----------------------- | ----- |
@@ -52,15 +48,15 @@ the following (Weber, 2024):
 | MRL 9 | Facilities and tools in routine production | | Facilities proven at production rate | | Routine MRP scheduling in place | Deployment | 
 | MRL 10 | Production process running under statistical process control | Full rate production personnel & skill set definitions in place | Surge capability for higher production rates understood | | Supply chain life-cycle management established | Full Production | 
 
-The overall MRL of a project is the lowest MRL across all of these categories. If a production
-facility has been designed and built, but still requires highly skilled scientists with PhDs to
-operate, the readiness level of manufacturing the product is constrained to an MRL 2.
+The overall MRL of a product is the lowest MRL across all of these categories. If a production
+facility has been designed and built, but the manufacturing process still requires highly skilled
+scientists with PhDs to operate, the readiness level of manufacturing the product is constrained to
+an MRL 2.
 
 While these levels are specific to product manufacturing, the categories can be tweaked to apply the
-same type of framework to operational readiness for managing software infrastructure and site
-reliability. I call these Operational Readiness Levels or ORLs. All of the physical facilities and
-tooling are translated into hardware or cloud infrastructure. The others are broad enough to remain
-the same.
+same type of framework to software operational readiness: Operational Readiness Levels (ORLs). All
+of the physical facilities and tooling are replaced with infrasturcture and processes needed to
+operate software at scale. The categories that have been left are broad enough to remain the same.
 
 | Level | Process description / definition | Skill required to operate | Infrastructure & Operating Processes | Cost management | Supply Chain Management | Phase |
 | ----- | -------------------------------- | ------------------------- | --------------------- | --------------- | ----------------------- | ----- |
@@ -75,13 +71,13 @@ the same.
 | ORL 9 | Process in routine use in Production | | Infrastructure & processes proven at production rate | | Routine MRP scheduling in place | Deployment | 
 | ORL 10 | Production process running under statistical process control | Full rate production personnel & skill set definitions in place | Surge capability for higher throughput understood | | Supply chain life-cycle management established | Full Production | 
 
-TRLs and ORLs are distinct but not fully separate. As an example, let's say a team of engineers are
-working to add a new product feature that requires a new type of cache. As there are many different
-caching strategies and technologies, the specific use here will require some collaboration between
-the architect, the software engineers, and the site reliability engineers. The development work of
-the product feature would lean more towards the TRL framework while the infrastructure design and
-implementation would lean more towards the ORLs. However, the overall feature will need to complete
-both to be fully operational in production.
+TRLs and MRL/ORLs are distinct but not fully separate. As an example, let's say a team of engineers
+are working to add a new product feature that requires a new type of cache. As there are many
+different caching strategies and technologies, the decisions on which to use will require some
+collaboration between the architect, the software engineers, and the site reliability engineers. The
+development work of the product feature would heavily use the TRL framework while the infrastructure
+design and implementation would more likely use the ORLs. However, the overall feature will need to
+meet both TLR 9 and ORL 10 in order to be determined complete and fully operational in production.
 
 What happens if the site reliability team determines that there are infrastructure constraints on
 which new caching system can be chosen? What happens if the cost of the desired caching
@@ -89,32 +85,34 @@ technology--in infrastructure, networking egress, and maintenance--is significan
 alternative? This is why close collaboration across all of the teams is imperative in the earliest
 stages of the project.
 
-In physical engineering, this is called design for manufacturing and assembly or DFMA. Not only
-do the engineers need to solve the specific engineering problem, but need to make sure that their
-resulting design does not interfere with other portions of the larger project. For instance, if a
-team of engineers were designing a new race car engine, they need to be constantly communicating
-among themselves to make sure they part designs do not use the same space as another part being
-designed. They also need to be in constant communication with the pit crew to make sure bolts that
-hold the engine together are easy to get to quickly and do not require new tools.
+In physical engineering, this early collaboration is called design for manufacturing and assembly or
+DFMA. Not only do the engineers need to solve the specific engineering problem, but they also need
+to make sure that their design does not interfere with other portions of the larger project. For
+instance, if a team of engineers were designing a new engine, they need to be constantly
+communicating among themselves to make sure their part designs do not use the same physical space as
+another part. They also need to be in communication with their maintenance crews to make sure that
+bolts holding the engine together are easy to get to get to and do not require new specialized tools.
 
 DFMA is the practice of bringing experts from manufacturing together with the product engineers in
-the design phase to collaborate throughout the entire project. The collaboration with manufacturing
-and operations in the early phases of product development helps identify suboptimal designs sooner,
-saving significant resource investment.
+the design phase to collaborate throughout the entire product development life-cycle. The
+collaboration with manufacturing, operations, and customer support in the early phases of product
+development helps identify suboptimal designs before significant investment.
 
-Unfortunately from my experience, SRE teams are often brought in late in the project life-cycle,
-after features and systems are fully designed and implemented. This can result in unintended issues
-like an increase of network traffic to a specific endpoint or user process that causes issues for a
-significant portion of the users. A good example would be two products with wildly different usage
-patterns sharing the same infrastructure. Collaborating with SRE during the design phase can help
-uncover these issues to keep long-term tech debt low.
+Unfortunately from my experience, in the software industry, SRE teams are often brought in late in
+the project life-cycle, after features and systems are fully designed and implemented. This not only
+stretches the timelines for project delivery--while putting stress on the SRE team--but it also
+risks unintended issues like an increase of network traffic to a specific endpoint or user process
+that causes issues for a significant portion of the users. An example of such an unintended issue
+could be two products with wildly different usage patterns sharing the same infrastructure.
+Optimizing for one usage pattern would then interfere with the other product. Collaborating with SRE
+during the design phase helps to uncover these issues in order to keep long-term tech debt low.
 
-The processes that the manufacturing industry has been continuously improving for physical products
-can be learned from and applied to the software industry. Using MRLs (or ORLs) for objective
-measurements of project progress help make sure that an organization's resources are being invested
-responsibly. We have been building up the foundation to examine how TRLs and MRL/ORLs can be
-implemented in a system to provide streamlined decision making to effectively manage resource
-investment. We will look at this system in the upcoming [Part 4]().
+We can take lessons from the processes that the manufacturing industry has been continuously
+improving and apply them to the software industry. Using MRLs (or ORLs) for objective measurements
+of project progress help make sure that an organization's resources are being invested responsibly.
+Over the last few posts we have been building up the foundation to examine how TRLs and MRL/ORLs can
+be used in implementing a system to provide streamlined decision making to effectively manage resource
+investment. We will look at such a system in the upcoming [Part 4]().
 
 
 ---
