@@ -22,7 +22,7 @@ Developing a new successful product must include the correct combination of mark
 a hard problem to solve, but it not unsolvable. If a process can be defined around new product
 development, then engineering methodologies can be applied to refine it.
 
-Too often leaders only useonly intuition too decide what projects and products to pursue. It is a
+Too often leaders only use intuition to decide what projects and products to pursue. It is a
 one-time roll of the dice where the firm is all-in until catastrophic failure. Intuition has an
 important place. If there was an algorithm to solve every problem, then intuition would not be
 needed to aid in choosing the path forward. However, intuition cannot be the sole reason for
