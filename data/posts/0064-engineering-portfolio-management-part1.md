@@ -39,11 +39,11 @@ off.
 
 Now, it might seem like I am starting down an anti-Agile path, but I am not. I fully agree with the
 philosophies of Agile and Lean Development and have observed the benefits in the teams that use
-them, with the caveat that they are applied to only project management. To help with the nuance
-between using Agile for project management versus other types of project work, it will be helpful to
-define a few terms as they seem to be rarely used in the SaaS industry. The following definitions
-come from the *A Guide to the Project Management Body of Knowledge* (Project Management Institute,
-p.4). 
+them, with the caveat that Agile is only applied project management and not portfolio management. To
+help with the nuance between using Agile for project management versus other types of project work,
+it will be helpful to define a few terms as they seem to be rarely used in the SaaS industry. The
+following definitions come from the *A Guide to the Project Management Body of Knowledge* (Project
+Management Institute, p.4). 
 
 **Project:** A temporary endeavor undertaken to create a unique product, service, or result. The
 temporary nature of projects indicate a beginning and an end to the project work or a phase of the
