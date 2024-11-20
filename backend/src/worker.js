@@ -16,9 +16,11 @@ app.get('/rss.xml', async c => {
 
 	if (rssBlob === null) return c.text('Object not found', 404)
 
-	c.header('content-type', 'application/xml')
-	c.header('etag', rssBlob.httpEtag)
-	return c.text(rssBlob.body, 200)
+	const headers = {
+		"content-type": "application/rss+xml",
+		"etag": rssBlob.httpEtag
+	}
+	return new Response(rssBlob.body, {status: 200, headers: headers})
 })
 
 
