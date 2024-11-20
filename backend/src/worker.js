@@ -16,9 +16,11 @@ app.get('/rss.xml', async c => {
 
 	if (rssBlob === null) return c.text('Object not found', 404)
 
-	c.header('content-type', 'application/xml')
-	c.header('etag', rssBlob.httpEtag)
-	return c.text(rssBlob.body, 200)
+	const headers = {
+		"Content-Type": "application/rss+xml",
+		"Etag": rssBlob.httpEtag
+	}
+	return new Response(rssBlob.body, {status: 200, headers: headers})
 })
 
 
@@ -41,9 +43,14 @@ app.get('/posts', async c => {
 				})
 		))
 		.then(postList => {
-			c.header('content-type', 'application/json')
-			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ data: postList }), 200)
+			return new Response(
+			  JSON.stringify({data: postList}),
+				{ status: 200,
+				  headers: {
+						"Content-Type": "application/json",
+						"Etag": postBlob.httpEtag
+				}}
+		  )
 		})
 })
 
@@ -59,9 +66,14 @@ app.get('/posts/:slug', async c => {
 	return postBlob.json()
 		.then(posts => posts[slug])
 		.then(post => {
-			c.header('content-type', 'application/json')
-			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ data: post}), 200)
+			return new Response(
+			  JSON.stringify({data: post}),
+				{ status: 200,
+				  headers: {
+						"Content-Type": "application/json",
+						"Etag": postBlob.httpEtag
+				}}
+		  )
 		})
 })
 
