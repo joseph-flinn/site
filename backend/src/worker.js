@@ -43,9 +43,14 @@ app.get('/posts', async c => {
 				})
 		))
 		.then(postList => {
-			c.header('content-type', 'application/json')
-			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ data: postList }), 200)
+			return new Response(
+			  JSON.stringify({data: postList}),
+				{ status: 200,
+				  headers: {
+						"Content-Type": "application/json",
+						"Etag": postBlob.httpEtag
+				}}
+		  )
 		})
 })
 
@@ -61,9 +66,14 @@ app.get('/posts/:slug', async c => {
 	return postBlob.json()
 		.then(posts => posts[slug])
 		.then(post => {
-			c.header('content-type', 'application/json')
-			c.header('etag', postBlob.httpEtag)
-			return c.text(JSON.stringify({ data: post}), 200)
+			return new Response(
+			  JSON.stringify({data: post}),
+				{ status: 200,
+				  headers: {
+						"Content-Type": "application/json",
+						"Etag": postBlob.httpEtag
+				}}
+		  )
 		})
 })
 
