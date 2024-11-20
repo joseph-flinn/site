@@ -7,6 +7,18 @@ const OUTPUT_DIR = '../../dist';
 
 const rssPosts = Object.values(posts).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 
+const escapeXml = (unsafe) => {
+    return unsafe.replace(/[<>&'"]/g, (c) => {
+        switch (c) {
+            case '<': return '&lt;';
+            case '>': return '&gt;';
+            case '&': return '&amp;';
+            case '\'': return '&apos;';
+            case '"': return '&quot;';
+        }
+    });
+}
+
 
 const render = (posts) => {
   return `<?xml version="1.0" encoding="UTF-8" ?>
@@ -21,9 +33,9 @@ const render = (posts) => {
         (post) => `
         <item>
           <guid>${SITE_URL}/posts/${post.slug}</guid>
-          <title>${post.title}</title>
+          <title>${escapeXml(post.title)}</title>
           <link>${SITE_URL}/posts/${post.slug}</link>
-          <description>${post.description}</description>
+          <description>${escapeXml(post.description)}</description>
           <pubDate>${new Date(post.published).toUTCString()}</pubDate>
         </item>`
       )

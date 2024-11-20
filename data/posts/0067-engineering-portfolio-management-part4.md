@@ -5,11 +5,11 @@
 
 ---
 
-After all the buildup through what portfolio management is and the role it plays (
-[Part 1](/posts/engineering-portfolio-management-part1)), the definitions of  Technology Readiness
+After all the buildup through what portfolio management is and the role it plays 
+([Part 1](/posts/engineering-portfolio-management-part1)), the definitions of  Technology Readiness
 Levels ([Part 2](/posts/engineering-portfolio-management-part2)), and the definitions of
-Manufacturing Readiness and how it can be applied to the software industry (
-[Part 3](/posts/engineering-portfolio-management-part3)), we finally get to the part where this is
+Manufacturing Readiness and how it can be applied to the software industry 
+([Part 3](/posts/engineering-portfolio-management-part3)), we finally get to the part where this is
 all integrated into a portfolio management system.
 
 Before diving into what makes up a portfolio management system, it is important to understand why we
@@ -95,9 +95,9 @@ example of what a traditional stage and gate flow looks like:
 In such an example, most of the work is done in serial and all criteria must be met prior to moving
 on in the flow. Every gate review meeting is a chance for the firm to make the Go/Kill decision on
 the project. The criteria for each gate will look different at every firm as each firm has different
-strategies to attain their objectives. These criteria is where TRLs (
-[Part 2](/posts/engineering-portfolio-management-part2)) and MRLs/ORLs (
-[Part 3](/posts/engineering-portfolio-management-part3)) could come in. A firm can choose to select
+strategies to attain their objectives. These criteria is where TRLs 
+([Part 2](/posts/engineering-portfolio-management-part2)) and MRLs/ORLs 
+([Part 3](/posts/engineering-portfolio-management-part3)) could come in. A firm can choose to select
 specific TRLs and MRL/ORLs to meet before a project is ready to move to the next stage. For example,
 criteria for Gate 3 might be that the project must have reached a TRL 3 and an ORL 3 before moving
 into the Development stage. 
