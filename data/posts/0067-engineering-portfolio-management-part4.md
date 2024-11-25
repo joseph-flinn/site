@@ -95,7 +95,7 @@ example of what a traditional stage and gate flow looks like:
 In such an example, most of the work is done in serial and all criteria must be met prior to moving
 on in the flow. Every gate review meeting is a chance for the firm to make the Go/Kill decision on
 the project. The criteria for each gate will look different at every firm as each firm has different
-strategies to attain their objectives. These criteria is where TRLs 
+strategies to attain their objectives. These criteria are where TRLs 
 ([Part 2](/posts/engineering-portfolio-management-part2)) and MRLs/ORLs 
 ([Part 3](/posts/engineering-portfolio-management-part3)) could come in. A firm can choose to select
 specific TRLs and MRL/ORLs to meet before a project is ready to move to the next stage. For example,
@@ -111,39 +111,40 @@ into the Development stage.
 | Gate 5 | - Does the project meet all quality standards?<br/> - Marketing plan ready?<br/> - Operations plan ready?<br/> - TRL 9?<br/> - ORL 7? |
 
 Pairing a stage-and-gate system like the above with a policy of expected timelines that projects
-should meet while progressing through the gates helps bring structure and transparency to the
-project investment process. During a quarterly or semi-annually gate review, if projects have not
-been able to meet their scheduled stage--measured by their gate criteria--the project committee may
-deem that the project should no longer receive resource investment and make the decision to kill it.
+should meet while progressing through the gates, helps bring structure and transparency to the
+project investment process. During a quarterly portfolio review, if projects have not been able to
+meet their scheduled stage (measured by their gate criteria) the project committee may deem that the
+project should no longer receive resource investment and make the decision to kill it.
 Alternatively, if the project is close to meeting the gate requirements but not quite there, the
 committee may elect to approve a Conditional pass meaning that the project can automatically move to
 the next stage if the set conditions met. However, if it fails to meet the condition in the
 additional time set, it is killed.
 
-As mentioned above, this example was a generic traditional approach to new product development. Such
-a portfolio management system would be extremely helpful for long-term projects spanning multiple
-quarters or years. However, there is a lot of upfront work that comes along with a serial process
-like this which might provide friction in an environment that uses Agile project management. The
-generic stage-and-gate system can be tweaked as needed to work within any environment that a firm
-has. The main idea is to establish Go/Kill decision criteria to optimize the resource investment
-across the firm as well as making the it transparent. 
+As mentioned above, this example is a generic approach to new product development. Such a portfolio
+management system would be extremely helpful for long-term projects spanning multiple quarters or
+years. However, there is a lot of upfront work that comes along with a serial process which might
+provide friction in an environment that uses Agile project management. The generic stage-and-gate
+system can be tweaked to work within any environment that a firm has. The main idea is to establish
+Go/Kill decision criteria to optimize the resource investment across the firm as well as making the
+it transparent. 
 
 In the software industry, a portfolio management system brings the needed structure to managing
 project life-cycles. I have witnessed too many large software projects go immediately from ideation
 to development. Often, these projects are projects born from the intuition of powerful people in the
-firm and the social pressures to complete them led to decisions to skip strategic planning and the
-assessments that would normally accompany building a business case for other projects. The
-stage-and-gate system helps mitigate the risks from gambling on intuition that executives seem to
-often use to make project investment decisions.
+firm and the social pressures to complete them led to decisions to skip strategic planning and
+assessments that would normally accompany building a business case. The stage-and-gate system helps
+mitigate the risks from the 1:7 gamble on intuition that executives seem to often use to make
+project investment decisions.
 
 In multi-project organizations where there is not a system to manage portfolio decisions, the
-environment of the product development teams quickly becomes unstable. Teams do not know what they
-are working on week to week because projects appear and disappear so quickly. Organizational
-capacity is often overloaded causing project slip and quality issues to appear because key
-activities are omitted from the pressure to deliver (Kahn et al, p.157). This can result in critical
-performance reviews of the teams and individuals trying to keep up on the constantly changing
-priorities which comes at the expense of the projects that are tied to the continued success of the
-organization and performance metrics of the team. Over a few years, this leads to burnout.
+environment of product development teams quickly becomes unstable. Teams do not know what they are
+working on week-to-week because projects appear and disappear so quickly. Organizational capacity is
+often overloaded causing project slip and quality issues to appear because key activities are
+omitted from the pressure to deliver (Kahn et al, p.157). This can result in degrading team
+performance and critical performance reviews of the teams and individuals trying to keep up on the
+constantly changing priorities. The quickly shifting priority projects often come at the expense of
+the projects that are tied to the continued success of the organization. Over a few years, this
+leads to burnout.
 
 While it seems that implementing project management portfolio will slow everything down, it only
 slows down the processes that need to be. As the military saying goes, "slow is smooth, smooth is
