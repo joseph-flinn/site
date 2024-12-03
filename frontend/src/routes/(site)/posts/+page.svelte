@@ -49,6 +49,7 @@
 
   .post-title:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   a:hover {

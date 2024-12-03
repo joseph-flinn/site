@@ -37,8 +37,7 @@
           source={drop.message}
           renderers={{
             blockquote: QuoteRenderer,
-            code: CodeRenderer,
-            paragraph: ParagraphRenderer
+            code: CodeRenderer
           }}
         />
       </div>
@@ -58,13 +57,12 @@
   }
 
   .dropTime {
-    font-size: 14px;
     color: #a1a09d;
   }
 
   .dropMessage {
-    font-size: 16px;
-    padding: 0.75em;
+    padding: 1em;
+    flex-grow: 1;
   }
 
   @media only screen and (max-width: 800px) and (min-width: 300px) {
