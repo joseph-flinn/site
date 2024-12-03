@@ -5,6 +5,10 @@
 
   import PageTitle from "$lib/components/PageTitle.svelte";
 
+  import CodeRenderer from '$lib/renderers/CodeRenderer.svelte';
+  import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
+  import QuoteRenderer from '$lib/renderers/QuoteRenderer.svelte';
+
   const drip = data.data.map((drop) => ({
     message: drop.message,
     created_at: new Date(drop.created_at)
@@ -30,7 +34,12 @@
       </div>
       <div class='dropMessage'>
         <SvelteMarkdown 
-          source={drop.message} 
+          source={drop.message}
+          renderers={{
+            blockquote: QuoteRenderer,
+            code: CodeRenderer,
+            paragraph: ParagraphRenderer
+          }}
         />
       </div>
     </div>
