@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Ubuntu-Regular';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype'),
+  }
+  /*
+  @font-face {
+    font-family: 'Ubuntu-Italic';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('/fonts/Ubuntu/Ubuntu-Italic.ttf') format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Ubuntu-BoldItalic';
+    font-style: monospace;
+    font-weight: 700;
+    src: url('/fonts/Ubuntu/Ubuntu-BoldItalic.ttf') format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Ubuntu-Bold';
+    font-style: monospace;
+    font-weight: 700;
+    src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype'),
+  }
+  */
+}

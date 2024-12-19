@@ -6,13 +6,13 @@
 </script>
 
 
-<div style="display: flex; padding: 0.5em 0em 0.5em 0em;">
+<div class="flex py-2">
   <a href="{base}/">
     <img src={logo} alt="JF Brand Icon" class="svg"/>
   </a>
-  <div style="padding: 0.5em;">
+  <div class="p-2">
     {#each pages as page}
-      <a href="{base}{page.path}"><b>{page.name}</b></a>
+      <a class="hover:underline" href="{base}{page.path}"><b>{page.name}</b></a>
     {/each}
   </div>
 </div>
