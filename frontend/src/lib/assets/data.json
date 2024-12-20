@@ -3,28 +3,30 @@
     "site": [
       {"name": "home", "path": "/"},
       {"name": "posts", "path": "/posts"},
-      {"name": "drip", "path": "/drip"}
+      {"name": "drip", "path": "/drip"},
+      {"name": "about", "path": "/about"}
     ]
   },
+  "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis condimentum ultrices. Nulla congue feugiat risus, ac vestibulum sem consectetur sit amet. Pellentesque vitae cursus turpis. Duis sagittis orci eu quam luctus dignissim. Nam mollis, enim et lobortis varius, risus ante luctus turpis, ac laoreet justo sapien at diam. Ut dignissim tincidunt velit at sodales. Integer malesuada euismod sem ut scelerisque.\n\nSuspendisse sollicitudin ac dui non volutpat. Nam tincidunt nisi in arcu laoreet, convallis facilisis tortor posuere. Donec non enim quis tellus dignissim finibus. Aenean sed mollis lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur ac vulputate ipsum, eu pellentesque turpis. Nulla purus leo, tempor eget lectus eget, faucibus venenatis ante. Vestibulum et ullamcorper nisl. Donec mattis, massa nec pulvinar accumsan, nisi nisi venenatis enim, ac viverra mauris diam ac enim. Donec et aliquet diam, vitae suscipit elit. Donec efficitur sapien vulputate, porttitor nunc sit amet, faucibus velit. Aenean quis dictum ipsum, iaculis suscipit est. Phasellus id ex volutpat, iaculis risus eu, elementum turpis.",
   "skillsData": {
     "Leadership": [
       "Curiosity",
       "Systems Thinking",
-      "Psychological Safety",
+      "Psychological safety",
       "Strategic Thinking",
-      "Situational Leadership: Delegate, Support, Coach, or Direct"
+      "Situational Leadership"
     ],
     "Management": [
-      "Psychological Safety",
-      "Organizational Alignment",
-      "High Performance = Purpose + Expectations + Feedback",
-      "Effective feedback with the PSBIQ model",
-      "Continuous Improvement",
+      "Psychological safety",
+      "Organizational alignment",
+      "Manageing for high performance",
+      "Effective feedback with PSBI",
+      "Continuous improvement",
       "Lean, Scrum, SAFe"
     ],
     "Technical": [ 
       "CI/CD",
-      "Kubernetes & Containerization",
+      "Kubernetes",
       "Python",
       "Javascript",
       "Linux",

@@ -4,8 +4,6 @@
   import Card from "$lib/components/Card.svelte";
   import PageTitle from "$lib/components/PageTitle.svelte";
   import Socials from "$lib/components/Socials.svelte";
-  import TabbedCard from "$lib/components/TabbedCard.svelte";
-  import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
 
@@ -14,18 +12,17 @@
 </script>
 
 <div class="sm:pt-8">
-  <PageTitle name="intro" />
-  <div class="px-4">
-    <SvelteMarkdown 
-      source={data.about} 
-      renderers={{
-        paragraph: ParagraphRenderer,
-      }}
-    />
-  </div>
-  <PageTitle name="popular" />
-  <div class="px-4">
-    <UnderConstruction />
+  <PageTitle name="expertise" />
+  <div class="columns-1 gap-y-4 sm:columns-2">
+    {#each Object.entries(data.skillsData) as [areaName, areaData]}
+      <Card title={areaName}>
+        <ul class="list-disc list-outside pl-8 break-inside-avoid-column">
+          {#each areaData as item}
+            <li>{item}</li>
+          {/each}
+        </ul>
+      </Card>
+    {/each}
   </div>
 </div>
 
