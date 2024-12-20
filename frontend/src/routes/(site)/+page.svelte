@@ -17,7 +17,7 @@
   <PageTitle name="intro" />
   <div class="px-4">
     <SvelteMarkdown 
-      source={data.about} 
+      source={data.intro} 
       renderers={{
         paragraph: ParagraphRenderer,
       }}

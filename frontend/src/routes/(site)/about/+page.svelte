@@ -12,6 +12,15 @@
 </script>
 
 <div class="sm:pt-8">
+  <PageTitle name="about" />
+  <div class="px-4">
+    <SvelteMarkdown 
+      source={data.about} 
+      renderers={{
+        paragraph: ParagraphRenderer,
+      }}
+    />
+  </div>
   <PageTitle name="expertise" />
   <div class="columns-1 gap-y-4 sm:columns-2">
     {#each Object.entries(data.skillsData) as [areaName, areaData]}
