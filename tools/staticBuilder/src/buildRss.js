@@ -5,6 +5,8 @@ import posts from '../../../dist/posts.json' assert {type: "json"};
 const SITE_URL = 'https://joseph.flinnlab.com';
 const OUTPUT_DIR = '../../dist';
 
+const year = new Date().getFullYear();
+
 const rssPosts = Object.values(posts).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 
 const escapeXml = (unsafe) => {
@@ -27,7 +29,7 @@ const render = (posts) => {
     <title>Joseph Flinn</title>
     <link>${SITE_URL}</link>
     <description>Joseph Flinn's blog about optimizing technology organizations</description>
-    <copyright>Copyright 2023 Joseph Flinn</copyright>
+    <copyright>Copyright ${year} Joseph Flinn</copyright>
     ${rssPosts
       .map(
         (post) => `
