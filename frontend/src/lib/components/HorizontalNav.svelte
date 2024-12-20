@@ -16,7 +16,6 @@
     {/each}
   </div>
 </div>
-<div class="w-full py-2 sm:py-1"/>
 
 <style>
   .svg {
