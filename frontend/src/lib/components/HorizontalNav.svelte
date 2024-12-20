@@ -7,7 +7,7 @@
 
 
 <div class="flex py-2 gap-x-4">
-  <a href="{base}/">
+  <a class="p-4" href="{base}/">
     <img src={logo} alt="JF Brand Icon" class="w-12 h-12 sm:w-24 sm:h-24 svg"/>
   </a>
   <div class="flex p-2 gap-x-8">
