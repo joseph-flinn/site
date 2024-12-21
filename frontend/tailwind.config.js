@@ -22,6 +22,7 @@ export default {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      gray: colors.gray,
       ivory: '#fffefb',
       tin: {
         100: '#8a8885',
