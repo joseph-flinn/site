@@ -25,7 +25,9 @@ export default {
       gray: colors.gray,
       ivory: '#fffefb',
       tin: {
-        100: '#8a8885',
+        100: '#a1a09d',
+        150: '#9b9894',
+        200: '#8a8885',
         500: '#5c5955',
       } 
     },
