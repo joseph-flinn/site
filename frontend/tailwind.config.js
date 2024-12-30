@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontSize: {
       xs: ['14px', { lineHeight: '24px', letterSpacing: '-0.03em' }],
@@ -25,15 +25,45 @@ export default {
       gray: colors.gray,
       ivory: '#fffefb',
       tin: {
-        100: '#a1a09d',
-        150: '#9b9894',
-        200: '#8a8885',
-        500: '#5c5955',
+        100: '#FFFEFBff',
+        200: '#EBE9E6ff',
+        300: '#D6D5D2ff',
+        400: '#C2C0BDff',
+        500: '#AEACA8ff',
+        600: '#999793ff',
+        700: '#85827Fff',
+        800: '#706E6Aff',
+        900: '#5C5955ff',
       } 
     },
     extend: {
+      typography: ({ theme }) => ({
+        tin: {
+          css: {
+            '--tw-prose-body': theme('colors.tin[900]'),
+            '--tw-prose-headings': theme('colors.tin[900]'),
+            '--tw-prose-lead': theme('colors.tin[900]'),
+            '--tw-prose-links': theme('colors.tin[200]'),
+            '--tw-prose-bold': theme('colors.tin[900]'),
+            '--tw-prose-counters': theme('colors.tin[900]'),
+            '--tw-prose-bullets': theme('colors.tin[900]'),
+            '--tw-prose-hr': theme('colors.tin[900]'),
+            '--tw-prose-quotes': theme('colors.tin[900]'),
+            '--tw-prose-quote-borders': theme('colors.tin[900]'),
+            '--tw-prose-captions': theme('colors.tin[900]'),
+            '--tw-prose-code': theme('colors.tin[900]'),
+            '--tw-prose-pre-code': theme('colors.tin[900]'),
+            '--tw-prose-pre-bg': theme('colors.tin[200]'),
+            '--tw-prose-th-borders': theme('colors.tin[900]'),
+            '--tw-prose-td-borders': theme('colors.tin[900]'),
+            '--tw-prose-invert-body': theme('colors.tin[100]'),
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+],
 }
 

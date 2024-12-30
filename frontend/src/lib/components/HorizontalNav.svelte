@@ -19,7 +19,7 @@
   <div class="flex p-2 gap-x-4 md:gap-x-8">
     {#each pages as page}
       <a 
-        class="hover:underline {page.name == 'rss' ? 'text-tin-100': 'text-tin-500'}" 
+        class="hover:underline {page.name == 'rss' ? 'text-tin-500': 'text-tin-900'}" 
         href="{base}{page.path}"
       ><b>{page.name}</b></a>
     {/each}
