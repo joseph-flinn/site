@@ -17,13 +17,13 @@ export default {
       '2xl': ['80px', { lineHeight: '80px', letterSpacing: '-0.032em' }],
     },
     fontFamily: {
-      ubuntu: "Ubuntu-Regular, monospace",
+      ubuntuRegular: "Ubuntu-Regular, monospace",
+      ubuntu: "Ubuntu, monospace",
     },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       gray: colors.gray,
-      ivory: '#fffefb',
       tin: {
         100: '#FFFEFB',
         200: '#EBE9E6',
