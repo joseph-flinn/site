@@ -12,6 +12,6 @@
     $: diagram && renderDiagram()
 </script>
 
-<div style="display: flex; align-items: center; justify-content: center;">
-  <span style="width: 100%;" bind:this={container} />
+<div class="flex items-center justify-center">
+  <span class="w-full" bind:this={container} />
 </div>

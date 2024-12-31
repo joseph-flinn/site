@@ -21,20 +21,20 @@
 </script>
 
 
-<div style="width: 100%; text-align: center; font-size: 24px;">
-  <div style="padding: 1em;">
+<div class="w-full text-center text-xl">
+  <div class="p-2">
     {title}
   </div>
 </div>
-<div style="display: flex; width: 100%;">
-  <div style="flex-grow: 1; padding: 1em;">
+<div class="flex w-full">
+    <div class="grow p-2">
     {published}
   </div>
-  <div style="padding: 1em;">
+  <div class="p-2">
     {readEstimate} mins
   </div>
 </div>
-<div style="padding: 1em;">
+<div class="p-2">
   <SvelteMarkdown 
     source={body} 
     renderers={{ 
