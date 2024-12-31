@@ -25,7 +25,7 @@
     {readEstimate} mins
   </div>
 </div>
-<div class="py-8 px-2">
+<div class="py-8 px-4">
   <TailwindSvelteMarkdown source={body} />
 </div>
 

@@ -8,16 +8,18 @@
 </script>
 
 
-<pre class="flex w-full">
+<div class="flex">
 {#if lang == "katex"}
   <div class="grow">
     {@html katex.renderToString(text, {displayMode: true})}
   </div>
 {:else if lang == "mermaid"}
-  <div class="grow">
+  <div class="grow p-4">
     <CodeDiagramRenderer diagram={text} />
   </div>
 {:else}
+  <pre class="flex w-full">
     <code class="grow p-2 rounded-md overflow-x-auto bg-tin-200 text-xs">{text}</code>
+  </pre>
 {/if}
-</pre>
+</div>
