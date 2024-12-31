@@ -9,43 +9,21 @@
     font-weight: 400;
     src: url('/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype'),
   }
-  /*
-  @font-face {
-    font-family: 'Ubuntu-Italic';
-    font-style: monospace;
-    font-weight: 400;
-    src: url('/fonts/Ubuntu/Ubuntu-Italic.ttf') format('truetype'),
-  }
-
-  @font-face {
-    font-family: 'Ubuntu-BoldItalic';
-    font-style: monospace;
-    font-weight: 700;
-    src: url('/fonts/Ubuntu/Ubuntu-BoldItalic.ttf') format('truetype'),
-  }
-
-  @font-face {
-    font-family: 'Ubuntu-Bold';
-    font-style: monospace;
-    font-weight: 700;
-    src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype'),
-  }
-  */
 
   h1 {
-    @apply pt-2 font-bold text-2xl
+    @apply pt-4 font-bold text-2xl
   }
 
   h2 {
-    @apply pt-2 font-bold text-xl
+    @apply pt-4 font-bold text-xl
   }
 
   h3 {
-    @apply pt-2 font-bold text-lg
+    @apply pt-4 font-bold text-lg
   }
 
   h4 {
-    @apply pt-2 font-bold italic
+    @apply pt-4 font-bold italic
   }
 
   hr {
