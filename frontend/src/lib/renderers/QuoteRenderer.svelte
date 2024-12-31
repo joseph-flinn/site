@@ -10,20 +10,9 @@
 </script>
 
 
-<div class="flex p-4 bg-tin-200 border-l-2 border-tin-700 rounded-r-lg text-xs">
+<div class="flex p-4 bg-tin-200 border-l-4 border-tin-700 rounded-r-lg">
   <div class="grow">
     <SvelteMarkdown source={newText} />
   </div>
 </div>
 <div class='p-1'/>
-
-
-<style>
-  .quote {
-    display: flex;
-    background: #eeeeed;
-    padding: 1em;
-    border-left: 3px solid #8A8885;
-    font-size: 14px;
-  }
-</style>
