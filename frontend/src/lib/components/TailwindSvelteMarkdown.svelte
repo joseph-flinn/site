@@ -12,6 +12,13 @@
   import TableBodyRenderer from '$lib/renderers/TableBodyRenderer.svelte';
   import TableRowRenderer from '$lib/renderers/TableRowRenderer.svelte';
   import TableCellRenderer from '$lib/renderers/TableCellRenderer.svelte';
+
+  /*
+  import LinkRenderer from 'LinkRenderer.svelte';
+  import HorizontalRuleRenderer from 'HorizontalRuleRenderer.svelte';
+  import OrderedListRenderer from 'OrderedListRenderer.svelte';
+  import UnorderedListRenderer from 'UnorderedListRenderer.svelte';
+  */
 </script>
 
 <SvelteMarkdown 

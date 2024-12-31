@@ -13,7 +13,7 @@
 
 
 <div class="w-full text-center text-xl">
-  <div class="p-2">
+  <div class="p-4">
     {title}
   </div>
 </div>
@@ -25,7 +25,7 @@
     {readEstimate} mins
   </div>
 </div>
-<div class="p-2">
+<div class="py-8 px-2">
   <TailwindSvelteMarkdown source={body} />
 </div>
 
