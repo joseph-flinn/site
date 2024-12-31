@@ -4,7 +4,6 @@
   import Card from "$lib/components/Card.svelte";
   import PageTitle from "$lib/components/PageTitle.svelte";
   import Socials from "$lib/components/Socials.svelte";
-  import TabbedCard from "$lib/components/TabbedCard.svelte";
   import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
