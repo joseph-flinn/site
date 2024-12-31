@@ -8,7 +8,7 @@
 </script>
 
 
-<div class="flex">
+<div class="flex py-2">
 {#if lang == "katex"}
   <div class="grow">
     {@html katex.renderToString(text, {displayMode: true})}

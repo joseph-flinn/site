@@ -31,11 +31,11 @@
   }
 
   ul {
-    @apply list-disc list-outside pl-8 break-inside-avoid-column
+    @apply list-disc list-outside py-2 pl-8 break-inside-avoid-column
   }
 
   ol {
-    @apply list-decimal list-outside pl-8 break-inside-avoid-column
+    @apply list-decimal list-outside py-2 pl-12 break-inside-avoid-column
   }
 
   a {
