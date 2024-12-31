@@ -6,41 +6,8 @@
 
 
 <button 
-  class="{primary ? 'buttonPrimary' : 'buttonSecondary'}"
+  class="ml-auto py-2 px-6 border-0 rounded-md text-center text-tin-100 hover:cursor-pointer {primary ? 'bg-tin-900 hover:bg-tin-700' : 'bg-tin-600 hover:bg-tin-400'}"
   on:click={handleClick}
 >
   {text}
 </button>
-
-
-<style>
-  button {
-    margin-left: auto;
-    padding: 0.5em 1.5em 0.5em 1.5em;
-    color: #fffefb;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
-  }
-
-  button:hover {
-    cursor: pointer;
-    background-color: #777;
-  }
-
-  .buttonPrimary {
-    background-color: #5c5955; 
-  }
-
-  .buttonSecondary {
-    background-color: #9b9894
-  }
-
-  .buttonPrimary:hover {
-    background-color: #777;
-  }
-
-  .buttonSecondary:hover {
-    background-color: #DAD9D7
-  }
-</style>
