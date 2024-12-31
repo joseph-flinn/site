@@ -35,16 +35,16 @@
 </script>
 
 
-<div class="vbar">
-  <div style="padding: 1em; margin-bottom: 5em;">
-  <a href="{base}/">
-    <img src={logo} alt="JF Brand Icon" class="svg"/>
+<div class="flex flex-col h-full w-[300px] shrink-0 bg-tin-900 text-tin-100">
+  <div class="p-2 mb-20">
+  <a class="text-tin-100" href="{base}/">
+    <img src={logo} alt="JF Brand Icon" class="w-20 h-20 svg"/>
   </a>
   </div>
   {#each buttons.pages as page}
     <VerticalNavButton name={page.name} handleClick={page.handler}/>
   {/each}
-  <div style="margin-top: auto">
+  <div class="mt-auto">
     {#each buttons.utilities as utility}
       <VerticalNavButton name={utility.name} handleClick={utility.handler}/>
     {/each}
@@ -52,23 +52,7 @@
 </div>
 
 <style>
-  .vbar {
-    height: 100%;
-    width: 300px;
-    flex-shrink: 0;
-    background-color: #5c5955; 
-    color: #fffefb;
-    display: flex; 
-    flex-direction: column;
-  }
-
-  a {
-    color: #fffefb;
-  }
-
   .svg {
-    width: 50px;
-    height: 50px;
     filter: invert(100%) sepia(37%) saturate(894%) hue-rotate(333deg) brightness(115%) contrast(106%);
   }
 </style>
