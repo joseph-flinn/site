@@ -18,45 +18,16 @@
 
 
 <Card>
-  <table>
+  <table class="p-6 border-spacing-0">
     <tr>
-      <th style="width: 200px">timestamp</th>
-      <th>drop</th>
+      <th class='p-4 w-[200px] border-0 text-left'>timestamp</th>
+      <th class='p-4 border-0 text-left'>drop</th>
     </tr>
     {#each data.data as datum}
-      <tr class="row" on:click={() => handleDripClick(datum.id)}>
-        <td>{datum.created_at}</td>
-        <td>{datum.message}</td>
+      <tr class="hover:bg-tin-200 hover:cursor-pointer" on:click={() => handleDripClick(datum.id)}>
+        <td class="p-4 border-0 align-top" >{datum.created_at}</td>
+        <td class="p-4 border-0 align-top">{datum.message}</td>
       </tr>
     {/each}
   </table>
 </Card>
-
-
-<style>
-  table {
-    padding: 1.5em;
-    border-spacing: 0px;
-  }
-
-  td, th {
-    padding: 1em;
-    border: 0px;
-  }
-
-  .row {
-  }
-
-  .row:hover {
-    background-color: #eee;
-    cursor: pointer;
-  }
-
-  th {
-    text-align: left;
-  }
-
-  td {
-    vertical-align: top;
-  }
-</style>
