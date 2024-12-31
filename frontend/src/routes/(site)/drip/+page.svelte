@@ -29,10 +29,10 @@
 <div class='flex flex-col'>
   {#each drip as drop}
     <div class='flex flex-col md:flex-row'>
-      <div class='dropTime p-4 pb-0 text-tin-100 md:basis-32 md:shrink-0 md:text-right md:border-r-2 md:border-solid md:border-tin-150'>
+      <div class='dropTime p-4 pb-0 text-tin-500 md:pl-0 md:basis-32 md:shrink-0 md:text-right md:border-r-2 md:border-solid md:border-tin-150'>
         <b><i>{myDateFormat(drop.created_at)}</i></b>
       </div>
-      <div class='flex-grow p-4'>
+      <div class='flex-grow p-4 pt-2 md:pt-4'>
         <SvelteMarkdown 
           source={drop.message}
           renderers={{
