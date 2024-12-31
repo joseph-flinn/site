@@ -12,25 +12,7 @@
   <img
     src={imgUrl}
     alt={text}
-    class="center"
+    class="block w-full mx-auto mt-8 mb-2"
   />
-  <div class="imgTitle">{text}</div>
+  <div class="mb-8 text-center text-xs">{text}</div>
 </div>
-
-
-<style>
-  .center {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    width: 100%;
-  }
-
-  .imgTitle {
-    font-size: 12px;
-    margin-bottom: 2em;
-    text-align: center;
-  }
-</style>

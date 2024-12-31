@@ -37,33 +37,7 @@ export default {
       } 
     },
     extend: {
-      typography: ({ theme }) => ({
-        tin: {
-          css: {
-            '--tw-prose-body': theme('colors.tin[900]'),
-            '--tw-prose-headings': theme('colors.tin[900]'),
-            '--tw-prose-lead': theme('colors.tin[900]'),
-            '--tw-prose-links': theme('colors.tin[200]'),
-            '--tw-prose-bold': theme('colors.tin[900]'),
-            '--tw-prose-counters': theme('colors.tin[900]'),
-            '--tw-prose-bullets': theme('colors.tin[900]'),
-            '--tw-prose-hr': theme('colors.tin[900]'),
-            '--tw-prose-quotes': theme('colors.tin[900]'),
-            '--tw-prose-quote-borders': theme('colors.tin[900]'),
-            '--tw-prose-captions': theme('colors.tin[900]'),
-            '--tw-prose-code': theme('colors.tin[900]'),
-            '--tw-prose-pre-code': theme('colors.tin[900]'),
-            '--tw-prose-pre-bg': theme('colors.tin[200]'),
-            '--tw-prose-th-borders': theme('colors.tin[900]'),
-            '--tw-prose-td-borders': theme('colors.tin[900]'),
-            '--tw-prose-invert-body': theme('colors.tin[100]'),
-          },
-        },
-      }),
     },
   },
-  plugins: [
-    require('@tailwindcss/typography')
-],
 }
 

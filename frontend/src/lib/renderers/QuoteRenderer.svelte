@@ -1,6 +1,7 @@
 <script>
-  export let lang;
   export let text;
+
+  import SvelteMarkdown from 'svelte-markdown';
 
   const tokenizedText = text.replace(/(?:\r\n|\r|\n)/g, " ")
   const formattedText = tokenizedText.replace(/  /g, "@@").replace(/--/g, "—")
@@ -9,16 +10,12 @@
 </script>
 
 
-<div class="quote">
-  <div style="flex-grow: 1;">
-  {#each paragraphs as paragraph, i}
-    <i>{paragraph}</i>
-    {#if i != paragraphs.length - 1}
-    <br><br>
-    {/if}
-  {/each}
+<div class="flex p-4 bg-tin-200 border-l-2 border-tin-700 rounded-r-lg text-xs">
+  <div class="grow">
+    <SvelteMarkdown source={newText} />
   </div>
 </div>
+<div class='p-1'/>
 
 
 <style>
