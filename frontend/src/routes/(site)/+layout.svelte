@@ -9,18 +9,8 @@
 
 <CentralColumn>
   <HorizontalNav pages={data.pages.site}/>
-  <div class="page-content">
+  <div class="flex flex-col grow">
     <slot></slot>
   </div>
   <Footer />
 </CentralColumn>
-
-<style>
-  .page-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-</style>
-
-
