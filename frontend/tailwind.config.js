@@ -17,7 +17,7 @@ export default {
       '2xl': ['80px', { lineHeight: '80px', letterSpacing: '-0.032em' }],
     },
     fontFamily: {
-      ubuntu: "Ubuntu-Regular, mono",
+      ubuntu: "Ubuntu-Regular, monospace",
     },
     colors: {
       transparent: 'transparent',
@@ -25,15 +25,15 @@ export default {
       gray: colors.gray,
       ivory: '#fffefb',
       tin: {
-        100: '#FFFEFBff',
-        200: '#EBE9E6ff',
-        300: '#D6D5D2ff',
-        400: '#C2C0BDff',
-        500: '#AEACA8ff',
-        600: '#999793ff',
-        700: '#85827Fff',
-        800: '#706E6Aff',
-        900: '#5C5955ff',
+        100: '#FFFEFB',
+        200: '#EBE9E6',
+        300: '#D6D5D2',
+        400: '#C2C0BD',
+        500: '#AEACA8',
+        600: '#999793',
+        700: '#85827F',
+        800: '#706E6A',
+        900: '#5C5955',
       } 
     },
     extend: {
