@@ -35,5 +35,12 @@
       "Azure",
       "AWS"
     ]
-  }
+  },
+  "books": [
+    { "title": "Leaders Eat Last", "author": "Simon Sinek", "link": "https://simonsinek.com/books/leaders-eat-last/" },
+    { "title": "Dare to Lead", "author": "Brené Brown", "link": "https://brenebrown.com/book/dare-to-lead/"},
+    { "title": "Never Split the Difference", "author": "Chris Voss", "link": "https://www.blackswanltd.com/never-split-the-difference"},
+    { "title": "Supercommunicators", "author": "Charles Duhigg", "link": "https://www.charlesduhigg.com/supercommunicators"},
+    { "title": "Extreme Ownership", "author": "Jocko Willink, Leif Babin", "link": "https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs/dp/1250067057"}
+  ]
 }
