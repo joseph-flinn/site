@@ -1,13 +1,6 @@
 <script>
 </script>
 
-<thead>
+<thead class="text-center font-bold">
   <slot></slot>
 </thead>
-
-<style>
-  thead {
-    text-align: center;
-    font-weight: bold;
-  }
-</style>
