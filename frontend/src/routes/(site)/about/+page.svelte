@@ -21,6 +21,7 @@
       }}
     />
   </div>
+  <div class="p-4"/>
   <PageTitle name="Expertise" />
   <div class="columns-1 gap-y-4 sm:columns-2">
     {#each Object.entries(data.skillsData) as [areaName, areaData]}
