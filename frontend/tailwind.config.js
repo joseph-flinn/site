@@ -24,6 +24,7 @@ export default {
       transparent: 'transparent',
       current: 'currentColor',
       gray: colors.gray,
+      black: colors.black,
       tin: {
         100: '#FFFEFB',
         200: '#EBE9E6',
