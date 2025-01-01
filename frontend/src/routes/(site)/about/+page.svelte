@@ -12,7 +12,7 @@
 </script>
 
 <div class="sm:pt-8">
-  <PageTitle name="about" />
+  <PageTitle name="About" />
   <div class="px-4">
     <SvelteMarkdown 
       source={data.about} 
@@ -21,7 +21,7 @@
       }}
     />
   </div>
-  <PageTitle name="expertise" />
+  <PageTitle name="Expertise" />
   <div class="columns-1 gap-y-4 sm:columns-2">
     {#each Object.entries(data.skillsData) as [areaName, areaData]}
       <Card title={areaName}>

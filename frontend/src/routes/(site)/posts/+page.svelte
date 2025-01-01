@@ -15,7 +15,7 @@
 
 <svelte:window bind:innerWidth={screenSize}/>
 
-<PageTitle name="posts"/>
+<PageTitle name="Posts"/>
 <div class="flex p-2 flex-col">
 {#each posts as post}
   <div 

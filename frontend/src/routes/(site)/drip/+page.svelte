@@ -24,7 +24,7 @@
 </script>
 
 
-<PageTitle name="drip"/>
+<PageTitle name="Drip"/>
 
 <div class='flex flex-col'>
   {#each drip as drop}

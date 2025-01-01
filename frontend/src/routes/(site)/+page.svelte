@@ -13,7 +13,7 @@
 </script>
 
 <div class="sm:pt-8">
-  <PageTitle name="intro" />
+  <PageTitle name="Intro" />
   <div class="px-4">
     <SvelteMarkdown 
       source={data.intro} 
@@ -22,7 +22,7 @@
       }}
     />
   </div>
-  <PageTitle name="popular" />
+  <PageTitle name="Popular" />
   <div class="px-4">
     <UnderConstruction />
   </div>
