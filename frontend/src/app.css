@@ -46,3 +46,14 @@
     @apply p-0.5 bg-tin-200
   }
 }
+
+
+@layer utilities {
+  .icon-svg {
+    filter: invert(34%) sepia(6%) saturate(404%) hue-rotate(355deg) brightness(94%) contrast(84%);
+  }
+
+  .icon-svg-light {
+    filter: invert(100%) sepia(37%) saturate(894%) hue-rotate(333deg) brightness(115%) contrast(106%);
+  }
+}

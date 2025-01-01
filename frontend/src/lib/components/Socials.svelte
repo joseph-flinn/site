@@ -30,18 +30,14 @@
       }}
     >
       {#if link.type === "img"}
-          <img src={link.img} alt={link.alt} class="w-8 h-8 svg"/>
+        <img 
+          class="w-8 h-8 icon-svg"
+          src={link.img} 
+          alt={link.alt} 
+        />
       {:else}
         <i class="text-xl fa {link.icon}"/>
       {/if}
     </div>
   {/each}
 </div>
-
-
-<style>
-  .svg {
-    filter: invert(35%) sepia(10%) saturate(215%) hue-rotate(355deg) brightness(93%) contrast(88%);
-  }
-</style>
-

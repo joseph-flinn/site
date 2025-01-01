@@ -38,7 +38,7 @@
 <div class="flex flex-col h-full w-[300px] shrink-0 bg-tin-900 text-tin-100">
   <div class="p-2 mb-20">
   <a class="text-tin-100" href="{base}/">
-    <img src={logo} alt="JF Brand Icon" class="w-20 h-20 svg"/>
+    <img src={logo} alt="JF Brand Icon" class="w-20 h-20 icon-svg-light"/>
   </a>
   </div>
   {#each buttons.pages as page}
@@ -50,9 +50,3 @@
     {/each}
   </div>
 </div>
-
-<style>
-  .svg {
-    filter: invert(100%) sepia(37%) saturate(894%) hue-rotate(333deg) brightness(115%) contrast(106%);
-  }
-</style>
