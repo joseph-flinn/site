@@ -7,7 +7,12 @@
       {"name": "about", "path": "/about"}
     ]
   },
-  "intro":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis condimentum ultrices. Nulla congue feugiat risus, ac vestibulum sem consectetur sit amet. Pellentesque vitae cursus turpis. Duis sagittis orci eu quam luctus dignissim. Nam mollis, enim et lobortis varius, risus ante luctus turpis, ac laoreet justo sapien at diam. Ut dignissim tincidunt velit at sodales. Integer malesuada euismod sem ut scelerisque.",
+  "intro": "I'm Joseph Flinn, an engineering manager focused on empowering teams to reach their highest potential through active listening and process improvement. I create inclusive, psychologically-safe environments where every team member's voice matters. My systems thinking approach to process improvement reinforces this environment while driving technical excellence with a balance between the short and long term. I have built an expertise in improving Engineering Operations across the SDLC, from Design to final value delivery to end users.",
+  "popular": [
+    { "name": "", "path": ""},
+    { "name": "", "path": ""},
+    { "name": "", "path": ""}
+  ],
   "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis condimentum ultrices. Nulla congue feugiat risus, ac vestibulum sem consectetur sit amet. Pellentesque vitae cursus turpis. Duis sagittis orci eu quam luctus dignissim. Nam mollis, enim et lobortis varius, risus ante luctus turpis, ac laoreet justo sapien at diam. Ut dignissim tincidunt velit at sodales. Integer malesuada euismod sem ut scelerisque.\n\nSuspendisse sollicitudin ac dui non volutpat. Nam tincidunt nisi in arcu laoreet, convallis facilisis tortor posuere. Donec non enim quis tellus dignissim finibus. Aenean sed mollis lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur ac vulputate ipsum, eu pellentesque turpis. Nulla purus leo, tempor eget lectus eget, faucibus venenatis ante. Vestibulum et ullamcorper nisl. Donec mattis, massa nec pulvinar accumsan, nisi nisi venenatis enim, ac viverra mauris diam ac enim. Donec et aliquet diam, vitae suscipit elit. Donec efficitur sapien vulputate, porttitor nunc sit amet, faucibus velit. Aenean quis dictum ipsum, iaculis suscipit est. Phasellus id ex volutpat, iaculis risus eu, elementum turpis.",
   "skillsData": {
     "Leadership": [
