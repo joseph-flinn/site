@@ -26,53 +26,26 @@
 
 
 <CentralColumn>
-  <div class='loginbox'>
+  <div class='mt-auto mb-auto w-full'>
     <Card>
-      <div style='display: flex; flex-direction: column; padding: 3em;'>
-        <div style='display: flex;'>
-          <label>
-            <div style='margin-top: auto; margin-bottom: auto'>
+      <div class='flex flex-col p-12'>
+        <div class='flex'>
+          <label class='flex grow m-4'>
+            <div class='mt-auto mb-auto'>
               token:
             </div>
-            <input bind:value={tokenData} name='token' type='password'>
+            <input 
+              class='grow p-2 m-4 border-b-2 border-b-tin-900 focus:bg-tin-200 focus:outline-0'
+              bind:value={tokenData} 
+              name='token' 
+              type='password'
+            >
           </label>
         </div>
         <Button 
-          text="Save"
+          text="Submit"
           {handleClick}
         />
     </Card>
   </div>
 </CentralColumn>
-
-
-<style>
-  .loginbox {
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 100%;
-  }
-
-  label {
-    display: flex;
-    flex-grow: 1;
-    margin: 1em;
-  }
-
-  input[type=password] {
-    padding: 0.5em;
-    flex-grow: 1;
-    margin: 1em;
-    color: #5c5955;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #5c5955;
-  }
-
-  input[type=password]:focus {
-    background-color: #f8f8f8f8;
-    outline: none;
-    border-bottom: 2px solid #5c5955;
-  }
-
-</style>

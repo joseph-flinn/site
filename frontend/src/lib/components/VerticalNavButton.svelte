@@ -4,18 +4,9 @@
 </script>
 
 
-<div class="navButton" on:click={handleClick}>{name}</div>
-
-
-<style>
-  .navButton {
-    padding: 1em 0.5em 1em 2em; 
-    text-align: left;
-    cursor: pointer;
-  }
-
-  .navButton:hover {
-    opacity: 0.8;
-    background-color: #4e4c48;
-  }
-</style>
+<div 
+    class="py-4 px-8 text-left hover:cursor-pointer hover:bg-tin-950 hover:opacity-80"
+  on:click={handleClick}
+>
+  {name}
+</div>

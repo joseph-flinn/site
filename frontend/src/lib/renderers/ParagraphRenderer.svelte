@@ -1,12 +1,3 @@
-<p class="readable">
+<p class="py-2 leading-relaxed">
   <slot/>
 </p>
-
-
-<style>
-  .readable {
-    line-height: 1.7;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
-</style>

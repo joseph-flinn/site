@@ -1,14 +1,8 @@
 <script>
 </script>
 
-<div style="overflow-x: auto;">
-  <table>
+<div class="py-2 overflow-x-auto">
+  <table class="border-collapse">
     <slot></slot>
   </table>
 </div>
-
-<style>
-  table {
-    border-collapse: collapse;
-  }
-</style>

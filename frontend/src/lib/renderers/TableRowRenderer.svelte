@@ -4,8 +4,3 @@
 <tr>
   <slot></slot>
 </tr>
-
-<style>
-  tr {
-  }
-</style>

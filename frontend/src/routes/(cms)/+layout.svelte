@@ -18,20 +18,11 @@
 </script>
 
 {#if authToken != ''}
-<div class="fullh-container">
+<div class="absolute h-full w-full flex">
   <VerticalNav />
-  <div style="display: flex; flex-direction: column; flex-grow: 1;">
-    <div style="height: 50px; background-color: #E7E7E6;" />
+  <div class="flex flex-col grow">
+    <div class="h-14 bg-tin-200"/>
     <slot></slot>
   </div>
 </div>
 {/if}
-
-<style>
-  .fullh-container {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      display: flex;
-  }
-</style>

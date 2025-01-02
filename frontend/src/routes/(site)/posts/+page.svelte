@@ -15,44 +15,28 @@
 
 <svelte:window bind:innerWidth={screenSize}/>
 
-<PageTitle name="posts"/>
-<div style="padding: 1em; display: flex; flex-direction: column;">
+<PageTitle name="Posts"/>
+<div class="flex p-2 flex-col">
 {#each posts as post}
   <div 
-    class="post-item" 
+    class="p-2" 
     on:click={() => {
       goto(`${$page.url.pathname}/${post.slug}`).then(() => {})
     }}
   >
     {#if screenSize > 800}
-      <div style="display: flex">
-        <div style="font-weight: 900; padding: 0em 1.5em 0em 0em;">{post.published}</div>
-        <div class="post-title">{post.title}</div>
+      <div class="flex">
+        <div class="pr-4 font-black">{post.published}</div>
+        <div class="text-tin-700 hover:underline hover:cursor-pointer">
+          {post.title}
+        </div>
       </div>
     {:else}
-      <div style="font-size: 12px;"><b>{post.published}</b></div>
-      <div style="font-size: 14px;" class="post-title">{post.title}</div>
+      <div class="text-xs"><b>{post.published}</b></div>
+      <div class="text-tin-700 hover:underline hover:cursor-pointer">
+        {post.title}
+      </div>
     {/if}
   </div>
 {/each}
 </div>
-
-
-<style>
-  .post-item {
-    padding: 0.5em;
-  }
-
-  .post-title {
-    color: #8A8885;
-  }
-
-  .post-title:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  a:hover {
-    font-weight: 700;
-  }
-</style>

@@ -99,14 +99,11 @@ enough to run multiple projects, a gated system is needed to manage the portfoli
 
 The Agile Manifesto states (Beck et al.):
 
-```
-**Individuals and interactions** over processes and tools
-**Working software** over comprehensive documentation
-**Customer collaboration** over contract negotiation
-**Responding to change** over following a plan
-
-While there is value in the items on the right, we value the items on the left more
-```
+> **Individuals and interactions** over processes and tools<br/>
+> **Working software** over comprehensive documentation<br/>
+> **Customer collaboration** over contract negotiation<br/>
+> **Responding to change** over following a plan<br/><br/>
+> While there is value in the items on the right, we value the items on the left more
 
 These principles do well in managing projects at the micro level; achieving the goals internal to
 the project. However, none of these principles directly help support the goals of portfolio

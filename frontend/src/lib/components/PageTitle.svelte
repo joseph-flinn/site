@@ -2,11 +2,4 @@
   export let name;
 </script>
 
-<div class="title">{name}</div>
-
-<style>
-  .title {
-    font-size: 26px;
-    padding: 0.5em;
-  }
-</style>
+<div class="p-2 pt-4 text-xl">{name}</div>

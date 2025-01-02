@@ -24,15 +24,15 @@
 </script>
 
 
-<PageTitle name="drip"/>
+<PageTitle name="Drip"/>
 
-<div class='dripList'>
+<div class='flex flex-col'>
   {#each drip as drop}
-    <div class='dropView'>
-      <div class='dropTime'>
+    <div class='flex flex-col md:flex-row'>
+      <div class='p-4 pb-0 text-tin-500 md:pl-0 md:basis-32 md:shrink-0 md:text-right md:border-r-2 md:border-solid md:border-tin-150'>
         <b><i>{myDateFormat(drop.created_at)}</i></b>
       </div>
-      <div class='dropMessage'>
+      <div class='flex-grow p-4 pt-2 md:pt-4'>
         <SvelteMarkdown 
           source={drop.message}
           renderers={{
@@ -44,46 +44,3 @@
     </div>
   {/each}
 </div>
-
-
-<style>
-  .dripList {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dropView {
-    display: flex;
-  }
-
-  .dropTime {
-    color: #a1a09d;
-  }
-
-  .dropMessage {
-    padding: 1em;
-    flex-grow: 1;
-  }
-
-  @media only screen and (max-width: 800px) and (min-width: 300px) {
-    .dropView {
-      flex-direction: column;
-    }
-    .dropTime {
-      padding: 1em 0.75em 0em 0.75em;
-    }
-  }
-
-  @media only screen and (min-width: 800px) {
-    .dropView {
-      flex-direction: row;
-    }
-
-    .dropTime {
-      flex-basis: 100px;
-      flex-shrink: 0;
-      border-right: 2px solid #9b9894; 
-      padding: 0.75em;
-    }
-  }
-</style>

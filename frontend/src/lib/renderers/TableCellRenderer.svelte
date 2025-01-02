@@ -3,14 +3,6 @@
   export let align;
 </script>
 
-<td>
+<td class="border-2 border-tin-700 p-3">
   <slot></slot>
 </td>
-
-<style>
-  td {
-    border: 1px solid;
-    border-color: #8a8885;
-    padding: 0.75em;
-  }
-</style>

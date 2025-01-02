@@ -54,9 +54,10 @@
 
 
 <PageTitle name='Drop'/>
-<div style="padding: 1.5em;">
+<div class="p-6">
   <Card>
     <textarea 
+      class="p-3 w-full border-2 border-tin-200 border-b-tin-500 outline-tin-300"
       placeholder='Write drop body...' 
       autofocus
       rows=25
@@ -64,7 +65,7 @@
     />
   </Card>
 </div>
-<div class='actionBar'>
+<div class='flex p-6'>
   {#if $dropEdit.id !== 'new'}
   <div>
     <Button 
@@ -74,7 +75,7 @@
     />
   </div>
   {/if}
-  <div style='margin-left: auto'>
+  <div class="ml-auto">
     <Button 
       text='Delete'
       primary={false}
@@ -88,19 +89,19 @@
 </div>
 
 <Modal bind:showModal>
-  <div style='display: flex; flex-direction: column; padding: 1em;'>
-    <div style='color: #5c5955; padding: 1em'>
+  <div class="flex flex-col p-4">
+    <div class="p-4 text-tin-900">
       Are you sure you want to delete this drop?
     </div>
-    <div style='display: flex; flex-direction: row; padding-top: 1em;'>
-      <div style='margin-left: auto; padding: 1em;'>
+    <div class="flex pt-4">
+      <div class="ml-auto p-4">
       <Button 
         text='No'
         primary={false}
         handleClick={() => {showModal = false}}
       />
     </div>
-    <div style='margin-right: auto; padding: 1em;'>
+    <div class="mr-auto p-4">
       <Button 
         text='Yes'
         handleClick={handleAffirmDelete}
@@ -108,20 +109,3 @@
     </div>
   </div>
 </Modal>
-
-
-<style>
-  .actionBar {
-    padding: 1.5em;
-    display: flex;
-  }
-
-  textarea {
-    margin: 1.5em;
-    padding: 0.75em;
-    border: 0px;
-    height: 70%;
-    border-bottom: 2px solid #9b9894;
-    outline-color: #dad9d7;
-  }
-</style>

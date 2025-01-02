@@ -1,48 +1,43 @@
 <script>
-  import { goto } from "$app/navigation";
+  import cvDownloadIcon from "$lib/assets/cv-download-icon.svg";
 
   const data = [
-      {"link":"https://joseph.flinnlab.com/rss.xml", "icon": "fa-rss", "extra": ""},
-      {"link":"https://linkedin.com/in/joseph-flinn", "icon": "fa-linkedin-square", "extra": ""},
-      {"link":"https://github.com/joseph-flinn", "icon": "fa-github", "extra": ""},
-      {"link":"https://blog-images.flinnlab.com/resume-joseph-flinn.pdf", "icon": "fa-download", "extra": "CV"},
+    {
+      link:"https://linkedin.com/in/joseph-flinn", 
+      type: "icon", 
+      icon: "fa-linkedin-square"},
+    {
+      link:"https://github.com/joseph-flinn", 
+      type: "icon", 
+      icon: "fa-github"},
+    {
+      link:"https://blog-images.flinnlab.com/resume-joseph-flinn.pdf", 
+      type: "img", 
+      img: cvDownloadIcon, 
+      alt: "Download CV"
+    },
   ];
 
 </script>
 
 
-<div style="display: flex; padding: 2em; text-align: center;">
+<div class="flex p-8 text-center">
   {#each data as link}
     <div 
-      class="social-button"
+      class="flex-grow flex justify-center ml-auto px-1 py-2 rounded-md text-center hover:bg-gray-100 hover:cursor-pointer"
       on:click={() => {
         window.location.href = link.link;
       }}
     >
-      <i class="fa {link.icon}"/>
-      {#if link.extra != ""}
-       {link.extra}
+      {#if link.type === "img"}
+        <img 
+          class="w-8 h-8 icon-svg"
+          src={link.img} 
+          alt={link.alt} 
+        />
+      {:else}
+        <i class="text-xl fa {link.icon}"/>
       {/if}
     </div>
   {/each}
 </div>
-
-<style>
-  a:hover {
-    text-decoration: none; 
-  }
-
-  .social-button {
-    flex: 1;
-    margin-left: auto;
-    padding: 0.5em 1.5em 0.5em 1.5em;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
-  }
-
-  .social-button:hover {
-    cursor: pointer;
-    background: #eee;
-  }
-</style>

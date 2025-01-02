@@ -16,19 +16,10 @@
 
 
 <PageTitle name='Drip'/>
-<div class='newButtonContainer'>
+<div class='ml-auto p-4'>
   <Button 
     text='+ New' 
     handleClick={handleNewClick} 
   />
 </div>
 <DripTable data={data} />
-
-
-<style>
-  .newButtonContainer {
-    margin-left: auto;
-    padding: 1em;
-  }
-</style>
-
