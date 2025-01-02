@@ -34,6 +34,18 @@
       </Card>
     {/each}
   </div>
+  <div class="p-4"/>
+  <PageTitle name="Influential Books" />
+  <div class="">
+    <ul>
+      {#each data.books as book}
+        <li>
+          <a href={book.link}>{book.title}</a> - {book.author}
+        </li>
+      {/each}
+    </ul>
+  </div>
+  <div class="p-4"/>
 </div>
 
 <div class="grow" />

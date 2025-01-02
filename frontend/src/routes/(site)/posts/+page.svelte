@@ -27,11 +27,15 @@
     {#if screenSize > 800}
       <div class="flex">
         <div class="pr-4 font-black">{post.published}</div>
-        <div class="text-tin-700 hover:underline hover:cursor-pointer">{post.title}</div>
+        <div class="text-tin-700 hover:underline hover:cursor-pointer">
+          {post.title}
+        </div>
       </div>
     {:else}
       <div class="text-xs"><b>{post.published}</b></div>
-      <div class="text-tin-700 hover:underline hover:cursor-pointer">{post.title}</div>
+      <div class="text-tin-700 hover:underline hover:cursor-pointer">
+        {post.title}
+      </div>
     {/if}
   </div>
 {/each}
