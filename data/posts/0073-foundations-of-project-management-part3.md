@@ -1,4 +1,4 @@
-!! title: Foundations of Project Management - Process Groups & Knowledge Areas
+!! title: [Foundations of Project Management] Process Groups & Knowledge Areas
 !! slug: foundations-of-project-management-part3
 !! published: 2025-01-06
 !! description: Part three of the Foundations of Project Management series: an overview of the process groups and knowledge areas of project management

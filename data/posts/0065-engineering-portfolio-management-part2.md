@@ -1,7 +1,7 @@
-!! title: Engineering Portfolio Management - Part 2
+!! title: [Engineering Portfolio Management] TRLs
 !! slug: engineering-portfolio-management-part2
 !! published: 2024-11-03
-!! description: Part two of the Engineering Portfolio Management series: a class summary and the lessons learned applied to the software industry
+!! description: Part two of the Engineering Portfolio Management series: a discussion on technology readiness levels and how they can be used in the software industry
 
 ---
 

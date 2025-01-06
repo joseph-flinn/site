@@ -1,7 +1,7 @@
-!! title: Engineering Portfolio Management - Part 3
+!! title: [Engineering Portfolio Management] MRLs & ORLs
 !! slug: engineering-portfolio-management-part3
 !! published: 2024-11-11
-!! description: Part three of the Engineering Portfolio Management series: a class summary and the lessons learned applied to the software industry
+!! description: Part three of the Engineering Portfolio Management series: a discussion on manufacturing readiness levels and how they apply to the software industry as operational readiness levels
 
 ---
 
@@ -9,7 +9,6 @@ Without a product or service application, technology is worth little more than t
 (Flinn, p.8). Manufacturing is a key process in developing products from technology. As such, the US
 Department of Defense came up readiness levels for their suppliers that are similar to NASA's TRLs
 discussed in [Part 2](./posts/0065-engineering-portfolio-management-part2). They are known as Manufacturing Readiness Levels (MRLs) (Flinn p.43). 
-
 Similar to TRLs, MRLs exist to assist in considering the overall readiness of a technology project
 during the different phases of development. For instance, is a technology worth developing all the
 way to TRL 9 if it costs significantly more than a customer is willing to pay? If not, the
