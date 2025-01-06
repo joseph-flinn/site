@@ -1,7 +1,7 @@
-!! title: Foundations of Project Management - Part 2
+!! title: [Foundations of Project Management] Project Management & Agile
 !! slug: foundations-of-project-management-part2
 !! published: 2024-12-30
-!! description: Part two of the Foundations of Project Management series: a class summary and the lessons learned applied to the software industry
+!! description: Part two of the Foundations of Project Management series: a discussion on Agile and where it fits in the broader project management field
 
 ---
 

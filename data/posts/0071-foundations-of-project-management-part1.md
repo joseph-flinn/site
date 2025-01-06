@@ -1,7 +1,7 @@
-!! title: Foundations of Project Management - Part 1
+!! title: [Foundations of Project Management] Introduction
 !! slug: foundations-of-project-management-part1
 !! published: 2024-12-15
-!! description: Part one of the Foundations of Project Management series: a class summary and the lessons learned applied to the software industry
+!! description: Part one of the Foundations of Project Management series: An introduction to the project management series
 
 ---
 
@@ -74,7 +74,8 @@ the extended schedule. If costs are set and cannot be adjusted, this constrains 
 delivered. It doesn't matter how much time we have, there is no way that a 3 bedroom 2 bathroom
 house can be built for $25,000 (assuming it is built to local building codes in the U.S.).
 
-We will review each these ten areas in more depth in [Part 3]() of the series.
+We will review each these ten areas in more depth in 
+[Part 3](/post/foundations-of-project-management-part3) of the series.
 
 
 ## Project Success
@@ -146,6 +147,6 @@ senior management. A team's approach to work management needs to support this sh
 ## Resources
 
 1. Cooper, Robert G. Winning at New Products: Creating Value through Innovation - 5th Edition. Fifth edition, Revised and Updated, Basic Books, 2017.
-2. Project Management Institute. A Guide to the Project Management Body of Knowledge (PMBOK® Guide) – Seventh Edition and The Standard for Project Management (ENGLISH). 7th edition, Project Management Institute, 2021.
+2. Project Management Institute. A Guide to the Project Management Body of Knowledge (PMBOK® Guide) – Seventh Edition and The Standard for Project Management (ENGLISH). 6th edition, Project Management Institute, 2017.
 3. Schwalbe, Kathy. Introduction to Project Management: With a Brief Guide to Microsoft Project Professional 2016. Sixth edition, Schwalbe Publishing, 2017.
 
