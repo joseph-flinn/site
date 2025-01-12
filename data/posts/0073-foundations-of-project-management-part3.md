@@ -37,7 +37,7 @@ document the goals of the project, the criteria for why it was selected, and how
 overall business strategic drivers. This information is important to document to allow for an easy
 way to keep the project team aligned on the goal of the project. It also provides a place to review
 the alignment of the project goals against business strategic drivers in 
-[portfolio gate reviews](/post/engineering-portfolio-management-part4).
+[portfolio gate reviews](/posts/engineering-portfolio-management-part4).
 
 The _Planning_ process group spans all ten of the knowledge areas and contains the most amount of
 processes. It includes creating plans on how to manage each of the knowledge areas. It also includes
@@ -79,7 +79,7 @@ like this is important to further a culture of organizational learning.
 Alternatively, the _Closing_ project group also manages the termination of a project. There are many
 reasons why a project may be terminated. In the most mature project management organizations, this
 often happens in the Go/Kill gate reviews during 
-[portfolio gate review sessions](/post/engineering-portfolio-management-part4). While terminated
+[portfolio gate review sessions](/posts/engineering-portfolio-management-part4). While terminated
 projects may be considered failed projects (project that have surpassed their projected baselines
 farther than can be recovered), they may also be a result of a healthy portfolio management process.
 It is crucial to maintain transparent Go/Kill criteria to help communicate success with the project
@@ -140,7 +140,7 @@ _Resource_ management is the PMI's term for human team management. This area inc
 plans on the needed skills for the project team and where those skills are going to be acquired. As
 an example, this might include a new hire, or it might include borrowing 20% of someone's time from
 somewhere else in the company. PMI's use of the word "Resource" here seems to mask the humanity of
-the team (more thoughts in this [piece that I wrote a year ago](/post/e2m-humans-as-resources)).
+the team (more thoughts in this [piece that I wrote a year ago](/posts/e2m-humans-as-resources)).
 A cursory look at the 7th Edition of the PMBOK seems to indicate the migration from "Resources" to
 "Team" (more to come on the 7th Edition in a future post).
 

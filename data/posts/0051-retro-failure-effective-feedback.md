@@ -24,7 +24,7 @@ resulting impact. All tasks in an organization should be able to be traced back 
 organization's Why in order to cultivate purpose throughout the organization. If it can't, there is
 a good chance that the task is incorrectly prioritized or the organization systems are in a state of
 dysfunction preventing alignment. I discuss the approach that I call Silver Circles, building off of
-Sinek's Golden Circles (Sinek 2017), in a [previous post](./post/what-how-org-leadership). 
+Sinek's Golden Circles (Sinek 2017), in a [previous post](/posts/what-how-org-leadership). 
 
 Feedback is the critical function in any learning system. Feedback loops are the difference between
 double-loop learning where a system learns and adjusts its decision policies and single-loop
