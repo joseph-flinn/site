@@ -40,13 +40,13 @@ task? How should stakeholders be kept up-to-date? Who owns the project status re
 questions are important to the success of any project, no matter if a plan-driven framework or an
 Agile framework is chosen for management. 
 
-As we discussed in [Part 5](/post/engineering-portfolio-management-part5) of the _Engineering
+As we discussed in [Part 5](/posts/engineering-portfolio-management-part5) of the _Engineering
 Portfolio Management_ series, some project characteristics lend themselves better to one framework
 over another (Cooper p.188). Every project is unique and will require a unique approach to deliver
 successfully. No two projects will have the same scope, schedule, budget, stakeholders, project
 team, etc. Some projects will require a lot of upfront planning, while others will require more
 flexibility in requirements. As a quick review of the characteristics we discussed in 
-[Part 5](/post/engineering-portfolio-management-part5): 
+[Part 5](/posts/engineering-portfolio-management-part5): 
 
 | Characteristics of<br/>Project or Setting | Agile Strengths | Plan-driven Strengths |
 | ----------------------------------------- | --------------- | --------------------- |
@@ -71,7 +71,7 @@ at a time. Depending on the migration project, maybe a hybrid approach would wor
 
 The triple constraint is a good place to start to understand the fundamental differences between a
 plan-based framework and an Agile framework in the context of the PMBOK. Remember from 
-[Part 1](/posts/Foundations-of-project-management-part1), the triple constraint is often defined as
+[Part 1](/posts/foundations-of-project-management-part1), the triple constraint is often defined as
 the constrained relationship between scope, schedule, and cost. 
 
 ![Triple Constraint: Agile vs Plan-driven (Cooper p.190)](/posts/0072/triple-constraint-agile.png)

@@ -75,7 +75,7 @@ delivered. It doesn't matter how much time we have, there is no way that a 3 bed
 house can be built for $25,000 (assuming it is built to local building codes in the U.S.).
 
 We will review each these ten areas in more depth in 
-[Part 3](/post/foundations-of-project-management-part3) of the series.
+[Part 3](/posts/foundations-of-project-management-part3) of the series.
 
 
 ## Project Success
