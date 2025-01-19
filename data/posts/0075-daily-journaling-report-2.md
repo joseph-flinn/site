@@ -60,14 +60,15 @@ off on the journey to find the perfect task management system to fit into my not
 
 With a few hours of research I compiled the contenders:
 
-| System | Link | Notes | Conclusion |
-| ------ | ---- | ----- | ---------- |
-| NocoDB | [https://nocodb.com]() | I already use NocoDB to track some areas of my life. It has a Calendar view. However, for some reason the EndDate value is behind a paywall... | ❌|
-| TaskMD | [https://github.com/BaldissaraMatheus/Tasks.md]() | This was essentially just a Kanban board. As much as I love lean management practices, I was not having task flow issues. | ❌ |
-| Taskwarrior | [https://taskwarrior.io]() | I set this up, but it required me to rebuild my entire workflow around the tool versus the tool fitting into my current workflow | ❌ |
-| Vault-tasks | [https://github.com/louis-thevenet/vault-tasks]() | Cool idea with the same "Why?" as what I was looking for, but didn't quite fit my needs | ❌ |
-| Custom-built task management app | [https://www.roadmap-ui.com]() | My first instinct is to build the solution myself rather than find one that is already built. But this would require too much time | ❌ |
-| GitHub Project | [https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects]() | This is the closest that I got, but it is not local and would require quite a bit of automation effort to link to my note-taking workflow | ❔|
+| System | Notes | Conclusion |
+| ------ | ----- | ---------- |
+| [NocoDB](https://nocodb.com) | I already use NocoDB to track some areas of my life. It has a Calendar view. However, for some reason the EndDate value is behind a paywall... | ❌|
+| [TaskMD](https://github.com/BaldissaraMatheus/Tasks.md) | This was essentially just a Kanban board. As much as I love lean management practices, I was not having task flow issues. | ❌ |
+| [Taskwarrior](https://taskwarrior.io) | I set this up, but it required me to rebuild my entire workflow around the tool versus the tool fitting into my current workflow | ❌ |
+| [Vault-tasks](https://github.com/louis-thevenet/vault-tasks) | Cool idea with the same "Why?" as what I was looking for, but didn't quite fit my needs | ❌ |
+| [Custom-built task management app](https://www.roadmap-ui.com) | My first instinct is to build the solution myself rather than find one that is already built. But this would require too much time | ❌ |
+| [GitHub Project](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) | This is the closest that I got, but it is not local and would require quite a bit of automation effort to link to my note-taking workflow | ❔|
+
 
 So...no perfect solution... Back to the drawing board, but this time to generate a user requirements
 list to actually know what I was looking for (which I should have done to begin with). My guiding
@@ -260,50 +261,41 @@ my workflow for a bit.
 > tool, I want tooling to expand my workflow. TaskWarrior seems extremely robust but feels
 > disconnected from my personal workflow. And it feels like its focus is optimizing local
 > productivity rather than long-term sustainability (however, I could be biased by the author of the
-> intro video that I watched).
-> 
+> intro video that I watched).<br/><br/>
 > I am going to continue with building my own simple task manager system. The current system for
 > short-term tasks seems to be working so they will remain in "Today's Plan". The additional user
 > requirements are going to be surrounding the management of larger projects and backlog items.
->
+> <br/><br/>
 > Projects should be their own type of note with a Tasks section. I currently have a few all
 > following different formats. Some are a single markdown file, while others are directories, while
 > other are sequential markdown files coupled on a specific class. The Project Note type needs to be
-> expanded with a standardized definition and could be codified into a template.
->
+> expanded with a standardized definition and could be codified into a template. <br/><br/>
 > Using the ZK system that I am already for daily notes and zettels, I can expand this to also
-> include Project notes (and possibly even literature notes to move them out of Zotero
->
-> **Daily Notes:** the source of truth for all notes on tasks or mid-form thoughts
+> include Project notes (and possibly even literature notes to move them out of Zotero</br><br/>
+> **Daily Notes:** the source of truth for all notes on tasks or mid-form thoughts</br>
 > **Zettels:** Highly linked "original" thoughts spurred from consuming media
->   (preferably text)
-> **Literature Notes:** paraphrased ideas from media
-> **Project Notes:** central place for managing related tasks
->
+>   (preferably text)<br/>
+> **Literature Notes:** paraphrased ideas from media<br/>
+> **Project Notes:** central place for managing related tasks<br/><br/>
 > Note that these definitions keep deliverables outside of the second-brain. Project work should
 > happen in a different place (perhaps `~/projects`?). Only the notes and thoughts should be
-> recorded in the second-brain.
->
+> recorded in the second-brain.<br/><br/>
 > Projects should be small enough that manually managing the tasks via markdown is not too much
 > work. If a project gets too big, it should be split out into smaller subprojects. Since Daily
 > Notes are the source of truth for notes on task activities, those sections should be linked to
 > from the project document. Other supporting sections like Requirements or Acceptance Criteria may
-> be necessary to determine if/when a project is determined to be complete.
->
+> be necessary to determine if/when a project is determined to be complete.<br/><br/>
 > It would also be beneficial to describe the different type of tasks that exist in the
-> second-brain.
->
-> **Daily Task:** A task that is small enough to be finished within a day.
+> second-brain.<br/><br/>
+> **Daily Task:** A task that is small enough to be finished within a day.<br/>
 > **Project Task:** A task that is related to a specific project. This will be
->   treated as a Daily Task when I add it to a day's plan and start working it.
+>   treated as a Daily Task when I add it to a day's plan and start working it.<br/>
 > **Backlog Task:** An Daily Task that is not high enough priority to plan for
->   that day. 
-> 
+>   that day.<br/><br/>
 > Backlog Tasks should only be day-sized tasks. If a new project needs to be completed, the Backlog
 > Task would be `Initiate New Project` rather than `Complete New Project`. Project initiation would
 > include creating a new project document, defining the goals and requirements, and setting up the
-> initial task list (possibly WBS?).
->
+> initial task list (possibly WBS?).<br/><br/>
 > Manual markdown editing can be used for managing both Daily Tasks and Project Tasks. However, we
 > are still missing the ability to manage the Backlog tasks that are spread out over many Daily
 > Notes. The initial idea for including a Backlog section was because the tasks often originated
@@ -311,6 +303,7 @@ my workflow for a bit.
 > further thought, markdown links might be a good solution to keeping context rather than building a
 > custom tool to generate and query a distributed backlog. Instead the backlog can be it's own
 > markdown file that includes links back to the originating Daily note thought.
+
 
 ### Journal Entry Excerpt - 2024-12-14
 
