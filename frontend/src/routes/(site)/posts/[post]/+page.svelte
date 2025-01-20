@@ -1,8 +1,9 @@
 <script>
   export let data;
 
-  import { log } from '$lib/utils/logger.js';
   import TailwindSvelteMarkdown from '$lib/components/TailwindSvelteMarkdown.svelte';
+
+  import { getImageUrl } from '$lib/utils/loader.js'
 
   const { title, published, body, description, ...rest } = data.data;
   const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
@@ -10,7 +11,10 @@
 </script>
 
 <svelte:head>
+  <meta property="og:type" content="article" />
   <meta property="og:title" content={title} />
+  <meta property="og:image" content={getImageUrl('/jf-icon.svg')} />
+  <meta property="og:image:type" content='image/svg+xml' />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={window.location.href} />
 </svelte:head>
