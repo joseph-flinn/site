@@ -13,8 +13,8 @@
 <svelte:head>
   <meta property="og:type" content="article" />
   <meta property="og:title" content={title} />
-  <meta property="og:image" content={getImageUrl('/jf-icon.svg')} />
-  <meta property="og:image:type" content='image/svg+xml' />
+  <meta property="og:image" content={getImageUrl('/jf-icon.png')} />
+  <meta property="og:image:type" content='image/png' />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={window.location.href} />
 </svelte:head>
