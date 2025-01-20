@@ -7,16 +7,16 @@
 
 It has been about three months since the first report of my 
 [new daily journaling practice](/posts/daily-journaling-report-1). I thought I'd share some of the
-updates that I have made since then. 
+updates I have made since then. 
 
 
 ## Updates - Minor Adjustments
 
 The first few updates are relatively small. While doing my morning reflection of the previous day, I
-often found myself focusing on the challenges and the negatives rather than the positives. Over a
-really challenging week in November, I found myself in a reinforcing loop which was amplifying the
-challenges. I decided to update my daily note template with a few reminders on how to think about
-the previous day.
+often found myself focusing on the challenges and negatives rather than the positives. Over a really
+challenging week in November, I found myself in a reinforcment loop which was amplifying the
+negatives. I decided to update my daily note template with a few reminders on how to think about the
+previous day.
 
 ```markdown
 # 2024-10-21
@@ -34,31 +34,37 @@ the day. As an example, the following was yesterday's intension.
 > Today's focus is perseverance. There is a lot of writing to be done today.
 ```
 
-I have found both of these updates helpful in orienting myself to have a more fulfilling day. Some
-days are specifically unproductive to rest and prepare for a week of productivity. Setting that as
-an intension in the morning allows me to avoid the fear of not being productive.
+I have found both of these updates helpful in orienting myself to feeling more fulfilled. Some days
+are intentionally unproductive to rest and prepare for a week of productivity. Setting that as an
+intension in the morning allows me to avoid the fear of not being productive (one of my big triggers
+to [workaholism](/posts/workaholism)).
 
 
 ## Updates - Task Management 
 
-The largest change has been in the form of how I approach task management past the daily priorities.
-As the repository of my daily notes grew with the **Backlog** section, I started losing tasks in the
-backlog. My idea had been to create a tool to query all of the notes and build a unified backlog on
-the fly, but that would require some interesting problem solving when it came to global ranking of
-priority.
+The largest change to my daily journaling habit has been task management beyond the daily
+priorities. As the repository of my daily notes grew with the **Backlog** section, I started losing
+tasks in the backlog. The fuzzy search that I use to search my thought notes doesn't do well with
+building a list of things to do. My idea had been to create a tool to query all of the notes and
+build a unified backlog on the fly. It would be an interesting problem to work on with tracking 
+global ranking of priority.
 
-At the same time, I was using [OpenProject](https://www.openproject.org) to stay on top of managing
-my class work last semester. I thought that I would use it extensively to track tasks, but the
-administrative overhead was too much for just a single person's workload. I did find the calendar
-view for tasks was helpful in managing daily capacity and task distribution over time to make sure
-that I only had 2-3 tasks a day rather than cramming before a due date. But this is something that
-most calendar applications support with no need for all of the other bells and whistles.
+During the same time, I was using [OpenProject](https://www.openproject.org) to stay on top of
+managing my class work last semester. I thought that I would use it extensively to track tasks, but
+the administrative overhead was too much for just a single person's workload. I was surprised that I
+found the calendar view to be the most helpful feature since it was something that I found useful in
+engineering work. It was extremely helpful in managing daily capacity and task distribution over
+time to make sure that I only had 2-3 tasks a day rather than cramming before a due date. The
+calendar view was really the only feature I used and is something that most calendar applications
+support with no need for all of the other bells and whistles of a fullon project management
+application.
 
-With the issues with a time-distributed backlog and the significant overhead for managing tasks in
+With the issues with a time-distributed backlog and the significant task management overhead in
 OpenProject, I decided I needed a simpler centralized approach. Like many of those before me, I set
 off on the journey to find the perfect task management system to fit into my note-taking workflow.
 
-With a few hours of research I compiled the contenders:
+With a few hours of research I compiled a few contenders that I thought were promising and did some
+more in-depth research and experimentation to see how they would fit into my workflow.
 
 | System | Notes | Conclusion |
 | ------ | ----- | ---------- |
@@ -74,27 +80,35 @@ So...no perfect solution... Back to the drawing board, but this time to generate
 list to actually know what I was looking for (which I should have done to begin with). My guiding
 requirements were:
 
-- Keep Daily notes **Today's Plan** as the source of truth for the list of priorities for the day
-- My `second-brain` version controlled repository needs to be the source of truth for the tasks
-- Tasks need to support linking to specific sections of Daily Notes and visa-versa
-- Supports a Project structure to organize collections of tasks that spreads over multiple months
-- Open source
+- The system should fit into my current workflow
+- My version-controlled `second-brain` repository is the source of truth for all tasks
+- Keep the _Daily Notes_ **Today's Plan** as the source of truth for the list of priorities for the
+  day
+- The system supports high linkability with _Daily Notes_
+- The system supports a Project structure to organize collections of tasks that spreads over
+  multiple months
+- Portable / Open source
 - Nice-to-have: supports a calendar view
 
+Looking at this list of requirements, I knew that the resulting system was going to be too
+opinionated and customized to have an task management application already created. Since I was not
+interested in overhauling my workflow to fit a tool, I knew my only two options were to create my
+own application or run a manual task management process.
+
 Throughout my search, the [_Getting Things Done_](https://gettingthingsdone.com/what-is-gtd/) system
-was in the back of my mind as well as the manual actions that I already do in my Zettelkasten. I
-came across a [blog post](https://pankajpipada.com/posts/2024-08-13-taskmgmt-2/) by Pankaj Pipada
-with a manual approach to managing tasks. I decided to take a day and write out a possible system
-that incorporated my current approach to using Zettelkasten, but expand it to support a new
-_Project_ note type. I settled on the below definitions for the expanded note types and the how
-Tasks would fit in. I have included excerpts from the journal entries in the **Resources** section
-below.
+kept coming back and it reminded me of manual actions that I already do in my Zettelkasten. I came
+across a [blog post](https://pankajpipada.com/posts/2024-08-13-taskmgmt-2/) by Pankaj Pipada with a
+description of their manual approach to managing tasks. I decided to take a day and write out a
+possible approach to a system that incorporated my current approach to using Zettelkasten, but
+expanded to support a new _Project Note_ type. I have included excerpts from my journal entries in
+the **Resources** section below that go into more depth. I settled on the below definitions for the
+expanded note types and the how Tasks would fit in. 
 
 | Term | Definition/Use |
 | ---- | ---------- | 
 | Daily Note | The source of truth for all notes on tasks or mid-form thoughts |
 | Zettels | Highly linked "original" thoughts spurred from consuming media (preferably text) |
-| Literature Note | Paraphrased ideas from media (most often text). Contains citation metadata |
+| Lit Note | Paraphrased ideas from media (most often text). Contains citation metadata |
 | Project Note | Central place for managing related tasks and sub-projects |
 | Daily Task | A task that is small enough to be finished within a day (See Daily Note) |
 | Project Task | A task that is related to a specific project. This will be treated as a Daily Task when I add it to a day's plan and start working it. |
@@ -112,13 +126,13 @@ With these definitions, I expanded the current file structure to include `./task
 │   ├── 2025-01-18.md
 │   └── 2025-01-19.md
 ├── projects
-│   ├── class-notes
+│   ├── grad-school
 │   │   ├── engm-510.md
 │   │   ├── engm-520.md
 │   │   ├── mbus-613.md
 │   │   └── mbus-670.md
 │   ├── ebook-scalable-swe-practices.md
-│   └── mem-book
+│   └── book-engineering-management
 │       ├── index.md
 │       ├── introduction.md
 │       ├── engineering-portfolio-management.md
@@ -136,8 +150,15 @@ With these definitions, I expanded the current file structure to include `./task
     └── think-like-a-monk-2020.md
 ```
 
-The main overhaul from the last version of the note taking system was the migration of the
-**Backlog** section of the Daily Notes to a centralized `./tasks.md`. 
+As a quick note on the zettelkasten system, one of the driving ideas is to write a single contained
+original thought and then link it to other single thoughts that are related. The random alphanumeric
+files each have one of these thoughts. Over time and an accumulation of these, strings of connected
+thoughts--even between seemingly unrelated subjects--will form and can become the basis of a writing
+project. My literature notes are getting migrated from where they currently are in 
+[Zotero](https://www.zotero.org) to the `$title-date.md` files for better linkability and searching.
+
+Now, back to the task management system. The main overhaul from the last version was the migration
+of the **Backlog** section of the _Daily Notes_ to a centralized `./tasks.md`.
 
 ```
 # Backlog
@@ -177,18 +198,26 @@ The main overhaul from the last version of the note taking system was the migrat
     [[journal/2025-01-02###Today's Plan]]
     #blog
 ```
-The Project backlog links to the Project Note for that project. If the project has yet to be
-initiated, the Project backlog links to the list of journal entries in Daily Notes that pertain to
-the project. Once the Project has been initiated, those journal links are moved into the Project
-Note.
 
-Individual backlog Tasks link back to the Daily Note where it originated to keep context of why I
-created the note. The task tags are currently not used, but I have included them as a way of some
-day filtering with a tool similar to [vault-tasks](https://github.com/louis-thevenet/vault-tasks).
-Once the Task is completed, a link to the Daily Note where it was completed is added to the
-"metadata" of the task and it is moved to the **Completed** section.
+There are two sections: **Backlog** and **Completed** and each of those sections have subsections
+for projects and tasks. The project backlog is used for both budding project ideas and for projects
+that are under way. If a project has yet to be initiated with a _Project Note_, the project backlog
+links to a list of journal entries in _Daily Notes_ that are related to the ideation phase of the
+project. Once the project has been initiated, the project backlog links to the newly created
+_Project Note_ and the journal entries are moved to it.
 
-While the Project Note template is still under development, the current format looks like this:
+Individual backlog tasks link back to the _Daily Note_ where it originated so that the context is
+saved as to why the task needs to be done. The task tags are currently not used, but I have included
+them as a way of some day filtering with a tool similar to
+[vault-tasks](https://github.com/louis-thevenet/vault-tasks). When I decide to work on a task, I'll
+add it as a priority for that day's _Daily Note_ and add a link to the backlog task.
+
+Once a task or project is complete, it is moved to the **Completed** section. I do not have a
+specific reason for keeping completed tasks around. The best that I have is that I want to keep a
+history of the tasks that I have completed in case I want to do some sort of analysis or personal
+quarterly/annual report over time.
+
+While the _Project Note_ template is still under development, the current format looks like this:
 
 ```
 # Project Name
@@ -198,11 +227,12 @@ Background information on the project or the problem.
 [[journal/day1#thought]]
 [[journal/day2#thought]]
 
+
 ## Goal 
 
-The goal of the project to help prioritize the projects and make sure the right project is being
-worked on at the right time. This answers the "Why are we do we need the project?" and "What is the
-scope of the project?"
+The goal of the project to help prioritize against other projects and make sure the right project is
+being worked on at the right time. This section answers the "Why are we do we need the project?" and
+"What is the scope of the project?"
 
 
 ## Notes - Journal
@@ -211,6 +241,8 @@ scope of the project?"
 
 
 ## Notes - Project
+
+### Random Thought
 
 This is a random thought that needs to be captured and stored alongside the project for ease of
 retrieval. 
@@ -227,29 +259,36 @@ retrieval.
 
 ```
 
-The links to journal entries in the background information contain thoughts around why the project
-should be initiated. They are the ones that are moved from the `tasks.md` file when the project
-is initiated. The **Notes - Journal** exists to support the **Notes - Thoughts** as the source of
-truth for capturing fleeting thoughts throughout the day. They may not be valuable enough to add to
-the project itself. The **Tasks** section is used the same way that `tasks.md` is used, but
-constrained to the project context.
+The links to journal entries in the background information section contain thoughts around why the
+project should be initiated. They are the ones that are moved from the `tasks.md` file when the
+project is initiated. The **Notes - Journal** exists to support **Notes - Thoughts** from _Daily
+Notes_ as the for capturing fleeting thoughts throughout the day. They may or may not be valuable
+enough to add to the project itself. The **Tasks** section is used the same way that `tasks.md` is
+used, but constrained to the project context.
 
-I wanted to allow for large projects/programs that included sub-projects. If a project gets too
-large, the main project document can be renamed as `index.md` and moved into a new project directory
-as seen in the directory structure above.
+While still in the very early stages of development, I also want to allow for large
+projects/programs that included sub-projects. If a project gets too large, the main project document
+can be renamed as `index.md` and moved into a new project directory as seen in the directory
+`book-engineering-management` in the file structure above. This project example is a multi-year
+project to write a book with all of the information I found important from my Master of Engineering
+Management program and how the processes in physical engineering relates back to software
+engineering. To make the project more manageable, I want to approach it systematically by breaking
+it down into a collection of smaller projects that deliver a series of posts that that I write as I
+take the classes. 
 
-In general, this approach to task management and project management has required very little
-overhead and been working out quite well with my Zettelkasten approach to note taking.
+Overall, this new approach to task and project management has required very little overhead and been
+working out quite well with my zettelkasten approach to note taking. There is some pain points which
+I will be focusing the next few months on improving.
 
 
 ## Room for improvement
 
-Retrieval of notes from journal entries is still a pain point. I am still using a fuzzy search in
-NeoVim to search through the notes for specific keywords. With all of the text data that I have
-created, I would like to experiment with a self-hosted RAG to be able to chat with my second-brain
-and possibly even ask for generated task lists and the like. My third _Daily Journaling_ report will
-probably come in about another three months once I have set up the RAG and experimented with it in
-my workflow for a bit.
+Retrieval of thoughts and ideas from journal entries is still a pain point. I am have not yet
+implemented a replacement for the fuzzy keyword search in NeoVim. With all of the text data that I
+have created, I would like to experiment with a self-hosted RAG to be able to chat with my
+second-brain and possibly even ask for generated task lists and the like. My third _Daily
+Journaling_ report will probably come in about another three months once I have set up the RAG and
+experimented with it in my workflow for a bit.
 
 ---
 
@@ -273,8 +312,7 @@ my workflow for a bit.
 > Using the ZK system that I am already for daily notes and zettels, I can expand this to also
 > include Project notes (and possibly even literature notes to move them out of Zotero</br><br/>
 > **Daily Notes:** the source of truth for all notes on tasks or mid-form thoughts</br>
-> **Zettels:** Highly linked "original" thoughts spurred from consuming media
->   (preferably text)<br/>
+> **Zettels:** Highly linked "original" thoughts spurred from consuming media (preferably text)<br/>
 > **Literature Notes:** paraphrased ideas from media<br/>
 > **Project Notes:** central place for managing related tasks<br/><br/>
 > Note that these definitions keep deliverables outside of the second-brain. Project work should
@@ -288,10 +326,9 @@ my workflow for a bit.
 > It would also be beneficial to describe the different type of tasks that exist in the
 > second-brain.<br/><br/>
 > **Daily Task:** A task that is small enough to be finished within a day.<br/>
-> **Project Task:** A task that is related to a specific project. This will be
->   treated as a Daily Task when I add it to a day's plan and start working it.<br/>
-> **Backlog Task:** An Daily Task that is not high enough priority to plan for
->   that day.<br/><br/>
+> **Project Task:** A task that is related to a specific project. This will be treated as a Daily
+> Task when I add it to a day's plan and start working it.<br/>
+> **Backlog Task:** An Daily Task that is not high enough priority to plan for that day.<br/><br/>
 > Backlog Tasks should only be day-sized tasks. If a new project needs to be completed, the Backlog
 > Task would be `Initiate New Project` rather than `Complete New Project`. Project initiation would
 > include creating a new project document, defining the goals and requirements, and setting up the
