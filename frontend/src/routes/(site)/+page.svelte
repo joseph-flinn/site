@@ -8,13 +8,21 @@
   import PageTitle from "$lib/components/PageTitle.svelte";
   import Socials from "$lib/components/Socials.svelte";
   import UnderConstruction from "$lib/components/UnderConstruction.svelte";
-
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
 
+  import { getImageUrl } from '$lib/utils/loader.js'
   import data from '$lib/assets/data.json';
 
 
 </script>
+
+<svelte:head>
+  <meta property="og:type" content />
+  <meta property="og:title" content />
+  <meta property="og:image" content={getImageUrl('/jf-icon.png')} />
+  <meta property="og:description" content />
+  <meta property="og:url" content={window.location.href} />
+</svelte:head>
 
 <div class="sm:pt-8">
   <PageTitle name="Intro" />
