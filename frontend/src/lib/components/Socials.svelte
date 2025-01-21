@@ -1,18 +1,21 @@
 <script>
   import cvDownloadIcon from "$lib/assets/cv-download-icon.svg";
+  import linkedinIcon from "$lib/assets/linkedin-brands-solid.svg"
+  import githubIcon from "$lib/assets/github-brands-solid.svg"
 
   const data = [
     {
       link:"https://linkedin.com/in/joseph-flinn", 
-      type: "icon", 
-      icon: "fa-linkedin-square"},
+      img: linkedinIcon,
+      alt: "LinkedIn logo"
+    },
     {
       link:"https://github.com/joseph-flinn", 
-      type: "icon", 
-      icon: "fa-github"},
+      img: githubIcon,
+      alt: "GitHub logo"
+    },
     {
       link:"https://blog-images.flinnlab.com/resume-joseph-flinn.pdf", 
-      type: "img", 
       img: cvDownloadIcon, 
       alt: "Download CV"
     },
@@ -29,15 +32,11 @@
         window.location.href = link.link;
       }}
     >
-      {#if link.type === "img"}
-        <img 
-          class="w-8 h-8 icon-svg"
-          src={link.img} 
-          alt={link.alt} 
-        />
-      {:else}
-        <i class="text-xl fa {link.icon}"/>
-      {/if}
+      <img 
+        class="w-8 h-8 icon-svg"
+        src={link.img} 
+        alt={link.alt} 
+      />
     </div>
   {/each}
 </div>
