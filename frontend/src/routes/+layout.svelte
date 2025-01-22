@@ -9,7 +9,7 @@
   import Footer from '$lib/components/Footer.svelte';
 
   import { getImageUrl } from '$lib/utils/loader.js'
-  import data from '$lib/assets/data.json';
+  import data from '$lib/config.json';
 
   $: pageData = $page.data.data ?? {}
 </script>

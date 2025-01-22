@@ -5,7 +5,9 @@
 
   import { getImageUrl } from '$lib/utils/loader.js'
 
-  const { title, published, body, description, ...rest } = data.data;
+  let postData = data.data;
+
+  const { title, published, body, description, ...rest } = postData;
   const wordCount = body.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
   const readEstimate = Math.round( wordCount / 200)
 </script>

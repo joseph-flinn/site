@@ -7,7 +7,7 @@
 
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
 
-  import data from '$lib/assets/data.json';
+  import data from '$lib/config.json';
 
 </script>
 
