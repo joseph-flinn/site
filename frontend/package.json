@@ -26,6 +26,7 @@
 	"dependencies": {
 		"katex": "^0.16.11",
 		"mermaid": "^11.1.1",
-		"svelte-markdown": "^0.4.1"
+		"svelte-markdown": "^0.4.1",
+        "jfui": "file:../jfui"
 	}
 }
