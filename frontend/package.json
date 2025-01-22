@@ -14,19 +14,17 @@
 		"@sveltejs/adapter-static": "^3.0.2",
 		"@sveltejs/kit": "^2.5.18",
 		"autoprefixer": "^10.4.20",
+		"katex": "^0.16.11",
+		"mdsvex": "^0.12.3",
+		"mermaid": "^11.1.1",
 		"npm-check-updates": "^16.14.20",
 		"postcss": "^8.4.49",
 		"svelte": "^4.2.18",
 		"svelte-check": "^3.8.4",
+		"svelte-markdown": "^0.4.1",
 		"tailwindcss": "^3.4.17",
 		"typescript": "^5.5.3",
 		"vite": "^5.3.3"
 	},
-	"type": "module",
-	"dependencies": {
-		"katex": "^0.16.11",
-		"mermaid": "^11.1.1",
-		"svelte-markdown": "^0.4.1",
-        "jfui": "file:../jfui"
-	}
+	"type": "module"
 }
