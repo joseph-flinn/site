@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Ubuntu-Regular';
+    font-style: monospace;
+    font-weight: 400;
+    src: url('/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype'),
+  }
+
+  h1 {
+    @apply pt-4 font-bold text-2xl
+  }
+
+  h2 {
+    @apply pt-4 font-bold text-xl
+  }
+
+  h3 {
+    @apply pt-4 font-bold text-lg
+  }
+
+  h4 {
+    @apply pt-4 font-bold italic
+  }
+
+  hr {
+    @apply my-4 border-t-2 border-tin-300
+  }
+
+  ul {
+    @apply list-disc list-outside py-2 pl-8 break-inside-avoid-column
+  }
+
+  ol {
+    @apply list-decimal list-outside py-2 pl-12 break-inside-avoid-column
+  }
+
+  a {
+    @apply underline text-tin-700
+  }
+
+  code {
+    @apply p-0.5 bg-tin-200
+  }
+}
+
+
+@layer utilities {
+  .icon-svg {
+    filter: invert(34%) sepia(6%) saturate(404%) hue-rotate(355deg) brightness(94%) contrast(84%);
+  }
+
+  .icon-svg-light {
+    filter: invert(100%) sepia(37%) saturate(894%) hue-rotate(333deg) brightness(115%) contrast(106%);
+  }
+}
