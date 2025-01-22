@@ -1,4 +1,4 @@
-# site - frontend
+# site - Drip CMS
 
 ## Configuration
 
@@ -34,4 +34,5 @@ vite dev --host 0.0.0.0
 
 
 ## Deployment
-Every push to `main` will auto deploy to `joseph-flinn.github.io/site`
+
+TODO 

@@ -4,6 +4,7 @@
   import { goto } from '$app/navigation'
   import { base } from '$app/paths'
 
+
   import Button from '$lib/components/Button.svelte'
   import Card from '$lib/components/Card.svelte'
   import CentralColumn from '$lib/layouts/CentralColumn.svelte'
@@ -17,6 +18,7 @@
 
   const handleClick= () => {
     token.set(tokenInputData);
+    tokenInputData = '';
   }
 
   console.log(`Layout Token: ${authToken}`)
