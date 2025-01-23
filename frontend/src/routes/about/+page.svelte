@@ -7,7 +7,7 @@
 
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
 
-  import data from '$lib/config.json';
+  import { aboutCopy, skillsData, influentialBooks } from "$lib/config";
 
 </script>
 
@@ -15,7 +15,7 @@
   <PageTitle name="About" />
   <div class="px-4">
     <SvelteMarkdown 
-      source={data.about} 
+      source={aboutCopy} 
       renderers={{
         paragraph: ParagraphRenderer,
       }}
@@ -24,7 +24,7 @@
   <div class="p-4"/>
   <PageTitle name="Expertise" />
   <div class="columns-1 gap-y-4 sm:columns-2">
-    {#each Object.entries(data.skillsData) as [areaName, areaData]}
+    {#each Object.entries(skillsData) as [areaName, areaData]}
       <Card title={areaName}>
         <ul class="list-disc list-outside pl-8 break-inside-avoid-column">
           {#each areaData as item}
@@ -38,7 +38,7 @@
   <PageTitle name="Influential Books" />
   <div class="">
     <ul>
-      {#each data.books as book}
+      {#each influentialBooks as book}
         <li>
           <a href={book.link}>{book.title}</a> - {book.author}
         </li>

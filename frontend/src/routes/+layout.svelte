@@ -9,7 +9,7 @@
   import Footer from '$lib/components/Footer.svelte';
 
   import { getImageUrl } from '$lib/utils/loader.js'
-  import data from '$lib/config.json';
+  import { siteNav } from '$lib/config';
 
   $: pageData = $page.data.data ?? {}
 </script>
@@ -25,7 +25,7 @@
 </svelte:head>
 
 <CentralColumn>
-  <HorizontalNav pages={data.pages.site}/>
+  <HorizontalNav pages={siteNav}/>
   <div class="flex flex-col grow">
     <slot></slot>
   </div>

@@ -11,7 +11,7 @@
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
 
   import { getImageUrl } from '$lib/utils/loader.js'
-  import data from '$lib/config.json';
+  import { introCopy, popularPosts } from "$lib/config";
 
 </script>
 
@@ -19,7 +19,7 @@
   <PageTitle name="Intro" />
   <div class="px-4">
     <SvelteMarkdown 
-      source={data.intro} 
+      source={introCopy} 
       renderers={{
         paragraph: ParagraphRenderer,
       }}
@@ -29,7 +29,7 @@
   <PageTitle name="Favorite Posts" />
   <div class="px-4">
     <div class="">
-      {#each data.popular as post}
+      {#each popularPosts as post}
         <div 
           class="p-2" 
           on:click={() => {
