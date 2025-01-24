@@ -1,7 +1,9 @@
-!! title: The Power of WHAT & HOW - Negotiation
-!! slug: what-how-negotiation
-!! published: 2023-10-23
-!! description: Explore the power of WHAT & HOW in negotiations
+---
+title: The Power of WHAT & HOW - Negotiation
+slug: what-how-negotiation
+published: 2023-10-23
+description: >
+  Explore the power of WHAT & HOW in negotiations
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: [Engineering Portfolio Management] TRLs
-!! slug: engineering-portfolio-management-part2
-!! published: 2024-11-03
-!! description: Part two of the Engineering Portfolio Management series: a discussion on technology readiness levels and how they can be used in the software industry
+---
+title: [Engineering Portfolio Management] TRLs
+slug: engineering-portfolio-management-part2
+published: 2024-11-03
+description: >
+  Part two of the Engineering Portfolio Management series: a discussion on technology readiness
+  levels and how they can be used in the software industry
 
 ---
 

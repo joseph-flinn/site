@@ -1,7 +1,10 @@
-!! title: [Manager Retro] Failure - Effective Feedback
-!! slug: retro-failure-effective-feedback
-!! published: 2024-07-29
-!! description: Discussing the critical failure of not creating enough time and capacity to deliver effective feedback. 
+---
+title: [Manager Retro] Failure - Effective Feedback
+slug: retro-failure-effective-feedback
+published: 2024-07-29
+description: >
+  Discussing the critical failure of not creating enough time and capacity to deliver effective
+  feedback. 
 
 ---
 

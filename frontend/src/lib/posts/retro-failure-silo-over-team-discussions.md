@@ -1,7 +1,10 @@
-!! title: [Manager Retro] Failure - Individual > Team Discussions
-!! slug: retro-failure-individual-over-team-discussions
-!! published: 2024-08-12
-!! description: Discussing my failure of cultivating team discussions and building trust by leaning too heavily into my comfort zone of one-on-one discussions
+---
+title: [Manager Retro] Failure - Individual > Team Discussions
+slug: retro-failure-individual-over-team-discussions
+published: 2024-08-12
+description: >
+  Discussing my failure of cultivating team discussions and building trust by leaning too heavily
+  into my comfort zone of one-on-one discussions
 
 ---
 

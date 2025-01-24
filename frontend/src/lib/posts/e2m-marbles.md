@@ -1,8 +1,11 @@
-!! title: Engineer to Manager - Marbles & Leadership Capital
-!! slug: e2m-marbles
-!! published: 2023-12-03
-!! description: Two weeks into my new career as a people manager, I had to make one of the toughest choices that I have had to make as a leader: deliver business value or build team trust
-
+---
+title: Engineer to Manager - Marbles and Leadership Capital
+slug: e2m-marbles
+published: 2023-12-03
+description: > 
+  Two weeks into my new career as a people manager, I had to make one of the 
+  toughest choices that I have had to make as a leader: to deliver business 
+  value or build team trust
 ---
 
 A few years ago, I became the first DevOps Engineer at my current company. I was excited about the

@@ -1,7 +1,9 @@
-!! title: Workaholism
-!! slug: workaholism
-!! published: 2024-10-07
-!! description: A story of a recovering workaholic
+---
+title: Workaholism
+slug: workaholism
+published: 2024-10-07
+description: >
+  A story of a recovering workaholic
 
 ---
 

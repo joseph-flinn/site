@@ -1,7 +1,10 @@
-!! title: [Engineering Portfolio Management] MRLs & ORLs
-!! slug: engineering-portfolio-management-part3
-!! published: 2024-11-11
-!! description: Part three of the Engineering Portfolio Management series: a discussion on manufacturing readiness levels and how they apply to the software industry as operational readiness levels
+---
+title: [Engineering Portfolio Management] MRLs & ORLs
+slug: engineering-portfolio-management-part3
+published: 2024-11-11
+description: >
+  Part three of the Engineering Portfolio Management series: a discussion on manufacturing readiness
+  levels and how they apply to the software industry as operational readiness levels
 
 ---
 

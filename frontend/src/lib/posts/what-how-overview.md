@@ -1,7 +1,9 @@
-!! title: The Power of WHAT & HOW - Overview
-!! slug: what-how-overview
-!! published: 2023-10-02
-!! description: Explore the power of WHAT & HOW
+---
+title: The Power of WHAT & HOW - Overview
+slug: what-how-overview
+published: 2023-10-02
+description: >
+  Explore the power of WHAT & HOW
 
 ---
 

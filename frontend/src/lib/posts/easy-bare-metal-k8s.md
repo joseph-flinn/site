@@ -1,7 +1,9 @@
-!! title: Easy Bare Metal K8s
-!! slug: easy-bare-metal-k8s
-!! published: 2023-10-16
-!! description: Easy approach to bare metal k8s at home
+---
+title: Easy Bare Metal K8s
+slug: easy-bare-metal-k8s
+published: 2023-10-16
+description: >
+  Easy approach to bare metal k8s at home
 
 ---
 

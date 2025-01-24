@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - EDD in Always-On Environments
-!! slug: edd-for-ha
-!! published: 2023-09-04
-!! description: The eighth article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - EDD in Always-On Environments
+slug: edd-for-ha
+published: 2023-09-04
+description: >
+  The eighth article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 

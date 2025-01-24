@@ -1,7 +1,9 @@
-!! title: Information Dilution and Ego
-!! slug: information-dilution-and-ego
-!! published: 2024-04-08
-!! description: A discussion on the dangers of reliable sources, generative AI, plagiarism, learning and ego
+---
+title: Information Dilution and Ego
+slug: information-dilution-and-ego
+published: 2024-04-08
+description: >
+  A discussion on the dangers of reliable sources, generative AI, plagiarism, learning and ego
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: [Engineering Portfolio Management] Portfolio Gate Reviews
-!! slug: engineering-portfolio-management-part4
-!! published: 2024-11-18
-!! description: Part 4 of the Engineering Portfolio Management series: a discussion on the generic approach to building a portfolio management system with gate reviews
+---
+title: [Engineering Portfolio Management] Portfolio Gate Reviews
+slug: engineering-portfolio-management-part4
+published: 2024-11-18
+description: >
+  Part 4 of the Engineering Portfolio Management series: a discussion on the generic approach to
+  building a portfolio management system with gate reviews
 
 ---
 

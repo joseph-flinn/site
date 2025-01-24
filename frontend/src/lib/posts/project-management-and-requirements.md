@@ -1,7 +1,10 @@
-!! title: Project Management - The Right Tool for the Job
-!! slug: project-management-and-requirements
-!! published: 2024-09-16
-!! description: Discussing Agile and traditional project management in different contexts and the key to choose between them: how well requirements are defined.
+---
+title: Project Management - The Right Tool for the Job
+slug: project-management-and-requirements
+published: 2024-09-16
+description: >
+  Discussing Agile and traditional project management in different contexts and the key to choose
+  between them: how well requirements are defined.
 
 ---
 

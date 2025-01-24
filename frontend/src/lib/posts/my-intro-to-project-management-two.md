@@ -1,7 +1,9 @@
-!! title: My Introduction to Project Management 2.0
-!! slug: my-intro-to-project-management-two
-!! published: 2024-09-02
-!! description: My story of being reintroduced to project management.
+---
+title: My Introduction to Project Management 2.0
+slug: my-intro-to-project-management-two
+published: 2024-09-02
+description: >
+  My story of being reintroduced to project management.
 
 ---
 

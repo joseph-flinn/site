@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Success - Deployment Complexity Reduction
-!! slug: retro-success-deployment-complexity-reduction
-!! published: 2024-06-03
-!! description: Reflection and gratitude on one of the most challenging project we worked on. 
+---
+title: [Manager Retro] Success - Deployment Complexity Reduction
+slug: retro-success-deployment-complexity-reduction
+published: 2024-06-03
+description: >
+  Reflection and gratitude on one of the most challenging project we worked on. 
 
 ---
 

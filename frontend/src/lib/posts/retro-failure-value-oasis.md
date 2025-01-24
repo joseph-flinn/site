@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Failure - Building a Value Oasis
-!! slug: retro-failure-value-oasis
-!! published: 2024-06-24
-!! description: Discussing my failure by building a Value Oasis
+---
+title: [Manager Retro] Failure - Building a Value Oasis
+slug: retro-failure-value-oasis
+published: 2024-06-24
+description: >
+  Discussing my failure by building a Value Oasis
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - CD (Delivery)
-!! slug: scalable-dev-delivery
-!! published: 2023-08-07
-!! description: The third article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - CD (Delivery)
+slug: scalable-dev-delivery
+published: 2023-08-07
+description: >
+  The third article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 In the last article, we did a deep dive on CI to prep us for the conversation about CD and how it can be implemented. 

@@ -1,7 +1,9 @@
-!! title: Learning & Operating
-!! slug: learning-and-operating
-!! published: 2024-12-09
-!! description: My big life decisions always seem to happen the week of Thanksgiving
+---
+title: Learning & Operating
+slug: learning-and-operating
+published: 2024-12-09
+description: >
+  My big life decisions always seem to happen the week of Thanksgiving
 
 ---
 

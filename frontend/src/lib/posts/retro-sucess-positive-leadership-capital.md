@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Success - Positive Leadership Capital
-!! slug: retro-success-positive-leadership-capital
-!! published: 2024-05-20
-!! description: Reflection and gratitude for the positive balance of Leadership Capital
+---
+title: [Manager Retro] Success - Positive Leadership Capital
+slug: retro-success-positive-leadership-capital
+published: 2024-05-20
+description: >
+  Reflection and gratitude for the positive balance of Leadership Capital
 
 ---
 

@@ -1,7 +1,9 @@
-!! title: System Dynamics - The Burden to the Intervenor Trap
-!! slug: e2m-st-addiction
-!! published: 2024-01-22
-!! description: Discussing one of the largest systems trap my team has been battling.
+---
+title: System Dynamics - The Burden to the Intervenor Trap
+slug: e2m-st-addiction
+published: 2024-01-22
+description: >
+  Discussing one of the largest systems trap my team has been battling.
 
 ---
 

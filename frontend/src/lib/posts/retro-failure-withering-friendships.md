@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Failure - Withering Personal Friendships
-!! slug: retro-failure-withering-friendships
-!! published: 2024-06-17
-!! description: Discussing my largest failure in my journey from engineer to manager.
+---
+title: [Manager Retro] Failure - Withering Personal Friendships
+slug: retro-failure-withering-friendships
+published: 2024-06-17
+description: >
+  Discussing my largest failure in my journey from engineer to manager.
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: [Foundations of Project Management] Introduction
-!! slug: foundations-of-project-management-part1
-!! published: 2024-12-15
-!! description: Part one of the Foundations of Project Management series: An introduction to the project management series
+---
+title: [Foundations of Project Management] Introduction
+slug: foundations-of-project-management-part1
+published: 2024-12-15
+description: >
+  Part one of the Foundations of Project Management series: An introduction to the project
+  management series
 
 ---
 

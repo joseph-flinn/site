@@ -1,7 +1,9 @@
-!! title: "What do you do?" - Identity Dimensionality Reduction
-!! slug: identity-dimensionality-reduction
-!! published: 2024-04-29
-!! description: A discussion on what we miss and cause by asking the question "What do you do?"
+---
+title: "What do you do?" - Identity Dimensionality Reduction
+slug: identity-dimensionality-reduction
+published: 2024-04-29
+description: >
+  A discussion on what we miss and cause by asking the question "What do you do?"
 
 ---
 

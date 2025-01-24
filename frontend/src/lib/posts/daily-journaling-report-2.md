@@ -2,7 +2,8 @@
 title: Daily Journaling - Report 2
 slug: daily-journaling-report-2
 published: 2025-01-20
-description: Second report with changes that I have made since first post.
+description: >
+  Second report with changes that I have made since first post.
 
 ---
 

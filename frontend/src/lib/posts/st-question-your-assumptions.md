@@ -1,7 +1,9 @@
-!! title: Always Question Your Assumptions
-!! slug: st-question-your-assumptions
-!! published: 2024-02-05
-!! description: Double-loop learning and questioning assumptions.
+---
+title: Always Question Your Assumptions
+slug: st-question-your-assumptions
+published: 2024-02-05
+description: >
+  Double-loop learning and questioning assumptions.
 
 ---
 

@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Failure - Trap of the Intervenor
-!! slug: retro-failure-trap-of-intervenor
-!! published: 2024-07-08
-!! description: Discussing the failure of falling into the Trap of the Intervenor
+---
+title: [Manager Retro] Failure - Trap of the Intervenor
+slug: retro-failure-trap-of-intervenor
+published: 2024-07-08
+description: >
+  Discussing the failure of falling into the Trap of the Intervenor
 
 ---
 

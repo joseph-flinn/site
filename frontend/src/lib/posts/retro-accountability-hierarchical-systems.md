@@ -1,7 +1,10 @@
-!! title: [Manager Retro] Accountability in Hierarchical Systems
-!! slug: retro-accountability-hierarchical-systems
-!! published: 2024-07-22
-!! description: Discussing my latest thoughts around accountability in reflection of my amygdala hijacking response
+---
+title: [Manager Retro] Accountability in Hierarchical Systems
+slug: retro-accountability-hierarchical-systems
+published: 2024-07-22
+description: >
+  Discussing my latest thoughts around accountability in reflection of my amygdala hijacking
+  response
 
 ---
 

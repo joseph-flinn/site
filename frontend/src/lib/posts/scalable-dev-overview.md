@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - Overview
-!! slug: scalable-dev-overview
-!! published: 2023-07-24
-!! description: The first article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - Overview
+slug: scalable-dev-overview
+published: 2023-07-24
+description: >
+  The first article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 This is the first of a series of articles on a git provider based flow that scales well from a handful of developers to

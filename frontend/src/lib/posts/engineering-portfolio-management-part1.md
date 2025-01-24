@@ -1,7 +1,10 @@
-!! title: [Engineering Portfolio Management] Introduction
-!! slug: engineering-portfolio-management-part1
-!! published: 2024-10-28
-!! description: Part one of the Engineering Portfolio Management series: an overview of what portfolio management is
+---
+title: [Engineering Portfolio Management] Introduction
+slug: engineering-portfolio-management-part1
+published: 2024-10-28
+description: >
+  Part one of the Engineering Portfolio Management series: an overview of what portfolio management
+  is
 
 ---
 

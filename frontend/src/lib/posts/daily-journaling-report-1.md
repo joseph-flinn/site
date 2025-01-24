@@ -1,7 +1,9 @@
-!! title: Daily Journaling - Report 1
-!! slug: daily-journaling-report-1
-!! published: 2024-10-21
-!! description: The first report on the practice of daily journaling.
+---
+title: Daily Journaling - Report 1
+slug: daily-journaling-report-1
+published: 2024-10-21
+description: >
+  The first report on the practice of daily journaling.
 
 ---
 

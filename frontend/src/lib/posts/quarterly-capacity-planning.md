@@ -1,7 +1,9 @@
-!! title: Capacity Planning for a Quarter
-!! slug: quarterly-capacity-planning
-!! published: 2024-12-02
-!! description: Reviewing a template for quarterly capacity planning
+---
+title: Capacity Planning for a Quarter
+slug: quarterly-capacity-planning
+published: 2024-12-02
+description: >
+  Reviewing a template for quarterly capacity planning
 
 ---
 

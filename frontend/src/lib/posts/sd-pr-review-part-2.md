@@ -1,7 +1,10 @@
-!! title: PR Review Delays - Flow Diagram with Delays
-!! slug: sd-pr-review-part-2
-!! published: 2024-02-26
-!! description: Part two of an exercise of System Dynamics to solve a problem with delays in our PR review process.
+---
+title: PR Review Delays - Flow Diagram with Delays
+slug: sd-pr-review-part-2
+published: 2024-02-26
+description: >
+  Part two of an exercise of System Dynamics to solve a problem with delays in our PR review
+  process.
 
 ---
 

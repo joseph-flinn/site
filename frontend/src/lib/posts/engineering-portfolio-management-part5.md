@@ -1,7 +1,10 @@
-!! title: [Engineering Portfolio Management] Agile vs. Plan-driven
-!! slug: engineering-portfolio-management-part5
-!! published: 2024-11-25
-!! description: Part 5 (the final part) of the Engineering Portfolio Management series: a discussion on Agile vs Plan-driven portfolio management.
+---
+title: [Engineering Portfolio Management] Agile vs. Plan-driven
+slug: engineering-portfolio-management-part5
+published: 2024-11-25
+description: >
+  Part 5 (the final part) of the Engineering Portfolio Management series: a discussion on Agile vs
+  Plan-driven portfolio management.
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: [Manager Retro] Failure - Change Management
-!! slug: retro-failure-change-management
-!! published: 2024-07-16
-!! description: Discussion on the challenges and pitfalls around change management and failures that came from them.
+---
+title: [Manager Retro] Failure - Change Management
+slug: retro-failure-change-management
+published: 2024-07-16
+description: >
+  Discussion on the challenges and pitfalls around change management and failures that came from
+  them.
 
 ---
 

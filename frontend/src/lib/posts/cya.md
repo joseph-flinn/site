@@ -1,7 +1,9 @@
-!! title: Organizational Communication - CYA Red Flag
-!! slug: org-com-cya
-!! published: 2023-11-20
-!! description: Discuss covering your ass and why it is a red flag
+---
+title: Organizational Communication - CYA Red Flag
+slug: org-com-cya
+published: 2023-11-20
+description: >
+  Discuss covering your ass and why it is a red flag
 
 ---
 

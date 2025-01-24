@@ -1,7 +1,9 @@
-!! title: Learning through Writing
-!! slug: learning-through-writing
-!! published: 2024-09-23
-!! description: A discussion the place that writing has in the learning process.
+---
+title: Learning through Writing
+slug: learning-through-writing
+published: 2024-09-23
+description: >
+  A discussion the place that writing has in the learning process.
 
 ---
 

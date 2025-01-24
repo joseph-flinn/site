@@ -1,7 +1,10 @@
-!! title: [Foundations of Project Management] Capability Maturity Levels
-!! slug: foundations-of-project-management-part4
-!! published: 2025-01-13
-!! description: Part four of the Foundations of Project Management series: an overview of organizational project management maturity levels
+---
+title: [Foundations of Project Management] Capability Maturity Levels
+slug: foundations-of-project-management-part4
+published: 2025-01-13
+description: >
+  Part four of the Foundations of Project Management series: an overview of organizational project
+  management maturity levels
 
 ---
 

@@ -1,7 +1,9 @@
-!! title: Practicing Impact over Productivity
-!! slug: impact-over-productivity
-!! published: 2024-08-26
-!! description: Practicing the perspective of impact over productivity
+---
+title: Practicing Impact over Productivity
+slug: impact-over-productivity
+published: 2024-08-26
+description: >
+  Practicing the perspective of impact over productivity
 
 ---
 

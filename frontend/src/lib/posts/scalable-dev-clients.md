@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - A note on client configuration
-!! slug: scalable-dev-clients
-!! published: 2023-09-11
-!! description: The ninth article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - A note on client configuration
+slug: scalable-dev-clients
+published: 2023-09-11
+description: >
+  The ninth article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 

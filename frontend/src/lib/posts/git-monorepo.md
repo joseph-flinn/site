@@ -1,9 +1,12 @@
-!! title: Git was not designed to support monorepos
-!! slug: git-monorepo
-!! published: 2023-07-17
-!! description: A discussion around why git was not designed for monorepos: when to use them and when to migrate
+---
+title: Git was not designed to support monorepos
+slug: git-monorepo
+published: 2023-07-17
+description: >
+  A discussion around why git was not designed for monorepos: when to use them and when to migrate
 
 ---
+
 I work with monorepos in git on a daily basis and have learned through experience that git was not designed to support
 monorepos. Can you build monorepos in git? Of course! There are some cases where I prefer a monorepo. However, there are
 specific exit criteria that I use to determine when it is time to switch.

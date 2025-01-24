@@ -1,7 +1,10 @@
-!! title: Personal Productivity vs Organizational Productivity
-!! slug: personal-vs-org-productivity
-!! published: 2024-04-01
-!! description: A discussion on an interesting perspective of personal productivity from the systems thinking perspective and the affect that it has on the greater group.
+---
+title: Personal Productivity vs Organizational Productivity
+slug: personal-vs-org-productivity
+published: 2024-04-01
+description: >
+  A discussion on an interesting perspective of personal productivity from the systems thinking
+  perspective and the affect that it has on the greater group.
 
 ---
 

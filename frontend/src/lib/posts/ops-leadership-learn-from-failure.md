@@ -1,7 +1,10 @@
-!! title: Operational Leadership - Learning from Failure
-!! slug: ops-leadership-learn-from-failure
-!! published: 2024-03-10
-!! description: The story of when I learned more about operational leadership in three hours than my entire career in software operations.
+---
+title: Operational Leadership - Learning from Failure
+slug: ops-leadership-learn-from-failure
+published: 2024-03-10
+description: >
+  The story of when I learned more about operational leadership in three hours than my entire career
+  in software operations.
 
 ---
 

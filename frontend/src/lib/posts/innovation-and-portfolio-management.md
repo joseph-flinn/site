@@ -1,7 +1,9 @@
-!! title: Innovation and Portfolio Management
-!! slug: innovations-and-portfolio-management
-!! published: 2024-10-14
-!! description: Short discussion on innovation and connecting it to business strategy.
+---
+title: Innovation and Portfolio Management
+slug: innovations-and-portfolio-management
+published: 2024-10-14
+description: >
+  Short discussion on innovation and connecting it to business strategy.
 
 ---
 

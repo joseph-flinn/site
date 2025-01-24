@@ -1,7 +1,9 @@
-!! title: Management Trust Feedback Loop
-!! slug: management-trust-feedback-loop
-!! published: 2024-03-17
-!! description: Discussing the idea of working relationship trust as a positive feedback loop
+---
+title: Management Trust Feedback Loop
+slug: management-trust-feedback-loop
+published: 2024-03-17
+description: >
+  Discussing the idea of working relationship trust as a positive feedback loop
 
 ---
 

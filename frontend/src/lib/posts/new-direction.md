@@ -1,7 +1,9 @@
-!! title: New Approach to the Posts
-!! slug: new-approach
-!! published: 2023-11-27
-!! description: A quick chat about the future direction of future posts.
+---
+title: New Approach to the Posts
+slug: new-approach
+published: 2023-11-27
+description: >
+  A quick chat about the future direction of future posts.
 
 ---
 

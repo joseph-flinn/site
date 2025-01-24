@@ -1,7 +1,9 @@
-!! title: Organizational Communication - Triangles of Death
-!! slug: org-comm-triangles-of-death
-!! published: 2023-11-13
-!! description: Discuss the triangling communication pattern in remote organization culture
+---
+title: Organizational Communication - Triangles of Death
+slug: org-comm-triangles-of-death
+published: 2023-11-13
+description: >
+  Discuss the triangling communication pattern in remote organization culture
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: Product Led Growth - Support Functions
-!! slug: plg-support-functions
-!! published: 2023-09-25
-!! description: Examining and defining the roles of the organization groups outside of the core product groups in PLG company
+---
+title: Product Led Growth - Support Functions
+slug: plg-support-functions
+published: 2023-09-25
+description: >
+  Examining and defining the roles of the organization groups outside of the core product groups in
+  PLG company
 
 ---
 

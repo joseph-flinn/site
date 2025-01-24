@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - Continuous Deployment (CD)
-!! slug: scalable-dev-deployment
-!! published: 2023-08-21
-!! description: The sixth article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - Continuous Deployment (CD)
+slug: scalable-dev-deployment
+published: 2023-08-21
+description: >
+  The sixth article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 

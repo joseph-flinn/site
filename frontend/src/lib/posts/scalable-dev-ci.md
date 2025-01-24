@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - CI
-!! slug: scalable-dev-integration
-!! published: 2023-07-31
-!! description: The second article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - CI
+slug: scalable-dev-integration
+published: 2023-07-31
+description: >
+  The second article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 CI, or Continuous Integration, is our first deep dive topic. There is only one primary goal of CI: shorten

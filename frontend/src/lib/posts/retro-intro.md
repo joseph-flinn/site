@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Introduction
-!! slug: retro-intro
-!! published: 2024-05-06
-!! description: An introduction on what is to come over the next few months in retrospect to the last few years
+---
+title: [Manager Retro] Introduction
+slug: retro-intro
+published: 2024-05-06
+description: >
+  An introduction on what is to come over the next few months in retrospect to the last few years
 
 ---
 

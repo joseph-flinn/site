@@ -1,7 +1,9 @@
-!! title: The Power of WHAT & HOW - Human Connection
-!! slug: what-how-connection
-!! published: 2023-11-06
-!! description: Explore the power of WHAT & HOW to connect better with other humans
+---
+title: The Power of WHAT & HOW - Human Connection
+slug: what-how-connection
+published: 2023-11-06
+description: >
+  Explore the power of WHAT & HOW to connect better with other humans
 
 ---
 

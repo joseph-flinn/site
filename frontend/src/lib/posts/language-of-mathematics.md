@@ -1,7 +1,9 @@
-!! title: The Language of Mathematics
-!! slug: language-of-mathematics
-!! published: 2024-09-30
-!! description: The beauty of mathematics is in seeing it as a language.
+---
+title: The Language of Mathematics
+slug: language-of-mathematics
+published: 2024-09-30
+description: >
+  The beauty of mathematics is in seeing it as a language.
 
 ---
 

@@ -1,7 +1,10 @@
-!! title: Scalable Development Practices - Automatic Versioning
-!! slug: scalable-dev-versioning
-!! published: 2023-08-14
-!! description: The fourth article in the series of how to implement a simple but scalable solution to delivering more value faster to the end user
+---
+title: Scalable Development Practices - Automatic Versioning
+slug: scalable-dev-versioning
+published: 2023-08-14
+description: >
+  The fourth article in the series of how to implement a simple but scalable solution to delivering
+  more value faster to the end user
 
 ---
 In the last few articles, we have been looking at how to implement scalable dev processes to support growing

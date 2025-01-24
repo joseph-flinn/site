@@ -1,7 +1,9 @@
-!! title: Engineer to Manager - Decision Fatigue Solutioning
-!! slug: e2m-decision-fatigue
-!! published: 2024-03-25
-!! description: A discussion on decision fatigue (ego depletion) and some thoughts around how to solve for it
+---
+title: Engineer to Manager - Decision Fatigue Solutioning
+slug: e2m-decision-fatigue
+published: 2024-03-25
+description: >
+  A discussion on decision fatigue (ego depletion) and some thoughts around how to solve for it
 
 ---
 

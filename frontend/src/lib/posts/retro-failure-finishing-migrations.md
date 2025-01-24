@@ -1,7 +1,9 @@
-!! title: [Manager Retro] Failure - Finishing Migrations
-!! slug: retro-failure-finishing-migrations
-!! published: 2024-07-01
-!! description: Discussing my failure to prevent stop-start work on migrations
+---
+title: [Manager Retro] Failure - Finishing Migrations
+slug: retro-failure-finishing-migrations
+published: 2024-07-01
+description: >
+  Discussing my failure to prevent stop-start work on migrations
 
 ---
 
