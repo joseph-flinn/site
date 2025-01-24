@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Failure - Individual > Team Discussions
+title: "[Manager Retro] Failure - Individual > Team Discussions"
 slug: retro-failure-individual-over-team-discussions
 published: 2024-08-12
 description: >

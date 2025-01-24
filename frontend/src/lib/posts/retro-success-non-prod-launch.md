@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Success - Non-production Launch
+title: "[Manager Retro] Success - Non-production Launch"
 slug: retro-success-non-prod-launch
 published: 2024-05-25
 description: >

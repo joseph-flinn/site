@@ -1,5 +1,5 @@
 ---
-title: Scalable Development Practices - Continuous Deployment (CD)
+title: "Scalable Development Practices - Continuous Deployment (CD)"
 slug: scalable-dev-deployment
 published: 2023-08-21
 description: >

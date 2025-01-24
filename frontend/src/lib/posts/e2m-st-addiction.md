@@ -1,5 +1,5 @@
 ---
-title: System Dynamics - The Burden to the Intervenor Trap
+title: "System Dynamics - The Burden to the Intervenor Trap"
 slug: e2m-st-addiction
 published: 2024-01-22
 description: >

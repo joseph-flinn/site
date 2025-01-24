@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Failure - Withering Personal Friendships
+title: "[Manager Retro] Failure - Withering Personal Friendships"
 slug: retro-failure-withering-friendships
 published: 2024-06-17
 description: >

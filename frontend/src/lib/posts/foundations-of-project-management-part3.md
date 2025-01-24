@@ -1,5 +1,5 @@
 ---
-title: [Foundations of Project Management] Process Groups & Knowledge Areas
+title: "[Foundations of Project Management] Process Groups & Knowledge Areas"
 slug: foundations-of-project-management-part3
 published: 2025-01-06
 description: >

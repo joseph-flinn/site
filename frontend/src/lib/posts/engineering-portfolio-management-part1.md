@@ -1,5 +1,5 @@
 ---
-title: [Engineering Portfolio Management] Introduction
+title: "[Engineering Portfolio Management] Introduction"
 slug: engineering-portfolio-management-part1
 published: 2024-10-28
 description: >

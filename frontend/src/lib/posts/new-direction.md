@@ -1,5 +1,5 @@
 ---
-title: New Approach to the Posts
+title: "New Approach to the Posts"
 slug: new-approach
 published: 2023-11-27
 description: >

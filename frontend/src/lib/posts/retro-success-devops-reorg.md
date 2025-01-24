@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Success - DevOps Reorganization
+title: "[Manager Retro] Success - DevOps Reorganization"
 slug: retro-success-devops-reorg
 published: 2024-08-19
 description: >

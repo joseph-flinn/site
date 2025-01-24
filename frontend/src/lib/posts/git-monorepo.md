@@ -1,5 +1,5 @@
 ---
-title: Git was not designed to support monorepos
+title: "Git was not designed to support monorepos"
 slug: git-monorepo
 published: 2023-07-17
 description: >

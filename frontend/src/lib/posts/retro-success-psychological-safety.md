@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Success - Psychological Safety 
+title: "[Manager Retro] Success - Psychological Safety "
 slug: retro-success-psychological-safety
 published: 2024-05-13
 description: >

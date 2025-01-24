@@ -1,5 +1,5 @@
 ---
-title: Product Led Growth - Support Functions
+title: "Product Led Growth - Support Functions"
 slug: plg-support-functions
 published: 2023-09-25
 description: >

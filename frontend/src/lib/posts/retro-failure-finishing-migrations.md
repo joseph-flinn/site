@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Failure - Finishing Migrations
+title: "[Manager Retro] Failure - Finishing Migrations"
 slug: retro-failure-finishing-migrations
 published: 2024-07-01
 description: >

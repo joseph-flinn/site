@@ -1,5 +1,5 @@
 ---
-title: Organizational Communication - Triangles of Death
+title: "Organizational Communication - Triangles of Death"
 slug: org-comm-triangles-of-death
 published: 2023-11-13
 description: >

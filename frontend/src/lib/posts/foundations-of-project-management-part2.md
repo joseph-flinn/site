@@ -1,5 +1,5 @@
 ---
-title: [Foundations of Project Management] Project Management & Agile
+title: "[Foundations of Project Management] Project Management & Agile"
 slug: foundations-of-project-management-part2
 published: 2024-12-30
 description: >

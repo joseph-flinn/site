@@ -1,5 +1,5 @@
 ---
-title: [Foundations of Project Management] Capability Maturity Levels
+title: "[Foundations of Project Management] Capability Maturity Levels"
 slug: foundations-of-project-management-part4
 published: 2025-01-13
 description: >

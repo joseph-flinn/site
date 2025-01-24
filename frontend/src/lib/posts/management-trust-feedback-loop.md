@@ -1,5 +1,5 @@
 ---
-title: Management Trust Feedback Loop
+title: "Management Trust Feedback Loop"
 slug: management-trust-feedback-loop
 published: 2024-03-17
 description: >

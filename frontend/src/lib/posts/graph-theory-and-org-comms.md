@@ -1,5 +1,5 @@
 ---
-title: Graph Theory of Organizational Communication
+title: "Graph Theory of Organizational Communication"
 slug: graph-theory-of-org-comms
 published: 2024-09-09
 description: >

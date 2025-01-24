@@ -1,5 +1,5 @@
 ---
-title: Product Led Growth - The Product Triad
+title: "Product Led Growth - The Product Triad"
 slug: plg-product-triad
 published: 2023-09-18
 description: >

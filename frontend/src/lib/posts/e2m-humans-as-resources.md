@@ -1,5 +1,5 @@
 ---
-title: Engineer to Manager - Humans as Resources
+title: "Engineer to Manager - Humans as Resources"
 slug: e2m-humans-as-resources
 published: 2024-01-08
 description: >

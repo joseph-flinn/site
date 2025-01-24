@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Success - Deployment Complexity Reduction
+title: "[Manager Retro] Success - Deployment Complexity Reduction"
 slug: retro-success-deployment-complexity-reduction
 published: 2024-06-03
 description: >

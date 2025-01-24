@@ -1,5 +1,5 @@
 ---
-title: Influence - "Why don't people listen to me?"
+title: "Influence - 'Why don't people listen to me?'"
 slug: understanding-and-influence
 published: 2024-04-15
 description: >

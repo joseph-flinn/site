@@ -1,5 +1,5 @@
 ---
-title: Engineer to Manager - Management vs Leadership
+title: "Engineer to Manager - Management vs Leadership"
 slug: e2m-management-and-leadership
 published: 2023-12-11
 description: >

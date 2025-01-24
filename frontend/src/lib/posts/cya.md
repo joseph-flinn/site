@@ -1,5 +1,5 @@
 ---
-title: Organizational Communication - CYA Red Flag
+title: "Organizational Communication - CYA Red Flag"
 slug: org-com-cya
 published: 2023-11-20
 description: >

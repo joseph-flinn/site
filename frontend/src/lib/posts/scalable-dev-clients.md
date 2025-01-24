@@ -1,5 +1,5 @@
 ---
-title: Scalable Development Practices - A note on client configuration
+title: "Scalable Development Practices - A note on client configuration"
 slug: scalable-dev-clients
 published: 2023-09-11
 description: >

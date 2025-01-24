@@ -1,5 +1,5 @@
 ---
-title: PR Review Delays - Flow Diagram with Delays
+title: "PR Review Delays - Flow Diagram with Delays"
 slug: sd-pr-review-part-2
 published: 2024-02-26
 description: >

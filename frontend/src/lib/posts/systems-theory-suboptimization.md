@@ -1,5 +1,5 @@
 ---
-title: System Dynamics - Team Suboptimization
+title: "System Dynamics - Team Suboptimization"
 slug: e2m-st-suboptimization
 published: 2024-01-15
 description: >

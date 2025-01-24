@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Accountability in Hierarchical Systems
+title: "[Manager Retro] Accountability in Hierarchical Systems"
 slug: retro-accountability-hierarchical-systems
 published: 2024-07-22
 description: >

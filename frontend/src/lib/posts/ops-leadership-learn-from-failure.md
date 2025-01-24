@@ -1,5 +1,5 @@
 ---
-title: Operational Leadership - Learning from Failure
+title: "Operational Leadership - Learning from Failure"
 slug: ops-leadership-learn-from-failure
 published: 2024-03-10
 description: >

@@ -1,5 +1,5 @@
 ---
-title: Learning through Writing
+title: "Learning through Writing"
 slug: learning-through-writing
 published: 2024-09-23
 description: >

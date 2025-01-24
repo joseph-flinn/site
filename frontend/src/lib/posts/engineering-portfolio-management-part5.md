@@ -1,5 +1,5 @@
 ---
-title: [Engineering Portfolio Management] Agile vs. Plan-driven
+title: "[Engineering Portfolio Management] Agile vs. Plan-driven"
 slug: engineering-portfolio-management-part5
 published: 2024-11-25
 description: >

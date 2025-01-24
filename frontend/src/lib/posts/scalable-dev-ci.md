@@ -1,5 +1,5 @@
 ---
-title: Scalable Development Practices - CI
+title: "Scalable Development Practices - CI"
 slug: scalable-dev-integration
 published: 2023-07-31
 description: >

@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Introduction
+title: "[Manager Retro] Introduction"
 slug: retro-intro
 published: 2024-05-06
 description: >

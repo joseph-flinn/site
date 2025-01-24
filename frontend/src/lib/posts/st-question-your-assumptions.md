@@ -1,5 +1,5 @@
 ---
-title: Always Question Your Assumptions
+title: "Always Question Your Assumptions"
 slug: st-question-your-assumptions
 published: 2024-02-05
 description: >

@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Failure - Change Management
+title: "[Manager Retro] Failure - Change Management"
 slug: retro-failure-change-management
 published: 2024-07-16
 description: >

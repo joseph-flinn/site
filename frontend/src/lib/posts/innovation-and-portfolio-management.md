@@ -1,5 +1,5 @@
 ---
-title: Innovation and Portfolio Management
+title: "Innovation and Portfolio Management"
 slug: innovations-and-portfolio-management
 published: 2024-10-14
 description: >

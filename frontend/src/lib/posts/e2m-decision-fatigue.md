@@ -1,5 +1,5 @@
 ---
-title: Engineer to Manager - Decision Fatigue Solutioning
+title: "Engineer to Manager - Decision Fatigue Solutioning"
 slug: e2m-decision-fatigue
 published: 2024-03-25
 description: >

@@ -1,5 +1,5 @@
 ---
-title: The Language of Mathematics
+title: "The Language of Mathematics"
 slug: language-of-mathematics
 published: 2024-09-30
 description: >

@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Failure - Effective Feedback
+title: "[Manager Retro] Failure - Effective Feedback"
 slug: retro-failure-effective-feedback
 published: 2024-07-29
 description: >

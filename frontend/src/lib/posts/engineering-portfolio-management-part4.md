@@ -1,5 +1,5 @@
 ---
-title: [Engineering Portfolio Management] Portfolio Gate Reviews
+title: "[Engineering Portfolio Management] Portfolio Gate Reviews"
 slug: engineering-portfolio-management-part4
 published: 2024-11-18
 description: >

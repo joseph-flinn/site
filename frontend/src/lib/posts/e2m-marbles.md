@@ -1,5 +1,5 @@
 ---
-title: Engineer to Manager - Marbles and Leadership Capital
+title: "Engineer to Manager - Marbles and Leadership Capital"
 slug: e2m-marbles
 published: 2023-12-03
 description: > 

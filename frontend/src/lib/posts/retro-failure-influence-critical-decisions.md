@@ -1,5 +1,5 @@
 ---
-title: [Manager Retro] Failure - Influence in Critical Decisions
+title: "[Manager Retro] Failure - Influence in Critical Decisions"
 slug: retro-failure-influence-critical-decisions
 published: 2024-08-05
 description: >

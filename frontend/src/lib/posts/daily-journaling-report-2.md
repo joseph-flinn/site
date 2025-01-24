@@ -1,5 +1,5 @@
 ---
-title: Daily Journaling - Report 2
+title: "Daily Journaling - Report 2"
 slug: daily-journaling-report-2
 published: 2025-01-20
 description: >

@@ -1,5 +1,5 @@
 ---
-title: Workaholism
+title: "Workaholism"
 slug: workaholism
 published: 2024-10-07
 description: >

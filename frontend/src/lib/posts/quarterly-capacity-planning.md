@@ -1,5 +1,5 @@
 ---
-title: Capacity Planning for a Quarter
+title: "Capacity Planning for a Quarter"
 slug: quarterly-capacity-planning
 published: 2024-12-02
 description: >

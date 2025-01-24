@@ -1,5 +1,5 @@
 ---
-title: Scalable Development Practices - Evolutionary Database Automation
+title: "Scalable Development Practices - Evolutionary Database Automation"
 slug: scalable-dev-edd
 published: 2023-08-27
 description: >

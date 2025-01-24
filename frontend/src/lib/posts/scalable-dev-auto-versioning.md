@@ -1,5 +1,5 @@
 ---
-title: Scalable Development Practices - Automatic Versioning
+title: "Scalable Development Practices - Automatic Versioning"
 slug: scalable-dev-versioning
 published: 2023-08-14
 description: >

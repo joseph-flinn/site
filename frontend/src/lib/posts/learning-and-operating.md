@@ -1,5 +1,5 @@
 ---
-title: Learning & Operating
+title: "Learning & Operating"
 slug: learning-and-operating
 published: 2024-12-09
 description: >

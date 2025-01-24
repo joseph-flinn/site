@@ -1,5 +1,5 @@
 ---
-title: Practicing Impact over Productivity
+title: "Practicing Impact over Productivity"
 slug: impact-over-productivity
 published: 2024-08-26
 description: >

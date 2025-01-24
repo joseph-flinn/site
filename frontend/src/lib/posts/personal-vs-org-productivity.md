@@ -1,5 +1,5 @@
 ---
-title: Personal Productivity vs Organizational Productivity
+title: "Personal Productivity vs Organizational Productivity"
 slug: personal-vs-org-productivity
 published: 2024-04-01
 description: >

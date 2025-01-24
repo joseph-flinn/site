@@ -1,5 +1,5 @@
 ---
-title: Systems Dynamics and AI
+title: "Systems Dynamics and AI"
 slug: sd-and-ai
 published: 2024-03-04
 description: >

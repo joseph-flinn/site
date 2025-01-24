@@ -1,5 +1,5 @@
 ---
-title: [Engineering Portfolio Management] MRLs & ORLs
+title: "[Engineering Portfolio Management] MRLs & ORLs"
 slug: engineering-portfolio-management-part3
 published: 2024-11-11
 description: >
