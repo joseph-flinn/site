@@ -1,5 +1,6 @@
 import { dev } from "$app/environment";
 
+
 export const siteTitle = "";
 export const siteDescription = "";
 export const url = dev ? "https:localhost:5173" : "https:/joseph.flinnlab.com"

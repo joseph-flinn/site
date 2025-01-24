@@ -30,9 +30,7 @@ const config = {
 		}
 	},
     preprocess: [
-        vitePreprocess({
-            extensions: ['.svelte']
-        }),
+        vitePreprocess(),
         mdsvex({
             extensions: ['.md'],
         })
