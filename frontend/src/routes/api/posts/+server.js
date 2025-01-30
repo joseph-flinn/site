@@ -5,7 +5,6 @@ const getPosts = async () => {
   let posts = [];
 
   const paths = import.meta.glob('/src/lib/posts/*.md', { eager: true });
-  console.log(`Number of paths: ${Object.keys(paths).length}`);
 
   for (const path in paths) {
     const file = paths[path];
@@ -13,7 +12,11 @@ const getPosts = async () => {
 
     if (file && typeof file === 'object' && 'metadata' in file && slug) {
       const metadata = file.metadata;
-      const post = { ...metadata, slug: slug };
+      const post = { 
+        ...metadata, 
+        slug: slug, 
+        published: metadata.published.split("T")[0]
+      };
 
       posts.push(post);
     } else {
@@ -21,11 +24,9 @@ const getPosts = async () => {
     }
   }
 
-  posts = posts.sort((first, second) => {
-    new Date(second.published).getTime() - new Date(first.published).getTime();
-  })
-
-  console.log(`Number of posts: ${posts.length}`);
+  posts = posts.sort((first, second) => (
+    new Date(second.published).getTime() - new Date(first.published).getTime()
+  ))
 
   return posts;
 };

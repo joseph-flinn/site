@@ -1,5 +1,9 @@
 import { getPostList } from '$lib/utils/loader.js';
 
-export const load = async ({fetch}) => {
-    return getPostList(fetch);
+export const load = async ({ fetch }) => {
+    const response = await fetch('api/posts')
+    const posts = await response.json()
+
+    return { posts }
+    //return getPostList(fetch);
 }

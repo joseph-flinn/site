@@ -6,7 +6,9 @@
   import PageTitle from "$lib/components/PageTitle.svelte";
   import { log } from '$lib/utils/logger.js';
 
-  const posts = data.data.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
+
+  console.log(data)
+  //const posts = data.data.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 
   let screenSize;
 </script>
@@ -15,7 +17,7 @@
 
 <PageTitle name="Posts"/>
 <div class="flex p-2 flex-col">
-{#each posts as post}
+{#each data.posts as post}
   <div 
     class="p-2" 
     on:click={() => {
