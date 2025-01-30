@@ -12,6 +12,8 @@
   import { siteNav } from '$lib/config';
 
   $: pageData = $page.data.data ?? {}
+
+  console.log(`PageData: ${page.data}`)
 </script>
 
 <svelte:head>

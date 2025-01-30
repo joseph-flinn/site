@@ -6,13 +6,14 @@ export const load = async ({fetch, params}) => {
     const post = await import(`../../../lib/posts/${params.post}.md`);
 
     return {
+      ...post.metadata, 
+      published: post.metadata.published.split("T")[0],
       content: post.default,
-      metadata: { ...post.metadata }
     }
 
   }
   catch(err) {
-    error(404, err)
+    error(404, `Could not find ${params.slug}`)
   }
 }
 
