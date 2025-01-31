@@ -41,7 +41,7 @@ export const remarkTableWrap = () => {
 export const remarkInlineCodeStyle = () => {
   return applyTailwindClasses(
     'inlineCode', 
-    'bg-tin-200 dark:bg-tin-800 p-1 text-sm font-mono dark:border-tin-700'
+    'bg-tin-200 dark:bg-tin-800 p-1 text-xs font-mono dark:border-tin-700'
   )
 }
 
