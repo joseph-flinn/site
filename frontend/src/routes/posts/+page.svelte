@@ -8,7 +8,6 @@
 
 
   console.log(data)
-  //const posts = data.data.sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 
   let screenSize;
 </script>

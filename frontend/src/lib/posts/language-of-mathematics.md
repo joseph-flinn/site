@@ -39,19 +39,19 @@ tranfers parts of our mental models to others. The secret is that mathematics is
 Let us suppose that the _@_ symbol is defined as the addition operation, such that given two numbers,
 _a_ and _b_, the following is true:
 
-```katex
+$$
 a @ b = a + b
-```
+$$
 
 Given the above definition of _@_, what are the following equal to?
 
-```katex
+$$
 \begin{align}
 3 @ 4 = ?\\
 (9 - 3) @ 2 = ?\\
 0 @ 0 = ?
 \end{align}
-```
+$$
 
 Using the language of mathematics, we have just given meaning to a symbol does not have meaning (or
 at least no agreed upon meaning wide enough to make it into Wikipedia's [Glossary of mathematical
@@ -80,18 +80,18 @@ questions might be in the form of "What values are in the top 10%?" or "What is 
 an observation falling between number _a_ and number _b_?" The second problem requires working with
 two different z-scores which is where most of my troubles began.
 
-```katex
+$$
 z = \frac{X - \mu}{\sigma}
-```
+$$
 
 Let us assume that the mean (_μ_) of a dataset is 3.1 and the standard deviation (_σ_) is 0.25.
 
-```katex
+$$
 \begin{align}
 z = \frac{\textit{a} - 3.1}{0.25}\\
 z = \frac{\textit{b} - 3.1}{0.25}
 \end{align}
-```
+$$
 
 We now have two values for _z_. As I was trying to communicate with my thought process in a homework
 assignment, I was struggling to communicate the differences between the first and second _z_ value.
@@ -101,12 +101,12 @@ differentiate the Z table probabilities that are associated with both of these Z
 I first tried defining a mathematical function to represent the action of the _z_ lookup to
 communicate. 
 
-```katex
+$$
 \begin{align}
 zlookup(a) = z\\
 zlookup^{-1}(z) = Probability
 \end{align}
-```
+$$
 
 However, this approach was still not clear. It still depends on _z_ which may be associated with
 either _a_ or _b_. Going back to the original problem above, the question of differentiation can be
@@ -118,22 +118,22 @@ that...".
 My next attempt cleared up both my issues in communication on the next assignment and finally
 resolved the confusion around the Z tables that I have had for years.
 
-```katex
+$$
 \begin{align}
 z_{a} = \frac{\textit{a} - 3.1}{0.25}\\
 z_{b} = \frac{\textit{b} - 3.1}{0.25}
 \end{align}
-```
+$$
 
 Expanding the use of this type of mathematical notation, I could also effectively write about the
 probabilities associated with both of these _z_ values.
 
-```katex
+$$
 \begin{align}
 P_{a} = zlookup(z_{a})\\
 P_{b} = zlookup(z_{b})
 \end{align}
-```
+$$
 
 Finding this notation allowed me to write in a clear and effective way. This in turn allowed me to
 think clearly when it came to probabilities associated with normal distributions. "An idea can have
