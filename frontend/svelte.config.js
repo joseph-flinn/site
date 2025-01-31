@@ -2,6 +2,12 @@ import adapter from  '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
+import { 
+	remarkInlineCodeStyle,
+	remarkTableCell,
+	remarkTableWrap
+} from './src/lib/renderers/remark-plugins.js';
+
 const dev = process.argv.includes('dev');
 
 const base = '';
@@ -35,7 +41,16 @@ const config = {
 	preprocess: [
     vitePreprocess(),
     mdsvex({
-        extensions: ['.md'],
+      extensions: ['.md'],
+			layout: {
+				blog: "./src/lib/layouts/mdsvex/blog-layout.svelte",
+				_: "./src/lib/layouts/mdsvex/blog-layout.svelte",
+			},
+			remarkPlugins: [
+				remarkInlineCodeStyle,
+				remarkTableCell,
+				remarkTableWrap
+			]
     })
 	]
 };

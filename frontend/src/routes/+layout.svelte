@@ -4,7 +4,7 @@
   import { base } from '$app/paths'
   import { page } from '$app/stores';
 
-  import CentralColumn from '$lib/layouts/CentralColumn.svelte';
+  import CentralColumn from '$lib/layouts/svelte/CentralColumn.svelte';
   import HorizontalNav from '$lib/components/HorizontalNav.svelte';
   import Footer from '$lib/components/Footer.svelte';
 

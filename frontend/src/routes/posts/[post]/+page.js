@@ -1,5 +1,8 @@
 import { error } from '@sveltejs/kit';
 
+import { formatDate } from '$lib/utils/date.js';
+
+
 export const load = async ({fetch, params}) => {
   //return getPost(params.post, fetch);
   try {
@@ -7,7 +10,7 @@ export const load = async ({fetch, params}) => {
 
     return {
       ...post.metadata, 
-      published: post.metadata.published.split("T")[0],
+      published: formatDate(post.metadata.published),
       content: post.default,
     }
 

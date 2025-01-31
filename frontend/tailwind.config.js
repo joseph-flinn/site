@@ -39,7 +39,58 @@ export default {
       } 
     },
     extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            'code::before': {
+              content: '""'
+            },
+            'code::after': {
+              content: '""'
+            },
+          },
+        },
+        tin: {
+          css: {
+            '--tw-prose-body': theme('colors.tin[800]'),
+            '--tw-prose-headings': theme('colors.tin[900]'),
+            '--tw-prose-lead': theme('colors.tin[700]'),
+            '--tw-prose-links': theme('colors.tin[700]'),
+            '--tw-prose-bold': theme('colors.tin[900]'),
+            '--tw-prose-counters': theme('colors.tin[600]'),
+            '--tw-prose-bullets': theme('colors.tin[400]'),
+            '--tw-prose-hr': theme('colors.tin[300]'),
+            '--tw-prose-quotes': theme('colors.tin[900]'),
+            '--tw-prose-quote-borders': theme('colors.tin[300]'),
+            '--tw-prose-captions': theme('colors.tin[700]'),
+            '--tw-prose-code': theme('colors.tin[900]'),
+            '--tw-prose-pre-code': theme('colors.tin[100]'),
+            '--tw-prose-pre-bg': theme('colors.tin[900]'),
+            '--tw-prose-th-borders': theme('colors.tin[300]'),
+            '--tw-prose-td-borders': theme('colors.tin[200]'),
+            '--tw-prose-invert-body': theme('colors.tin[200]'),
+            '--tw-prose-invert-headings': theme('colors.white'),
+            '--tw-prose-invert-lead': theme('colors.tin[300]'),
+            '--tw-prose-invert-links': theme('colors.white'),
+            '--tw-prose-invert-bold': theme('colors.white'),
+            '--tw-prose-invert-counters': theme('colors.tin[400]'),
+            '--tw-prose-invert-bullets': theme('colors.tin[600]'),
+            '--tw-prose-invert-hr': theme('colors.tin[700]'),
+            '--tw-prose-invert-quotes': theme('colors.tin[100]'),
+            '--tw-prose-invert-quote-borders': theme('colors.tin[700]'),
+            '--tw-prose-invert-captions': theme('colors.tin[400]'),
+            '--tw-prose-invert-code': theme('colors.white'),
+            '--tw-prose-invert-pre-code': theme('colors.tin[300]'),
+            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+            '--tw-prose-invert-th-borders': theme('colors.tin[600]'),
+            '--tw-prose-invert-td-borders': theme('colors.tin[700]'),
+          }
+        },
+      })
     },
   },
+  plugins: [
+    require('@tailwindcss/typography')
+  ]
 }
 
