@@ -40,9 +40,10 @@ exchanging information across our assumed single medium of communication. To pre
 drawing out all of these complete graphs for larger numbers of people, the following equation
 computes the number of edges for any complete graph of _n_ people:
 
-```katex
+$$
 E_K(n) = \frac{n(n-1)} 2
-```
+$$
+
 
 Graphing this equation over the set of `{ 0, 50, 100, 200, 250 }` people results in this line chart
 (also known as a graph, but a different type of graph than the mathematical graph data structure we

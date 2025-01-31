@@ -2,21 +2,18 @@ import adapter from  '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
-import { 
-	remarkInlineCodeStyle,
-	remarkTableCell,
-	remarkTableWrap
-} from './src/lib/renderers/remark-plugins.js';
+
+import mdsvexConfig from './mdsvex.config.js';
 
 const dev = process.argv.includes('dev');
 
 const base = '';
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: [
 		'.svelte', 
-		'.md'
+		'.md',
+		'.svx'
 	],
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -39,19 +36,8 @@ const config = {
 		}
 	},
 	preprocess: [
-    vitePreprocess(),
-    mdsvex({
-      extensions: ['.md'],
-			layout: {
-				blog: "./src/lib/layouts/mdsvex/blog-layout.svelte",
-				_: "./src/lib/layouts/mdsvex/blog-layout.svelte",
-			},
-			remarkPlugins: [
-				remarkInlineCodeStyle,
-				remarkTableCell,
-				remarkTableWrap
-			]
-    })
+    //vitePreprocess(),
+    mdsvex(mdsvexConfig)
 	]
 };
 
