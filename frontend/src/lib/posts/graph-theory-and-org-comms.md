@@ -7,7 +7,7 @@ description: >
 ---
 
 <script>
-  import Mermaid from "$lib/renderers/Mermaid.svelte";
+  import Mermaid from "$lib/components/Mermaid.svelte";
 </script>
 
 
