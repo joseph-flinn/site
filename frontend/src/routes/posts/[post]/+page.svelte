@@ -1,9 +1,25 @@
 <script>
   export let data;
 
-  import TailwindSvelteMarkdown from '$lib/components/TailwindSvelteMarkdown.svelte';
+  import { onMount } from 'svelte';
+  import mermaid from 'mermaid'
 
-  console.log(data)
+  mermaid.initialize({
+    theme: 'neutral',
+    themeVariables: {
+      background: '#fffefb',
+      xyChart: {
+        plotColorPalette: '#5c5955',
+      },
+    },
+    startOnLoad: false 
+  })
+
+  onMount(() => {
+    setTimeout(async () => {
+      await mermaid.run()
+    }, 0)
+  })
 
   //const { title, published, description, Content } = data;
   //const readEstimate = 0;

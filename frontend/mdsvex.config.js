@@ -1,6 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 import remarkMath from 'remark-math';
-//import rehypeKatex from 'rehype-katex';
 import rehypeKatexSvelte from 'rehype-katex-svelte';
 
 import { 
@@ -18,14 +17,15 @@ const config = defineConfig({
 	},
 	remarkPlugins: [
 		remarkMath,
+
 		remarkInlineCodeStyle,
 		remarkTableCell,
-		remarkTableWrap
+		remarkTableWrap,
 	],
 	rehypePlugins: [
 		rehypeKatexSvelte,
-		//rehypeKatex
 	],
+	highlight: false,
 })
 
 

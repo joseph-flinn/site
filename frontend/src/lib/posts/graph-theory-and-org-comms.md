@@ -4,8 +4,12 @@ slug: graph-theory-of-org-comms
 published: 2024-09-09
 description: >
   Using graph theory to show why organizational communication policies are important.
-
 ---
+
+<script>
+  import Mermaid from "$lib/renderers/Mermaid.svelte";
+</script>
+
 
 Graph theory is my favorite area of mathematics. I was introduced to it between my sophomore and
 junior years in university while researching secure routing algorithms at the University of
@@ -44,26 +48,18 @@ $$
 E_K(n) = \frac{n(n-1)} 2
 $$
 
-
 Graphing this equation over the set of `{ 0, 50, 100, 200, 250 }` people results in this line chart
 (also known as a graph, but a different type of graph than the mathematical graph data structure we
 are discussing in this post):
 
-```mermaid
----
-config:
-  themeVariables:
-    xyChart:
-      backgroundColor: "#fffefb"
-      plotColorPalette: "#5c5955"
----
+<Mermaid> 
 xychart-beta
-    title "Communication Channel Growth"
-    x-axis [0, 50, 100, 150, 200, 250]
-    y-axis "Channels" 0 --> 40000
-    line [ 0, 50, 100, 150, 200, 250 ]
-    line [ 0, 1225, 4950, 11175, 19900, 31125 ]
-```
+  title "Communication Channel Growth"
+  x-axis [0, 50, 100, 150, 200, 250]
+  y-axis "Channels" 0 --> 40000
+  line [ 0, 50, 100, 150, 200, 250 ]
+  line [ 0, 1225, 4950, 11175, 19900, 31125 ]
+</Mermaid>
 
 As a social system grows linearly, the number of possible communication channels grows polynomially
 (slower than exponentially, but will never plateau naturally). The horizontal-looking line at the
