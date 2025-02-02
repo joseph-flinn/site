@@ -20,10 +20,4 @@ export const load = async ({fetch, params}) => {
   }
 }
 
-//import { getPost } from '$lib/utils/loader.js';
-//
-//export const load = async ({fetch, params}) => {
-//  return getPost(params.post, fetch);
-//}
-
-export const prerender =true;
+export const prerender = true;

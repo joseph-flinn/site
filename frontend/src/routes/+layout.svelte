@@ -11,9 +11,9 @@
   import { getImageUrl } from '$lib/utils/loader.js'
   import { siteNav } from '$lib/config';
 
-  $: pageData = $page.data.data ?? {}
+  $: pageData = $page.data ?? {}
 
-  console.log(`PageData: ${page.data}`)
+  console.log(`PageData: ${JSON.stringify($page.data, null, 4)}`)
 </script>
 
 <svelte:head>

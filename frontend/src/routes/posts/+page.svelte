@@ -6,7 +6,6 @@
   import PageTitle from "$lib/components/PageTitle.svelte";
   import { log } from '$lib/utils/logger.js';
 
-
   console.log(data)
 
   let screenSize;

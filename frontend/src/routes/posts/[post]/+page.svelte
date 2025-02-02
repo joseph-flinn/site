@@ -4,12 +4,14 @@
   import { onMount } from 'svelte';
   import mermaid from 'mermaid'
 
+  let styles = getComputedStyle(document.documentElement);
+
   mermaid.initialize({
     theme: 'neutral',
     themeVariables: {
-      background: '#fffefb',
+      background: '#FFFEFB',
       xyChart: {
-        plotColorPalette: '#5c5955',
+        plotColorPalette: '#5C5955',
       },
     },
     startOnLoad: false 
@@ -25,8 +27,6 @@
   //const readEstimate = 0;
   //const wordCount = data.content.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
   //const readEstimate = Math.round( wordCount / 200)
-
-  //<TailwindSvelteMarkdown source={data.content} />
 </script>
 
 
