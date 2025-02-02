@@ -37,12 +37,27 @@ exchange, both feeling that the value exchange was fair (the "F-bomb" that shoul
 extreme caution in any negotiation). 
 
 Both parties are investing time into the negotiation and don't want to waste it. Using the word "no"
-seems like a quick way to end the negotiation and walk away with nothing to show for the investment.
-However, behind every first "no" is some of that hidden information about what the other party truly
-wants. In a salary negotiation, this can look like dropping an initial number that is way more than
-you'd actually be willing to accept. That first "no" is often followed by an explanation as to why,
-which is a valuable piece of information that the other party is working with. It is also the signal
-that you are in collaboration toward a common goal.
+seems like a quick way to end the negotiation and walk away with nothing to show for it. However, it
+is also a safe word. "Yes" is communicating that I am committing to something, which can be scary if
+I don't feel like I have enough information to actually make a decision. As a buyer, "no" is a safe.
+It doesn't commit to something that I am not yet fully onboard with.
+
+As a seller, "no" is also a way to provide saftey for the buyer to commit. Asking a "yes" question in
+the form of a "no" question helps give the power of decision to the buyer. They don't feel rushed
+into making a decision without taking the time they need. If a buyer is dragging their feet on
+signing a contract, a question like "Would it be crazy to expect the contract to be signed by end of
+day today?" helps get the commitment. 
+
+I used this technique with a past manager to short-circuit what was often a multi-day Slack
+conversation with high risk of ghosting. "Would it be crazy for me to expect X, Y, Z by EoD
+tomorrow?" Within ten minutes I not only had an answer, but had a meeting on the calendar to discuss
+what I needed.
+
+If the question doesn't end in an immediate commitment, it uncovers additional information about
+blockers. Behind every first "no" is some of that hidden information about what the other party
+truly wants. That first "no" is often followed by an explanation as to why, which is a valuable
+piece of information that the other party is working with. It is also the signal that you are in
+collaboration toward a common goal.
 
 The success of a negotiation may not be what either party thinks it is before going in. It is all
 about activley listening to your counterpart and finding a way to solve their problem, even if you
@@ -58,12 +73,12 @@ performance of the team that I am on. If the company compromises and raises thei
 there is a risk that I have overvalued myself and do not have the organizational impact to match.
 
 Walking away in a win-win situation where you helped solve their problem builds future value. That
-could look like accepting a job with a salary slightly higher than you were expecting and giving a
-lot of energy to the company to become a member of the organization and solve thier biggest
-problems. Or it might mean declining the job and referring someone else in your network that would
-be a better fit. "No" is a magic word that helps gather more information, whether in a negotiation
-setting or even in connecting as humans in a social setting. 
+could look like accepting a job with a salary slightly higher than you were expecting and giving
+more energy to the company than you would have to help solve their biggest problems. Or it might
+mean declining the job and referring someone else in your network that would be a better fit. 
 
+Getting to "no" lowers the stress of commitment and helps gather more information, whether in a
+negotiation setting or even in connecting as humans in a social setting. 
 
 ---
 
