@@ -24,7 +24,7 @@ techniques to every day life).
 Getting to "no" is one of the tactical empathy techniques to help a counterpart commit to a decision
 or to gather information on the blockers to a commitment. While interesteing, I found it was easily
 overshadowed by three other techniques that I have found used on an almost-daily basis: "What & How"
-(which I have written about in [this series](./posts/what-how-overview)), labeling, and mirroring.
+(which I have written about in [this series](/posts/what-how-overview)), labeling, and mirroring.
 Successful negotiation is all about real human connection, to figure out what my counterpart
 really wants to be able to give that to them in exchange for the thing that I want: creating a
 win-win situation.
