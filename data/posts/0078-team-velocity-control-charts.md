@@ -26,21 +26,10 @@ measurements (Terpening p.36):
 
 | Measurement | Description |
 | ----------- | ----------- |
-| Nominal | Exclusive and exhaustive categories. All things must fit into one and only one category.
-  There is no logical order to these categories. Examples of nominal characteristics are gender, and
-  religious affiliation. |
-| Ordinal | Adds logical order to the exclusive and exhaustive categories. However, while there is a
-  logical order, the distance between ranks is not equal. Examples of ordinal characteristics include
-  agreeableness survey questions. The difference between a 4/5 and a 5/5 is not equal to the
-  difference between a 1/5 and a 2/5. These differences cannot be measured. |
-| Interval | Adds equality to the ranks of ordinal. The "distance" between one rank and another
-  equals the "distance" from one to another. However, there is no meaningful zero starting point.
-  Temperature (in F or C, but not K) is an example. The difference between 100F and 50F can be
-  measured and is the same as the difference between 0F and 50F. However, 100F is not twice as hot as
-  50F even though 100 is twice as much as 50. |
-| Ratio | Adds a meaningful zero starting point to an Interval. A good example would be temperature
-  in Kelvin. The intervals of Celsius and Kelvin are the same, but 0 K means there is no thermal
-  energy in the object of study. Since there is a meaningful 0, Kelvin is a ratio. |
+| Nominal | Exclusive and exhaustive categories. All things must fit into one and only one category. There is no logical order to these categories. Examples of nominal characteristics are gender, and religious affiliation. |
+| Ordinal | Adds logical order to the exclusive and exhaustive categories. However, while there is a logical order, the distance between ranks is not equal. Examples of ordinal characteristics include agreeableness survey questions. The difference between a 4/5 and a 5/5 is not equal to the difference between a 1/5 and a 2/5. These differences cannot be measured. |
+| Interval | Adds equality to the ranks of ordinal. The "distance" between one rank and another equals the "distance" from one to another. However, there is no meaningful zero starting point. Temperature (in F or C, but not K) is an example. The difference between 100F and 50F can be measured and is the same as the difference between 0F and 50F. However, 100F is not twice as hot as 50F even though 100 is twice as much as 50. |
+| Ratio | Adds a meaningful zero starting point to an Interval. A good example would be temperature in Kelvin. The intervals of Celsius and Kelvin are the same, but 0 K means there is no thermal energy in the object of study. Since there is a meaningful 0, Kelvin is a ratio. |
 
 T-shirt sizes and the Fibonacci sequence are examples of an ordinal measurements. Adding two
 medium-sized shirts together does not result in a size large. While adding `2 + 1 == 3`, `3 + 1 !=
