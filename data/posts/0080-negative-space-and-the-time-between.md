@@ -43,12 +43,12 @@ circumstance and necessity.
 Hunter Thompson spoke to this when asked for advice in the purpose of life from a friend.
 
 > But a man who procrastinates in his CHOOSING will inevitably have his choice made for him by
-circumstance. -- Thompson
+> circumstance. -- Thompson
 
 [Earlier in his letter](https://fs.blog/hunter-s-thompson-to-hume-logan/), Thompson advised to
-"strive to be ourselves" rather than to strive to be a fireman, banker, policeman or doctor. It
-isn't that we cannot be those, "but that we must make the goal to conform to the individual, rather
-than make the individual conform to the goal".
+"strive to be ourselves" rather than to strive to be a fireman, banker, policeman or doctor. It is
+not that we cannot be those things, "but that we must make the goal to conform to the individual,
+rather than make the individual conform to the goal".
 
 Karlsson's note is on executing this idea. In the pursuit of being ourselves, we must design our
 lives around the constraints that we put on ourselves rather than taking on an identity with preset
