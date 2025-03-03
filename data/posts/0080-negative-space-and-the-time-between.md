@@ -45,14 +45,12 @@ When asked for advice on the purpose of life, Hunter Thompson advised his friend
 [in a letter] (https://fs.blog/hunter-s-thompson-to-hume-logan/), to "strive to be ourselves" rather
 than to strive to be a fireman, banker, policeman or doctor. 
 
->  I don’t mean that we can’t BE firemen, bankers, or doctors— but that we must make the goal
->  conform to the individual, rather than make the individual conform to the goal.
+> I don’t mean that we can’t BE firemen, bankers, or doctors--but that we must make the goal conform to the individual, rather than make the individual conform to the goal.
 
 When we do not strive to be ourselves and design our around what we want to do on a daily or weekly
 basis, circumstance will inevitably choose for us.
 
-> But a man who procrastinates in his CHOOSING will inevitably have his choice made for him by
-> circumstance. -- Thompson
+> But a man who procrastinates in his CHOOSING will inevitably have his choice made for him by circumstance. -- Thompson
 
 Karlsson's note on designing our lives as a product puts Thompson's idea into action. In the pursuit
 of being ourselves, we must design our lives around the constraints that we put on ourselves rather
