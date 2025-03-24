@@ -23,9 +23,9 @@ scalable and asynchronous way to generate and discuss ideas, refining them befor
 to the team to vote on adoption.
 
 As we are building our startup today, we have decided to heavily lean into asynchronous
-communication as our default communciation model with only a single weekly meeting. As our
+communication as our default communication model with only a single weekly meeting. As our
 documentation quickly grows, we are starting to need a process to tracking ideas and their state.
-This need reminded me of the RFD process that the process improvment guild designed and implemented
+This need reminded me of the RFD process that the process improvement guild designed and implemented
 at Bitwarden which was originally based on the Oxide Computer Company's RFD process 
 [[2](https://oxide.computer/blog/rfd-1-requests-for-discussion)].
 
