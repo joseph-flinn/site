@@ -1,4 +1,4 @@
-!! title: Transferable Management skills to Life
+!! title: Transferable Management Skills to Life
 !! slug: management-skills-to-life
 !! published: 2025-04-29
 !! description: A quick discussion around two management skills that I have found valuable in life.
