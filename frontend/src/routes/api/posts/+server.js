@@ -4,18 +4,27 @@ import { json } from '@sveltejs/kit';
 const getPosts = async () => {
   let posts = [];
 
-  const paths = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+  const processedPaths = import.meta.glob('/src/lib/posts/*.md', { eager: true });
+  const rawPaths = import.meta.glob('/src/lib/posts/*.md', { eager: true, as: 'raw'});
 
-  for (const path in paths) {
-    const file = paths[path];
+  for (const path in processedPaths) {
+    const file = processedPaths[path];
+    const rawContent = rawPaths[path];
     const slug = path.split('/').at(-1)?.replace('.md', '');
 
     if (file && typeof file === 'object' && 'metadata' in file && slug) {
       const metadata = file.metadata;
+
+      // Extract content from raw markdown (skip frontmatter)
+      const contentOnly = rawContent.split('---').slice(2).join('---').trim();
+      const wordCount = contentOnly.split(/\s+/).filter(word => word.length > 0).length;
+      const readEstimate = Math.round(wordCount / 200);
+
       const post = { 
         ...metadata, 
         slug: slug, 
-        published: metadata.published.split("T")[0]
+        published: metadata.published.split("T")[0],
+        readEstimate: readEstimate
       };
 
       posts.push(post);

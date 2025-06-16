@@ -10,7 +10,6 @@
   import { formatDate } from '$lib/utils/date.js';
 
   const readEstimate = 0;
-
   //const wordCount = data.content.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
   //const readEstimate = Math.round( wordCount / 200)
 

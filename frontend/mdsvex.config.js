@@ -17,7 +17,6 @@ const config = defineConfig({
 	},
 	remarkPlugins: [
 		remarkMath,
-
 		remarkInlineCodeStyle,
 		remarkTableCell,
 		remarkTableWrap,

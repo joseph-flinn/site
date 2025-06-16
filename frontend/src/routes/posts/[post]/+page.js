@@ -11,6 +11,7 @@ export const load = async ({fetch, params}) => {
     return {
       ...post.metadata, 
       published: formatDate(post.metadata.published),
+      readEstimate: 0,
       content: post.default,
     }
 
@@ -26,4 +27,4 @@ export const load = async ({fetch, params}) => {
 //  return getPost(params.post, fetch);
 //}
 
-export const prerender =true;
+export const prerender = true;
