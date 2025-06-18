@@ -1,4 +1,5 @@
 import { visit } from 'unist-util-visit'; 
+import { loadEnv } from 'vite';
 
 
 const applyTailwindClasses = (nodeType, classes) => {
@@ -51,4 +52,17 @@ export const remarkTableCell = () => {
     'tableCell', 
     'border-2 border-tin-700 p-3'
   )
+}
+
+
+export const remarkDynamicBlobLinks = () => {
+  const env = loadEnv(process.env.APP_ENV, process.cwd(), '')
+
+  return (tree) => {
+    visit(tree, 'image', (node) => {
+      if (node.url.startsWith('/')) {
+        node.url = env.PUBLIC_IMAGESOURCE + node.url;
+      }
+    });
+  };
 }

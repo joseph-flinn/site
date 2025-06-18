@@ -3,6 +3,7 @@ import remarkMath from 'remark-math';
 import rehypeKatexSvelte from 'rehype-katex-svelte';
 
 import { 
+	remarkDynamicBlobLinks,
 	remarkInlineCodeStyle,
 	remarkTableCell,
 	remarkTableWrap
@@ -17,6 +18,7 @@ const config = defineConfig({
 	},
 	remarkPlugins: [
 		remarkMath,
+	  remarkDynamicBlobLinks,
 		remarkInlineCodeStyle,
 		remarkTableCell,
 		remarkTableWrap,
