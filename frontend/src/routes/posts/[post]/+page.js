@@ -6,7 +6,7 @@ import { formatDate } from '$lib/utils/date.js';
 export const load = async ({fetch, params}) => {
   //return getPost(params.post, fetch);
   try {
-    const post = await import(`../../../lib/posts/${params.post}.md`);
+    const post = await import(`../../../posts/${params.post}.md`);
 
     return {
       ...post.metadata, 
