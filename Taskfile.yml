@@ -12,17 +12,34 @@ tasks:
         npm run build:posts
         npm run build:rss
 
-  build:frontend:
+
+  build:frontend:staging:
     silent: true
     dir: frontend
     cmds:
-      - npm run build
+      - APP_ENV=staging vite build --mode staging
 
-  run:frontend: 
+
+  build:frontend:production:
+    silent: true
+    dir: frontend
+    cmds:
+      - APP_ENV=production vite build
+
+
+  dev:frontend: 
     silent: true
     dir: frontend
     cmds:
       - npm run dev -- --host
+
+
+  run:frontend:
+    silent: true
+    dir: frontend
+    cmds:
+      - vite preview
+
 
   deploy:data:staging:
     silent: true
@@ -31,6 +48,7 @@ tasks:
       - rclone copyto dist/rss.xml r2:flinnlab-blog-dev/rss.xml
       - rclone sync data/images/ r2:flinnlab-blog-images-dev
 
+
   deploy:data:production:
     silent: true
     dir: data
@@ -38,11 +56,13 @@ tasks:
       #- rclone copyto posts.json r2:flinnlab-blog-dev/posts.json
       - rclone sync images/ r2:flinnlab-blog-images
 
+
   install:hooks:
     silent: true
     cmds:
       - rm -rf .git/hooks
       - ln -s $PWD/tools/git-hooks .git/hooks
+
 
   new:post:
     silent: true
