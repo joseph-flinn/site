@@ -5,9 +5,6 @@ export async function getPosts() {
   for (const path in modules) {
     const post = await modules[path]();
 
-    //const wordCount = data.content.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
-    //const readEstimate = Math.round( wordCount / 200)
-
     posts.push({
       ...post.metadata,
       published: post.metadata.published.split("T")[0],
@@ -15,5 +12,5 @@ export async function getPosts() {
     });
   }
   
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return posts.sort((a, b) => new Date(b.published) - new Date(a.published));
 }
