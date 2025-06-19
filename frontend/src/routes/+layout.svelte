@@ -13,7 +13,7 @@
 
   $: pageData = $page.data ?? {}
 
-  console.log(`PageData: ${JSON.stringify($page.data, null, 4)}`)
+  //console.log(`PageData: ${JSON.stringify($page.data, null, 4)}`)
 </script>
 
 <svelte:head>

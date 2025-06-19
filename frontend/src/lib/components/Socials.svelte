@@ -31,7 +31,8 @@
     <div 
       class="flex-grow flex justify-center ml-auto px-1 py-2 rounded-md text-center hover:bg-gray-100 hover:cursor-pointer"
       on:click={() => {
-        goto(link.link).then(() => {});
+        console.log(`Clicked link: ${link.link}`)
+        window.location.href = link.link
       }}
     >
       <img 
