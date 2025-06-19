@@ -6,8 +6,7 @@
 
   pages = [
     ...pages,
-      { name: "rss", path: "https://blog-images.flinnlab.com/rss.xml"},
-    //{ name: "rss", path: "https://joseph.flinnlab.com/rss.xml"}
+    { name: "rss", path: "/api/rss.xml"}
   ];
 
 </script>
