@@ -59,7 +59,7 @@ We will be walking through an implementation of [MinimumCD](https://minimumcd.or
 a great resource to what it takes to implement CD and an amazing reference. A key point of understanding that it touches
 on that will be needed before we get started is [Trunk Based Development](https://trunkbaseddevelopment.com/) branching
 strategy and the usage of a single project in the repo (see [Git was not designed for
-monorepos](./posts/git-monorepo) for more information)
+monorepos](/posts/git-monorepo) for more information)
 
 
 ## Automatic Versioning

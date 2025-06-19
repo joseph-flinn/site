@@ -1,6 +1,6 @@
 ---
 title: "Scalable Development Practices - Automatic Versioning"
-slug: scalable-dev-versioning
+slug: scalable-dev-auto-versioning
 published: 2023-08-14
 description: >
   The fourth article in the series of how to implement a simple but scalable solution to delivering

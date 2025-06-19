@@ -28,7 +28,7 @@ responsibility for the mistakes of their team; the failures are the leader's but
 team’s (Sinek 2017).
 
 In addition to responsibility and honor, I strongly believe in having a growth mindset (Dweck 2008).
-[Past success does not predict future success](./posts/retro-success-does-not-predict-sucess). If
+[Past success does not predict future success](/posts/retro-success-does-not-predict-success). If
 past success does not predict future success, there are few lessons to learn from past success. If
 one cannot learn from success, then learning failure is the only other option. 
 

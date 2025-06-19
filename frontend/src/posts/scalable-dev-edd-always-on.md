@@ -1,6 +1,6 @@
 ---
 title: "Scalable Development Practices - EDD in Always-On Environments"
-slug: edd-for-ha
+slug: scalable-dev-edd-always-on
 published: 2023-09-04
 description: >
   The eighth article in the series of how to implement a simple but scalable solution to delivering
@@ -10,7 +10,7 @@ description: >
 
 Martin Fowler et al. have [a great article](https://martinfowler.com/articles/evodb.html) on how to approach database
 design in a way that enables the ability to evolve with how the corresponding code started to change with new Agile
-methodologies. In my [previous article](./posts/scalable-dev-edd), we looked at an example of
+methodologies. In my [previous article](/posts/scalable-dev-edd), we looked at an example of
 creating tooling to assist with automating work around implementing EDD. Both articles allude to more advanced scenarios
 where additional processes are required to support EDD; one of which are environments where the application must be up
 at all times.
@@ -76,7 +76,7 @@ database-name/
     └── 0000_init_migrator.sql
 ```
 
-We used the above directory setup in the [previous article](./posts/scalable-dev-edd).
+We used the above directory setup in the [previous article](/posts/scalable-dev-edd).
 `migrations` contain any of the migrations that will be run in step 1 of the deploy. The order they are added are
 incredibly important. When preparing for the *X.2* deploy, _Transition_ migrations that are going to be finalized must be
 added into the `migrations` directory _*BEFORE*_ their corresponding _Finalization_ migrations. After them come the

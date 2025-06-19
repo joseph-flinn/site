@@ -19,8 +19,8 @@ organization. Before I accepted and started in the role, I knew that being a Dev
 DevOps team has a high risk of being an anti-pattern for technical organization structure (Skelton,
 _"DevOps Topologies"_). I took the this as a challenge to overcome (which is not necessarily the
 wrong decision, but a lot harder to do that I had originally thought).  However, I had yet to learn
-about [influencing critical decisions](./posts/retro-failure-influence-critical-decisions) or the
-dangers of [value oases](./posts/retro-failure-value-oasis). 
+about [influencing critical decisions](/posts/retro-failure-influence-critical-decisions) or the
+dangers of [value oases](/posts/retro-failure-value-oasis). 
 
 ## DevOps and Team Topologies
 
@@ -106,7 +106,7 @@ the Director and Engineering Manager to make sure there were no issues with coll
 between the teams in the future.
 
 With the blessing of my manager, I used
-[the communications skills](./posts/understanding-and-influence) that I had been learning--the hard
+[the communications skills](/posts/understanding-and-influence) that I had been learning--the hard
 way--over the last few years to approach the topic the missions of the BRE/DTE and Platform
 development teams and the names. Leaning into curiosity, a simple "Can you _tell me more_ about what
 y'all are thinking for the future of the Platform team?" got us directly to the heart of the

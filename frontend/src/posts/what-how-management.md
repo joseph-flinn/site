@@ -56,7 +56,7 @@ kill that energy is for anyone on the team to say "it's just the way we've alway
 
 How are WHAT & HOW used to build _inclusion?_ _Inclusion_ is only felt when the person's perspective feels understood.
 The only way to do that is to actually understand the perspective and convince the person that you do understand it.
-What is the best way of doing that? Exactly like in [WHAT & HOW: Negotiation](./posts/what-how-negotiation) to
+What is the best way of doing that? Exactly like in [WHAT & HOW: Negotiation](/posts/what-how-negotiation) to
 understand a counterpart's perspective, we ask WHAT & HOW questions to build our perspective. And then we can go on to
 use Mirroring and Labeling (this is another plug to read 
 [_Never Split the Difference_](https://www.blackswanltd.com/never-split-the-difference)) to show the person that we do
@@ -85,7 +85,7 @@ How are WHAT & HOW used to create the _saftey to challenge the status quo?_ The 
 the status quo_ is continuous improvement. When "why don't we do it this way?" is asked or when "we need to do it this
 way" is stated, the person is pushing for improvement from their perspective. WHAT & HOW become really important tools
 in persistently chasing after that other perspective. While in the chase, bringing the ideas of 
-[WHAT & HOW in Organizational Leadership](./posts/what-how-organizational-leadership) into the conversation becomes a
+[WHAT & HOW in Organizational Leadership](/posts/what-how-org-leadership) into the conversation becomes a
 powerful teaching tool (for both parties). We might be convinced that we can't actually do what is being suggested, but
 through WHAT & HOW questions we discover that we can (we learn something by discovering their perspective). Or maybe we
 are headed in that direction but we see a lot of steps that we need to take to get there from where we are today. WHAT &

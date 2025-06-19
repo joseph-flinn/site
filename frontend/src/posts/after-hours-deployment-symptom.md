@@ -8,7 +8,7 @@ description: >
 ---
 
 I had an early morning epiphany a few days ago: as I have been the intervenor in my team (see [the post on this "trap"
-or System Dynamics Archetype](./posts/e2m-st-addiction)), my team has the intervenor for the company when it comes to
+or System Dynamics Archetype](/posts/e2m-st-addiction)), my team has the intervenor for the company when it comes to
 the issues we are having with the resiliency of the system during a deployment.
 
 A lot has changed in our underlying approach to hosting over the three years that I've been on the team. When I first
@@ -29,7 +29,7 @@ About a year later, one of the Staff Engineers proposed and pushed for the use o
 2016) to solve this particular underlying issue of backwards compatible database changes. Implementing EDD was a really
 large push and took months of effort to get everyone onboard and figure out all of the nuances of implementing the
 theoretical into the practical orchestration process (Bitwarden, 2023). I have [previously written about the technical
-implementation](./posts/edd-for-ha) for a tool to help the orchestration. It has been amazing to see the decrease in
+implementation](/posts/scalable-dev-edd-always-on) for a tool to help the orchestration. It has been amazing to see the decrease in
 backwards compatibility issues over the last 18 months.
 
 Unfortunately, in the time that it took to get there, more resiliency issues have been experienced that were not

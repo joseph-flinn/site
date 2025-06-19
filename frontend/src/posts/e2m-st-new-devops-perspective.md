@@ -1,6 +1,6 @@
 ---
 title: "System Dynamics - A New Definition of DevOps?"
-slug: e2m-st-new-devops-perspecitve
+slug: e2m-st-new-devops-perspective
 published: 2024-01-29
 description: >
   Discuss a new perspective on what DevOps is 

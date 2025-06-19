@@ -11,11 +11,12 @@ description: >
 Without a product or service application, technology is worth little more than to satisfy curiosity
 (Flinn, p.8). Manufacturing is a key process in developing products from technology. As such, the US
 Department of Defense came up readiness levels for their suppliers that are similar to NASA's TRLs
-discussed in [Part 2](./posts/0065-engineering-portfolio-management-part2). They are known as Manufacturing Readiness Levels (MRLs) (Flinn p.43). 
-Similar to TRLs, MRLs exist to assist in considering the overall readiness of a technology project
-during the different phases of development. For instance, is a technology worth developing all the
-way to TRL 9 if it costs significantly more than a customer is willing to pay? If not, the
-development of the technology may need to be put on hold.
+discussed in [Part 2](/posts/engineering-portfolio-management-part2). They are known as
+Manufacturing Readiness Levels (MRLs) (Flinn p.43). Similar to TRLs, MRLs exist to assist in
+considering the overall readiness of a technology project during the different phases of
+development. For instance, is a technology worth developing all the way to TRL 9 if it costs
+significantly more than a customer is willing to pay? If not, the development of the technology may
+need to be put on hold.
 
 The US DoD defines the MRLs as the following (Flinn p.44-45):
 

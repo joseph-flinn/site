@@ -81,9 +81,9 @@ performance instead.
 So if we are not to optimize for organization performance by optimizing team performance by further
 optimizing for individual performance, how should managers be working towards driving their
 organizations forward? The answer lies in alignment, both vertical and horizontal. Everything that a
-team does needs to be fully aligned with the (organization's mission and
-goals)[./posts/e2m-st-suboptimization] and incentives should be based on alignment instead of
-performance.
+team does needs to be fully aligned with the 
+[organization's mission and goals](/posts/e2m-st-suboptimization) and incentives should be based on
+alignment instead of performance.
 
 The awareness _The Rise and Fall of Getting Things Done_ brought has slowed my efforts to fully
 overhaul and optimize my personal productivity to make sure that the system that I adopt will not

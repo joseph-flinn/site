@@ -19,7 +19,7 @@ I have recently been reading a lot of Simon Sinek with books like _Leaders Eat L
 [[3](https://simonsinek.com/books/the-infinite-game/)]. _Leaders Eat Last_ has done a lot in shaping how I see
 leadership. Sinek's main thoughts around what makes great leaders are leaders that care for, protect and provide for 
 their teams. He uses the biology of the wolf pack as an example. Alpha wolves care for, protect, and provide for the
-rest of the pack (I wrote a [post on Leadership](./posts/e2m-management-and-leadership) in more depth last week). The
+rest of the pack (I wrote a [post on Leadership](/posts/e2m-management-and-leadership) in more depth last week). The
 more a leader cares for, protects, and provide for their team, the more tight knit their team will operate. If each team
 member knows that the leader is leading for the good of the team and will not sacrifice the members for self gain, the
 more the team will pull together and sacrifice for each other.
@@ -52,9 +52,9 @@ of an organization.
 So if prioritization and the act of shielding aren't inputs to change organizational health, what is? What do both of
 these have in common? _Trust_. The more _Trust_ in an organization, the more aligned that organization will be across
 all First Teams. The more alignment in an organization, the less internal shielding is necessary to maintain _Trust_
-inside of each Second Team. How do you build _Trust_? With [every action and every decision](./posts/e2m-marbles). Put
+inside of each Second Team. How do you build _Trust_? With [every action and every decision](/posts/e2m-marbles). Put
 both your First Team and Second Team before your needs and desires. Never sacrifice team members for self gain. Be the
-first into the Unknown. Be a [Leader](./posts/e2m-management-and-leadership)
+first into the Unknown. Be a [Leader](/posts/e2m-management-and-leadership)
 
 
 ---

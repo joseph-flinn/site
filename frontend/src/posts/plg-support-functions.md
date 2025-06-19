@@ -8,7 +8,7 @@ description: >
 
 ---
 
-In the [last PLG post](./posts/plg-product-triad), we examined the unique roles and perspectives that each of the core groups
+In the [last PLG post](/posts/plg-product-triad), we examined the unique roles and perspectives that each of the core groups
 have: Product, Design, and Engineering Development. This post, we're going to look at how the rest of the organization
 supports the Product Led Growth. 
 

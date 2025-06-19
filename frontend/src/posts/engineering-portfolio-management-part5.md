@@ -110,7 +110,7 @@ The Agile Manifesto states (Beck et al.):
 
 These principles do well in managing projects at the micro level; achieving the goals internal to
 the project. However, none of these principles directly help support the goals of portfolio
-management. Remember from [Part 4](./posts/engineering-portfolio-management-part4) that the goals of
+management. Remember from [Part 4](/posts/engineering-portfolio-management-part4) that the goals of
 portfolio management are to: 1) achieve strategic alignment with the business objectives, 2)
 maximize the value of the portfolio of projects, 3) maintain the right balance of projects, and 4)
 maintain the correct number of ongoing projects (Kahn et al, p.156). This is where a gated system

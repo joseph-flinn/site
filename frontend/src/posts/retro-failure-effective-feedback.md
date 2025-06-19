@@ -56,7 +56,7 @@ unexpected behavior--to then create purpose towards the expected behavior.
 In general, I feel like I failed at creating the time and capacity that I needed to build a culture
 of continuous feedback. This is one of the direct impacts from so often swapping my manager hat for my
 IC hat and falling into the trap of the intervenor 
-([discussed a few weeks ago](./posts/retro-failure-trap-of-intervenor)). The higher the pressure on
+([discussed a few weeks ago](/posts/retro-failure-trap-of-intervenor)). The higher the pressure on
 my team, the more pressure I felt to switch hats and spend time as an IC to release the pressure
 from the team. The more time I spent as an IC, the less time I was spending as a manager. The less
 time I was spending as a manager, the less effective feedback I gave. The less effective feedback I

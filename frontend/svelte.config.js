@@ -21,14 +21,20 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
 			fallback: 'index.html',
+			pages: 'build',
+			assets: 'build',
 			strict: true,
-		}),		
+			precompress: false,
+		}),
     prerender: {
+			handleMissingId: 'warn',
 			entries: [
 				"*",
-				//"/api/posts/page/*",
-        "/posts/",
-        "/posts/*",
+				"/about",
+				"/posts",
+		    //"/api/posts/page/*",
+        //"/posts/",
+        //"/posts/*",
 			],
 		},
 		paths: {
@@ -36,7 +42,7 @@ const config = {
 		}
 	},
 	preprocess: [
-    //vitePreprocess(),
+    vitePreprocess(),
     mdsvex(mdsvexConfig)
 	]
 };

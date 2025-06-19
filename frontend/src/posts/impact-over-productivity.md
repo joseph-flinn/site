@@ -33,7 +33,7 @@ week.
 
 However, I need to squash this feeling of pride. There are three major risks that come from the idea
 of productivity. I have previously discussed the dangers in optimizing for [personal (or team)
-productivity over organizational productivity](./posts/personal-vs-org-productivity) as the
+productivity over organizational productivity](/posts/personal-vs-org-productivity) as the
 summation of personal productivity does not equate to organizational productivity. The other two
 risks are that productivity metrics risks long-term collapse of the system by creating friction for
 innovation, and risks a world view that human value is correlated to what they produce.

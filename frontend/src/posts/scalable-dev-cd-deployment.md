@@ -1,6 +1,6 @@
 ---
 title: "Scalable Development Practices - Continuous Deployment (CD)"
-slug: scalable-dev-deployment
+slug: scalable-dev-cd-deployment
 published: 2023-08-21
 description: >
   The sixth article in the series of how to implement a simple but scalable solution to delivering

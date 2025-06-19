@@ -1,30 +1,34 @@
+import { getPosts } from '$lib/posts.js';
 import { error } from '@sveltejs/kit';
 
 import { formatDate } from '$lib/utils/date.js';
 
 
-export const load = async ({fetch, params}) => {
-  //return getPost(params.post, fetch);
+export async function load({ params }) {
   try {
     const post = await import(`../../../posts/${params.post}.md`);
-
     return {
       ...post.metadata, 
       published: formatDate(post.metadata.published),
       readEstimate: 0,
       content: post.default,
     }
-
-  }
-  catch(err) {
-    error(404, `Could not find ${params.slug}`)
+  } catch(e) {
+    console.error('Failed to load post:', params.post, e);
+    throw error(404, `Post not found: ${params.post}`);
   }
 }
 
-//import { getPost } from '$lib/utils/loader.js';
-//
-//export const load = async ({fetch, params}) => {
-//  return getPost(params.post, fetch);
-//}
 
-export const prerender = true;
+// The entries() function ensures all blog posts are discovered during prerendering, making the site
+// completely static while maintaining SvelteKit's developer experience.
+export async function entries() {
+  const posts = await getPosts();
+  console.log(
+    'Generated entries:',
+    posts.map(p => p.path)
+  );
+  return posts.map(post => ({ 
+    post: post.slug || post.path 
+  }));
+}

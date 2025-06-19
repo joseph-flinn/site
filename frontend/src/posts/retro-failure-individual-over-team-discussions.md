@@ -23,7 +23,7 @@ their back (Sinek 2017).
 Team meetings are one of the most important areas to build trust in fully remote and globally
 distributed teams. Trust is an integral part of communication, and communication is an integral part
 of trust. I have previously discussed the nuances of trust and communication--specifically effective
-feedback--in [Management Trust Feedback Loop](posts/management-trust-feedback/loop). 
+feedback--in [Management Trust Feedback Loop](/posts/management-trust-feedback-loop). 
 
 Team meetings are a chance for team members to build trust. They provide a space to discuss the
 different solutions to problems that the team needs to solve. It requires vulnerability to pitch an
@@ -39,7 +39,7 @@ team.
 
 My focus over the last few years on cultivating psychological safety has been to make sure that
 everyone feels heard. I think that I successfully achieved this goal, as discussed earlier on in
-this series ([Success - Psychological Safety](./posts/manager-retro-succcess-psychological-safety)).
+this series ([Success - Psychological Safety](/posts/retro-success-psychological-safety)).
 However, I missed the important part of developing the skills in the rest of the team. My focus was
 on my one-on-one relationships with each engineer on team to make sure that I not only heard and
 understood them, but they felt heard and understood. I missed the opportunity to coach and develop

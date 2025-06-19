@@ -167,7 +167,7 @@ instead of the scenario where the rescuers barely knew each other.
 
 There are crucial decisions that leaders have to make, and sometimes these decisions are between two
 solutions that both have significant costs. This decision is an example of one of them (and I talk
-about one in my second week of being a manager [here](./posts/0020-e2m-marbles)).
+about one in my second week of being a manager [here](/posts/e2m-marbles)).
 
 
 ### Command & Control

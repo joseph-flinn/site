@@ -100,7 +100,7 @@ integrate it into their business systems and validate that the product will work
 payroll software is fully operational across the workforce, it may then be considered a TRL 9 for
 the purchasing company.
 
-As mentioned in [Part 1](./posts/0064-engineering-portfolio-management-part1), my career has been in
+As mentioned in [Part 1](/posts/engineering-portfolio-management-part1), my career has been in
 the Software-as-a-Service industry and in Cloud Operations. Both of these areas are relatively new
 compared to other industries like the food, aerospace, or steel industries. It seems we are in our
 adolescence, where we think we know better than the engineering industries that have come before.

@@ -1,6 +1,6 @@
 ---
 title: "Scalable Development Practices - CI"
-slug: scalable-dev-integration
+slug: scalable-dev-ci
 published: 2023-07-31
 description: >
   The second article in the series of how to implement a simple but scalable solution to delivering

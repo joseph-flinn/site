@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
   import mermaid from 'mermaid'
 
-  let styles = getComputedStyle(document.documentElement);
+  //let styles = getComputedStyle(document.documentElement);
 
   mermaid.initialize({
     theme: 'neutral',

@@ -48,7 +48,7 @@ However, a culture of psychological safety, providing opportunity to speak up is
 There are communication skills that are required to effectively change both my mental model as well
 as others'. I have experienced having the opportunity to speak, but that alone does not prevent the
 situation of spinning our wheels trying to solve a problem. I have 
-[previously written about influence](./posts/0037-understanding-and-influence.md). In that post I
+[previously written about influence](/posts/understanding-and-influence). In that post I
 honed in on the missing communication skills required in these scenarios when critical decisions are
 on the line. Reviewing and expanding on that post, active listening with genuine curiosity is "the
 secret" to leaving with successful alignment. The great news is that not everyone in the room needs
