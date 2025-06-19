@@ -32,6 +32,7 @@ const config = {
 				"*",
 				"/about",
 				"/posts",
+				"/api/rss.xml"
 		    //"/api/posts/page/*",
         //"/posts/",
         //"/posts/*",
