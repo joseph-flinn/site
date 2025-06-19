@@ -11,7 +11,6 @@ export async function getPosts() {
     posts.push({
       ...post.metadata,
       published: post.metadata.published.split("T")[0],
-      readEstimate: 0,
       path: path.replace('/src/posts/', '').replace('.md', '')
     });
   }

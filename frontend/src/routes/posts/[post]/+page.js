@@ -10,10 +10,9 @@ export async function load({ params }) {
     return {
       ...post.metadata, 
       published: formatDate(post.metadata.published),
-      readEstimate: 0,
       content: post.default,
     }
-  } catch(e) {
+  } catch (e) {
     console.error('Failed to load post:', params.post, e);
     throw error(404, `Post not found: ${params.post}`);
   }
@@ -24,10 +23,6 @@ export async function load({ params }) {
 // completely static while maintaining SvelteKit's developer experience.
 export async function entries() {
   const posts = await getPosts();
-  console.log(
-    'Generated entries:',
-    posts.map(p => p.path)
-  );
   return posts.map(post => ({ 
     post: post.slug || post.path 
   }));

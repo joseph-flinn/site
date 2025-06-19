@@ -3,6 +3,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
 
+import { readingTimePreprocessor } from './src/lib/preprocessors/readingTime.js';
 import mdsvexConfig from './mdsvex.config.js';
 
 const dev = process.argv.includes('dev');
@@ -41,6 +42,7 @@ const config = {
 	},
 	preprocess: [
     vitePreprocess(),
+		readingTimePreprocessor(),
     mdsvex(mdsvexConfig)
 	]
 };

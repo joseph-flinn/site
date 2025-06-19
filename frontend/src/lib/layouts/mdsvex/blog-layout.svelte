@@ -5,15 +5,11 @@
   export let title;
   export let published;
   export let description;
+  export let readingTime;
   export let slug;
 
   import { formatDate } from '$lib/utils/date.js';
 
-  const readEstimate = 0;
-  //const wordCount = data.content.split(" ").reduce((sum, word) => sum += (word != "") ? 1 : 0, 0);
-  //const readEstimate = Math.round( wordCount / 200)
-
-  //<TailwindSvelteMarkdown source={data.content} />
 </script>
 
 
@@ -29,7 +25,7 @@
     {formatDate(published)}
   </div>
   <div class="p-2">
-    {readEstimate} mins
+    {readingTime} mins
   </div>
 </div>
 
