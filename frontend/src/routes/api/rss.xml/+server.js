@@ -1,6 +1,9 @@
 import { getPosts } from '$lib/posts';
 import { env } from '$lib/env';
 
+
+export const prerender = true;
+
 const SITE_URL = env.PUBLIC_SITE;
 const YEAR = new Date().getFullYear();
 
