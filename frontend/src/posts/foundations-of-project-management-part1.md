@@ -47,8 +47,9 @@ derived from the strategic drivers of the mission, values, and vision, are criti
 of project portfolios, whether an organization has an officially defined portfolio management
 process or not.
 
-In [Part 4](), we'll examine some tools to measure an organization's project management maturity
-level and some of actions that can be taken to grow into the next levels.
+In [Part 4](/posts/foundations-of-project-management-part4), we'll examine some tools to measure an
+organization's project management maturity level and some of actions that can be taken to grow into
+the next levels.
 
 
 ## The Triple Constraint

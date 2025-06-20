@@ -119,5 +119,5 @@ put the pack first and are no longer are able to be the first into the fray.
 
 ### Links
 
-- [https://books.google.com/ngrams/graph?content=accountability&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3]()
+- https://books.google.com/ngrams/graph?content=accountability&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
 

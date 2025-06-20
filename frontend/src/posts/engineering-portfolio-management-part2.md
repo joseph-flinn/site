@@ -48,7 +48,8 @@ NASA_).
 While specific to aerospace flight vehicles, the differences between levels helps extrapolate TRLs
 to other industries. A light-weight gate review system can then be built around these levels to
 ensure that all criteria has been met to achieve each level before investing too heavily into the
-next ones. [Part 4]() will go into more detail on such a system.
+next ones. [Part 4](/posts/engineering-portfolio-management-part4) will go into more detail on such
+a system.
 
 It is helpful to expand each of the description definitions along multiple categories. This makes
 sure that the same definitions are used when assigning an overall level at a gate review. These

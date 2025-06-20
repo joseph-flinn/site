@@ -88,7 +88,8 @@ During portfolio optimization activities, if a project cannot be tied back to on
 strategic objective, it should be killed immediately. Any project that is not in alignment is a
 waste of investment and is working against the success of the firm. A portfolio management system is
 the key to optimizing a firm's investment towards their strategic objectives. Such a system will be
-discussed in [Part 4]() of this _Engineering Portfolio Management_ series.
+discussed in [Part 4](/posts/engineering-portfolio-management-part4) of this _Engineering Portfolio
+Management_ series.
 
 In addition to strategic alignment, portfolio management also brings a balance of investment to a
 firm's project portfolio. Continuous innovation is important in today's business climate. Innovation

@@ -115,7 +115,8 @@ improving and apply them to the software industry. Using MRLs (or ORLs) for obje
 of project progress help make sure that an organization's resources are being invested responsibly.
 Over the last few posts we have been building up the foundation to examine how TRLs and MRL/ORLs can
 be used in implementing a system to provide streamlined decision making to effectively manage resource
-investment. We will look at such a system in the upcoming [Part 4]().
+investment. We will look at such a system in the upcoming 
+[Part 4](/posts/engineering-portfolio-management-part4).
 
 
 ---
