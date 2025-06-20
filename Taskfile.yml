@@ -25,14 +25,14 @@ tasks:
     silent: true
     dir: frontend
     cmds:
-      - APP_ENV=staging vite build --mode staging
+      - APP_ENV=staging npm run build
 
 
   build:frontend:production:
     silent: true
     dir: frontend
     cmds:
-      - APP_ENV=production vite build
+      - APP_ENV=production npm run build
 
 
   dev:frontend: 
