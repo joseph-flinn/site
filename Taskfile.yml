@@ -3,6 +3,14 @@
 version: '3'
 
 tasks:
+  test:frontend:all:
+    silent: true
+    dir: frontend
+    cmds:
+      - |
+        npm run test:links
+
+
   build:data:
     silent: true
     cmds:
