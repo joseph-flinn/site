@@ -6,7 +6,7 @@
 
   pages = [
     ...pages,
-    { name: "rss", path: "https://joseph.flinnlab.com/rss.xml"}
+    { name: "rss", path: "/api/rss.xml"}
   ];
 
 </script>
@@ -22,10 +22,18 @@
   </a>
   <div class="flex p-2 gap-x-4 md:gap-x-8">
     {#each pages as page}
-      <a 
-        class="no-underline hover:underline {page.name == 'rss' ? 'text-tin-500': 'text-tin-900'}" 
-        href="{base}{page.path}"
-      ><b>{page.name}</b></a>
+      {#if page.name == 'rss'}
+        <a 
+          class="no-underline hover:underline text-tin-500"
+          href={page.path}
+          rel="external"
+        ><b>{page.name}</b></a>
+      {:else}
+        <a 
+          class="no-underline hover:underline text-tin-900" 
+          href="{base}{page.path}"
+        ><b>{page.name}</b></a>
+      {/if}
     {/each}
   </div>
 </div>

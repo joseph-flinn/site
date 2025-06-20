@@ -68,8 +68,11 @@ jobs:
         working-directory: frontend        
         run: npm ci
 
+      - name: Test Links
+        run: task test:frontend:all
+
       - name: Build Frontend
-        run: task build:frontend
+        run: task build:frontend:production
 
 
   build-data:

@@ -1,4 +1,6 @@
 <script>
+
+  import { goto } from "$app/navigation";
   import cvDownloadIcon from "$lib/assets/cv-download-icon.svg";
   import linkedinIcon from "$lib/assets/linkedin-brands-solid.svg"
   import githubIcon from "$lib/assets/github-brands-solid.svg"
@@ -29,7 +31,7 @@
     <div 
       class="flex-grow flex justify-center ml-auto px-1 py-2 rounded-md text-center hover:bg-gray-100 hover:cursor-pointer"
       on:click={() => {
-        window.location.href = link.link;
+        window.location.href = link.link
       }}
     >
       <img 

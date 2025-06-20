@@ -11,4 +11,4 @@ windows:
     window_name: dev
   - window_name: shell
     panes:
-      - nix develop --command task run:frontend
+      - nix develop --command task dev:frontend

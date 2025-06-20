@@ -79,7 +79,7 @@ jobs:
         run: npm ci
 
       - name: Build Frontend
-        run: task build:frontend
+        run: task build:frontend:production
 
 
   build-n-deploy-data:
