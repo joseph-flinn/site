@@ -5,11 +5,19 @@
   };
   outputs = { self, nixpkgs }:
     let
-      pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
+      system = "x86_64-linux"; # Or "aarch64-darwin", etc.
+      #pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
+      
+      # Import nixpkgs with unfree packages enabled
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
     in {
       devShells.x86_64-linux.default = pkgs.mkShell {
         name = "site";
         buildInputs = [
+          pkgs.claude-code
           pkgs.nodejs_20
           pkgs.actionlint
           pkgs.k6
