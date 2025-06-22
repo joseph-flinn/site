@@ -5,6 +5,7 @@ This directory contains a comprehensive test suite for validating all markdown l
 ## Running the Tests
 
 ```bash
+# From project root
 npm run test:links
 ```
 
