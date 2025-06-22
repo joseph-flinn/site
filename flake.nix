@@ -19,14 +19,17 @@
     in {
       devShells.x86_64-linux.default = pkgs.mkShell {
         name = "site";
-        buildInputs = [
+        packages = [
           pkgs.claude-code
-          #pkgs.opencode
           pkgs.nodejs_20
           pkgs.actionlint
           pkgs.k6
           pkgs.rclone
           pkgs.wrangler
+
+          pkgs.ripgrep
+          pkgs.fzf
+
           opencode.packages.${system}.default
           (import ./data/tools/edda/derivation.nix { lib = pkgs.lib; python311Packages = pkgs.python311Packages; })
         ];
