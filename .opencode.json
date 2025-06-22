@@ -1,0 +1,25 @@
+{
+  "providers": {
+    "openrouter": {
+      "disabled": false
+    }
+  },
+  "agents": {
+    "coder": {
+      "model": "openrouter.llama-4-scout-free",
+      "maxTokens": 5000,
+      "reasoningEffort": ""
+    },
+    "task": {
+      "model": "openrouter.llama-4-scout-free",
+      "maxTokens": 5000,
+      "reasoningEffort": ""
+    },
+    "title": {
+      "model": "openrouter.llama-4-scout-free",
+      "maxTokens": 80,
+      "reasoningEffort": ""
+    }
+  },
+  "autoCompact": true
+}

@@ -2,11 +2,14 @@
   description = "Personal Website";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable"; 
+    opencode = {
+      url = "github:joseph-flinn/opencode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, opencode }:
     let
       system = "x86_64-linux"; # Or "aarch64-darwin", etc.
-      #pkgs = nixpkgs.legacyPackages.x86_64-linux.pkgs;
       
       # Import nixpkgs with unfree packages enabled
       pkgs = import nixpkgs {
@@ -16,13 +19,18 @@
     in {
       devShells.x86_64-linux.default = pkgs.mkShell {
         name = "site";
-        buildInputs = [
+        packages = [
           pkgs.claude-code
           pkgs.nodejs_20
           pkgs.actionlint
           pkgs.k6
           pkgs.rclone
           pkgs.wrangler
+
+          pkgs.ripgrep
+          pkgs.fzf
+
+          opencode.packages.${system}.default
           (import ./data/tools/edda/derivation.nix { lib = pkgs.lib; python311Packages = pkgs.python311Packages; })
         ];
         shellHook = ''
