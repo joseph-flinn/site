@@ -1,4 +1,4 @@
-!! title: Generative AI - My Current State of Thought
+!! title: [Generative AI] My Current State of Thought
 !! slug: gen-ai-thoughts-2025-06-11
 !! published: 2025-06-11
 !! description: A collection of thoughts and concerns about the current state of Generative AI.
