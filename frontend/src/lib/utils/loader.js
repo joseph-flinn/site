@@ -34,6 +34,7 @@ const buildPostList = (postsData) => {
        })
 }
 
+
 export const getPostList = (fetch) => {
     log('$lib.utils.loader:getPostList()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
     return memoizedFetch(fetch, '/posts')
@@ -43,14 +44,6 @@ export const getPostList = (fetch) => {
 export const getPost = (postSlug, fetch) => {
     log('$lib.utils.loader:getPost()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
     return memoizedFetch(fetch, `/posts/${postSlug}`)
-};
-
-export const getApiPostList = (fetch) => {
-    log('$lib.utils.loader:getApiPostList()', `Datasource Type: /api`)
-    return fetch(`${PUBLIC_DATASOURCE}${path}`)
-        .then(response => { 
-            return { data: response.json() }
-        })
 };
 
 
