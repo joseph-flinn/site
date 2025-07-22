@@ -111,7 +111,11 @@ function were rewritten causing a bug.
 While working on correcting it, I caught the agent rereading the files that it had just read instead
 of using what was already in its context. This highlights an issue with short-term and long-term
 memory while working on the same task. This is both frustrating from a time efficiency perspective
-as well as an economic one since tokens are being burned through doing the same thing.
+as well as an economic one since tokens are being burned through doing the same thing. I was also
+finding it "forgetting" how I told it to use git. I have GPG signing set up for my account. Claude
+doesn't know the password for my GPG key (and I will not give it access to use it). I explicitly
+told it to skip GPG signing in the CLAUDE.md file. However, every time it would try committing the
+first time in the session it would try with the GPG signing key.
 
 And now on to the scariest part of this whole experience. While I was getting familiar with how the
 plugin worked while directing Claude in fixing the issues, I noted that the plugin didn't support
