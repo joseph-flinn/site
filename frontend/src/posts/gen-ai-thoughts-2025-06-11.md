@@ -1,5 +1,5 @@
 ---
-title: "Generative AI - My Current State of Thought"
+title: "[Gen AI] - My Current State of Thought"
 slug: gen-ai-thoughts-2025-06-11
 published: 2025-06-11
 description: >
