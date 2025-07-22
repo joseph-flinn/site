@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Configuration
-const POSTS_DIR = join(__dirname, '..', 'src', 'posts');
+const POSTS_DIR = join(__dirname, '..', 'posts');
 const DATA_IMAGES_DIR = join(__dirname, '..', '..', 'data', 'images');
 const STATIC_DIR = join(__dirname, '..', 'static');
 
