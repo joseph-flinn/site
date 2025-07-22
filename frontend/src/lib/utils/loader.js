@@ -34,6 +34,7 @@ const buildPostList = (postsData) => {
        })
 }
 
+
 export const getPostList = (fetch) => {
     log('$lib.utils.loader:getPostList()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
     return memoizedFetch(fetch, '/posts')
@@ -53,5 +54,6 @@ export const getDropList = (fetch) => {
 
 
 export const getImageUrl = (imageMarkdownUrl) => {
+    log('$lib.utils.loader:getImageUrl()', `Image source: ${PUBLIC_IMAGESOURCE}`)
     return `${PUBLIC_IMAGESOURCE}${imageMarkdownUrl}`
 }
