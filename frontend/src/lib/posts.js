@@ -1,16 +1,13 @@
-export async function getPosts() {
-  const modules = import.meta.glob('/src/posts/*.md');
-  const posts = [];
-  
-  for (const path in modules) {
-    const post = await modules[path]();
+const allPostFiles = import.meta.glob('/posts/*.md', { eager: true });
 
-    posts.push({
-      ...post.metadata,
-      published: post.metadata.published.split("T")[0],
-      path: path.replace('/src/posts/', '').replace('.md', '')
-    });
-  }
+export async function getPosts() {
+  const posts = Object.entries(allPostFiles).map(([path, module]) => {
+    return {
+      ...module.metadata,
+      published: module.metadata.published.split("T")[0],
+      path: path.replace('/posts/', '').replace('.md', '')
+    }
+  })
   
   return posts.sort((a, b) => new Date(b.published) - new Date(a.published));
 }

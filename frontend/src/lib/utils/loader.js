@@ -45,6 +45,14 @@ export const getPost = (postSlug, fetch) => {
     return memoizedFetch(fetch, `/posts/${postSlug}`)
 };
 
+export const getApiPostList = (fetch) => {
+    log('$lib.utils.loader:getApiPostList()', `Datasource Type: /api`)
+    return fetch(`${PUBLIC_DATASOURCE}${path}`)
+        .then(response => { 
+            return { data: response.json() }
+        })
+};
+
 
 export const getDropList = (fetch) => {
     log('$lib.utils.loader:getDropList()', `Datasource Type: ${PUBLIC_DATASOURCE_TYPE}`)
@@ -53,5 +61,6 @@ export const getDropList = (fetch) => {
 
 
 export const getImageUrl = (imageMarkdownUrl) => {
+    log('$lib.utils.loader:getImageUrl()', `Image source: ${PUBLIC_IMAGESOURCE}`)
     return `${PUBLIC_IMAGESOURCE}${imageMarkdownUrl}`
 }
