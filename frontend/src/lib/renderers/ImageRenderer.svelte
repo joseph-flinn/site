@@ -6,7 +6,6 @@
   import { getImageUrl } from '$lib/utils/loader.js'
 
   const imgUrl = href.startsWith("/posts") ? getImageUrl(href) : href
-
 </script>
 
 <div>
