@@ -9,16 +9,16 @@ description: >
 ---
 
 I have recently started consulting with a local dance company who is working on finding a low-cost
-solution to simplify payments and checkin to lessons and social dances. Pre-paid physcial punch
+solution to simplify payments and check-in for lessons and social dances. Pre-paid physical punch
 cards were just rolled out as a low-tech solution. It is low-cost and is a great improvement for
-regular dancers.
+regular dancers, but they are looking for even more of an improvement.
 
 Working with a story of a failed mobile app in the past and the non-technical CEO working on vibe
 coding an app, I decided that it was time for me to get my hands dirty with using genAI
 experimentation in a development workflow.
 
 With some research into tools available, I decided to go with an Expo app for ease of cross platform
-and Strapi as the headless CMS. We needed content updates to be easily done by non-techincal admins
+and Strapi as the headless CMS. We needed content updates to be easily done by non-technical admins
 and Strapi has the most stars on the [Jamstack site's CMS list](https://jamstack.org/headless-cms/).
 This architecture would easily allow for a follow-on update to the business's website if they chose
 to share the backend.
@@ -48,19 +48,11 @@ SUM:                            60            450            155          16341
 -------------------------------------------------------------------------------
 ```
 
-I know from past experience, a project of this size would take me about two weeks to do myself. I'd
-have to spin up on how Strapi pluigns work (in both v4 and v5), spin up on the code base, read the
-docs on breaking changes, and then get to updating and fixing.
-
-The tasks in front of us--Claude Code and I--were to update the project dependencies while
-upgrading the plugin to support the v5 major version of Strapi. It soon became apparent that
-something weird happend in the development cycles of Strapi that was confusing Claude. 
-
-Strapi's major verison update to version 5 was released on September 18, 2024. It included a major
-version update to the custom design system that was tagged `2.0.0-rc*`, but not yet released. Claude
-kept trying to use the latest released `1.19.0` (from May 31, 2024) instead of using v2. The plugin
-code would successfully build, but then break in the browser when trying to load from the
-conflicting version. 
+I know from past experience, a project of this size would take me about two weeks to fully update
+myself. I'd have to spin up on how Strapi pluigns work (in both v4 and v5), spin up on the code
+base, read the docs on breaking changes, develop the updates, and test. The tasks in front of
+us--Claude Code and I--were to update the project dependencies while upgrading the plugin to support
+the v5 major version of Strapi. 
 
 
 ## TL;DR
@@ -71,108 +63,130 @@ conflicting version.
 
 ## Attempt #1
 
-With the errors happening in the browser console, there was a lot of copy and pasting of errors into
-the Claude Code chat (ie. vibe coding). I set up a Puppeteer MCP server to try to give Claude direct
-access to those errors, but it was never really used. It could have been a setup issue or something
-else entirely.
-
 I did an `npm update && npm upgrade` in the project and worked through problem after problem using
 the browser errors as a guide. I worked this way for about 5 days squashing one library bug after
-another. Fixing one thing seemed to break something somewhere else. I made a note that one of
-drawbacks of using genAI in this way was that once you needed to "eject" from that workflow, the
-context is not as robust as the one that you would have built from manually working in the codebase.
+another. Fixing one thing seemed to break something somewhere else. 
+
+Shortly after starting, it became apparent that something weird happened in the development cycles
+of Strapi which was confusing Claude. Strapi's major verison update to version 5 was released on
+September 18, 2024. It included a major version update to the custom design system that was tagged
+`2.0.0-rc*`, but not yet released. Claude kept trying to use the latest released `1.19.0` (from May
+31, 2024) instead of using v2. The plugin code would successfully build, but then break in the
+browser when trying to
+
+Errors were being logged in the browser console where Claude didn't have access to them. I was doing
+a lot of copy and pasting of errors into the Claude Code chat (ie. vibe coding). I set up a
+Puppeteer MCP server to try to give Claude direct access to those errors, but Claude didn't seem to
+use it. It could have been a setup issue or something else entirely.
+
+In some downtime, I made a note that one of drawbacks of using genAI in this way was that once you
+needed to "eject" from that workflow, the context is not as robust as the one that you would have
+built from manually working in the codebase.
 
 > I have been fighting with the AI for about a week. If I give up, I'll have nothing really to show
 > for it since all of the context that I would have built while manually working on the code does
 > not exist.
 
 After a bit more work, we finally had the design system updates that we needed to make the plugin
-work on load instead of fully breaking. Throughout the process, there were also some inefficiencies
-in process. I asked Claude to revert a change that we had just made. Instead of using the context
-that we had just used, it decided to read all of the files again. I get that the agent may not be
-time-aware or change-aware (as in not knowing if I had made a manual change as a developer), but it
-felt weird for it to go read all of the files again that we had just edited.
+work when navigated to instead of fully breaking the interface. 
 
-Anyway, on to the next task: fixing the backend breaking change for CMS file upload. This is
-required to create Stripe Products. This is where Claude started creating new coding and
-architecture patterns. One of the things that great engineers learn is to work within the patterns
-that are already set up in a project. This is support effective long-term maintenance of a code
-base. It is really difficult to maintain a code-base that has constantly shifting patterns. 
+Throughout the process, I observed some inefficiencies in the tasks that Claude chose to take on. I
+asked Claude to revert a change that we had just made. Instead of using the context that we had just
+created, it decided to read all of the files again. I get that the agent may not be time-aware or
+change-aware (as in not knowing if I had made a manual change as a developer), but it felt weird for
+it to go read all of the files again that we had just edited instead of having state awareness in
+context. Maybe this is a future improvement.
 
-The project came with a utils file pattern where all of the api calls were being handled. Instead of
-creating a new fuction in the utils file, Claude created it directly in the page that we were
-working on. Because this function was also needed elsewhere, this violates both SOLID and DRY
-principles. I asked it to fix this by moving the fuction to a shared file which it did, creating a
-new `./hooks/` directory instead of adding the function to the already existing utils file. I
-finally explicitly asked it to move the code to `./utils.js`. In testing the function, the
-implementation was found to be incorrect. During this process, the implementation details of the
-function were rewritten causing a bug.
+On to the next task: fixing the backend breaking change for CMS file upload, which is required to
+create Stripe Products in the database. During this task, Claude started creating new coding and
+architecture patterns which surprised me. One of the things that great engineers learn to do is to
+work within the patterns that are already set up in a project. This skill supports effective
+long-term maintenance of the code base. It is really difficult to maintain a code-base that has
+constantly shifting patterns.
 
-While working on correcting it, I caught the agent rereading the files that it had just read instead
-of using what was already in its context. This highlights an issue with short-term and long-term
-memory while working on the same task. This is both frustrating from a time efficiency perspective
-as well as an economic one since tokens are being burned through doing the same thing. I was also
-finding it "forgetting" how I told it to use git. I have GPG signing set up for my account. Claude
-doesn't know the password for my GPG key (and I will not give it access to use it). I explicitly
-told it to skip GPG signing in the CLAUDE.md file. However, every time it would try committing the
-first time in the session it would try with the GPG signing key.
+The project came with a utils file pattern where all of the api calls were being handled. We needed
+a new api call to solve the file upload issue, and instead of creating a new fuction in the utils
+file, Claude created it directly in the page that we were working on. This function was also going
+to be needed elsewhere, so this pattern violates both SOLID and DRY principles. 
 
-And now on to the scariest part of this whole experience. While I was getting familiar with how the
-plugin worked while directing Claude in fixing the issues, I noted that the plugin didn't support
-user session tokens or RBAC. It instead used a hardcoded environment variable for
-STRAPI_ADMIN_API_TOKEN. This environment variable is only set in the build server, but is referenced
-in the `./admin/` directory which is the javascript that is loaded into the browser. Alarm bells
-started going off in my head. Thankfully, this is the authentication pattern that came with the
-plugin and Claude had nothing to do with creating this security vulnerability.
+That being said, this pattern was implicit in the code base and not explicitly called out in
+Claude's working memory through CLUADE.md or any collaborative planning doc (which we'll take a look
+at in Attempt 2). I asked it to fix this by moving the function to a shared file which it did. Then
+Claude created a new `./hooks/` directory instead of adding the function to the already existing
+utils file. I finally explicitly asked it to move the code to the `./utils.js` file. But then in
+testing the function, the implementation was found to be incorrect. During the whole process of
+moving the function around, the implementation details of the function were rewritten causing a bug.
 
-I worked with Claude to convert to the user session tokens, which didn't end up working. More alarm
-bells started going off when Claude "fixed" the user session token issue by reverting to using the
-hardcoded admin token. With further work on trying to get the session tokens to work, Claude changed
-all of the authenticated routes to public ones. More alarm bells. It was here where I decided to
-completely restart the upgrade using a different approach in collaborating with Claude.
+While working through this problem, I caught the agent rereading the files that it had just read
+instead of using what was already in its context. This highlights an issue with short-term and
+long-term memory while working on the same task. This is both frustrating from a time efficiency
+perspective as well as an economic one, since tokens are being burned through doing the same thing. 
+
+I was also finding it "forgetting" how I told it to use git. I have GPG signing set up for my
+account. Claude doesn't know the password for my GPG key (and I will not give it access to use it).
+I explicitly told it to skip GPG signing in the CLAUDE.md file. However, every time it would try
+committing the first time in the session it would try with the GPG signing key.
+
+And now for the scariest part of this whole experience. While I was getting familiar with how the
+plugin worked while during my management of the Claude agent, I noted that the plugin didn't support
+the modern pattern of using user session tokens or RBAC. It instead used a hardcoded environment
+variable for STRAPI_ADMIN_API_TOKEN. This environment variable is set in the build server, but is
+referenced in the `./admin/` directory. The admin directory is the javascript that is loaded into
+the browser, so this environment variable is sent to the browser and is readable to whomever loads
+that minified Javascript file. Alarm bells started going off in my head. 
+
+Thankfully, this is a pattern that came with the plugin and Claude had nothing to do with creating
+this security vulnerability. I worked with Claude to convert to the user session tokens, which
+didn't end up working. But then then Claude "fixed" the user session token issue that it created by
+reverting to using the hardcoded admin token because "that's what the project was set up with". The
+next few attempts ended with Claude changing all of the authenticated routes to public ones. More
+alarm bells. It was here where I decided to completely restart the upgrade using a different
+approach in collaborating with Claude.
 
 
 ## Attempt #2
 
-With attempt number two, I decided to follow some other engineer's advice and use a collaborative
-project management plan document for extended state management of the tasks. I decided to keepe this
-in a CLAUDE_PLAN.md document alongside the CLAUDE.md. The initial plan seemed pretty good, but I did
-have to use what I learned from the first attempt to highlight the issues with the components as
-well as the security vulnerability.
+With attempt number two, I decided to follow a different AI use pattern and use a collaborative
+project management plan document for extended state management of the tasks prior to working on the
+tasks themselves. I decided to keep this plan in a CLAUDE_PLAN.md document alongside the CLAUDE.md.
+The initial plan seemed pretty good, but I did have to use what I learned from the first attempt to
+highlight the issues with the design system components as well as the security vulnerability.
 
 The first thing that I did was have Claude generate a full test suite to have something to verify
-changes against. Unfortunately this was mostly for the backend code and not the frontend code. I am
-pretty unfamiliar with testing frontend code, so I didn't look too far into it.
+changes against. Unfortunately this was mostly for the backend code (`./server`)and not the frontend
+code (`./admin`) where I was having most of the problems. I am pretty unfamiliar with testing
+frontend code, so I didn't look too far into creating a more robust suite.
 
-Claude seemed to freak out about the security vulnerability and decided to focus on it first in the
-plan. Looking back, I wish I had focused on the design system update first. There was no way to test
-if the security vulnerability had been fixed because the design system update was keeping the plugin
-from being able to load. Overall, the use of the CLAUDE_PLAN doc seemed to keep Claude very focused
-on the task at hand. It also was very helpful for Claude to include example code for future Claude
-sessions to use.
+Claude seemed to freak out about the security vulnerability that I mentioned and decided to focus on
+it first in the plan. Looking back, I wish I had had Claude focus on the design system update first.
+There was no way to test if the security vulnerability had been fixed until the design system update
+was finished and the plugin would load. Overall, the use of the CLAUDE_PLAN doc seemed to keep
+Claude very focused on the task at hand. It also was very helpful for Claude to generate example
+code in the plan for future Claude sessions to use.
 
-One note of interest during this attempt was that if I could trust Claude to work on making the
-changes without direct oversight, I could focus on doing critical thinking through writing notes
-(which is where the notes in this post are coming from).
+One note of interest during this attempt was that I would find myself trusting Claude to work on
+making the changes without direct oversight (in a separate git branch that I would then review).
+This allowed me to focus on doing critical thinking through writing notes (which is where the notes
+in this post are coming from).
 
 Unfortunately, I ran into a weird issue the second time around with the design system update. In the
 week since the first attempt, two new `2.0.0-r*` versions had been tagged and published. The design
 system library is not yet stable and is crashing the plugin. I am not a fan of using pre-release
 libraries in production, and the fact that Strapi v5 has been doing this for the last 10 months with
 an unstable design system library has led to me making the decision to move on to another CMS
-option.
+option. This is not really a reflection on using Claude, but a reflection on the Strapi project in
+general.
 
 
 ## Conclusion
 
 After both of these attempts, I consider this a failure. The first attempt was a failure in both how
 the agent was working on the project and how I was using. One of the big contributors to the failure
-was that the project wans't set up in a way where the agent could verify the changes itself. It
-required me manaully testing and reporting back the errors. The second attempt was a failure created
-from the decision on which CMS to use. Going forward, I will be looking into Ghost and Payload to
-see which one I want to go with. I am currently leaning towards Payload as it would allow for an
-easy integration with Next.js for a website.
-
+was that the plugin project wasn't set up in a way where the agent could verify the changes itself.
+It required me manually testing and reporting back the errors. The second attempt was a failure
+created from the decision on which CMS to use. Going forward, I will be looking into Ghost and
+Payload to see which one I want to go with. I am currently leaning towards Payload as it would allow
+for an easy integration with Next.js for a website.
 
 ---
 
