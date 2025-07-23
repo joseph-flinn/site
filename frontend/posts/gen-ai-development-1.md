@@ -1,7 +1,7 @@
 ---
 title: "[Gen AI] Claude Code Usage Notes (1) - Failure?"
 slug: gen-ai-development-1
-published: 2025-07-22
+published: 2025-07-23
 description: >
   Notes from using Claude Code to work on dependency updates for Strapi plugin, ultimately ending in
   failure. 
