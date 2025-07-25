@@ -1,7 +1,9 @@
-!! title: {{ TITLE }}
-!! slug: {{ SLUG }}  # e2m-st-suboptimizaion
-!! published: {{ DATE }}
-!! description: {{ RSS DESCRIPTION }}
+---
+title: {{ TITLE }}
+slug: {{ SLUG }}  # name-of-the-file
+published: {{ DATE }}
+description: >
+  {{ RSS DESCRIPTION }}
 
 ---
 
