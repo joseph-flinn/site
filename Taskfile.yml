@@ -77,12 +77,10 @@ tasks:
     dir: ./
     cmds:
       - | 
-        cd ./data/posts
-        latest_post=$(ls ./[0-9][0-9][0-9][0-9]* | sort | tail -n 1)
-        latest_post_file=$(basename $latest_post)
-        latest_post_id=$(echo "${latest_post_file:0:4}")
-        next_id=$( printf "%04d" $((latest_post_id + 1)) )
-
-        cd ../../
-
-        cp ./tools/wip-template.md ./data/posts/$next_id-slug.md
+        NEW_POST="wip-slug.md"
+        if [[ -f "frontend/posts/$NEW_POST" ]]; then
+          echo "[!] $NEWPOST already exists!"
+        else
+          cp ./tools/wip-template.md ./frontend/posts/$NEW_POST
+          echo "[*] $NEW_POST created."
+        fi
