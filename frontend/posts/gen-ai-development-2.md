@@ -531,8 +531,8 @@ the site because the directory was not empty. Claude created a `./backup` direct
 files in it to try to resolve this. Since this was still in the same directory, the SvelteKit CLI
 still failed. To resolve this failure, Claude deleted the `./backup` directory, successfully created
 the site scaffold and then tried to restore the files from the now deleted `./backup` directory.
-This is reminiscent of the 
-[recent deletion of a production database by an AI agent](https://x.com/jasonlk/status/1946069562723897802).
+This is reminiscent of the recent deletion of a production database by an AI agent 
+[[1](https://x.com/jasonlk/status/1946069562723897802)].
 
 I was directly observing the agent and saw where it was going and was able to save myself a few
 minutes of rework by quickly making a copy of the `./backup` directory outside of the project
@@ -580,3 +580,9 @@ building for a sustainable business. Or maybe sustainable business are a thing o
 instead everyone should be looking to capitalize on whatever the trend is, spending someone else's
 money and trying to exit before it is no longer the trend. Then again, this feels like trying to
 time the stock market.
+
+---
+
+## Resources 
+
+1. https://x.com/jasonlk/status/1946069562723897802
