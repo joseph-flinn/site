@@ -10,7 +10,8 @@ description: >
 
 ## TL;DR
 
-I used Claude Code to build and deploy my independent consulting site in under 10 hours.
+I used Claude Code to build and deploy my [independent consulting site](https://flinnsolutions.com)
+in under 10 hours.
 
 
 ## Using Claude to Build a Professional Website from Scratch
