@@ -16,23 +16,23 @@ in under 10 hours.
 
 ## Using Claude to Build a Professional Website from Scratch
 
-A few months ago, I finally decided to launch an independent consulting firm. My first few clients
-have been acquired through in-person networking. There had not been a need to build out some of the
-modern business requirements like a website. As of two weeks ago, this was no longer the case.
+A few months ago, I finally decided to launch an independent consulting firm. While my first few
+clients have been acquired through in-person networking, I need a website for continued marketing.
 
-When I built this site, I had made the decision to do it completely from scratch. I wanted to build
-my own components from scratch instead of using a pre-made design system or component library. I
-wanted the design to be fully "me" because this is the extension of myself on the wider internet.
-However, this requirement doesn't hold for an independent consulting website.
+When I built this personal site, I had made the decision to do it completely from scratch. I wanted
+to design my own components instead of using a pre-made design system or component library. I wanted
+the design to be fully "me" because the site is the extension of myself on the wider internet. However,
+this same requirement doesn't hold for an independent consulting website.
 
 After [my attempt using Claude Code to do a project migration](/posts/gen-ai-development-1), I
-wanted to try my hand at a greenfield project. I decided to use Claude Code to build the firm's site
-since I didn't have any strong design constraints. I just needed a professional-looking website.
+wanted to try my hand at a greenfield project. I decided to use Claude Code to build the firm's
+site. It seemed like it was going to be an easier task there were no strong design constraints. I
+just needed a professional-looking website.
 
-I knew from my experience building this site, that a fully custom site would be about 200-250 hours
-of work for a simple server side generated static site. With Claude Code seemingly good at
-generating boilerplate code, it seemed that this might be a good test. I was hoping that Claude
-could cut that time down significantly.
+I knew from my experience from building my personal site, that a fully custom site would be about
+200-250 hours of work for a simple server side generated static site. With Claude Code seemingly
+good at generating boilerplate code, it seemed like the consulting site might be a good test. I was
+hoping that Claude could cut that time down significantly.
 
 Learning from the migration project, Claude and I started with developing a strategic plan for the
 project:
@@ -198,45 +198,47 @@ session to clear the context window with something like this:
 
 > I would like to move onto Phase 3 of the project plan found in CLAUDE_PLAN.md
 
-Claude would read the task management file into its working memory and do pretty well staying on
-target and developing the feature as needed. We'd go back and forth for a bit and then when it got
-to a point I wanted to commit our work, I'd ask it commit the work and make an entry in the
-CLAUDE_LOG.md file. I think the log file could be an interesting workflow to help set context for
-future sessions, but I haven't gotten around to experimenting with it.
+Claude would read the task management file into its working memory, understand what we had
+previously done, and do pretty well staying on target and developing the feature as needed. We'd go
+back and forth for a bit and then when it got to a point I wanted to commit our work, I'd ask Claude
+to commit the work and make an entry in the CLAUDE_LOG.md file. I think the log file could be an
+interesting workflow to help set context for future sessions, but I haven't gotten around to
+experimenting with it.
 
 The first iteration of the site was a pure white background with black text. It looked modern, but
 it definitely needed some work on getting to "professional". I asked Claude to add color to the site
-and it developed a generic blue-gray Tailwind theme. I spent about an hour chatting with Gemini
-about different Tailwind color palettes to find one that was good for "high tech software
-consulting" which was really easy to drop in and replace the theme colors.
+and it developed a generic blue-gray Tailwind theme. I spent another hour chatting with Gemini about
+different Tailwind color palettes to find one that was good for "high tech software consulting"
+which was really easy to drop in and replace the theme colors. I could have had these conversations
+with Claude, but I wanted to save my token limit for actual coding.
 
-In about 5 hours, I went from not having a website to having a website available on the internet
-(you can check it out at https://flinnsolutions.com if you are interested). I did have my Cloudflare
-account set up because I use it as my cloud of choice for things like this personal site as well as
-some other things. This saved me a bit of time, but would probably only be another hour of set up on
-top of the 5 if I hadn't had it.
+It took about 5 hours, from start to now, to go from noting to having a website available on the
+internet (you can check it out at https://flinnsolutions.com if you are interested). I did have my
+Cloudflare account set up because I use it as my cloud of choice for things like this personal site
+as well as some other things. This saved me a bit of time, but would probably only be another hour
+of set up on top of the 5 if I hadn't had it.
 
-Even though I had a website, it had generic business consulting copy on it and didn't align with my
-experience or the services that I offer. I asked Claude to rewrite all of the copy to be in line
-with my description of myself:
+I now have a professional looking site, but it had generic business consulting copy on it and didn't
+align with my experience or the services that I offer. I asked Claude to rewrite all of the copy to
+be in line with my description of myself:
 
-> I'm Joseph Flinn, an engineering manager focused on empowering teams to reach their highest
+> Please update all of the copy on the website to more align to my experience and story.
+>
+> "I'm Joseph Flinn, an engineering manager focused on empowering teams to reach their highest
 > potential through curiosity and continuous improvement. I create inclusive, psychologically-safe
 > environments where every team member's voice matters. My systems thinking approach to continuous
 > improvement reinforces a safe environment while driving technical excellence with a balance
 > between the short and long term goals. I have built an expertise in improving Engineering
-> Operations across the SDLC: from Design to final value delivery to end users.
+> Operations across the SDLC: from Design to final value delivery to end users."
 
 It did a pretty good job with correcting the copy, the list of services, and even story on the About
-page. The blog is still just an example though. 
-
-While it was an interesting experience using AI as a content management system, I didn't really want
-to waste my limited daily tokens on updating copy and I definitely did not want to search through
-the files in the codebase every time I needed to update copy. I also did not want to stand up a full
-CMS either. This is a small static site that is not going to change that often and does not need the
-complexity of a full CMS. I asked Claude to design a simple markdown-based CMS and add it as a
-feature to the CLAUDE_PLAN doc. The first design was a file per page. While this was well organized,
-the site is small enough that I just wanted a single file.
+page. While it was an interesting experience using AI as a content management system, I didn't
+really want to waste my limited daily tokens on updating copy and I definitely did not want to
+search through the files in the codebase every time I needed to update copy. Alternatively, I did
+not want to stand up a full CMS either. This is a small static site that is not going to change that
+often and does not need the complexity of a full CMS. I asked Claude to add a design of a simple
+markdown-based CMS to the CLAUDE_PLAN doc. The first design was a separate file per webpage. While
+this was well organized, the site is small enough that I wanted just a single file.
 
 <details>
   <summary>Simple YAML CMS</summary>
@@ -511,14 +513,15 @@ contact:
 ```
 </details>
 
-Since my past experience is highly technical, I do not need a complex CMS. There are some things
-that this CMS plus the site doesn't handle. If I add another service, the rendering of the services
-isn't the best user experience. But, this works for now.
+Since my past experience is highly technical, I do not need a more complex CMS. There are some
+things that this CMS doesn't handle well. If I add another service, the rendering of the services
+isn't the best user experience. But, this works for now and I have the technical capability of
+updating the frontend code as needed to support any structural changes in the CMS.
 
-I spent the last 5 hours manually creating a logo for the firm and setting up the backend logic to
-handle the contact form. A logo and icon are important marketing assets for any business. And like
-most contact forms, I want to receive an email any time someone wants to connect about the services
-that I provide.
+I spent the last 5 hours of th eproject manually creating a logo for the firm and setting up the
+backend logic to handle the contact form. A logo and icon are important marketing assets for any
+business, and like most contact forms, I want to receive an email any time someone wants to connect
+about the services that I provide.
 
 
 ## Unexpected Behaviors
@@ -526,35 +529,39 @@ that I provide.
 Throughout the development process I ran into two instances of risk that showed the current state of
 (im)maturity of the technology.
 
-When I first started the project, I built out the CLUADE.md and CLAUDE_LOG.md files in the project
-directory. However, when asked to create the new SvelteKit site, the SvelteKit CLI couldn't scaffold
-the site because the directory was not empty. Claude created a `./backup` directory with the two
-files in it to try to resolve this. Since this was still in the same directory, the SvelteKit CLI
-still failed. To resolve this failure, Claude deleted the `./backup` directory, successfully created
-the site scaffold and then tried to restore the files from the now deleted `./backup` directory.
-This is reminiscent of the recent deletion of a production database by an AI agent 
+When I first started the project, I built out the CLUADE.md and CLAUDE_LOG.md files in the empty
+project directory. When I aasked Claude to create the new SvelteKit site, the SvelteKit CLI couldn't
+scaffold the site because the directory was not empty. To attempt to solve this problem, Claude
+created a `./backup` directory with the two files in it to try to resolve this. Since this was in
+the same directory, the SvelteKit CLI still failed. To resolve this failure, Claude deleted the
+`./backup` directory, successfully creating the site scaffold. However, when it then tried to
+restore the files from the `./backup` directory, it found that it had been deleted.. This is
+reminiscent of the recent deletion of a production database by an AI agent
 [[1](https://x.com/jasonlk/status/1946069562723897802)].
 
-I was directly observing the agent and saw where it was going and was able to save myself a few
-minutes of rework by quickly making a copy of the `./backup` directory outside of the project
-directory. While this might all be scary because the "backup" nature of it, in general this
-highlights another gap in file system state management in the agent's working memory. 
+While this was happening, I was directly observing the agent and saw where it was going and was able
+to save the few minutes of rework by quickly making a copy of the `./backup` directory outside of
+the scope of the project directory. While this experience might be scary because the "backup" nature
+of it, in general this highlights another gap in file system state management capabilities of an
+agent's working memory. 
 
 The other unexpected behavior was from the collaborative nature between human and LLM. Claude had
 made some changes to a handful of files while working on a feature. Afterward, I decided that I
 wanted to remove a specific section on each page and update the background colors of the divs that
-were surrounding it. While working on the next part of the task, Claude saw the changes, decided
-that they somehow changed when they shouldn't have, and added them back in. 
+were surrounding it. This was easy enough to do and was faster if I did it manually. However, While
+working on the next part of the task, Claude saw the changes, decided that they somehow changed when
+they shouldn't have, and added the changes back in. 
 
-This behavior may have been avoided with an updated development workflow. Maybe this wouldn't have
-happened if I would have either committed those changes right after making them or alert Claude that
-I made some manual changes. Either way, I think this points to another gap in the file system state
-management process of coding agents. If the state isn't what it was expecting, we may want the agent
-to ask the human if this was an expected change instead of assuming that it wasn't. I have not found
-a smooth way of utilizing git inside of the agentic coding workflow that follows the good
-engineering practice of committing small pieces of work. The agent seems to want to make code
-changes in large sweeps. Further experimentation is needed on refining the human + agent workflow in
-this regard.
+Maybe this wouldn't have happened if I would have either committed those changes right after making
+them or if I had explicitly alerted Claude that I made some manual changes. Either way, I think this
+points to another gap in the file system state management process of coding agents. How do we
+effectivley manage the state of the file system and determine if changes to it should be accepted or
+should be fixed? 
+
+In the meantime, I have yet to find a smooth way of utilizing git inside of the agentic coding
+workflow that follows the good engineering practice of committing small pieces of work as we go. The
+agent seems to want to make code changes in large sweeps. Further experimentation is needed on
+refining the human + agent workflow in this regard.
 
 
 ## Outcomes
@@ -564,11 +571,12 @@ requirements. I have a professional looking website that allows people to contac
 interested in my consulting services.
 
 However, the engineering quality of the site is relatively low. I chose to go with a SvelteKit site
-because I am currently the most familiar with that framework. The most glaring issue is that Claude
-chose to hardcode all of the pages with components on each page. There is very little abstraction
-and reusability which violates SOLID engineering principles. I am confident that I could use Claude
-to quickly refactor the entire site to use components rather than hardcoded site pages. However, the
-site as-is currently meets all business requirements.
+because I am currently the most familiar with that frontend framework. The most glaring engineering
+issue is that Claude chose to hardcode all of the pages with components on each page. There is very
+little abstraction and reusability which violates SOLID engineering principles. I am confident that
+I could use Claude to quickly refactor the entire site to use components rather than hardcoded site
+pages. However, since the site currently meets all business requirements, I don't see the need to
+spend another month on a Claude subscription.
 
 This experience highlights one of my concerns about the current state of AI. AI is a tool that
 enables quick deployment of solutions that meet short-term business requirements. In my case, the
@@ -576,7 +584,7 @@ initial solution is being deployed with tech-debt on day one. Why? Because it me
 and business requirements. However, as soon as I need to go update the site design, I will have to
 wade through a mess of code (or an AI agent will). 
 
-My concern is that AI is amplifying the over-optimizing of short-term business goals rather than
+My concern is that AI is amplifying the over-optimization of short-term business goals rather than
 building for a sustainable business. Or maybe sustainable business are a thing of the past and
 instead everyone should be looking to capitalize on whatever the trend is, spending someone else's
 money and trying to exit before it is no longer the trend. Then again, this feels like trying to
