@@ -1,6 +1,6 @@
 ---
 title: "The Story of the Kubernetes Migration & Systems Thinking"
-slug: the-k8s-systems-thinking-story
+slug: the-k8s-story
 published: 2025-10-31
 description: >
   Systems thinking and my biggest project
