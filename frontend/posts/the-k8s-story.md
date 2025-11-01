@@ -139,11 +139,6 @@ had just been my peers and we were very early in our manager/direct report relat
 
 ### Challenges
 
-- Pushback from engineers on my team
-- Navigating direct leadership change
-- Negotiating with the CEO
-- Securing development capacity
-
 The biggest challenges that we faced were not the technical ones in front of us. They were the
 people system challenges. The first was vetting my idea with the team or finding a better solution
 so that we were all aligned. Neither happened right away. In fact, it actually took approaching the
