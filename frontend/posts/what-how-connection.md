@@ -1,5 +1,6 @@
 ---
-title: "The Power of WHAT & HOW - Human Connection"
+title: "Human Connection"
+series: "The Power of WHAT & HOW"
 slug: what-how-connection
 published: 2023-11-06
 description: >

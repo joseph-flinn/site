@@ -1,5 +1,6 @@
 ---
 title: "System Dynamics - A New Definition of DevOps?"
+series: "Engineer to Manager"
 slug: e2m-st-new-devops-perspective
 published: 2024-01-29
 description: >

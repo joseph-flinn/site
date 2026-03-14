@@ -1,5 +1,6 @@
 ---
-title: "The Power of WHAT & HOW - Overview"
+title: "Overview"
+series: "The Power of WHAT & HOW"
 slug: what-how-overview
 published: 2023-10-02
 description: >

@@ -1,5 +1,6 @@
 ---
-title: "Scalable Development Practices - CD (Delivery)"
+title: "CD (Delivery)"
+series: "Scalable Development Practices"
 slug: scalable-dev-delivery
 published: 2023-08-07
 description: >

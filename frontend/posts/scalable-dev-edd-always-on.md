@@ -1,5 +1,6 @@
 ---
-title: "Scalable Development Practices - EDD in Always-On Environments"
+title: "EDD in Always-On Environments"
+series: "Scalable Development Practices"
 slug: scalable-dev-edd-always-on
 published: 2023-09-04
 description: >

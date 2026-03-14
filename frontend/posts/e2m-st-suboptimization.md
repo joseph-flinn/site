@@ -1,5 +1,6 @@
 ---
 title: "System Dynamics - Team Suboptimization"
+series: "Engineer to Manager"
 slug: e2m-st-suboptimization
 published: 2024-01-15
 description: >

@@ -1,5 +1,6 @@
 ---
-title: "Scalable Development Practices - Overview"
+title: "Overview"
+series: "Scalable Development Practices"
 slug: scalable-dev-overview
 published: 2023-07-24
 description: >

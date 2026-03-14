@@ -1,5 +1,6 @@
 ---
-title: "The Power of WHAT & HOW - Organizational Leadership"
+title: "Organizational Leadership"
+series: "The Power of WHAT & HOW"
 slug: what-how-org-leadership
 published: 2023-10-09
 description: >

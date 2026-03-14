@@ -1,5 +1,6 @@
 ---
-title: "The Power of WHAT & HOW - Negotiation"
+title: "Negotiation"
+series: "The Power of WHAT & HOW"
 slug: what-how-negotiation
 published: 2023-10-23
 description: >

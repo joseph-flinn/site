@@ -1,5 +1,6 @@
 ---
-title: "The Power of WHAT & HOW - Management"
+title: "Management"
+series: "The Power of WHAT & HOW"
 slug: what-how-management
 published: 2023-10-30
 description: >

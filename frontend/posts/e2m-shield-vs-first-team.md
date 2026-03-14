@@ -1,5 +1,6 @@
 ---
-title: "Engineer to Manager - Shield vs First Team"
+title: "Shield vs First Team"
+series: "Engineer to Manager"
 slug: e2m-shield-vs-first-team
 published: 2023-12-18
 description: >
