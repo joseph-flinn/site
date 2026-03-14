@@ -2,13 +2,15 @@ import { getPosts } from '$lib/posts.js';
 import { error } from '@sveltejs/kit';
 
 import { formatDate } from '$lib/utils/date.js';
+import { buildTitle } from '$lib/utils/postTitle.js';
 
 
 export async function load({ params }) {
   try {
     const post = await import(`../../../../posts/${params.post}.md`);
     return {
-      ...post.metadata, 
+      ...post.metadata,
+      title: buildTitle(post.metadata),
       published: formatDate(post.metadata.published),
       content: post.default,
     }

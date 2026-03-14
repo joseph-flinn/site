@@ -1,9 +1,12 @@
+import { buildTitle } from '$lib/utils/postTitle.js';
+
 const allPostFiles = import.meta.glob('/posts/*.md', { eager: true });
 
 export async function getPosts() {
   const posts = Object.entries(allPostFiles).map(([path, module]) => {
     return {
       ...module.metadata,
+      title: buildTitle(module.metadata),
       published: module.metadata.published.split("T")[0],
       path: path.replace('/posts/', '').replace('.md', '')
     }

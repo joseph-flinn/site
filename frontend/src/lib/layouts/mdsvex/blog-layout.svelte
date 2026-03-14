@@ -3,20 +3,19 @@
 
 <script>
   export let title;
+  export let series;
   export let published;
   export let description;
   export let readingTime;
   export let slug;
 
   import { formatDate } from '$lib/utils/date.js';
-
+  import { buildTitle } from '$lib/utils/postTitle.js';
 </script>
-
-
 
 <div class="w-full text-center text-xl">
   <div class="p-4">
-    {title}
+    {buildTitle({series, title})}
   </div>
 </div>
 
