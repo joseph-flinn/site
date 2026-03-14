@@ -42,6 +42,12 @@ tasks:
       - npm run dev -- --host
 
 
+  env:dev:
+    silent: true
+    cmds:
+      - docker run -ti --rm --name devenv-node -v "{{.USER_WORKING_DIR}}:/app" node-devenv bash
+
+
   run:frontend:
     silent: true
     dir: frontend
