@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Success - Deployment Complexity Reduction"
+title: "Success - Deployment Complexity Reduction"
+series: "Manager Retro"
 slug: retro-success-deployment-complexity-reduction
 published: 2024-06-03
 description: >
   Reflection and gratitude on one of the most challenging project we worked on. 
 
 ---
+
 
 One of the greatest technical achievements that the team has made was to decrease the complexity the
 backend deploy. There is also a significant failure associated with the result, but we will review

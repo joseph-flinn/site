@@ -1,5 +1,6 @@
 ---
-title: "[Manager Retro] Success - Non-production Launch"
+title: "Success - Non-production Launch"
+series: "Manager Retro"
 slug: retro-success-non-prod-launch
 published: 2024-05-25
 description: >
@@ -7,6 +8,7 @@ description: >
   project
 
 ---
+
 
 One of the first large projects that my team undertook was to create a staging environment for
 testing changes prior to deploying to production. As expected, this environment helped greatly in

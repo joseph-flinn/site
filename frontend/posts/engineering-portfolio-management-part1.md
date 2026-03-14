@@ -1,5 +1,6 @@
 ---
-title: "[Engineering Portfolio Management] Introduction"
+title: "Introduction"
+series: "Engineering Portfolio Management"
 slug: engineering-portfolio-management-part1
 published: 2024-10-28
 description: >
@@ -7,6 +8,7 @@ description: >
   is
 
 ---
+
 
 Until the first day of class this semester, I associated the word "portfolio" with artists or
 financial investments. Learning about portfolio management in relation to a project management

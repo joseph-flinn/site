@@ -1,5 +1,6 @@
 ---
-title: "[Manager Retro] Failure - Effective Feedback"
+title: "Failure - Effective Feedback"
+series: "Manager Retro"
 slug: retro-failure-effective-feedback
 published: 2024-07-29
 description: >
@@ -7,6 +8,7 @@ description: >
   feedback. 
 
 ---
+
 
 Delivering effective feedback is one of the core responsibilities of a manager. Feedback is a
 crucial part of the learning process. When a manager does not use effective feedback, they are

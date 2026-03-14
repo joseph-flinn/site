@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Success - Psychological Safety "
+title: "Success - Psychological Safety "
+series: "Manager Retro"
 slug: retro-success-psychological-safety
 published: 2024-05-13
 description: >
   Reflection and gratitude for the psychological safe environment on the team
 
 ---
+
 
 In my time as a manager, the greatest of achievements has been the trust cultivated in each
 relationship with my direct reports. Every action that is taken includes a trust component. The

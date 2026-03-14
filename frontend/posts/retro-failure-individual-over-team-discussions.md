@@ -1,5 +1,6 @@
 ---
-title: "[Manager Retro] Failure - Individual > Team Discussions"
+title: "Failure - Individual > Team Discussions"
+series: "Manager Retro"
 slug: retro-failure-individual-over-team-discussions
 published: 2024-08-12
 description: >
@@ -7,6 +8,7 @@ description: >
   into my comfort zone of one-on-one discussions
 
 ---
+
 
 The last failure that we will review is my failure to cultivate high performing teamwork between
 team members. With my preparation to depart and as I was examining the communication structures on

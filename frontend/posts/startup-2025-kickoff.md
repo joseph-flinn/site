@@ -1,11 +1,13 @@
 ---
-title: "[Startup 2025] Kickoff"
+title: "Kickoff"
+series: "Startup 2025"
 slug: startup-2025-kickoff
 published: 2025-03-17
 description: >
   A series following the journey of a 2025 startup: Kickoff
 
 ---
+
 
 With reflection on Henrik Karlsson's note about designing lifestyle [1], I have made a list of my
 current constraints:

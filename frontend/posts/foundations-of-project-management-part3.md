@@ -1,5 +1,6 @@
 ---
-title: "[Foundations of Project Management] Process Groups & Knowledge Areas"
+title: "Process Groups & Knowledge Areas"
+series: "Foundations of Project Management"
 slug: foundations-of-project-management-part3
 published: 2025-01-06
 description: >
@@ -7,6 +8,7 @@ description: >
   knowledge areas of project management
 
 ---
+
 
 The goal of this post is to provide a quick introduction to the process groups and knowledge areas
 that are defined in the 6th Edition of the PMBOK Guide. While these are presented in a linear

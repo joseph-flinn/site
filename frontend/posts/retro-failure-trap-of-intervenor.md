@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Failure - Trap of the Intervenor"
+title: "Failure - Trap of the Intervenor"
+series: "Manager Retro"
 slug: retro-failure-trap-of-intervenor
 published: 2024-07-08
 description: >
   Discussing the failure of falling into the Trap of the Intervenor
 
 ---
+
 
 System thinking traps are general patterns that result in disturbing the equilibrium of a system
 from a specific policy change (Meadows 2009). The Trap of the Intervenor is when a systemic problem

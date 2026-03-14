@@ -1,11 +1,13 @@
 ---
-title: "[Daily Journaling] Report 3"
+title: "Report 3"
+series: "Daily Journaling"
 slug: daily-journaling-report-3
 published: 2025-08-12
 description: >
   The third report in the series on "daily journaling" with my second-brain setup.
 
 ---
+
 
 It has been just under 7 months since my last overhaul of my daily journaling system and how I use
 it. In that time, I have had some significant life changes that have led me to a different usage

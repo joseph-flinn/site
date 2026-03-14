@@ -1,5 +1,6 @@
 ---
-title: "[Manager Retro] Accountability in Hierarchical Systems"
+title: "Accountability in Hierarchical Systems"
+series: "Manager Retro"
 slug: retro-accountability-hierarchical-systems
 published: 2024-07-22
 description: >
@@ -7,6 +8,7 @@ description: >
   response
 
 ---
+
 
 Over the last decade, I have observed in myself that I have a close-to-physical response of
 revulsion to the word "accountability". The word "accountability" and associated idea has grown

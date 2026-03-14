@@ -1,11 +1,13 @@
 ---
-title: "[Meta-Learning] Multiple Intelligences & Growth Mindset"
+title: "Multiple Intelligences & Growth Mindset"
+series: "Meta-Learning"
 slug: multiple-intelligences-and-growth-mindset
 published: 2025-03-10
 description: >
   A season of learning from the perspective of multiple intelligences and meta-learning
 
 ---
+
 
 Learning is one of my two core values (Brown). Almost everything I do can be traced back to
 learning. I am constantly looking for opportunities to learn new things and improve skills that I

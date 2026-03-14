@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Failure - Finishing Migrations"
+title: "Failure - Finishing Migrations"
+series: "Manager Retro"
 slug: retro-failure-finishing-migrations
 published: 2024-07-01
 description: >
   Discussing my failure to prevent stop-start work on migrations
 
 ---
+
 
 The next failure we are going to discuss is the failure to focus on and finish migrations. Will
 Larson changed my view on migrations in _An Elegant Puzzle_. Migrations are the only way to manage

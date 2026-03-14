@@ -1,5 +1,6 @@
 ---
-title: "[Engineering Portfolio Management] MRLs & ORLs"
+title: "MRLs & ORLs"
+series: "Engineering Portfolio Management"
 slug: engineering-portfolio-management-part3
 published: 2024-11-11
 description: >
@@ -7,6 +8,7 @@ description: >
   levels and how they apply to the software industry as operational readiness levels
 
 ---
+
 
 Without a product or service application, technology is worth little more than to satisfy curiosity
 (Flinn, p.8). Manufacturing is a key process in developing products from technology. As such, the US

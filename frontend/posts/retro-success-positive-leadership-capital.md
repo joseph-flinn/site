@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Success - Positive Leadership Capital"
+title: "Success - Positive Leadership Capital"
+series: "Manager Retro"
 slug: retro-success-positive-leadership-capital
 published: 2024-05-20
 description: >
   Reflection and gratitude for the positive balance of Leadership Capital
 
 ---
+
 
 As a people manager, I saw my role as a support role. My priority was to get my team what they
 needed to make decisions and succeed, not to be the one that constantly made the decisions. This was

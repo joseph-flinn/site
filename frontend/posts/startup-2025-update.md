@@ -1,11 +1,13 @@
 ---
-title: "[Startup 2025] Update"
+title: "Update"
+series: "Startup 2025"
 slug: startup-2025-update
 published: 2025-06-10
 description: >
   Update on the state of the startup project
 
 ---
+
 
 Life has a tendency of changing when you least expect it. Through multiple meetings with my
 cofounder, we have decided to stop pursuing the project as a startup and shift it to a side project

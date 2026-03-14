@@ -1,5 +1,6 @@
 ---
-title: "[Engineering Portfolio Management] TRLs"
+title: "TRLs"
+series: "Engineering Portfolio Management"
 slug: engineering-portfolio-management-part2
 published: 2024-11-03
 description: >
@@ -7,6 +8,7 @@ description: >
   levels and how they can be used in the software industry
 
 ---
+
 
 Technology in the software industry is being developed at increasing speeds. Entire companies run
 their entire life-cycle within a few years. With the world going faster and faster, it seems

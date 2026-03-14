@@ -1,11 +1,13 @@
 ---
-title: "[Startup 2025] Async Discussion - RFDs"
+title: "Async Discussion - RFDs"
+series: "Startup 2025"
 slug: startup-2025-rfds
 published: 2025-03-24
 description: >
   Reviewing the implementation of the RFD process in the startup
 
 ---
+
 
 One of the highlights of my career was being elected to lead a cross-functional process improvement
 guild[[1](https://www.atlassian.com/agile/agile-at-scale/spotify)] in the early days of Bitwarden.

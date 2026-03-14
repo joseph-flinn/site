@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Failure - Building a Value Oasis"
+title: "Failure - Building a Value Oasis"
+series: "Manager Retro"
 slug: retro-failure-value-oasis
 published: 2024-06-24
 description: >
   Discussing my failure by building a Value Oasis
 
 ---
+
 
 The next failure that we are going to discuss is what Will Larson calls a Value Oasis (Larson 2020).
 Before proceeding, I would like to set the stage with what I currently define "DevOps" to be (unless

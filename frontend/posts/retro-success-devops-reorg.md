@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Success - DevOps Reorganization"
+title: "Success - DevOps Reorganization"
+series: "Manager Retro"
 slug: retro-success-devops-reorg
 published: 2024-08-19
 description: >
   Last post in the Manager Retro series discussing the last success prior to departure.
 
 ---
+
 
 While I find more value in failures than successes, we will end this series on a successful note.
 In the final few weeks at the organization, I saw significant progress on an impactful organization

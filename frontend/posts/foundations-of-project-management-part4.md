@@ -1,5 +1,6 @@
 ---
-title: "[Foundations of Project Management] Capability Maturity Levels"
+title: "Capability Maturity Levels"
+series: "Foundations of Project Management"
 slug: foundations-of-project-management-part4
 published: 2025-01-13
 description: >
@@ -7,6 +8,7 @@ description: >
   management maturity levels
 
 ---
+
 
 One of the first issues that a scaling engineering team at a startup will run into is in managing a
 growing number of projects. At the beginning, there are a lot of ad-hoc processes to get code

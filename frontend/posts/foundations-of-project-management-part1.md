@@ -1,5 +1,6 @@
 ---
-title: "[Foundations of Project Management] Introduction"
+title: "Introduction"
+series: "Foundations of Project Management"
 slug: foundations-of-project-management-part1
 published: 2024-12-15
 description: >
@@ -7,6 +8,7 @@ description: >
   management series
 
 ---
+
 
 When I learned that _Foundations of Project Management_ was a required business elective of the
 Engineering Management program, I was a bit disappointed. _Agile Project Management_ is a different

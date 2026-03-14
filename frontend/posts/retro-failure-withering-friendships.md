@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Failure - Withering Personal Friendships"
+title: "Failure - Withering Personal Friendships"
+series: "Manager Retro"
 slug: retro-failure-withering-friendships
 published: 2024-06-17
 description: >
   Discussing my largest failure in my journey from engineer to manager.
 
 ---
+
 
 The darkside of having a growth mindset is that there is far more attention and focus put on the
 failures to grow from than celebrating the successes. However, the I think it balances out since the

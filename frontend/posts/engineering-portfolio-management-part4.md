@@ -1,5 +1,6 @@
 ---
-title: "[Engineering Portfolio Management] Portfolio Gate Reviews"
+title: "Portfolio Gate Reviews"
+series: "Engineering Portfolio Management"
 slug: engineering-portfolio-management-part4
 published: 2024-11-18
 description: >
@@ -7,6 +8,7 @@ description: >
   building a portfolio management system with gate reviews
 
 ---
+
 
 After all the buildup through what portfolio management is and the role it plays 
 ([Part 1](/posts/engineering-portfolio-management-part1)), the definitions of  Technology Readiness

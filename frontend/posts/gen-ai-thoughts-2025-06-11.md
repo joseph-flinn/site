@@ -1,11 +1,13 @@
 ---
-title: "[Gen AI] - My Current State of Thought"
+title: "- My Current State of Thought"
+series: "Gen AI"
 slug: gen-ai-thoughts-2025-06-11
 published: 2025-06-11
 description: >
   A collection of thoughts and concerns about the current state of Generative AI.
 
 ---
+
 
 There is a lot of content being created around genAI right now. Articles are being written showing
 how it is increasing software engineering productivity while other experienced software engineers

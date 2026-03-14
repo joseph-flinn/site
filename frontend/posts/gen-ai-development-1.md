@@ -1,5 +1,6 @@
 ---
-title: "[Gen AI] Claude Code Usage Notes (1) - Failure?"
+title: "Claude Code Usage Notes (1) - Failure?"
+series: "Gen AI"
 slug: gen-ai-development-1
 published: 2025-07-23
 description: >
@@ -7,6 +8,7 @@ description: >
   failure. 
 
 ---
+
 
 I have recently started consulting with a local dance company who is working on finding a low-cost
 solution to simplify payments and check-in for lessons and social dances. Pre-paid physical punch

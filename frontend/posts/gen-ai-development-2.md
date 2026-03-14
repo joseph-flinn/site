@@ -1,5 +1,6 @@
 ---
-title: "[Gen AI] Claude Code Usage Notes (2) - Success?"
+title: "Claude Code Usage Notes (2) - Success?"
+series: "Gen AI"
 slug: gen-ai-development-2
 published: 2025-07-26
 description: >
@@ -7,6 +8,7 @@ description: >
   scratch, which was somewhat of a success (depending on how you define it).
 
 ---
+
 
 ## TL;DR
 

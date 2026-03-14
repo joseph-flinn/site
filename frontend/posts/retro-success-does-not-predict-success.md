@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Past Success Does Not Predict Future Success"
+title: "Past Success Does Not Predict Future Success"
+series: "Manager Retro"
 slug: retro-success-does-not-predict-success
 published: 2024-06-10
 description: >
   Wrapping up the initial collection successes and intro into the long list of failures and lessons.
 
 ---
+
 
 Success is a fickle thing. People define their success in different ways. Success is having more
 money than you need so you can have whatever you want and not work again. Or maybe success is having

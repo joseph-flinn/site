@@ -1,5 +1,6 @@
 ---
-title: "[Engineering Portfolio Management] Agile vs. Plan-driven"
+title: "Agile vs. Plan-driven"
+series: "Engineering Portfolio Management"
 slug: engineering-portfolio-management-part5
 published: 2024-11-25
 description: >
@@ -7,6 +8,7 @@ description: >
   Plan-driven portfolio management.
 
 ---
+
 
 In this final post of the series, we are going to expand on the idea that Engineering Portfolio
 Management is not a debate between Agile vs a gated idea-to-launch systems. A robust system that

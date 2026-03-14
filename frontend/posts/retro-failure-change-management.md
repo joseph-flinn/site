@@ -1,5 +1,6 @@
 ---
-title: "[Manager Retro] Failure - Change Management"
+title: "Failure - Change Management"
+series: "Manager Retro"
 slug: retro-failure-change-management
 published: 2024-07-16
 description: >
@@ -7,6 +8,7 @@ description: >
   them.
 
 ---
+
 
 The next failure that we will examine is my failure around change management. I am curious what the
 correlation is between a globally distributed asynchronous team and the level of challenge there is

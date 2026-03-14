@@ -1,11 +1,13 @@
 ---
-title: "[Manager Retro] Failure - Influence in Critical Decisions"
+title: "Failure - Influence in Critical Decisions"
+series: "Manager Retro"
 slug: retro-failure-influence-critical-decisions
 published: 2024-08-05
 description: >
   Discussion on failing to influence critical decisions and the lessons learned.
 
 ---
+
 
 Out of all of the failures over the last few years, there is one that I have no doubt will stay with
 me for the rest of my life. In fact, it is not my first time failing in the same way. However, there

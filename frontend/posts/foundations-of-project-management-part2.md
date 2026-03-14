@@ -1,5 +1,6 @@
 ---
-title: "[Foundations of Project Management] Project Management & Agile"
+title: "Project Management & Agile"
+series: "Foundations of Project Management"
 slug: foundations-of-project-management-part2
 published: 2024-12-30
 description: >
@@ -7,6 +8,7 @@ description: >
   in the broader project management field
 
 ---
+
 
 Project management can be a very sensitive topic in the software industry. From my personal
 experience, discussions between frameworks and approaches can quickly turn into lines being drawn
