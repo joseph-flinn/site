@@ -20,7 +20,6 @@
       devShells.x86_64-linux.default = pkgs.mkShell {
         name = "site";
         packages = [
-          pkgs.claude-code
           pkgs.nodejs_20
           pkgs.actionlint
           pkgs.k6
@@ -30,7 +29,6 @@
           pkgs.ripgrep
           pkgs.fzf
 
-          opencode.packages.${system}.default
           (import ./data/tools/edda/derivation.nix { lib = pkgs.lib; python311Packages = pkgs.python311Packages; })
         ];
         shellHook = ''
