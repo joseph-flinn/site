@@ -91,7 +91,7 @@ higher priority project.
 
 ## Knowledge Areas
 
-There are the 6th Edition of the PMBOK covers ten knowledge areas of project management: 
+The 6th Edition of the PMBOK covers ten knowledge areas of project management: 
 
 1. Integration Management
 2. Scope Management
