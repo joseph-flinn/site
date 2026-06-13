@@ -89,10 +89,11 @@ I wonder if this is an option in synchronous meetings, where we go around the ta
 through a static-order circular list (remote) to sound off with any questions, comments, concerns or
 ideas. A "pass" acknowledges that the information has been received and there is nothing to add. In
 addition to this, being careful at approaching one-on-one discussions on the same topics is
-important. Any side discussions must be scrutinized to make sure they should be taking place outside
-of the team discussion. If there is any information that surfaces that is important, it should be
-brought back to the team by the source of the information (ie. if an engineer has an idea, they
-should be the one to share it with the rest of the group in a team meeting rather than the manager). 
+important. Any side discussions must be scrutinized to make sure they should be being taken place
+outside of the team discussion. If there is any information that surfaces that is important, it
+should be brought back to the team by the source of the information (ie. if an engineer has an idea,
+they should be the one to share it with the rest of the group in a team meeting rather than the
+manager). 
 
 ---
 

@@ -30,7 +30,7 @@ not, is made without the data in support.
 
 ### Desgin
 
-Design owns and is responsible for designing the solution to a defined problem that Product deemes
+Design owns and is responsible for designing the solution to a defined problem that Product deems
 the highest value to end users. Solutions and alternatives are developed and user feedback is
 gathered to validate the solution. The size and scope of these problems could vary greatly; from a
 small change in the corner of a settings page to a complete user experience overhaul. If the
@@ -60,29 +60,32 @@ increases waste.
 
 ## Culture of Experimentation
 
-If the organization's engineering practices support a culture of experimentation and iteration, one of the important
-user data collection streams comes from in-product. Increasing the velocity of delivering a minimum valuable product
-into the hands of the users to gain feedback enables higher velocity of value learning. The primary business goal of a
-product is to delight and deliver value to the users. Feedback on already-delivered product capabilities leads to faster
-refinement of what is valuable to the end user: what is worth investing in and what is not. This is the secret to
-leading the marketplace. Enabling the culture of experimentation, iteration, and high velocity are the outcomes of
-practicing DevOps.
+If the organization's engineering practices support a culture of experimentation and iteration, one
+of the important user data collection streams comes from in-product. Increasing the velocity of
+delivering a minimum valuable product into the hands of the users to gain feedback enables higher
+velocity of value learning. The primary business goal of a product is to delight and deliver value
+to the users. Feedback on already-delivered product capabilities leads to faster refinement of what
+is valuable to the end user: what is worth investing in and what is not. This is the secret to
+leading the marketplace. Enabling the culture of experimentation, iteration, and high velocity are
+the outcomes of practicing DevOps.
 
 The organization structure should be such that it promotes PLG and Lean management. The Lean
 management principles should be applied to the communication channel creation as well: maximize the
 delivery of value in communication while minimizing waste of unneeded communication. Organization
-communication is the hardest problems to solve. [Conway's
-Law](https://www.melconway.com/Home/Committees_Paper.html), the [Inverse Conway Maneuver
-reference](https://yoan-thirion.gitbook.io/knowledge-base/xtrem-reading/resources/book-notes/team-topologies#conways-law)
-to the findings in [Accelerate](https://www.oreilly.com/library/view/accelerate/9781457191435/) in
-relation to the Inverse Conway Maneuver and the [implications of executing such a maneuver
-incorrectly](https://medium.com/@Cyrdup/icm-1-say-no-to-the-inverse-conway-maneuver-6672ba2373cb).
+communication are the hardest problems to solve. 
+[Conway's Law](https://www.melconway.com/Home/Committees_Paper.html), 
+the 
+[Inverse Conway Maneuver reference](https://yoan-thirion.gitbook.io/knowledge-base/xtrem-reading/resources/book-notes/team-topologies#conways-law)
+to the findings in 
+[Accelerate](https://www.oreilly.com/library/view/accelerate/9781457191435/) in
+relation to the Inverse Conway Maneuver and the 
+[implications of executing such a maneuver incorrectly](https://medium.com/@Cyrdup/icm-1-say-no-to-the-inverse-conway-maneuver-6672ba2373cb).
 Another article will be written around Conway's Law and the Inverse Conway Maneuver.
 
 
 ---
 
-In PLG organizations, the Core product groups each have complimentary roles and responsibilities to play in order to
-be the most effective. Each business function relies heavily on each other to make up the whole of the core product 
-groups to optimize the Lean management goals: maximizing value delivery to the end user and minimizing waste in the
-delivery.
+In PLG organizations, the Core product groups each have complimentary roles and responsibilities to
+play in order to be the most effective. Each business function relies heavily on each other to make
+up the whole of the core product groups to optimize the Lean management goals: maximizing value
+delivery to the end user and minimizing waste in the delivery.

@@ -56,7 +56,7 @@ This post is not a how-to on the Zettelkasten Method. If you are interested in l
 would highly recommend checking out [this introduction](https://zettelkasten.de/introduction/) by
 the Zettelkasten Method community.
 
-As a TL;DR, I will briefly explain the different types of notes in the method as it give some
+As a TL;DR, I will briefly explain the different types of notes in the method as it gives some
 context to book consumption.
 
 - **Permanent/Zettel:** a note that contains a single original thought (no plagiarism!), connected
@@ -268,7 +268,7 @@ Paranoia is not trusting anyone (even not trusting them to not be able to do
 their work) and thinking that everyone around you are fools.
 
 ## 127
-Organization and structure are necessary for the smooth operations that leads to
+Organization and structure are necessary for the smooth operations that lead to
 success.
 
 ## 128

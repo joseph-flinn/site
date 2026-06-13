@@ -115,10 +115,10 @@ goals for a subsystem causes the hierarchy to malfunction.
 From a Systems Theory perspective, there are two reasons why an organization is dysfunctional: 1)
 optimization of team goals over the organization goals, and 2) the hierarchy of the organization
 forgetting its original purpose to help the subsystems do their jobs better. Systems in the real
-world are messy, so it isn't either/or. It is a mixture of both. And it true Systems Theory fashion,
+world are messy, so it isn't either/or. It is a mixture of both. And it's true Systems Theory fashion,
 is there a causation between the both reasons? Are there feedback loops in the system? And if so,
 are they reinforcing or balancing feedback loops? How do we dampen the oscillations in a
-dysfunctional organization to converge to a sustainable long term future instead of leading to a
+dysfunctional organization to converge to a sustainable long-term future instead of leading to a
 self-induced extinction?
 
 ---

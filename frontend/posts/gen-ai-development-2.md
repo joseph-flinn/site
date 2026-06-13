@@ -518,7 +518,7 @@ things that this CMS doesn't handle well. If I add another service, the renderin
 isn't the best user experience. But, this works for now and I have the technical capability of
 updating the frontend code as needed to support any structural changes in the CMS.
 
-I spent the last 5 hours of th eproject manually creating a logo for the firm and setting up the
+I spent the last 5 hours of the project manually creating a logo for the firm and setting up the
 backend logic to handle the contact form. A logo and icon are important marketing assets for any
 business, and like most contact forms, I want to receive an email any time someone wants to connect
 about the services that I provide.

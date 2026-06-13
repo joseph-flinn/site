@@ -38,7 +38,7 @@ management system for the entire organization to use for all projects.
 
 Cooper defined an effective new product development process with his Stage-Gate® [1] system (p.95).
 The product development process is broken down into five phases. Each phase has a review and
-approval gate before the product can progress onto the next phase. All of the work in prior phase
+approval gate before the product can progress onto the next phase. All of the work in prior phases
 must be completed across multiple categories to be approved to continue. 
 
 The first 3 phases are filled with research and data gathering to validate that the product is worth
@@ -49,7 +49,7 @@ policy?
 Leaders must be wary of any of these questions being answered with intuition rather than data.
 Project selection through emotions or politics is symptom of an immature product development system
 (Kahn p.160). Customers must be extensively interviewed through the entire process to make sure that
-their needs are being met. Not understanding the customer or the market is the number one reasons
+their needs are being met. Not understanding the customer or the market is the number one reason
 that new products fail (Cooper, p.35).
 
 Front-loading the product development process with research and planning increases the lead-time to
