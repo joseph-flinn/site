@@ -358,7 +358,7 @@ Learning comes from failure and rarely from success.
 
 ## 216
 “Any fool can learn from experience. The trick is to learn from other people’s
-experience” ”-- Benjamin Franklin
+experience” -- Bismark
 ```
 
 </details>
