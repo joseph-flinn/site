@@ -10,7 +10,7 @@ description: >
 
 The goal of this post is to provide a quick introduction to the process groups and knowledge areas
 that are defined in the 6th Edition of the PMBOK Guide. While these are presented in a linear
-fashion, they often happen during the management of a project. Ricardo Vargas has a
+fashion, they often happen in parallel during the management of a project. Ricardo Vargas has a
 great overview of how the different processes interact with each other which can be found 
 [here](https://youtu.be/GC7pN8Mjot8). Vargas drills into the viewers that each knowledge area
 affects the other knowledge areas; changes in one affect some or all the others.
