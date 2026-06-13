@@ -55,7 +55,7 @@ they have indeed learned something in the last 12-16 weeks. But this exposes the
 the student. Systems thinking suggests that systems can only have a single overarching goal that is
 being optimized (Meadows, p.85). If the goal of learning for the long-term starts dominating the
 overall system goal of getting a good grade to eventually get certified, there is a high risk of a
-balancing loop being activate to optimize for the good grade rather than learning for the long-term.
+balancing loop being activated to optimize for the good grade rather than learning for the long-term.
 
 When tension exists between the two goals, which one wins? It fully depends on the student and the
 balancing loops that they have set up for themselves and their personal goals with their program.

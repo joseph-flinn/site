@@ -18,12 +18,12 @@ and they are just getting more valuable and important as the world continues on 
 
 Over the next few weeks, we'll see how WHAT and HOW plays an important role in Organizational Leadership. They are the
 foundation of building a compelling organization, mission, and brand. We'll examine Simon Sinek's Golden Circle idea,
-expand on it with what we'll call Silver Rings. These drive the all important alignment across the organization.
+expand on it with what we'll call Silver Rings. These drive the all-important alignment across the organization.
 
 
 Next we'll examine the power of WHAT and HOW in the tangentially related topic of persuasion or negotiation. While
 answering the Golden Circle questions, WHAT and HOW play a vital role in the process of aligning perspectives to
-answer those questions themselves (wow, talk about idea Inception!). 
+answer those questions themselves (wow, talk about Idea Inception!). 
 
 
 After we explore how these words align and maintain an organization's alignment, we'll see how these words are the most

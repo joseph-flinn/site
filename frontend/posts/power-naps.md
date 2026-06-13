@@ -25,7 +25,7 @@ being released for thoughts to freely wander in and out, the mind not attaching 
 As my lifestyle and sleeping habits have changed with dance and with having a partner, the skill of
 power napping has become important. I have found myself feeling exhausted at dance events, but
 wanting to participate. In such instances, I find 20 to 30 minutes of downtime and a bench or floor
-space under a table to lie down. I often choose an less-than-comfortable surface so that I know I am
+space under a table to lie down. I often choose a less-than-comfortable surface so that I know I am
 not going to sleep for the night. I close my eyes and focus on lengthening my exhales. I may not
 fully lose consciousness to sleep, but the slow exhale of breath is relaxing. I shoot for 3 to 4
 breaths a minute: a 2-3 second inhale and a 17-20 second exhale. 40 to 50 of these breaths will take

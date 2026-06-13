@@ -10,17 +10,16 @@ description: >
 
 The goal of this post is to provide a quick introduction to the process groups and knowledge areas
 that are defined in the 6th Edition of the PMBOK Guide. While these are presented in a linear
-fasion, they ofent happen in parallel durinng the management of a project. Ricardo Vargas has a
+fashion, they often happen during the management of a project. Ricardo Vargas has a
 great overview of how the different processes interact with each other which can be found 
 [here](https://youtu.be/GC7pN8Mjot8). Vargas drills into the viewers that each knowledge area
 affects the other knowledge areas; changes in one affect some or all the others.
 
-Rememeber, the PMBOK defines a project as "a temporary endeavor undertaken to create a unique
+Remember, the PMBOK defines a project as "a temporary endeavor undertaken to create a unique
 product, service, or result" (Project Management Institute p.4). As such, a project has a specific
 beginning. Prior to a project starting, it has to be selected by the organization's project selection
 process. [Part 4](/posts/foundations-of-project-management-part4) will review what such a process
 looks like depending on an organization's project management maturity level.
-
 
 ## Process Groups
 
@@ -66,7 +65,7 @@ Scrum backlog grooming sessions).
 
 While a project is being _Executed_, project managers also _Monitor & Control_ the project outcomes.
 _Monitoring_ is often done with dashboards and other similar tools to create visibility into how the
-project is tracking against the planned baselines. Visibility is important identify risks to the
+project is tracking against the planned baselines. Visibility is important to identify risks to the
 project and communicate them with both the project team and the stakeholders. While there is a risk
 of being too heavy-handed in _Controlling_, great project managers know how to use transparency with
 the project team to minimize this risk. Project teams with realistic baselines and the autonomy to
@@ -90,10 +89,9 @@ team even if the project is preemptively killed before completion (Cooper p.60).
 criteria helps communicate that the project team did not fail, but are instead needed elsewhere on a
 higher priority project.
 
-
 ## Knowledge Areas
 
-There are 6th Edition of the PMBOK covers ten knowledge areas of project management: 
+There are the 6th Edition of the PMBOK covers ten knowledge areas of project management: 
 
 1. Integration Management
 2. Scope Management
@@ -106,13 +104,13 @@ There are 6th Edition of the PMBOK covers ten knowledge areas of project managem
 9. Procurement Management
 10. Stakeholder Management
 
-_Integration_ management are the activities and deliverables that integrate the rest of the
+_Integration_ management is the activities and deliverables that integrate the rest of the
 knowledge areas together. It is often the glue that holds the project together. This area includes
 developing the project charter, developing the overall project management plan, and managing the
 project's knowledge base.
 
 _Scope_ management manages everything to do with the scope of the project. Scope is one of the three
-areas of the triple constraint. Any changes to scope directly affects the _Schedule_ and _Cost_.
+areas of the triple constraint. Any changes to scope directly affect the _Schedule_ and _Cost_.
 Processes and deliverables in the scope knowledge area include the WBS and the plan on managing
 change requests once a scope baseline has been created. 
 
@@ -158,7 +156,7 @@ risks to the project and the plans to mitigate them. One of the deliverables fro
 project risk register to catalog all identified risks and the mitigation strategies that are planned
 in the event that an identified risk becomes reality. 
 
-The _Procurement_ management area includes managing all external partners and suppliers. It includes
+_Procurement_ management area includes managing all external partners and suppliers. It includes
 the activities to identify and select them as well as the purchasing activities. 
 
 The final knowledge area is _Stakeholder_ management. This includes plans on how to manage the
@@ -168,7 +166,6 @@ their power and their interest as well as their desired level of engagement (Sch
 deliverable is often kept confidential because of the sensitive nature of the subjective judgements
 of the different stakeholders. Some of the key stakeholders can be identified as detractors to the
 success of the project.
-
 
 ## Conclusion
 
@@ -194,5 +191,3 @@ in a future post.
 2. Cooper, Robert G. Winning at New Products: Creating Value through Innovation - 5th Edition. Fifth edition, Revised and Updated, Basic Books, 2017.
 3. Schwalbe, Kathy. Introduction to Project Management: With a Brief Guide to Microsoft Project Professional 2016. Sixth edition, Schwalbe Publishing, 2017.
 4. PMBOK 7 vs PMBOK 6 Top Differences to See - Vinsys. https://www.vinsys.com/blog/pmbok-7-vs-pmbok-6. Accessed 5 Jan. 2025.
-
-

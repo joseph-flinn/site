@@ -11,7 +11,7 @@ description: >
 Delivering effective feedback is one of the core responsibilities of a manager. Feedback is a
 crucial part of the learning process. When a manager does not use effective feedback, they are
 missing one of the most influential tools that they have at their disposal to manage their team to
-high performance. It is crucial element for the growth of the individual in the role and in their
+high performance. It is a crucial element for the growth of the individual in the role and in their
 career.
 
 Through management coaching with Marlow, I was introduced to a formula for managing for high
@@ -65,7 +65,6 @@ higher the pressure on the team. The more pressure on the team, the more I felt 
 IC work to relieve the pressure. This is a great example of the vicious reinforcing feedback loop
 known as the trap of the intervenor.
 
-
 ## Gratitude
 
 I am grateful for learning that active listening with curiosity is the "secret" to cultivating
@@ -77,8 +76,6 @@ feedback and there is a place for the leader to receive feedback for their own p
 I am also really grateful for all of the opportunities that I had to give feedback (whether executed
 or not). Each time I failed to deliver feedback is another reminder of how important feedback is. I
 have taken all of these with me into my personal life to improve as a general human being. 
-
----
 
 ## Resources
 

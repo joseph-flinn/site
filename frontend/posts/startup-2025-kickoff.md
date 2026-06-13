@@ -28,7 +28,7 @@ or actively thinking about work while "off the clock". This approach has served 
 career growth and promotion, but at the cost of diversity and balance of experiences in life. 
 
 In any job, there is always a risk of finding a misalignment between where I want to be and the
-direction that the organization for is going. With the massive amounts of energy invested in career
+direction that the organization is going. With the massive amounts of energy invested in career
 growth, finding this misalignment ends in pretty extreme burnout, requiring months away from the
 industry to dig my way out. 
 
@@ -45,7 +45,7 @@ This post is the kickoff to a series that will be following our progress as we b
 ## Project Kickoff
 
 Since alignment is the most important aspect of the success of a project, we started there. The team
-needed to align on what success of the projects looks like. We determined that getting to an MVP
+needed to align on what success of the project looks like. We determined that getting to an MVP
 launch with little-to-no negative monthly cash flow would be considered a success. Anything on top
 of that would be icing on the cake. 
 
@@ -72,7 +72,7 @@ incorporates routine check-ins (gate reviews) to make sure that continued invest
 sense, even prior to _MVP Launch_. If one of these check-ins results in a decision to kill the
 product, we will also consider everything that we have learned up to that point a success.
 
-Keep and eye out for an upcoming post will be doing a more in-depth review of our product
+Keep an eye out for an upcoming post will be doing a more in-depth review of our product
 development strategy and how we planning for the gate review sessions.
 
 ---

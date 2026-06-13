@@ -80,7 +80,7 @@ And yet, the world keeps spinning. Bits and bytes sit on disks waiting for their
 the silicone highways, for a chance to jump out along the fiber lines and go for an adventure.
 Products are bought and sold, packages sorted and shipped. Bank transactions flow from one account
 to another, changing the digital balances along the way. Aircraft move people and cargo from one
-place to another and space craft launch to explore that which is far away.
+place to another and spacecraft launch to explore that which is far away.
 
 In a world saturated with the intangible, the tangible is needed to stay grounded in reality and to
 avoid getting lost in cyber space. The smell of fresh-cut pine and the silkiness of sawdust is an
