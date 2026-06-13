@@ -156,7 +156,7 @@ risks to the project and the plans to mitigate them. One of the deliverables fro
 project risk register to catalog all identified risks and the mitigation strategies that are planned
 in the event that an identified risk becomes reality. 
 
-_Procurement_ management area includes managing all external partners and suppliers. It includes
+The _Procurement_ management knowledge area includes managing all external partners and suppliers. It includes
 the activities to identify and select them as well as the purchasing activities. 
 
 The final knowledge area is _Stakeholder_ management. This includes plans on how to manage the
