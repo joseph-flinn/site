@@ -19,7 +19,7 @@ situations and met new people, being a student was my answer. But as life change
 been called into question.
 
 Am I a full-time student? Am I a software engineer? Am I a manager? Am I a dancer? Am I a writer? Am
-Am I an outdoorsman? Am I an entrepreneur? Am I a creator? Am I a musician? Am I an athlete? Am I an
+I an outdoorsman? Am I an entrepreneur? Am I a creator? Am I a musician? Am I an athlete? Am I an
 academic? Am I a philosopher? Am I an artist?
 
 There is a temptation to find that sole identity, to be secure in the idea that I am something: to
