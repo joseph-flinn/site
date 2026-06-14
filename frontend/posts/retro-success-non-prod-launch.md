@@ -21,7 +21,7 @@ The rest of the project was four months of reverse engineering how the system wo
 to be configured, and then immortalizing it in code so that it would not have to be reverse
 engineered again.
 
-Finally after many long months of building out infrastructure, building out deploy pipelines for the
+Finally, after many long months of building out infrastructure, building out deploy pipelines for the
 environment--something that also had not existed in production--and having the QA team verify that
 it was working as expected and something was not missed, we launched the environment. 
 
@@ -33,7 +33,7 @@ environment. All of these issues built a mistrust in the level of replication th
 environment had. However, after many months, all of the configuration bugs had been found and fixed
 and the confidence in the environment grew and it became a lot more useful in the SDLC process.
 
-The expected value of catching issues before getting to Production was not the only added value of
+The expected value of catching issues before getting to production was not the only added value of
 the environment. Up until that point, there had been little documentation on what the actual system
 looked like, all of the pieces that were required, or what parts they played. There was a time where
 the most senior engineers were arguing what a service actually did and how it worked. The
@@ -46,7 +46,7 @@ roles in the overall system.
 There were many lessons to be learned through the challenges. One of the biggest lessons was the
 importance of system documentation and data flow diagrams through the system. As an operator, I
 do not need to understand the inner workings of all of the pieces of the system, but I do need to
-be able to where the boundaries are between systems, what those systems do, and how they do it.
+be able to see where the boundaries are between systems, what those systems do, and how they do it.
 It often seems like the easiest way to do this from the developer's perspective is to read the code.
 However, reading tens to hundreds of thousands of lines of code would take years to fully build up a
 working mental model if not actively developing in that codebase. 
@@ -55,6 +55,6 @@ I am also grateful for learning the importance of experimentation. There were ne
 arose in the non-production environment that required novel solutions relative to the production
 environment. At that time, a single deploy to production took half a day. The non-production
 environment needed to be deployed to multiple times a day. If it took half a day to update
-non-production, it would useless half of the time. We were able to solve the multi-hour deploy time
+non-production, it would be useless half of the time. We were able to solve the multi-hour deploy time
 in non-production and then apply the same solution to production. This pattern repeated itself with
 other processes between the two environments over the next few years.

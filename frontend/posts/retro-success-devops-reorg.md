@@ -17,8 +17,8 @@ few past DevOps Engineering roles and I was excited about the opportunity to sha
 methodologies and practices and the possible future career advancement possibilities at this
 organization. Before I accepted and started in the role, I knew that being a DevOps Engineer on a
 DevOps team has a high risk of being an anti-pattern for technical organization structure (Skelton,
-_"DevOps Topologies"_). I took the this as a challenge to overcome (which is not necessarily the
-wrong decision, but a lot harder to do that I had originally thought).  However, I had yet to learn
+_"DevOps Topologies"_). I took this as a challenge to overcome (which is not necessarily the
+wrong decision, but a lot harder to do than I had originally thought).  However, I had yet to learn
 about [influencing critical decisions](/posts/retro-failure-influence-critical-decisions) or the
 dangers of [value oases](/posts/retro-failure-value-oasis). 
 
@@ -38,7 +38,7 @@ of "shifting left" so that developers did everything was no longer feasible.
 
 _Team Topologies_ (Skelton and Pais) was published in 2019 and had been out for a few years. Skelton
 and Pais examined the anti-patterns of organizations adopting DevOps methodologies. Two of the most
-prevalent anti-patterns are the "DevOps Team Silo" (Anti-Type B) and the "Dev don't need Devops"
+prevalent anti-patterns are the "DevOps Team Silo" (Anti-Type B) and the "Dev don't need DevOps"
 (Anti-Type C) (Skelton, _"DevOps Topologies"_). With the ever-expanding complexities of the cloud,
 Platform Engineering was proposed as the solution to the arguably failed attempts to adopt DevOps
 via tactics rather than culture. 
@@ -46,7 +46,7 @@ via tactics rather than culture.
 ## DevOps Team Reorg
 
 Platform Engineering is what I was working towards as the future of the DevOps team. I pitched the
-idea to my manager and there seemed to be agreeablenss that it was the viable future. But in a weird
+idea to my manager and there seemed to be agreeableness that it was the viable future. But in a weird
 turn of events, six months later, the name "Platform" was given to a development team during a
 reorg. This team had a completely independent mission from the standard practices of a Platform
 Engineering team. I found myself back in a situation where a term was used differently than
@@ -62,8 +62,8 @@ the year led to a pause on this initiative until midway through 2024.
 
 In early 2023, I designed the growth plan for the DevOps team to keep abreast with the rest of the
 growing Engineering department. However, with budget constraints and reprioritization of work, that
-growth plan did not take affect The DevOps and CloudOps teams delivered a huge success in decreasing
-deployment complexity and delivering a second production system without, all without linearly
+growth plan did not take effect. The DevOps and CloudOps teams delivered a huge success in decreasing
+deployment complexity and delivering a second production system all without linearly
 scaling the deployment work required to maintain two production systems (
 [this post](retro-success-deployment-complexity-reduction) has more information on that success).
 
@@ -96,24 +96,24 @@ was giving the much deserved attention to the self-hosted deployment models as t
 significant portion of the bottom line as well as being one of the biggest market differentiators
 for the product.
 
-The DevOps team had successfully been deprecated in favor for teams with more focused purposes.
+The DevOps team had successfully been deprecated in favor of teams with more focused purposes.
 However, there was still that nagging issue of naming and the growing concern of duplicating
 missions between the BRE/DTE teams and Platform team. I had really good relationships with both
 the Engineering Manager of the Platform development team and the Director of Engineering. Before my
 departure, I wanted to do what I could to leave my teams, my department, and the organization as a
-whole in the best place that I could. This meant having a crucial conversation (Grenny et al) with
+whole in the best place that I could. This meant having a crucial conversation (Grenny et al.) with
 the Director and Engineering Manager to make sure there were no issues with colliding missions
 between the teams in the future.
 
 With the blessing of my manager, I used
 [the communications skills](/posts/understanding-and-influence) that I had been learning--the hard
-way--over the last few years to approach the topic the missions of the BRE/DTE and Platform
+way--over the last few years to approach the topic of the missions of the BRE/DTE and Platform
 development teams and the names. Leaning into curiosity, a simple "Can you _tell me more_ about what
 y'all are thinking for the future of the Platform team?" got us directly to the heart of the
 problem. We quickly found that we had some past misunderstandings of what each team needed in
 support to collaborate. We all agreed that the current Platform team was not aptly named given their
 purpose and mission. We collaboratively realized that the majority of the directions that both
-teams were headed were extremely complimentary but fully independent which meant that there was a
+teams were headed were extremely complementary but fully independent which meant that there was a
 low risk of collision.
 
 While I am unsure if there will be a name change in the future, it was decided that the BRE and DTE

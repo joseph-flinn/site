@@ -9,7 +9,7 @@ description: >
 
 I was introduced to the idea of First Team by Patrick Lencioni last year as I was assisting with conducting interviews
 for my new manager [[1](https://www.youtube.com/watch?v=BjE_mPoZPSg)]. The general idea of First Team is prioritizing
-the alignment of the team of peers over representing and lobbying for team the leader is leading.  While Lencioni
+the alignment of the team of peers over representing and lobbying for the team the leader is leading.  While Lencioni
 focuses the idea of the First Team on the Executive Leadership team, it can and should be applied throughout the
 organization at all levels. As an engineering manager, I have two teams: the team of other engineering manager peers and
 the team that I lead.
@@ -20,14 +20,14 @@ I have recently been reading a lot of Simon Sinek with books like _Leaders Eat L
 leadership. Sinek's main thoughts around what makes great leaders are leaders that care for, protect and provide for 
 their teams. He uses the biology of the wolf pack as an example. Alpha wolves care for, protect, and provide for the
 rest of the pack (I wrote a [post on Leadership](/posts/e2m-management-and-leadership) in more depth last week). The
-more a leader cares for, protects, and provide for their team, the more tight knit their team will operate. If each team
-member knows that the leader is leading for the good of the team and will not sacrifice the members for self gain, the
+more a leader cares for, protects, and provides for their team, the more tight-knit their team will operate. If each team
+member knows that the leader is leading for the good of the team and will not sacrifice the members for self-gain, the
 more the team will pull together and sacrifice for each other.
 
 These two ideas seem at odds, and a quick search on the internet for "shit shield" brings up a lot of posts written
 about management and middle management from both the "managers should be shit shields" and "managers shouldn't be shit
 shields" perspectives. I've given it a lot over the last year and, like most important things in life, have concluded
-that it is a lot more nuanced than than the one dimensional "do this" and "don't do this". There is a missing piece, and
+that it is a lot more nuanced than the one-dimensional "do this" and "don't do this". There is a missing piece, and
 that piece is _Trust_.
 
 It seems like Lencioni's call to action is the action or behavior of prioritizing the First Team over the Second Team.
@@ -53,7 +53,7 @@ So if prioritization and the act of shielding aren't inputs to change organizati
 these have in common? _Trust_. The more _Trust_ in an organization, the more aligned that organization will be across
 all First Teams. The more alignment in an organization, the less internal shielding is necessary to maintain _Trust_
 inside of each Second Team. How do you build _Trust_? With [every action and every decision](/posts/e2m-marbles). Put
-both your First Team and Second Team before your needs and desires. Never sacrifice team members for self gain. Be the
+both your First Team and Second Team before your needs and desires. Never sacrifice team members for self-gain. Be the
 first into the Unknown. Be a [Leader](/posts/e2m-management-and-leadership)
 
 

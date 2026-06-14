@@ -11,24 +11,24 @@ The fourth and final area where the words WHAT & HOW have a large impact is in s
 likable and remembered is important for networking and finding business opportunities. Humans rarely, if ever, achieve
 something in a vacuum. Human connection is a need. Building a strong social circle that supports your purpose serves two
 things:  1) creating social or business opportunities that wouldn't otherwise be there, and 2) increasing a person's
-natural resources of Community (_Your Money or Your Life_ [[1](https://yourmoneyoryourlife.com/book-summary/)].
+natural resources of Community (_Your Money or Your Life_ [[1](https://yourmoneyoryourlife.com/book-summary/)]).
 
 In her book _Captivate: The Science of Succeeding with People_ [[1](https://www.scienceofpeople.com/captivate/)],
 Vanessa Van Edwards discusses skills and techniques to overcome awkwardness at networking events or other social
 gatherings (among a great many other things). One of those tools that she explores is something that she calls a Spark:
-the piqued curiosity between two people that connect them and fosters a desire to learn more about the other. Using
+the piqued curiosity between two people that connects them and fosters a desire to learn more about the other. Using
 "Sparky questions"--open ended and unexpected questions--to create a Spark and start and initiate the human connection.
 The human brain is wired to seek out novelty [[3](https://www.ciis.edu/news/novelty-keeps-your-brain-healthy)], so these
-types of open ended question _spark_ the curiosity that starts that creates an immediate interest in the conversation.
+types of open ended questions _spark_ the curiosity that starts and creates an immediate interest in the conversation.
 
-Connecting Van Edward's work to Chris Voss's work in _Never Split the Difference_
+Connecting Van Edwards's work to Chris Voss's work in _Never Split the Difference_
 [[4](https://www.blackswanltd.com/never-split-the-difference)], we can expand those open ended _Sparky_ questions to be
 open ended WHAT & HOW questions. Expressing genuine interest and curiosity in other people creates that connection.
 People want to feel understood and heard, and providing that for other people in an individualistic society creates it.
-Through human connection, social networks grow stronger. As people felt understood, there is space to then reciprocate
+Through human connection, social networks grow stronger. As people feel understood, there is space to then reciprocate
 and give understanding back, further strengthening the connection. Making a habit of this creates a social gravity. The 
 more people come into the orbit, the more opportunities there are for people to connect those around them, to match
-complimentary needs in both parties. These opportunities could be social, in business, or even other needs (finding a
+complementary needs in both parties. These opportunities could be social, in business, or even other needs (finding a
 mechanic, finding an accountant, etc.)
 
 Social community is super important for a healthy human. A study found that a rat that is isolated from other rats
@@ -50,7 +50,7 @@ community brings motivation and working long days is not as painful because ther
 leaving the world better than you found it.
 
 Human connection is a necessary part of the human experience. It fills basic human needs, but also opens up social
-opportunities, business opportunities and more. Connection and Community creates purpose and motivation to do good in
+opportunities, business opportunities and more. Connection and Community create purpose and motivation to do good in
 the world. And this purpose and motivation can lead to a better relationship with finances to be able to maximize one's
 fulfillment by maximizing life energy used for pushing forward one's purpose.
 
@@ -60,7 +60,7 @@ fulfillment by maximizing life energy used for pushing forward one's purpose.
 ## Resources 
 
 1. [Vicki Robin: Your Money or Your Life](https://yourmoneyoryourlife.com/book-summary/) 
-2. [Vanessa Van Edward's: Captivate: The Science of Succeeding with People](https://www.scienceofpeople.com/captivate/)
+2. [Vanessa Van Edwards: Captivate: The Science of Succeeding with People](https://www.scienceofpeople.com/captivate/)
 3. [California Institute of Integral Studies: Novelty Keeps the Brain Healthy](https://www.ciis.edu/news/novelty-keeps-your-brain-healthy)
 4. [Chris Voss: Never Split the Difference](https://www.blackswanltd.com/never-split-the-difference)
 5. [National Library of Medicine: Volitional social interaction prevents drug addiction in rat models](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7386559/)

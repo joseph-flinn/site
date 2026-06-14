@@ -10,10 +10,10 @@ description: >
 I grab my coffee and sit down on my couch. I have just finished my morning routine and am ready to
 start in on what the day has in store. My digital life is inches away to my left. Every morning
 starts like this. I take a sip of my coffee and boot up my laptop. After logging in, I quickly
-navigate to my daily journal which is quickly becoming my newest old friend.
+navigate to my daily journal, which is quickly becoming my newest old friend.
 
 My journal has seamlessly replaced the structure and routine in this new chapter. My schedule is
-completely up to me which is almost too free. The journal helps set goals and helps ground me in
+completely up to me, which is almost too free. The journal helps set goals and helps ground me in
 making progress towards those goals.
 
 A few years ago, I remember a conversation with my uncle about task prioritization. I had recently
@@ -23,13 +23,13 @@ knowing what tomorrow's priority was, but logging on in the morning to find a ne
 
 My uncle's advice was to ask myself "What is the one thing that will push us towards our goal this
 week (short-term)?" and "What is the one thing that will best set us up for our long-term goals?"
-This idea was echoed in _The 80/20 Manager_ (Koch, 2013), find the highest priority for the day and
+This idea was echoed in _The 80/20 Manager_ (Koch, 2013): find the highest priority for the day and
 do nothing else until that task is completed.
 
 Unfortunately, as a manager I ran into trouble around organizational goals and priorities.
 Attempting to align team goals to unknown or constantly-shifting organizational goals is a recipe
-for burnout. Add to this the struggle of determining what daily fires were wild fires versus
-candles, daily practices of setting of intention and priority did not take root.
+for burnout. Add to this the struggle of determining what daily fires were wildfires versus
+candles; daily practices of setting intention and priority did not take root.
 
 Moving into my next chapter of graduate school, there is the lack of structure that was previously
 provided by the four to six hours of daily meetings. I needed to find a replacement. Starting a
@@ -44,7 +44,7 @@ improving on using a lens of gratitude in this reflection.
 
 I also use this section to set an overall intention for the focus of the day.
 Sometimes this is a more robust overview of the high priority tasks for the day,
-and other times it is more vague and hope oriented.
+and other times it is more vague and hope-oriented.
 
 
 ## Today's Plan
@@ -75,7 +75,7 @@ section to track key decisions and things that I have tried as well as the
 outcomes of those "experiments".
 
 For example, a few months ago I was working on installing NixOS on a Libre
-Potato v1. There was not a straight-forward tutorial on how to do it
+Potato v1. There was not a straightforward tutorial on how to do it
 successfully and it took a lot of trial and error. I needed to flash the
 bootloader to the correct storage medium and install the OS on another. Taking
 note of all of the steps that I tried and the outcomes allowed me to track the

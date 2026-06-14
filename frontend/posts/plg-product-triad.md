@@ -22,21 +22,20 @@ Product is responsible for the value that is delivered to the end user through t
 the collection point for all end user feedback. Their primary responsibility is to collect all of
 this feedback, and synthesize it to a problem definition. They also lead the planning on what
 metrics need to be collected to verify the problem and calculate the value of solving the problem
-for the end user. Product then uses the value calculation to and rank problem definitions against
-one another. All types of reasons of why something should be done in the product should be captured
+for the end user. Product then uses the value calculation to rank problem definitions against one another. All types of reasons of why something should be done in the product should be captured
 in metrics used to calculate the value. No product decision, whether it leads to financial growth or
 not, is made without the data in support.
 
 
-### Desgin
+### Design
 
 Design owns and is responsible for designing the solution to a defined problem that Product deems
 the highest value to end users. Solutions and alternatives are developed and user feedback is
 gathered to validate the solution. The size and scope of these problems could vary greatly; from a
 small change in the corner of a settings page to a complete user experience overhaul. If the
-proposed solution is large functionality change that requires significant investment, user feedback
+proposed solution is a large functionality change that requires significant investment, user feedback
 via user research should be done previous to implementation. However, if the scope of the solution
-is not large, user feedback comes post implementation and be naturally added to the to Product user
+is not large, user feedback comes post implementation and is naturally added to the Product user
 feedback collection strategy. If A/B testing is applicable, it would be used here to enable
 in-product user feedback. 
 
@@ -53,7 +52,7 @@ review of solutions and alternatives to Product's defined problems. Design leans
 Engineering for the feasibility and complexity of a solution and Engineering is responsible for
 providing feedback to assist with minimizing technical complexity. Minimizing complexity is
 important to contribute to the overall Lean goals of maximizing value delivery while minimizing
-waste. Technical complexity is slow to develop and test which makes it the enemy of Lean since it
+waste. Technical complexity is slow to develop and test, which makes it the enemy of Lean since it
 causes friction in the fast delivery of value. Complex solutions are also prone to rework which
 increases waste. 
 
@@ -71,8 +70,8 @@ the outcomes of practicing DevOps.
 
 The organization structure should be such that it promotes PLG and Lean management. The Lean
 management principles should be applied to the communication channel creation as well: maximize the
-delivery of value in communication while minimizing waste of unneeded communication. Organization
-communication are the hardest problems to solve. 
+delivery of value in communication while minimizing waste of unneeded communication. Organizational
+communications are the hardest problems to solve. 
 [Conway's Law](https://www.melconway.com/Home/Committees_Paper.html), 
 the 
 [Inverse Conway Maneuver reference](https://yoan-thirion.gitbook.io/knowledge-base/xtrem-reading/resources/book-notes/team-topologies#conways-law)
@@ -85,7 +84,7 @@ Another article will be written around Conway's Law and the Inverse Conway Maneu
 
 ---
 
-In PLG organizations, the Core product groups each have complimentary roles and responsibilities to
+In PLG organizations, the Core product groups each have complementary roles and responsibilities to
 play in order to be the most effective. Each business function relies heavily on each other to make
 up the whole of the core product groups to optimize the Lean management goals: maximizing value
 delivery to the end user and minimizing waste in the delivery.

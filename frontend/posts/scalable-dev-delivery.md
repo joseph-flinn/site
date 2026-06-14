@@ -12,7 +12,7 @@ As [MinimumCD](https://minimumcd.org/minimumcd/) shows, CI is required to realiz
 If you haven't already, give 
 [_Scalable Development Practices - CI_](/posts/scalable-dev-ci) a read.
 
-CD has come to mean two different things: Continuous Delivery and Continous Deployment. As we discussed in 
+CD has come to mean two different things: Continuous Delivery and Continuous Deployment. As we discussed in 
 [_Scalable Development Practices - Overview_](/posts/scalable-dev-overview), the difference between
 continuous delivery and continuous deployment is the number of manual steps in the pipeline from the time where a
 software engineer commits a change to the trunk branch and when it appears in Production. Here, Production can be
@@ -37,13 +37,13 @@ deploy process expects it to be.
 
 Since we are running trunk based development where the trunk is assumed to always be in a deployable state, every update
 to the trunk should have a corresponding build artifact that is ready to be configured and deployed. During the deploy process,
-there should be not be any more artifact building. If this was the case, the artficats would not necessarily be fully tested
+there should not be any more artifact building. If this was the case, the artifacts would not necessarily be fully tested
 signed off. If the deploy process includes rebuilding and retesting, this also increases the length feedback loop to Production 
 and slows down value delivery.
 
 ## Code
 
-Continuous Integraiton and Continuous Delivery work so close together that I put them in the same pipeline. For the
+Continuous Integration and Continuous Delivery work so close together that I put them in the same pipeline. For the
 running example, we are going to add a job to the end of `CI-main.yml` that pushes the already-built package to a
 predetermined place where the deployment process can pick it up.
 

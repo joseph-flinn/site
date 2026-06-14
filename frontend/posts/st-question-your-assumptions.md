@@ -16,11 +16,11 @@ humans is single-loop learning. An agent is placed into a world, receives feedba
 experiences the feedback from the decision, receives more feedback to make another decision. And so on and so forth _ad
 infinitum_.
 
-> Single-loop learning does not result in deep change to our mental models--our understanding of the casual structure of
+> Single-loop learning does not result in deep change to our mental models--our understanding of the causal structure of
 > the system, along with the boundary of the model (which variables are included and which are excluded) and the time
 > horizon we consider relevant--our framing or articulation of a problem (Sterman, 2000)
 
-The famous Skinner Box experiments shows this well. A rat is placed into a box that has at least one lever connected to
+The famous Skinner Box experiments show this well. A rat is placed into a box that has at least one lever connected to
 some feedback. Depending on the research question, the lever could deliver different types of feedback: positive
 reinforcement, positive punishment, negative reinforcement, and negative punishment. The overall idea of the Skinner Box
 is to test different operant conditioning research questions in isolated and controlled environments (Nickerson, 2024).
@@ -34,9 +34,9 @@ experimentation.
 > "Inventory is too high because sales unexpectedly fell. Sales fell because the competitors lowered their price. The
 > competitors lowered their prices because ..." Such event-level explanations can be extended indefinitely, in an
 > unbroken Aristotelian chain of cause and effects, until we arrive at some First Cause, or more likely, lose interest
-> along they way (Sterman, 2000).
+> along the way (Sterman, 2000).
 
-In a different Skinner Box experiment, Skinner experimented with food delivery regular interval food delivery with
+In a different Skinner Box experiment, Skinner experimented with regular interval food delivery with
 pigeons and found that the pigeons associated whatever behavior they were doing right before the food delivery with the
 appearance of food (Skinner, 1948). A cause-effect relationship was formed between behavior and reward even though there
 was no relation between the cause and effect. Anthropomorphically, the pigeons assumed that it was from the event of
@@ -50,7 +50,7 @@ does. In the pigeon experiment, the world doesn't stay constant as it did the ex
 the appearance of food changes and so does the observed behavior of the pigeon's mental model. From the anthropomorphic
 perspective of the pigeon, the pigeon receives positive reinforcement feedback for a certain behavior when the food
 appears--even though there is no relation--so it decides to keep doing that behavior. The feedback from the system
-continues. When the feedback stops--the regular intervals of food delivery stops--the behavior continues but
+continues. When the feedback stops--the regular intervals of food delivery stop--the behavior continues but
 deteriorates over time as the perceived feedback stops. The feedback that indicates that it is not the behavior that
 causes the food updates the pigeon's mental model in relation. When the regular interval food delivery is resumed,
 a new cause-effect relationship starts, even though the delivery is still not related to the behavior. In the studied
@@ -60,16 +60,16 @@ In double-loop learning, the feedback doesn't just affect the decisions in the w
 models, decision rules, decision making strategies, and the system itself (Sterman, 2000). The resulting behavior from
 the system is different than before because the system is different than before.
 
-> Systems Thinking is double-loop learning: information feedback about the real world no only alters our decisions
-> within the context of the exiting frames and decision rules, but also feeds back to alter our mental models. As our
+> Systems Thinking is double-loop learning: information feedback about the real world not only alters our decisions
+> within the context of the existing frames and decision rules, but also feeds back to alter our mental models. As our
 > mental models change, we change the structure of our systems, creating different decision rules and strategies. The
 > same information processed by different decision rules and strategies now yield a different decision (Sterman, 2000).
 
-There is are lists of things that impede learning at each point in double-loop learning: the real world is very complex
+There are lists of things that impede learning at each point in double-loop learning: the real world is very complex
 and difficult to reason about with accuracy, selective perception, biases, ambiguity, misperceptions of feedback,
 unscientific reasoning (even by scientists), judgemental biases, defensive routines, inconsistent decision making, and
 performance as goal are just some. These all have something in common: a strong underlying bias that currently held
-assumptions are more accurate that something else, even in the face of disconfirming evidence of the held assumptions.
+assumptions are more accurate than something else, even in the face of disconfirming evidence of the held assumptions.
 
 Identifying and questioning all assumptions is paramount to learning in complex systems. As we try to work towards a
 specific system goal, have we defined the boundaries well enough? Is there a variable that we have intentionally or
@@ -78,7 +78,7 @@ stated goal of the system that we are studying? Does the behavior of the system 
 goal that it is moving towards in action that is different than the stated goal? 
 
 When we start questioning all of our assumptions, we allow flexibility in our mental models to conform to the observed
-world instead of demanding the world conform to our mental models. Our perspectives shifts. It becomes easier to relate
+world instead of demanding the world conform to our mental models. Our perspectives shift. It becomes easier to relate
 to other humans because our mental models of the world remain fluid.
 
 > Each participant in a conversation employs a different mental model to interpret the subject. Fundamental assumptions

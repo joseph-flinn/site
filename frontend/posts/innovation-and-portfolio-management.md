@@ -21,7 +21,7 @@ product that does not fulfill a need (including a chocolate bar that fulfills a 
 hard week from my perspective).
 
 Developing a new successful product must include the correct combination of market and timing. It is
-a hard problem to solve, but it not unsolvable. If a process can be defined around new product
+a hard problem to solve, but it is not unsolvable. If a process can be defined around new product
 development, then engineering methodologies can be applied to refine it.
 
 Too often leaders only use intuition to decide what projects and products to pursue. It is a
@@ -47,7 +47,7 @@ until our investment is recouped? Does the return on investment exceed our firm'
 policy?
 
 Leaders must be wary of any of these questions being answered with intuition rather than data.
-Project selection through emotions or politics is symptom of an immature product development system
+Project selection through emotions or politics is a symptom of an immature product development system
 (Kahn p.160). Customers must be extensively interviewed through the entire process to make sure that
 their needs are being met. Not understanding the customer or the market is the number one reason
 that new products fail (Cooper, p.35).
@@ -55,7 +55,7 @@ that new products fail (Cooper, p.35).
 Front-loading the product development process with research and planning increases the lead-time to
 start development. This is often seen as a bad thing in the software world where the drive is to be
 the first to market to capture as much of the market as possible. However, skimping on the initial
-research and planning phases lead to longer development times and more rework causing the overall
+research and planning phases leads to longer development times and more rework causing the overall
 cost of the project to increase significantly. The majority of the costs of a project are in the
 development execution phase. While speed is important, the rest of the new product development
 processes cannot be sacrificed to gain more speed. 
@@ -85,7 +85,7 @@ the firm's portfolio of projects is aligned with the firm's strategy and objecti
 ## Resources
 
 1. Sinek, Simon. The Infinite Game. Portfolio/Penguin, 2019.
-2. Christensen, Clayton M. The Innovator’s Dilemma: The Revolutionary Book That Will Change the Way You Do Business ; [with a New Preface]. 1. Harper Business paperback publ, Harper Business, 2011.
+2. Christensen, Clayton M. The Innovator’s Dilemma: The Revolutionary Book That Will Change the Way You Do Business ; [with a New Preface]. 1. Harper Business paperback publisher, Harper Business, 2011.
 3. Flinn, Peter. Managing Technology and Product Development Programmes: A Framework for Success. Wiley, 2019.
 4. Cooper, Robert G. Winning at New Products: Creating Value through Innovation - 5th Edition. Fifth edition, Revised and Updated, Basic Books, 2017.
 5. Kahn, Kenneth B., et al., editors. The PDMA Handbook of New Product Development. Third edition, Wiley, 2013.

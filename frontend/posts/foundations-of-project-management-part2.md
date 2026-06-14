@@ -14,7 +14,7 @@ and choosing hills to die on. Often there is a split between the engineering fun
 business function where Agile is the champion of the engineers and a traditional plan-driven
 approach is the champion for the business functions. 
 
-Sales and marketing teams function need specific dates and deadlines in order to collaborate with
+Sales and marketing teams' function needs specific dates and deadlines in order to collaborate with
 external partners for press release go-to-market launches. Engineers are hesitant to commit to
 specific deadlines because product development work is often filled with ambiguity where a timeline
 for completion may not be known. Ambiguity may be higher in the case where the product or technology
@@ -33,10 +33,10 @@ There is a large amount of literature on the success of both plan-driven project
 Agile project management. As such, I can hear the question being asked: "If there are examples of
 both succeeding, which is correct?"
 
-I think this is wrong question to be asking. It was certainly the wrong question to be asking going
+I think this is the wrong question to be asking. It was certainly the wrong question to be asking going
 into a course on the _Foundations of Project Management_. The PMBOK provides the _standard_ of
 project management: what needs to be done regardless of the _framework_ that is chosen for the
-project (Schwable p.79). As an example, the PMBOK states that a communication management plan is
+project (Schwalbe p.79). As an example, the PMBOK states that a communication management plan is
 important for the success of any project. Such a plan answers the questions: How will the team
 communicate on a daily basis? What communication channels should be used in the event of an urgent
 task? How should stakeholders be kept up-to-date? Who owns the project status reports? These
@@ -62,9 +62,9 @@ flexibility in requirements. As a quick review of the characteristics we discuss
 Agile has shown to be extremely resilient in project settings where there is a lot of ambiguity,
 where requirements are not fully known and plans have a high risk of changing. New product or
 feature development is an excellent example of where Agile shines. The underlying implementation of
-a feature may not be fully known before the team starts work on project.
+a feature may not be fully known before the team starts work on the project.
 
-On the other hand, managing a infrastructure migration project will require a lot more planning to
+On the other hand, managing an infrastructure migration project will require a lot more planning to
 minimize downtime. A plan-driven framework may be more beneficial. However, such a project may also
 benefit from an iterative approach where independent portions of the infrastructure are migrated one
 at a time. Depending on the migration project, maybe a hybrid approach would work best.
@@ -87,10 +87,10 @@ project is significantly higher.
 
 In a plan-driven framework, the definition of completion is tied to the scope. The project is
 finished when the well-defined scope has been delivered. As an example, a utility company needs to
-build a dam to increase their ability to produce electricity. The scope of the dam is pre-defined
+build a dam to increase its ability to produce electricity. The scope of the dam is pre-defined
 ahead of construction. The project is not finished until a functioning dam has been completed and
 has been delivered to the utility company's operations team. In this case, the cost and schedule are
-relatively flexible. The success of the project may be tied the cost and schedule constraints, but
+relatively flexible. The success of the project may be tied to the cost and schedule constraints, but
 the completion of the project is defined by the scope being delivered. The dam may be delivered over
 budget and ahead of schedule, but the project is not considered completed until the dam has been
 delivered.
@@ -107,7 +107,7 @@ increasing tension on the team.
 ## Conclusion
 
 While there is a difference between a plan-driven project management framework and an Agile project
-management framework, they are both built on top the foundations of project management described in
+management framework, they are both built on top of the foundations of project management described in
 the PMBOK. No matter what framework a project dictates or is chosen for the project, there are a set
 of deliverables that correlate to the success of projects. The 5 process groups and 10 knowledge
 areas in the PMBOK can be organized in a traditionally serial timeline or an iterative Agile

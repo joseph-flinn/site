@@ -35,7 +35,7 @@ learning where a system continues to make the same decisions no matter the outco
 In fact, the two core ideas in Systems Thinking are feedback loops and system goals (Meadows 2009).
 Feedback can come in many forms (team metrics, success/failure of projects, verbal feedback, etc). A
 manager's responsibility is to build and maintain these feedback loops to benefit the team and to
-fill any gaps with verbal feedback that metrics and other feedback framework miss.
+fill any gaps with verbal feedback that metrics and other feedback frameworks miss.
 
 I believe that expectations are the most delicate of the three areas in managing for high
 performance. As a new manager, I wrestled with how to set expectations, what expectations were
@@ -45,8 +45,8 @@ were highly personalized to my personality and perspective.
 
 In the early days, I was also highly sensitive to giving feedback on expectations that had not
 already previously been explicitly defined. I know from many personal experiences that receiving
-strong or critical feedback on an expectation that was failed to be communicated is a quick way to
-lose trust in a leader. However, a few months of having feedback conversations around my
+strong or critical feedback on an expectation that was not communicated is a quick way to
+lose trust in a leader. However, after a few months of having feedback conversations around my
 expectations that had not explicitly been set, I realized that feedback conversations themselves can
 be a great catalyst to setting expectations that had not previously been discussed. The 
 [SBI feedback framework](https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/)
@@ -68,7 +68,7 @@ known as the trap of the intervenor.
 ## Gratitude
 
 I am grateful for learning that active listening with curiosity is the "secret" to cultivating
-psychological safety which is necessary for setting effective expectations. Leaders will make
+psychological safety, which is necessary for setting effective expectations. Leaders will make
 mistakes and poor expectations will be set. However, through psychological safety and a continuous
 feedback culture, feedback can flow both ways. Direct reports will be more willing to receive
 feedback and there is a place for the leader to receive feedback for their own personal learning.
@@ -79,8 +79,8 @@ have taken all of these with me into my personal life to improve as a general hu
 
 ## Resources
 
-1. “Exploring the Habits That Enhance People Management and Leadership.” Marlow | Coaching for Managers and Emerging Leaders, https://getmarlow.com/article/exploring-the-habits-that-enhance-people-management-and-leadership-1599081175682x923507461749735400. Accessed 28 July 2024.
+1. "Exploring the Habits That Enhance People Management and Leadership." Marlow | Coaching for Managers and Emerging Leaders, https://getmarlow.com/article/exploring-the-habits-that-enhance-people-management-and-leadership-1599081175682x923507461749735400. Accessed 28 July 2024.
 2. Sinek, Simon. Find Your Why: A Practical Guide to Discovering Purpose for You or Your Team. Portfolio/Penguin, an imprint of Penguin Random House, LLC, 2017.
 3. Sterman, John D. Business Dynamics: Systems Thinking and Modeling for a Complex World. Nachdr., Irwin/McGraw-Hill, 2009.
 4. Meadows, Donella H., and Diana Wright. Thinking in Systems: A Primer. Earthscan, 2009.
-5. “Use Situation-Behavior-Impact (SBI)™ to Understand Intent.” CCL, https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/. Accessed 12 May 2024.
+5. "Use Situation-Behavior-Impact (SBI)™ to Understand Intent." CCL, https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/. Accessed 12 May 2024.

@@ -7,7 +7,7 @@ description: >
 
 ---
 
-I am in the middle of moving, so the next few posts might be on the shorter side
+I am in the middle of moving, so the next few posts might be on the shorter side.
 
 ---
 
@@ -16,7 +16,7 @@ at, and move through, the world. In almost every human interaction, these are th
 and they are just getting more valuable and important as the world continues on its digital path.
 
 
-Over the next few weeks, we'll see how WHAT and HOW plays an important role in Organizational Leadership. They are the
+Over the next few weeks, we'll see how WHAT and HOW play an important role in Organizational Leadership. They are the
 foundation of building a compelling organization, mission, and brand. We'll examine Simon Sinek's Golden Circle idea,
 expand on it with what we'll call Silver Rings. These drive the all-important alignment across the organization.
 
@@ -36,5 +36,5 @@ Taking those themes, we'll see how we can apply them to improve our social lives
 relationships, not just the ones in a professional setting.
 
 
-How can two little words be so powerful? What is it about these words that make them applicable in so many different and
+How can two little words be so powerful? What is it about these words that makes them applicable in so many different and
 seemingly unrelated areas? (Haha! Did you see what I did there?). Let's continue forward together and find out.

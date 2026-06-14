@@ -13,25 +13,25 @@ I have spent the last five years working in different roles on teams with "DevOp
 spend quite a bit of time thinking and discussing what "DevOps" means. 
 
 Being a part of the interview panel for my new manager--with the title of _Director of DevOps &
-Infrastructure_--I have had the chance to ask each candidate what DevOps means to them.Before asking
+Infrastructure_--I have had the chance to ask each candidate what DevOps means to them. Before asking
 the question, I always preface it with something like: "DevOps means something different to every
 person and it looks different at every company; so much so that each one of the engineers on this
-team have a different perspective on what it means. With this in mind, what does DevOps mean to
+team has a different perspective on what it means. With this in mind, what does DevOps mean to
 you?" Unsurprisingly, each candidate had a different answer.
 
 Since reading Accelerate [[1](https://itrevolution.com/product/accelerate/)] a few years ago, my
-working defintion for any discussion around DevOps has been: _"DevOps is a collection of engineering
+working definition for any discussion around DevOps has been: _"DevOps is a collection of engineering
 practices and methodologies to deliver more value, faster, in a more stable way to the end user."_ I
 have not been truly satisfied with this definition or perspective and recently I have found it
 lacking. A quick follow up question asking about the specific engineering practices and
-methodologies can quickly lead to a opinion-heavy debate over Trunk Based Development vs GitFlow,
+methodologies can quickly lead to an opinion-heavy debate over Trunk Based Development vs GitFlow,
 Continuous Delivery vs Continuous Deployment, and how much testing is needed, where it's needed and
 what needs to be tested.
 
 As I have become a student of System Dynamics, I am working on coming up with a new personal
 perspective of what DevOps is and how it is defined.
 
-> DevOps is System Dynamics applied a technical organization with the goals of high performing value
+> DevOps is System Dynamics applied to a technical organization with the goals of high performing value
 > delivery. -- (Joseph Flinn)
 
 This definition seems a bit more hand wavy and relies on some previously gained knowledge and
@@ -52,13 +52,13 @@ Next up is "Systems Dynamics". _Thinking in Systems_
 [[2](https://www.chelseagreen.com/product/thinking-in-systems/)] is a primer in Systems Theory which
 is a large part of the study of Systems Dynamics. 
 
-> Self-organization produces hetrogeneity and unpredictability. It is likely to come up with whole
+> Self-organization produces heterogeneity and unpredictability. It is likely to come up with whole
 > new structures, whole new ways of doing things. It requires freedom and experimentation, and a
 > certain amount of disorder. These conditions that encourage self-organization often can be scary
 > to individuals and threatening to power structures (p. 81). 
 
 DevOps strives to improve the system of the organization to create a self-organizing structure that
-works towards the goal of value delivery. The characteristics of a self-organizing system is
+works towards the goal of value delivery. The characteristics of a self-organizing system are
 experimentation which is the culture DevOps pushed towards Westrum Organizational Culture
 [[1](https://itrevolution.com/product/accelerate/)]. 
 
@@ -93,9 +93,9 @@ it out and measure the delays in it helps add more information to the system to 
 bottleneck. Removing the global bottleneck is the only way to increase flow through the value
 stream. Improving processes upstream of the bottleneck only achieves more flow getting caught in the
 bottleneck. Improving processes downstream of the bottleneck achieves higher performance on the work
-once it gets there, but the bottleneck is still delivering the same amount of work as previous. 
+once it gets there, but the bottleneck is still delivering the same amount of work as before. 
 
-> Whenever one factor ceases to be limiting, growth occurs and the growth itself change the relative
+> Whenever one factor ceases to be limiting, growth occurs and the growth itself changes the relative
 > scarcity of factors until another becomes limiting. To shift attention from the abundant factors
 > to the next potential limiting factor is to gain real understanding of, and control over, the
 > growth process (p. 103).

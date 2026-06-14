@@ -9,7 +9,7 @@ description: >
 
 As a people manager, I saw my role as a support role. My priority was to get my team what they
 needed to make decisions and succeed, not to be the one that constantly made the decisions. This was
-was even more important in technical decisions where the senior engineers had more years of
+even more important in technical decisions where the senior engineers had more years of
 experience solving the technical problems. However, there were times when my role as a people
 manager shifted from support to leadership and decisions needed to be made. 
 
@@ -32,14 +32,14 @@ is that a single decision that has sweeping negative impacts has the potential t
 leader. Often these decisions are when the leader sacrifices the team for their own sake (Sinek
 2017).
 
-As a manager I focused on those small decisions that added trust to the working relationships of my
+As a manager, I focused on those small decisions that added trust to the working relationships of my
 team. It was extremely important to me that my team knew that I was there and I had their backs no
 matter what. One of the ways that I was able to build and keep a healthy level of Leadership Capital
 was to avoid making sweeping decisions that impacted my team without first discussing them with the
 team. There were little to no decisions that I made where I expended large portions of the
 Leadership Capital that I had worked to build.
 
-This might seem like it was all rainbow and unicorns, but that was not the case. There were multiple
+This might seem like it was all rainbows and unicorns, but that was not the case. There were multiple
 times when there was disagreement on the team in which direction we should go. For each of these
 disagreements, we made it a point to have discussions about them, to fully understand what everyone
 was thinking and what they saw through their perspectives that others might be missing. Each time we
@@ -58,7 +58,7 @@ must be deep enough that it can sustain a full loss of capital from that decisio
 Leaders rarely get feedback from their team on their leadership. When they do receive it, it is
 often negative feedback; places where they are failing or need to grow rather than what they have
 done to better the team. Over the last few weeks since my departure has been announced and the
-weight of my influence has shifted, I have had conversations that and received feedback that I would
+weight of my influence has shifted, I have had conversations and received feedback that I would
 normally not have had. And I have found that in my departure, there is a positive balance in the
 Leadership Capital account. 
 
@@ -66,7 +66,7 @@ I am extremely grateful for the opportunity to have built and led a team. Settin
 not sure what the VP of Engineering saw to pull me up into this position; to support me as I bumbled
 around trying to figure out how to take my individual contributor hat off and replace it with a
 people management hat. I have learned a great deal about how different people see the world and have
-been required to learn to see the world the way they see it in order to understand, support them and
+been required to learn to see the world the way they see it in order to understand, support them, and
 unite the team.
 
 I am grateful for the team that I had the opportunity to lead. They showed up every day to dive into

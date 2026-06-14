@@ -21,11 +21,11 @@ read to ourselves, we took trips to the library. We would ride our bikes and exc
 books from last week for a new one. Books were a source of infinite worlds of possibilities and of
 knowledge.
 
-Reading remained a favored past-time through my teenage years. I would rush through our home school
+Reading remained a favored pastime through my teenage years. I would rush through our home school
 curriculum to get done before lunch so that I could read from noon until bed. There was no need to
 remember the information, only to get lost among the pages.
 
-Reading fiction tapered off a bit as I started university at 16. Reading started became more about
+Reading fiction tapered off a bit as I started university at 16. Reading started to become more about
 analysis (literature) and retention (all other subjects). It wasn't until Christmas break of my last
 year of undergrad that I craved to get lost in the pages of fiction once again.
 
@@ -45,7 +45,7 @@ it when they needed to remember how they solved a problem at a previous job. The
 brain" intrigued me, but I was also cautious around the risk of spending more time organizing the
 information rather than using it.
 
-I didn't start a system until a dear friend of mine suggested to explore the Zettelkasten Method. I
+I didn't start a system until a dear friend of mine suggested exploring the Zettelkasten Method. I
 was really intrigued. I picked up the book _How to take Smart Notes_ by Sönke Ahrens and I proceeded
 to learn how to consume.
 
@@ -61,7 +61,7 @@ context to book consumption.
 
 - **Permanent/Zettel:** a note that contains a single original thought (no plagiarism!), connected
   to other Zettels.
-- **Fleeting:** a random thought that may turn into a permanent/Zettel note or may be discarded
+- **Fleeting:** a random thought that may turn into a permanent/Zettel note or may be discarded.
 - **Hub:** a note that provides a linear hierarchy to Zettels (helpful in collecting Zettels for a
     written body of work).
 - **Literature:** a note from an external body of work; either paraphrased to avoid plagiarism or
@@ -75,18 +75,17 @@ book does not need to be opened again for reference.
 
 ```
 ## xxiii
-Early success comes with the risk of losing oneself in the out-sizing of role
-that is has in one’s identity.
+Early success comes with the risk of losing oneself in the out-sizing of the role
+that it has in one's identity.
 
 ## 2
-Ego is the need to better than others, more than others, recognized as more
+Ego is the need to be better than others, more than others, being recognized as more
 important than others--past the actual benefit that any of these might actually
 have
 
 ## 3
 Ego prevents a direct connection to the world around us, to the people around us
-and it is this that inhibits collaboration and success, however one might define
-their success.
+and it is this that inhibits collaboration and success, however one might define one's success.
 
 ## 4
 “If you start believing in your greatness, it is the death of your creativity”
@@ -101,7 +100,7 @@ to be ready for any of the promotions that he took.
 
 ## 20
 For those leaders that are built through actual achievement instead of through
-being born into it, constant surprise  in their accomplishments is their friend.
+being born into it, constant surprise in their accomplishments is their friend.
 It is true modesty they have, not feigned.
 
 ## 21
@@ -109,7 +108,7 @@ Talent is not sufficient to make success. One has to step outside of one’s own
 way to utilize the talent for success.
 
 ## 22
-Learning and growth happens in small iterative steps. These steps will take us
+Learning and growth happen in small iterative steps. These steps will take us
 into the long term future and they cannot be skipped.
 
 ## 26
@@ -126,7 +125,7 @@ Purpose helps answer “to be or to do”. If the most important thing to someon
 themselves, then “to be” is the answer. Talk about where you’re going, say yes
 to the promotions, and chase bigger salaries. However, if one’s purpose is
 larger than one’s self, it is about doing the work; no matter the cost.
-Compromise is not needed because it is all about the doing the work.
+Compromise is not needed because it is all about doing the work.
 
 ## 38
 Becoming a student under a master places your power in someone else’s hands. One
@@ -145,7 +144,7 @@ More often than not failure comes by following passions over reason.
 ## 47
 We only hear the part of the story where successful people had passion, so we
 equate passion as the precursor to success. We don’t hear about the stories
-where passion people to failure.
+where passion leads people to failure.
 
 ## 49
 Passion is about the self. Purpose is greater than the self.
@@ -158,7 +157,7 @@ and not just something one desires to be.
 Support others so they can be good instead of just making them look good.
 
 ## 56
-How would it be different to ask every newly met person what could done to truly
+How would it be different to ask every newly met person what could be done to truly
 help them with no thought of how the act or relationship would be of benefit?
 
 ## 63
@@ -172,7 +171,7 @@ work with the system until this time.
 
 ## 67
 Thinking and planning based on what one desires is pointless. It assumes what
-has yet come to pass; “festering on their thoughts” Arisotle.
+has yet come to pass; “festering on their thoughts” Aristotle.
 
 ## 71
 “imaginary audience” (David Elkind) is where we are at the center of our own
@@ -201,7 +200,7 @@ there is no need to overcompensate and create the labels.
 Truly knowing one’s self produces humility.
 
 ## 81
-Success and expertise doesn’t have a finish line. It requires a lot of effort.
+Success and expertise don’t have a finish line. It requires a lot of effort.
 But this means that it is within reach, if we have the patience and the grit to
 do the work.
 
@@ -222,7 +221,7 @@ Sobriety is required to sustain the intoxication of success. A system dedicated
 to the work instead of to us is required.
 
 ## 103
-“as our island of knowledge grows, so does the shores of our ignorance” -- John
+“as our island of knowledge grows, so do the shores of our ignorance” -- John
 Wheeler.
 
 ## 104
@@ -296,11 +295,11 @@ Sympatheia - a connection to the cosmos. When one is not connected to something
 greater than oneself, ego stands in the way of experiencing beauty.
 
 ## 145
-Success through sheer will is not sustainable. One cannot outwork and out run
+Success through sheer will is not sustainable. One cannot outwork and outrun
 everyone forever.
 
 ## 146
-Ego often demands to standup for oneself, but that doesn’t lead to resolving the
+Ego often demands to stand up for oneself, but that doesn’t lead to resolving the
 matter, only escalation.
 
 ## 151
@@ -339,7 +338,7 @@ than that of others, do not be swayed by their celebrations when you exceed
 theirs but miss yours. Do not care what other people think.
 
 ## 199
-Ego is undermined with every increasing standards.
+Ego is undermined with ever-increasing standards.
 
 ## 201
 Trying to destroy something with hate and ego often drives that thing to persist
@@ -358,7 +357,7 @@ Learning comes from failure and rarely from success.
 
 ## 216
 “Any fool can learn from experience. The trick is to learn from other people’s
-experience” -- Bismark
+experience” -- Bismarck
 ```
 
 </details>
@@ -390,7 +389,7 @@ search through my notes, since it is digital, and find what I was looking for.
 
 The question of consumption is really up to the reader and the goal of reading the text. If
 information retention is the goal, then consuming may be a good approach. However, I do not consume
-every book that I read. I rarely take notes in a works of fiction, as I still read those to get lost
+every book that I read. I rarely take notes in works of fiction, as I still read those to get lost
 in the story. 
 
 As a writer and as a graduate student, I highly value attributing ideas to their original sources

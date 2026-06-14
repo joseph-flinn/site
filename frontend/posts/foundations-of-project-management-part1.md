@@ -25,7 +25,7 @@ successful project. They are codified in the Project Management Body of Knowledg
 ## What is a Project?
 
 Before diving into the processes and deliverables, we need to define what a project is. The PMBOK
-defines a project "a temporary endeavor undertaken to create a unique product, service, or result"
+defines a project as "a temporary endeavor undertaken to create a unique product, service, or result"
 (Project Management Institute p.4). The following are additional characteristics of a project that
 expand on this definition (Schwalbe p.5).
 
@@ -48,7 +48,7 @@ of project portfolios, whether an organization has an officially defined portfol
 process or not.
 
 In [Part 4](/posts/foundations-of-project-management-part4), we'll examine some tools to measure an
-organization's project management maturity level and some of actions that can be taken to grow into
+organization's project management maturity level and some of the actions that can be taken to grow into
 the next levels.
 
 
@@ -72,13 +72,13 @@ other areas. However, there are three with strong interdependent correlations th
 Triple Constraint: Scope, Schedule, and Cost. Any changes to one of these directly affects and
 constrains the other two.
 
-For example, if the scope of a project increases, so will cost. If the schedule of a project
+For example, if the scope of a project increases, so will the cost. If the schedule of a project
 increases, the cost will increase as well with additional weeks of salary that will be needed for
 the extended schedule. If costs are set and cannot be adjusted, this constrains how much can be
 delivered. It doesn't matter how much time we have, there is no way that a 3 bedroom 2 bathroom
 house can be built for $25,000 (assuming it is built to local building codes in the U.S.).
 
-We will review each these ten areas in more depth in 
+We will review each of these ten areas in more depth in 
 [Part 3](/posts/foundations-of-project-management-part3) of the series.
 
 
@@ -89,8 +89,8 @@ definitions of success could differ from their stakeholder's definition. It is i
 closely to what the stakeholder or sponsor is looking for so the project can be considered a success
 from their perspective (Schwalbe p.14). 
 
-Most often, project success is determined by how well it did meeting the triple the constraint.
-Comparing the actuals of scope, schedule, and cost to there respective baselines provides a
+Most often, project success is determined by how well it did meeting the triple constraint.
+Comparing the actuals of scope, schedule, and cost to their respective baselines provides a
 quantitative way of determining the level of success.
 
 In addition to these internal measures of success, it is important to also include the customer or
@@ -118,17 +118,17 @@ operations type work.
 I have spent my career in the DevOps/SRE/CloudOps space and have often observed operations work
 being managed with Agile project management frameworks (Scrum, SAFe, etc). Remember, the definition
 of a project explicitly defines it as a temporary endeavor, with a definite beginning and end.
-"Keeping servers up" or "keeping the lights on" is not a project as there is not definite end.
+"Keeping servers up" or "keeping the lights on" is not a project as there is no definite end.
 
 Support and operations work do not fit nicely into planned _x_ week time blocks where _n_ work can
 be committed to being completed. Pipelines break and need to be fixed as soon as possible. Servers
-blow up because of cloud provider. These events do not fit nicely into a project management
+blow up because of a cloud provider. These events do not fit nicely into a project management
 framework like Scrum where planning happens in backlog grooming. Agile has some great project
 management frameworks, but they are designed to work well for project type work. They are not
 optimized for operations type work. 
 
 However, it is important to note that Operations teams are not constrained to only operations type
-work and Project teams are not constrained to project type work. For instance, if all of a servers
+work and Project teams are not constrained to project type work. For instance, if all of the servers
 need to be upgraded to the latest security patch, there is a definite start and end to the tasks
 involved with the upgrade. The upgrade also delivers a specific result. Operations teams also do
 projects and may need a project management framework to manage these tasks. Similarly, a Project
@@ -142,7 +142,7 @@ with an operations management framework and adapt it for the project work minori
 true as well: project teams adapting a project management framework for their operations work. Using
 a process or approach that does not fit the majority of the work a team does causes frustration and
 unhealthy tension. Team success--for both project and operations teams--is dependent on the
-collaboration and shared understand of how success is defined between the team, the manager, and
+collaboration and shared understanding of how success is defined between the team, the manager, and
 senior management. A team's approach to work management needs to support this shared understanding.
 
 

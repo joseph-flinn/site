@@ -13,7 +13,7 @@ different conclusions and different sets of rules to follow in making decisions.
 medium in which people share these mental models with others.
 
 Clear and effective strategies are important when discussing abstract concepts. There are few
-concepts more abstract that the topics that mathematics describe. It was not until my senior year in
+concepts more abstract than the topics that mathematics describes. It was not until my senior year in
 university that I discovered the secret of mathematics.
 
 We all start our journey into mathematics with learning arithmetic operators (`+, -, ×, ÷, =`). 
@@ -32,9 +32,9 @@ exponents, parentheses, square roots, and square brackets. We add letters into o
 about circles and triangles, `π` and _e_, functions, the Cartesian coordinate system and how
 algebraic equations can be plotted to visually represent the function solutions. 
 
-Somewhere mixed in to all of the numbers and symbols, we learn four of the most powerful words: "Let
+Somewhere mixed into all of the numbers and symbols, we learn four of the most powerful words: "Let
 us suppose that...". With these four words, we have the power to define worlds, bend reality, and
-tranfers parts of our mental models to others. The secret is that mathematics is a language.
+transfer parts of our mental models to others. The secret is that mathematics is a language.
 
 Let us suppose that the _@_ symbol is defined as the addition operation, such that given two numbers,
 _a_ and _b_, the following is true:
@@ -53,7 +53,7 @@ $$
 \end{align}
 $$
 
-Using the language of mathematics, we have just given meaning to a symbol does not have meaning (or
+Using the language of mathematics, we have just given meaning to a symbol that does not have meaning (or
 at least no agreed upon meaning wide enough to make it into Wikipedia's [Glossary of mathematical
 symbols](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols)). The reason we have a
 glossary of symbols like this is because someone in history used the words "Let us suppose that" to
@@ -63,7 +63,7 @@ with that symbol.
 It was using the language of mathematics that I have finally been able to understand the 
 [standard normal table](https://en.wikipedia.org/wiki/Standard_normal_table) in statistics. Even
 while in my undergraduate degree in mathematics, the Z table was a black box. My professor was a bit
-hand-wavy on where the numbers came from and I had never seens something like the Z table in my
+hand-wavy on where the numbers came from and I had never seen something like the Z table in my
 previous studies in mathematics. It was the first time that I could not calculate an answer, but was
 rather required to look up the answer in a table. I did not know how to fit that into my mental
 model of mathematics.
@@ -74,8 +74,8 @@ current leader in certification for operations quality management, and operation
 business class that I am going to be taking.
 
 The z-score of the observation is the number of standard deviations away it is from the mean of the
-dataset. It is used while calculating the probabiltiy that an observations falls between two numbers
-is a common problem to solve while working with a normal and standard normal distributions. These
+dataset. It is used while calculating the probability that an observation falls between two numbers;
+this is a common problem to solve while working with normal and standard normal distributions. These
 questions might be in the form of "What values are in the top 10%?" or "What is the probability of
 an observation falling between number _a_ and number _b_?" The second problem requires working with
 two different z-scores which is where most of my troubles began.
@@ -94,7 +94,7 @@ z = \frac{\textit{b} - 3.1}{0.25}
 $$
 
 We now have two values for _z_. As I was trying to communicate with my thought process in a homework
-assignment, I was struggling to communicate the differences between the first and second _z_ value.
+assignment, I was struggling to communicate the differences between the first and second _z_ values.
 How do we track which _z_ value corresponds to the original numbers _a_ and _b_? How can we
 differentiate the Z table probabilities that are associated with both of these Z values? 
 
@@ -147,5 +147,3 @@ and thinking around it becomes clear.
 ## Resources
 
 1. Zinsser, W. (1989). Writing to learn. Harper Collins.
-
-

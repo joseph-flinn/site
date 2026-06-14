@@ -26,9 +26,9 @@ to the team to vote on adoption.
 
 As we are building our startup today, we have decided to heavily lean into asynchronous
 communication as our default communication model with only a single weekly meeting. As our
-documentation quickly grows, we are starting to need a process to tracking ideas and their state.
+documentation quickly grows, we are starting to need a process to track ideas and their state.
 This need reminded me of the RFD process that the process improvement guild designed and implemented
-at Bitwarden which was originally based on the Oxide Computer Company's RFD process 
+at Bitwarden, which was originally based on the Oxide Computer Company's RFD process 
 [[2](https://oxide.computer/blog/rfd-1-requests-for-discussion)].
 
 Below is the startup's RFD 0001, adopting the RFD process:
@@ -100,8 +100,8 @@ related ideas. It is critical that RFDs in the _Ideation_ state are clear and na
 
 Any member of the team is encouraged to champion or take ownership of and start active work on any
 RFD (moving it to this _Discussion_ state) with or without the participation of the original author.
-This should start a conversation around the idea which ideally would be in a single communication
-channel (card comments, document comments, etc). Any points of discussion that end up revising the
+This should start a conversation around the idea, which ideally would be in a single communication
+channel (card comments, document comments, etc.). Any points of discussion that end up revising the
 RFD should be captured in the RFD itself. This state enables our work to remain asynchronous.
 
 #### Deep Dive
@@ -115,9 +115,9 @@ champion.
 From _Deep Dive_, the RFD can end up in four states:
 
 _Deep Dive_: When more discussion is needed and the item is added to the next meeting and stays in the _Deep Dive_ state.
-_Committed_: Where it is decided that the work needs to be done, but does not have an owner
-_In Progress_: Where someone takes immediate ownership of the RFD to start work
-_Abandoned_: Where it is closed and archived
+_Committed_: Where it is decided that the work needs to be done, but does not have an owner.
+_In Progress_: Where someone takes immediate ownership of the RFD to start work.
+_Abandoned_: Where it is closed and archived.
 
 #### Committed
 
@@ -138,7 +138,7 @@ the team grows, this guideline will become increasingly important to improve thr
 
 #### Accepted
 
-Once an RFD has been entirely implemented or document is an explanation of the current state of the
+Once an RFD has been entirely implemented or the document is an explanation of the current state of the
 system, it should be set to the _Accepted_ state. Once in this state, any major comments or calls
 for significant changes should be done in a new RFD.
 
@@ -146,13 +146,13 @@ for significant changes should be done in a new RFD.
 
 > Finally, if an idea is found to be non-viable (that is, deliberately never implemented) or if an
 > RFD should be otherwise indicated that it should be ignored, it can be moved into the abandoned
-> state
+> state.
 
 When an RFD is _Abandoned_, a specific reason should be noted as to why. At any point in the future,
 if someone thinks that it should be reconsidered, a new RFD should be created with a link to the old
 one along with supporting reasons on why the reason for abandonment is no longer valid (ex. “X is no
 longer the case”, “There is more evidence to suggest that Y might still be a continued problem. We
-need a solution”)
+need a solution.”).
 
 ### Notes on Priority
 

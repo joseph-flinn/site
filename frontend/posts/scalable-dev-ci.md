@@ -9,7 +9,7 @@ description: >
 ---
 CI, or Continuous Integration, is our first deep dive topic. There is only one primary goal of CI: shorten
 the feedback loop for developers. The faster a developer can get feedback on the quality of code, the faster changes can
-be made to maintain that quality. Faster feedback loops decreases the likelihood of bugs introduced from context
+be made to maintain that quality. Faster feedback loops decrease the likelihood of bugs introduced from context
 switching, decreases the likelihood of merge conflicts, increases the velocity of work into the trunk branch, and
 increases the stability of the project. All of these things are foundational to the next topic of CD.
 
@@ -112,7 +112,7 @@ unit testing and the end-to-end tests look very similar. These would look very d
 there is a UI component to test in the end-to-end portion. 
 
 Here, I am using `unit` to test the application code a function that is not directly exposed by the REST api. While the
-testing code might look very similar, the end-to end testing takes on the different perspective of
+testing code might look very similar, the end-to-end testing takes on the different perspective of
 running the tests against the resulting container image that we build. This container image is what we will be either
 publishing for others to use or deploying into Production. Even if the unit tests pass, we cannot assume the end-to-end
 ones will because the container definition could change.
@@ -141,7 +141,7 @@ jobs:
       python-version: "3.11"
 ```
 
-Whenever a PR is opened or updated, the unit tests will run. The PR is blocked from merging until this jobs passes.
+Whenever a PR is opened or updated, the unit tests will run. The PR is blocked from merging until this job passes.
 
 
 ```yaml

@@ -9,7 +9,7 @@ description: >
 
 I was recently chatting with a friend about software architecture and I realized that I have a
 default "hammer" pattern that I start with for every project. My friend asked me to create an
-in-depth write up to help guide their journey, so I thought I'd share the design with a wider
+in-depth write-up to help guide their journey, so I thought I'd share the design with a wider
 audience and chat through my personal experiences on why this is my go-to architecture. I'll also
 call out some conscious biases and explain where they come from.
 
@@ -17,7 +17,7 @@ call out some conscious biases and explain where they come from.
 ## The _Three Principal Layers_
 
 Martin Fowler is one of the most influential voices in software architecture and software
-engineering. His book on enterprise application architecture is a must read for anyone serious about
+engineering. His book on enterprise application architecture is a must-read for anyone serious about
 growing in their software architecture design skills.
 
 Fowler introduces the _Three Principal Layers_ (p. 20) which is comprised of the Presentation layer,
@@ -59,17 +59,17 @@ priorities for ease of mental contexts and for security purposes.
 ## Benefits 
 
 Having the data access layer in source code allows for the use of software engineering tools and
-practices (versioning, testing suites, etc) which creates more stability in the system long-term.
+practices (versioning, testing suites, etc.) which creates more stability in the system long-term.
 Full testing suites can be easily built around an API data access layer compared to the more
-difficult testing suites for stored procedure.
+difficult testing suites for stored procedures.
 
-Added benefits for decoupling data access and data storage is that future data migrations can be
+Added benefits for decoupling data access and data storage are that future data migrations can be
 more seamless for users. Multiple versions of the same service can be deployed side-by-side with
 different ways of updating the underlying data model. Care will be needed to make sure that they can
 exist side-by-side, but this is going to be a better user experience than creating an outage by
 turning off the old service before turning on the new one.
 
-In addition to ease of testing and migration, data access layer source code can be more easily be
+In addition to ease of testing and migration, data access layer source code can be more easily
 deployed and reverted than stored procedures in a database. My experience in SRE database management
 and application deployments has reinforced keeping the access layer in source code rather than in
 the database. When stored procedures are used for data access, a lot of work is required to
@@ -81,14 +81,14 @@ likely fail at some point with a high risk of a service outage.
 Moving on from the data access layer, using a static client minimizes the amount of compute needed
 on the backend. For web applications, the server does not need to dynamically render the page when
 the client is called. This keeps cloud compute costs low as well as improves scalability of
-infrastructure. Static clients decouples the client application from the server application allowing
+infrastructure. Static clients decouple the client application from the server application allowing
 for each of the underlying infrastructures to be scaled independently. For instance, if it is taking
 a while to load the initial webpage in certain geographies, deploying the static client to a global
 CDN will most likely resolve the issue (as long as it does not depend on server calls to load data).
 
-Using the static client pattern also has security benefits. I have experience used server-side
-templating engines which allows access to secrets to be used while generating the frontend pages.
-This is great if those secrets are needed for some reason, but it is also creates a risk of
+Using the static client pattern also has security benefits. I have experience using server-side
+templating engines which allow access to secrets to be used while generating the frontend pages.
+This is great if those secrets are needed for some reason, but it also creates a risk of
 accidental secret leakage. Static client architecture (specific to web) helps keep mental contexts
 separate while building the system. Clients should not contain any secrets since it is running on
 someone else's machine.
@@ -96,7 +96,7 @@ someone else's machine.
 In addition to the benefits of the design decisions for the different layers, this overall design
 allows for future application scalability as well. What if the project wants to add a mobile app in
 addition to the web client? Mobile apps are just compiled static code. This pattern can easily be
-horizontally expanded to support the mobile app constraint. What if micro services are needed to
+horizontally expanded to support the mobile app constraint. What if microservices are needed to
 scale the human/team part of the engineering organization? This pattern supports the horizontal
 expansion of services as needed.
 

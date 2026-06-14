@@ -8,7 +8,7 @@ description: >
 ---
 
 The third area of impact of the words WHAT and HOW is people management: building psychological safety on a team. The
-[Harvard Business Review](https://hbr.org/2017/01/the-neuroscience-of-trust) found that the affect of trust on
+[Harvard Business Review](https://hbr.org/2017/01/the-neuroscience-of-trust) found that the effect of trust on
 self-reported performance was powerful.  Comparing the top and bottom quartiles (get ready for a stats dump), respondents
 in the top quartile indicated that they:
 
@@ -23,7 +23,7 @@ in the top quartile indicated that they:
 
 Dr. Timothy Clark's book, 
 [_The 4 Stages of Psychological Safety_](https://www.penguinrandomhouse.com/books/617259/the-4-stages-of-psychological-safety-by-tim-clark), 
-define the 4 stages of psychological safety as:
+defines the 4 stages of psychological safety as:
 
 1. included
 2. able to learn
@@ -32,19 +32,19 @@ define the 4 stages of psychological safety as:
 
 _Inclusion_ is being brought in, asked to participate, and being actively listened to; no matter who you are, no matter
 seniority, no matter your background. Bridewater Associates takes it to the next level by leaning into "idea
-meritocracy" and "radical transparency". They _expect_ all ideas to be shared, no matter if they come a VP in the
+meritocracy" and "radical transparency". They _expect_ all ideas to be shared, no matter if they come from a VP in the
 company or if they come from an intern. 
 
 _Able to learn_ is having the space to take moderate risks, fail, and learn from those failures without the fear of
 repercussions. Without this, innovation becomes extremely difficult. Over time, it leads to only a few people driving
-the innovation in an organization instead of everyone which hinders the overall innovation in an organziation.
+the innovation in an organization instead of everyone, which hinders the overall innovation in an organization.
 
 _Safe to contribute_ means that feedback is not feared and is known to be constructive. Positive feedback is actionable.
 There is no question on what the behavior is that is leading to a positive impact on the team or in the organization.
 Similarly, negative feedback precisely identifies the behavior that is having a negative impact on the larger team and
 organization. _Safe to contribute_ means that negative feedback is seen as an opportunity for growth to benefit the
 individual as well as the team and organization. It is also providing the space for mutual feedback where feedback is
-requested a direct report.
+requested from a direct report.
 
 _Safe to challenge the status quo_ is having the space to ask the question of "why do we do it this way?" It is
 important to not only train organizational leaders on providing this space, but also the people on the teams themselves.
@@ -70,9 +70,9 @@ also runs the risk of only using the leader's perspective instead of the diverse
 coaching someone look like? You guessed it! Lots of WHAT & HOW questions while actively listening to the problem and
 guiding the other person to find _their_ answer.
 
-How are WHAT & HOW used to create the _saftey to contribute?_ Effective feedback is one of the three core pillars to
+How are WHAT & HOW used to create the _safety to contribute?_ Effective feedback is one of the three core pillars to
 developing a team of high performers. Different versions of the 
-[SBI framework](https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/)
+[SBI framework](https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/).
 Lara Hogan's take on the SBI framework--the [_Feedback Equation_](https://larahogan.me/blog/feedback-equation/)-- is an
 effective way to deliver feedback, focusing on making the feedback actionable by adding a request at the end. One
 example could be: "Can you include more information in your messages so that I can make sure I can fully understand you
@@ -81,7 +81,7 @@ making this change. "HOW can I support you in growing towards this?" or "WHAT ca
 This helps build more trust in the relationship. This request is not just a "this needs to change" but is also a "you
 are not on your own. There is support to make this change".
 
-How are WHAT & HOW used to create the _saftey to challenge the status quo?_ The ideas behind it being _safe to challenge
+How are WHAT & HOW used to create the _safety to challenge the status quo?_ The ideas behind it being _safe to challenge
 the status quo_ is continuous improvement. When "why don't we do it this way?" is asked or when "we need to do it this
 way" is stated, the person is pushing for improvement from their perspective. WHAT & HOW become really important tools
 in persistently chasing after that other perspective. While in the chase, bringing the ideas of 
@@ -94,7 +94,7 @@ perspective through WHAT & HOW).
 
 ---
 
-WHAT & HOW are the main tools for effective people development and management of a high performance team. WHAT & HOW
+WHAT & HOW are the main tools for effective people development and management of a high-performance team. WHAT & HOW
 leads to understanding the perspectives of direct reports to provide insights and opportunities for development for
 them. It also affords us the opportunity for self-development as we are required to put aside our perspective and learn
 about someone else's. They are the main tools that drive building trust on a team through inclusion, learning, feedback
@@ -106,5 +106,5 @@ culture, and pushing for continuous improvement.
 
 1. [Harvard Business Review: The Neuroscience of Trust](https://hbr.org/2017/01/the-neuroscience-of-trust)
 2. [Dr. Timothy Clark: The 4 Stages of Psychological Safety](https://www.penguinrandomhouse.com/books/617259/the-4-stages-of-psychological-safety-by-tim-clark/)
-3. [MindTools: The Situation-Behavior-Impact(TM) Tool](https://www.mindtools.com/ay86376/the-situation-behavior-impact-feedback-tool)
-3. [Lara Hogan: The Feedback Equation](https://larahogan.me/blog/feedback-equation/)
+3. [MindTools: The Situation-Behavior-Impact (TM) Tool](https://www.mindtools.com/ay86376/the-situation-behavior-impact-feedback-tool)
+4. [Lara Hogan: The Feedback Equation](https://larahogan.me/blog/feedback-equation/)

@@ -20,17 +20,17 @@ now, adopting an unsustainable lifestyle while working in the software industry.
 sabbaticals--measured in months and not weeks--in the eight years of my career. Something needs to
 change.
 
-Having worked for three companies, I now have enough datapoints to see a developing trend. I throw
-my whole self into my work; finding my identity in my role and taking on the lifestyle that comes
+Having worked for three companies, I now have enough data points to see a developing trend. I throw
+my whole self into my work, finding my identity in my role and taking on the lifestyle that comes
 with it. When I am not at work, I spend at least half of my free time reading, writing, and learning
 about how to improve in my role and in my career. I spent a total of 80+ hours a week either at work
 or actively thinking about work while "off the clock". This approach has served me well in terms of
-career growth and promotion, but at the cost of diversity and balance of experiences in life. 
+career growth and promotion, but at the cost of diversity and balance of experiences in life.
 
 In any job, there is always a risk of finding a misalignment between where I want to be and the
 direction that the organization is going. With the massive amounts of energy invested in career
 growth, finding this misalignment ends in pretty extreme burnout, requiring months away from the
-industry to dig my way out. 
+industry to dig my way out.
 
 So, how can I meet all of these constraints? Well, for the next year or so, I am going to be
 designing and building my daily life around West Coast Swing. This meets constraints 1 through 3. To
@@ -47,7 +47,7 @@ This post is the kickoff to a series that will be following our progress as we b
 Since alignment is the most important aspect of the success of a project, we started there. The team
 needed to align on what success of the project looks like. We determined that getting to an MVP
 launch with little-to-no negative monthly cash flow would be considered a success. Anything on top
-of that would be icing on the cake. 
+of that would be icing on the cake.
 
 ![Project Milestones](/posts/0082/project-milestones.png)
 
@@ -72,12 +72,11 @@ incorporates routine check-ins (gate reviews) to make sure that continued invest
 sense, even prior to _MVP Launch_. If one of these check-ins results in a decision to kill the
 product, we will also consider everything that we have learned up to that point a success.
 
-Keep an eye out for an upcoming post will be doing a more in-depth review of our product
-development strategy and how we planning for the gate review sessions.
+Keep an eye out for an upcoming post; it will be doing a more in-depth review of our product
+development strategy and how we are planning for the gate review sessions.
 
 ---
 
 ## Resources
 
 1. Karlsson, Henrik. https://substack.com/@henrikkarlsson/note/c-95418840
-

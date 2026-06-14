@@ -10,7 +10,7 @@ description: >
 
 Without a product or service application, technology is worth little more than to satisfy curiosity
 (Flinn, p.8). Manufacturing is a key process in developing products from technology. As such, the US
-Department of Defense came up readiness levels for their suppliers that are similar to NASA's TRLs
+Department of Defense came up with readiness levels for their suppliers that are similar to NASA's TRLs
 discussed in [Part 2](/posts/engineering-portfolio-management-part2). They are known as
 Manufacturing Readiness Levels (MRLs) (Flinn p.43). Similar to TRLs, MRLs exist to assist in
 considering the overall readiness of a technology project during the different phases of
@@ -30,13 +30,13 @@ The US DoD defines the MRLs as the following (Flinn p.44-45):
 | MRL 6 | Capability to produce prototype system or subsystem in a production relevant environment |
 | MRL 7 | Capability to produce prototype system, subsystem, or components in a production representative environment |
 | MRL 8 | Pilot line capability demonstrated. Ready to begin low-rate production |
-| MRL 9 | Low Rate Production demonstrated. Capability in place to being Full Rate Production |
+| MRL 9 | Low Rate Production demonstrated. Capability in place to begin Full Rate Production |
 | MRL 10 | Full Rate Production demonstrated and lean production practices in place |
 
 With such vague descriptions, it is helpful to break these up into multiple categories to provide a
-more robust framework for determining the overall MRL of a product. Rememeber, every organization is
-a unique blend of people, process, and product, so ach organization may need different MRL
-categoiries. A good base example to start from would be the following (Weber, 2024):
+more robust framework for determining the overall MRL of a product. Remember, every organization is
+a unique blend of people, process, and product, so each organization may need different MRL
+categories. A good base example to start from would be the following (Weber, 2024):
 
 | Level | Process description / definition | Skill required to produce | Production Facilities | Cost management | Supply Chain Management | Phase |
 | ----- | -------------------------------- | ------------------------- | --------------------- | --------------- | ----------------------- | ----- |
@@ -58,7 +58,7 @@ an MRL 2.
 
 While these levels are specific to product manufacturing, the categories can be tweaked to apply the
 same type of framework to software operational readiness: Operational Readiness Levels (ORLs). All
-of the physical facilities and tooling are replaced with infrasturcture and processes needed to
+of the physical facilities and tooling are replaced with infrastructure and processes needed to
 operate software at scale. The categories that have been left are broad enough to remain the same.
 
 | Level | Process description / definition | Skill required to operate | Infrastructure & Operating Processes | Cost management | Supply Chain Management | Phase |
@@ -68,7 +68,7 @@ operate software at scale. The categories that have been left are broad enough t
 | ORL 3 | Specific process proven by producing representative system | | Core processes and infrastructure defined | Overall cost target & business case defined | Identified specialized processes required | Research | 
 | ORL 4 | Processes fundamentals fully understood and request-rate capability proven | | Approach and budget defined | | | Development | 
 | ORL 5 | Process validated in production representative system (staging) | Skilled operator (Specialized SRE) | Production infrastructure & processes modeled | Item-by-item targets | Make vs Buy Completed | Development | 
-| ORL 6 | Production process defined | Trained production operator (Any SRE) | Production process trialed | Full business case agreed ahead of MRL 7-9 | Critical suppliers selected | Development | 
+| ORL 6 | Production process defined | Trained production operator (Any SRE) | Production process trialed | Full business case agreed ahead of ORL 7-9 | Critical suppliers selected | Development | 
 | ORL 7 | | | | Validated with quotes | | Deployment | 
 | ORL 8 | Process validated in Production | | Production infrastructure installed | Cost & business case validated in production | All suppliers selected | Deployment | 
 | ORL 9 | Process in routine use in Production | | Infrastructure & processes proven at production rate | | Routine MRP scheduling in place | Deployment | 
@@ -80,7 +80,7 @@ different caching strategies and technologies, the decisions on which to use wil
 collaboration between the architect, the software engineers, and the site reliability engineers. The
 development work of the product feature would heavily use the TRL framework while the infrastructure
 design and implementation would more likely use the ORLs. However, the overall feature will need to
-meet both TLR 9 and ORL 10 in order to be determined complete and fully operational in production.
+meet both TRL 9 and ORL 10 in order to be determined complete and fully operational in production.
 
 What happens if the site reliability team determines that there are infrastructure constraints on
 which new caching system can be chosen? What happens if the cost of the desired caching
@@ -94,7 +94,7 @@ to make sure that their design does not interfere with other portions of the lar
 instance, if a team of engineers were designing a new engine, they need to be constantly
 communicating among themselves to make sure their part designs do not use the same physical space as
 another part. They also need to be in communication with their maintenance crews to make sure that
-bolts holding the engine together are easy to get to get to and do not require new specialized tools.
+bolts holding the engine together are easy to get to and do not require new specialized tools.
 
 DFMA is the practice of bringing experts from manufacturing together with the product engineers in
 the design phase to collaborate throughout the entire product development life-cycle. The
@@ -112,7 +112,7 @@ during the design phase helps to uncover these issues in order to keep long-term
 
 We can take lessons from the processes that the manufacturing industry has been continuously
 improving and apply them to the software industry. Using MRLs (or ORLs) for objective measurements
-of project progress help make sure that an organization's resources are being invested responsibly.
+of project progress helps make sure that an organization's resources are being invested responsibly.
 Over the last few posts we have been building up the foundation to examine how TRLs and MRL/ORLs can
 be used in implementing a system to provide streamlined decision making to effectively manage resource
 investment. We will look at such a system in the upcoming 

@@ -10,26 +10,26 @@ description: >
 
 Technology in the software industry is being developed at increasing speeds. Entire companies run
 their entire life-cycle within a few years. With the world going faster and faster, it seems
-challenging to pause and take a step back to think about what technology is or what it's role is in
+challenging to pause and take a step back to think about what technology is or what its role is in
 society.
 
 _Technology_ is defined as "the practical application of research and science to develop new
 solutions that could subsequently be taken into commercial application through a product or service"
 (Flinn p.5). While I do work in the "tech industry", I often forget that the tech industry expands
 far beyond my little corner in software. The "tech industry" is the entire industry where research
-and science is being applied to develop new solutions. Generative AI is definitely in the tech
-industry, and so is mRNA, CO2-based heat pumps, and solid-state batteries. 
+and science are being applied to develop new solutions. Generative AI is definitely in the tech
+industry, and so are mRNA, CO2-based heat pumps, and solid-state batteries. 
 
 Product development is the process in which technologies are turned into a commercial product or
 service. How do we know when a technology is sufficiently ready to be turned into a product? Some
 might say as soon as someone is willing to pay for it, but this leaves out a whole slew of testing
 and safety considerations. It also leaves out one of the more important business questions: "How do
-we know which of the technologies are the most promising (ie. best return for the organization)?"
+we know which of the technologies are the most promising (i.e., best return for the organization)?"
 
 Fortunately for us, one of the great innovators of the 20th century has built a guide in determining
 the readiness of technology. These readiness levels help measure technologies against themselves in
 order to monitor their progress in development. They are also used to measure against other
-competing technologies to determine and prioritize the projects that has the best chance of success.
+competing technologies to determine and prioritize the projects that have the best chance of success.
 NASA developed Technology Readiness Levels to capture this data (_Technology Readiness Levels -
 NASA_). 
 
@@ -45,9 +45,9 @@ NASA_).
 | TRL 8 | Actual system completed and "flight qualified" through test and demonstration (ground or space) |
 | TRL 9 | Actual system "flight proven" through successful mission operations |
 
-While specific to aerospace flight vehicles, the differences between levels helps extrapolate TRLs
+While specific to aerospace flight vehicles, the differences between levels help extrapolate TRLs
 to other industries. A light-weight gate review system can then be built around these levels to
-ensure that all criteria has been met to achieve each level before investing too heavily into the
+ensure that all criteria have been met to achieve each level before investing too heavily into the
 next ones. [Part 4](/posts/engineering-portfolio-management-part4) will go into more detail on such
 a system.
 
@@ -75,7 +75,7 @@ a new technology that had a TRL 7 in _Product Definition_ but a TRL 2 in _Testin
 all other TRLs were greater than 2), the overall TRL of the technology would be a TRL 2. 
 
 These level definitions have a heavy skew towards physical engineering. But lucky for us, NASA also
-develops software and has adapted their original TRLs to software engineering (_Software Technology
+develops software and has adapted its original TRLs to software engineering (_Software Technology
 Readiness Levels - NASA_):
 
 | Level | Software Description |
@@ -110,13 +110,13 @@ But we are still learning what works and what does not.
 While I advocate for DevOps methodologies and building the capabilities for failing fast forward,
 it seems that some of the approaches adopted have cut TRL corners. "Fail fast" has become a
 motto and badge of honor in the software industry. But the original idea seems to have lost its
-efficacy. It seems to have become an excuse to not to do the upfront legwork to validate ideas
+efficacy. It seems to have become an excuse not to do the upfront legwork to validate ideas
 before building them.
 
 It seems that the intangibility of software makes it look like writing software is cheap. It might
-take five minutes to write these three lines of code and five days to write another three other
+take five minutes to write these three lines of code and five days to write three other
 lines of code. The end product in both cases is three lines of code but the impact may be completely
-different: an html button with a new hover state versus statistical analysis monitoring algorithm to
+different: an HTML button with a new hover state versus statistical analysis monitoring algorithm to
 determine the failure state of a dam generator.
 
 Dr. Ali published a book this year correlating the use of Agile project management with increased
@@ -130,13 +130,13 @@ We can see this behavior in building new software features without the voice of 
 Features are built and rolled out and then A/B tested. If the user likes a new feature, "Great!
 Let's keep it". If they don't, it may get removed (or sometimes it will be left in the product since
 there is another feature that is a higher priority than removing the unwanted one). A/B testing is
-useful for low cost changes (button color changes, etc), but with significant changes, a lot more
+useful for low-cost changes (button color changes, etc), but with significant changes, a lot more
 planning and validation is needed.
 
 Failing fast needs to get back to failing early in the TRL levels rather than in TRL 9 after the
 technology has been fully implemented and deployed to production. While learning after the fact is
 valuable, it is better to learn prior to the significant financial investment in TRL 7-9. The gate
-review system that will be discussed in [Part 4]() will provide a process to fail fast in a reliable
+review system that will be discussed in [Part 4](/posts/engineering-portfolio-management-part4) will provide a process to fail fast in a reliable
 way.
 
 ---

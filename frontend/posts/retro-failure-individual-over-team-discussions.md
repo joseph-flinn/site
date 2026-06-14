@@ -8,17 +8,17 @@ description: >
 
 ---
 
-The last failure that we will review is my failure to cultivate high performing teamwork between
+The last failure that we will review is my failure to cultivate high-performing teamwork between
 team members. With my preparation to depart and as I was examining the communication structures on
-my team. I observed a hub-and-spoke communication structure where a lot of the communication on the
-team was passed through me. Hub-and-spoke communication structures bottleneck have an extremely high
+my team, I observed a hub-and-spoke communication structure where a lot of the communication on the
+team was passed through me. Hub-and-spoke communication structures have an extremely high
 chance of bottlenecking at the hub. 
 
-High functioning teams operate smoothly more often than not. Each member knows their role and how
+High-functioning teams operate smoothly more often than not. Each member knows their role and how
 they fit into the team. They know the purpose of the team and how their contributions to the team
 contribute to the overall organization's goals. These teams are characterized with high levels of
 trust; each team member knowing that their teammates are executing their roles and that they have
-their back (Sinek 2017).
+their backs (Sinek 2017).
 
 Team meetings are one of the most important areas to build trust in fully remote and globally
 distributed teams. Trust is an integral part of communication, and communication is an integral part
@@ -32,7 +32,7 @@ communication and trust, vulnerability increases trust and trust increases the a
 vulnerable. Cultivating the spaces for vulnerability and trust building in team meetings strengthens
 the bonds of teamwork throughout the team.
 
-Psychologically safe teams have been shown to be the highest performing teams; teams that deliver
+Psychologically safe teams have been shown to be the highest-performing teams; teams that deliver
 the most business value in an efficient manner (Edmondson 2019). As such, my number one priority as
 a manager is to create a psychologically safe space on the team to maximize the performance of my
 team.
@@ -41,7 +41,7 @@ My focus over the last few years on cultivating psychological safety has been to
 everyone feels heard. I think that I successfully achieved this goal, as discussed earlier on in
 this series ([Success - Psychological Safety](/posts/retro-success-psychological-safety)).
 However, I missed the important part of developing the skills in the rest of the team. My focus was
-on my one-on-one relationships with each engineer on team to make sure that I not only heard and
+on my one-on-one relationships with each engineer on the team to make sure that I not only heard and
 understood them, but they felt heard and understood. I missed the opportunity to coach and develop
 these same skills throughout the rest of the team.
 
@@ -51,7 +51,7 @@ been leaning into my communication strengths of one-on-one conversations rather 
 communication skills to effectively facilitate team discussions.
 
 In the early days of moving from a peer engineer to being a manager, I prioritized the team feeling
-heard above everything. My relationship on the team had just drastically change and essentially
+heard above everything. My relationship on the team had just drastically changed and essentially
 started over and this was the most important thing that I felt that I needed to do to best position
 the team to continue growing (I still feel that this was the best decision).
 
@@ -62,18 +62,18 @@ fully believe that there was nothing to add, so I started re-asking these same q
 1:1s where it might be more comfortable for someone to share their thoughts. 
 
 Over time, the quieter engineers learned that I would circle back to the important questions and
-re-ask them in 1:1s, so would decide not to answer the questions in the team meetings and rather
+re-ask them in 1:1s, so they would decide not to answer the questions in the team meetings and rather
 save their input until the 1:1s. My comfort zone is the one-on-one conversations, so these would be
-really valuable conversations, but would have very little transparency to the rest of the team.
+really valuable conversations, but they would have very little transparency to the rest of the team.
 
 This pattern is a pretty inefficient communication pattern where the hub is aware of everything
-going on, but the spokes sometimes are not. This inefficient pattern is exacerbated with breadth of
+going on, but the spokes sometimes are not. This inefficient pattern is exacerbated by the breadth of
 focus of work on the team and any increase in pressure.
 
 
 ## Gratitude
 
-I am grateful that I have learned both the strength and weaknesses of being a one-on-one
+I am grateful that I have learned both the strengths and weaknesses of being a one-on-one
 communicator. Being aware of the importance of team discussions over one-on-one discussions is
 helpful in identifying the skills that I need to grow in. 
 
@@ -88,8 +88,8 @@ just a specific emoji, communicates back that the message has been received and 
 I wonder if this is an option in synchronous meetings, where we go around the table (in-person) or
 through a static-order circular list (remote) to sound off with any questions, comments, concerns or
 ideas. A "pass" acknowledges that the information has been received and there is nothing to add. In
-addition to this, being careful at approaching one-on-one discussions on the same topics is
-important. Any side discussions must be scrutinized to make sure they should be being taken place
+addition to this, being careful when approaching one-on-one discussions on the same topics is
+important. Any side discussions must be scrutinized to make sure they aren't taking place
 outside of the team discussion. If there is any information that surfaces that is important, it
 should be brought back to the team by the source of the information (ie. if an engineer has an idea,
 they should be the one to share it with the rest of the group in a team meeting rather than the

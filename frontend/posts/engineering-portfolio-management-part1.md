@@ -20,7 +20,7 @@ the SaaS and cloud software industries on their head. Then around 2012, DevOps a
 Development emerged to push the boundaries software development velocity even further; creating
 software development practices to streamline value delivery to the end user in safer ways.
 
-Before moving too much further, I do want to recognize the my bias in the software industry is from
+Before moving too much further, I do want to recognize my bias in the software industry is from
 the startup Software-as-a-Service space. I know that there are more stringent requirements in
 industries like aerospace where Agile project management is taboo and "test in production" cannot be
 used.
@@ -84,7 +84,7 @@ as the portfolio continues through its life-cycle (Wu & Chatzipanos, p.23). For 
 initiation phase of a portfolio may be the same as the creation of the firm or maybe it comes after
 the initial idea shows promise and the firm grows to have more than one project. 
 
-During portfolio optimization activities, if a project cannot be tied back to on of the firm's
+During portfolio optimization activities, if a project cannot be tied back to one of the firm's
 strategic objective, it should be killed immediately. Any project that is not in alignment is a
 waste of investment and is working against the success of the firm. A portfolio management system is
 the key to optimizing a firm's investment towards their strategic objectives. Such a system will be
@@ -100,7 +100,7 @@ available to continuously improve and the long-term gains in innovation to keep 
 From a product and process perspective, these time horizons are categorized as derivative, platform,
 and breakthrough. Derivative projects are projects that look to optimize one or two variables. For
 the software industry, this might be adding a new feature to a product or using caching in the CI
-pipelines to achieve an 15% increase in speed. Platform projects are projects that improve multiple
+pipelines to achieve a 15% increase in speed. Platform projects are projects that improve multiple
 key metrics and are scalable to more than the initial product or process where it was developed.
 Examples of a software platform project includes Microsoft Office where a suite of products can be
 mixed and matched to meet many customers' needs. Breakthrough projects significantly disrupt an
@@ -121,8 +121,7 @@ how time and money are invested over a balanced time-horizon.
 Engineering portfolio management is one of the most important systems to create at any company that
 is developing technology. It provides a framework to make sure the right investments are made at the
 right time. And it helps foster a culture of innovation while making sure that all projects and team
-members are aligned with the firm's mission, values, and vision. Next week we will take a look at a
-two tools that are core to physical engineering portfolio management, _Technology Readiness Levels_
+members are aligned with the firm's mission, values, and vision. Next week we will take a look at two tools that are core to physical engineering portfolio management, _Technology Readiness Levels_
 and _Manufacturing Readiness Levels_, and how they can be related to the software industry.
 
 ---

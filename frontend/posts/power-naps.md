@@ -9,8 +9,8 @@ description: >
 
 Two years ago, I started adding naps as an option in my daily routine. After shutting my work
 laptop, I would check in with my body's energy levels. If I wasn't feeling ready to hop on my bike
-and go for a 20 mile ride, it was time for a nap. I would put on headphones and a specific
-music-only playlist on Spotify and lay down on the couch for about 30 minutes. I would use a
+and go for a 20-mile ride, it was time for a nap. I would put on headphones and a specific
+music-only playlist on Spotify and lie down on the couch for about 30 minutes. I would use a
 simple breathing technique that I had learned a few years before to zone out and eventually fall
 asleep if I was tired enough.
 
@@ -39,7 +39,7 @@ takes, but the focus on the exhale being longer than the inhale.
 
 I have found this breathing technique handy in managing stress in stressful situations. Taking a few
 minutes a day to practice it gets the rhythms into the body. I have observed myself unconsciously
-taking a quick inhale and long exhale when I am stressed in high stress situations like large city
+taking a quick inhale and long exhale when I am stressed in high-stress situations like large city
 traffic.
 
 I highly recommend experimenting with power naps and this simple technique of lengthening the exhale

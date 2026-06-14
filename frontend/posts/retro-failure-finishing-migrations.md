@@ -26,16 +26,16 @@ In 2022, my team made little value impact on any initiative, let alone the infra
 migration, because we switched to higher priority initiatives before the previous ones could be
 finished and the value delivered. Half of the team was new and onboarding, about a quarter of the
 capacity was being used for keeping the lights on, and the other quarter was being used on higher
-urgency initiatives (most which are still not done in 2024). 
+urgency initiatives (most of which are still not done in 2024). 
 
 What felt like a near-constant change in priority through the sense of urgency from whatever was on
 fire that week led to whiplash across the engineering department and on my team. When the fire was
-put out, the urgency degraded and was lost which revealed itself as a false sense of urgency.
+put out, the urgency degraded and was lost, which revealed itself as a false sense of urgency.
 
 The strength of Agile comes from the flexibility to adapt to changes in the environment. However,
 that flexibility is also its weakness. If actions and decisions are made with an over-optimization
-on the characteristic of flexibility, there is a high risk that planning and strategy is
-deprioritized. Planning and strategy suffers in highly Agile and DevOps focused teams (Duggan 2024). 
+on the characteristic of flexibility, there is a high risk that planning and strategy are
+deprioritized. Planning and strategy suffers in highly Agile and DevOps-focused teams (Duggan 2024). 
 
 While it could be said that the sense of urgency and the whiplash came from multiple upstream issues
 around perceived lack of alignment on mission, values, strategy, and planning, that is shifting
@@ -45,28 +45,27 @@ environment, but those perfect environments do not exist.
 Where did I go wrong? I failed to understand that all problems are people problems and not technical
 problems (Atwood 2008). My core lie of human value being tied to knowledge was a large catalyst in
 this. The more technical knowledge and experience I had in a specific area, the more I thought
-others would listen. But I have not found that to be the case. Instead it takes a completely
-separate skillset of communication; active listening being one of the most important skills (Duhigg
+others would listen. But I have not found that to be the case. Instead, it takes a completely
+separate skillset of communication; active listening is one of the most important skills (Duhigg
 2024). 
 
 I also failed in the implementation of making the work that the team was doing tangible by making it
 visible (DeGrandis 2022) and tying it to company initiatives. I also failed to bridge the gap in
-communication to keep abreast with the current company initiatives. The software industry comes with
+communication to keep abreast of the current company initiatives. The software industry comes with
 its challenges of building something that is mostly intangible. We are in the business of building
 black boxes that pass in inputs and get outputs back. The processes to make these intangible assets
-is difficult to visualize because they are also intangible. There is not a factory floor to observe
+are difficult to visualize because they are also intangible. There is not a factory floor to observe
 to see where raw materials or parts are stacking up if there is a bottleneck in the stream.
 
 In addition to the people problem failure and the visibility of work, I exacerbated these issues by
 not successfully migrating the technical IC decisions off of my plate so that I could focus on
-solving these problems. I kept putting the technical IC hat back on as fires broke out around us
-which prevented others from learning how to put out those fires.
+solving these problems. I kept putting the technical IC hat back on as fires broke out around us, which prevented others from learning how to put out those fires.
 
 
 ## Gratitude
 
 Coming out of the last few years, I now have personal experience on why successful migrations are
-important and the importance of planning, execution, and completion is and the exponential increase
+important and the importance of planning, execution, and completion and the exponential increase
 of tech debt if they are not finished and the pain that interrupts cause. It is extremely important
 to plan, strategize, and execute to completion all of the migrations that have been decided upon.
 

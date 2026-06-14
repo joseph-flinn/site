@@ -13,7 +13,7 @@ weaknesses lie.
 
 ---
 
-A few friends and I were a hour outside of town, headed out on a weekend trip when the engine
+A few friends and I were an hour outside of town, headed out on a weekend trip when the engine
 suddenly seized and threw a rod. The car immediately started to decelerate with smoke coming out of
 the engine compartment. This was my first experience of a roadside breakdown/emergency, at least
 that I can remember. Somehow I have been able to make it my entire life without a flat tire or
@@ -39,20 +39,19 @@ event we were going to. The car was towed back to town a few days later.
 
 ---
 
-My current skillset in relation to strategy and tactics are to approach them separately. Strategy
+My current skillset in relation to strategy and tactics is to approach them separately. Strategy
 answers the question "Where are we going?" and tactics answers the question "How do we get there?".
 These are often separated in hierarchical social structures such as a company or the military.
 Higher ranking personnel are in charge of defining the strategy and their reports are in charge of
 designing and executing the tactics.
 
 This vehicle emergency situation was significantly different than
-[my experience in wilderness emergency response](/posts/ops-leadership-learn-from-failure), this
+[my experience in wilderness emergency response](/posts/ops-leadership-learn-from-failure); this
 situation didn't have a clearly defined goal. In wilderness first response, the goal is to triage
 the victim(s) and get them to a medical provider as soon as necessary. This goal does not change
 from one emergency to another. In contrast, the tactics required to get to the undefined goal in the
 vehicle emergency wildly varied. The actions required to get everyone to the destination were very
-different than the actions required to arrive at the destination that night, with the possibility
-with a smaller travel party.
+different than the actions required to arrive at the destination that night, with the possibility of a smaller travel party.
 
 In computer science, there is a subset of problems called pathfinding. Pathfinding problems can be
 abstracted to model strategic problem solving by creating a current state (being broken down on the
@@ -77,7 +76,7 @@ I am reminded of a quote by the chess Grand Master Garry Kasparov:
 
 The strategy that I employed in this situation was ineffective, as there was no defined goal. I
 learned a lot about myself through this experience. My current strengths in strategy and tactics
-come when they separated and can be worked through independently. My current area of improvement is
+come when they are separated and can be worked through independently. My current area of improvement is
 when there is ambiguity in the overall goal, or when tactics have a very short feedback loop that
 has a significant impact on the overall goal which then changes the strategy.
 
@@ -85,4 +84,4 @@ has a significant impact on the overall goal which then changes the strategy.
 
 ## Resources
 
-1. Sniegocki, Liz. “5 Everyday Strategic Habits for HR and People Ops Pros | LifeLabs Learning.” Https://Www.Lifelabslearning.Com, https://www.lifelabslearning.com/blog/5-everyday-strategic-habits-for-hr-and-people-ops-pros. Accessed 31 Mar. 2025.
+1. Sniegocki, Liz. “5 Everyday Strategic Habits for HR and People Ops Pros | LifeLabs Learning.” https://www.lifelabslearning.com, https://www.lifelabslearning.com/blog/5-everyday-strategic-habits-for-hr-and-people-ops-pros. Accessed 31 Mar. 2025.

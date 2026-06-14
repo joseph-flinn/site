@@ -11,7 +11,7 @@ I was recently talking with a Director of a Foundations Engineering group which 
 Platform, SRE, and Data teams. We got to talking about what leads to dysfunction in an organization. 
 [My recent thoughts built from Simon Sinek's perspective on leadership](/posts/e2m-management-and-leadership) 
 really drove my perspective in the conversation. I briefly discussed my thoughts on the tension
-between  [shielding and Patrick Lencioni's idea of "First Team"](/posts/e2m-shield-vs-first-team).
+between [shielding and Patrick Lencioni's idea of "First Team"](/posts/e2m-shield-vs-first-team).
 From my interpretation, the Director's point of view was built mostly from Patrick Lencioni's idea
 of the "First Team". As we discussed some of the alignment issues at my current organization and how
 it was affecting my team, my conversational counterpart mentioned that he thought I'd really like
@@ -24,16 +24,15 @@ misalignment comes from a leader applying the wrong technique to influence witho
 touches briefly on enacting changes inside of your authority to model to those outside to influence
 their direction. However, there are two different instances where this might be applied: ambiguity
 or disagreement. Larson explains that when there is ambiguity, this approach is a great way to
-influence. However, if this is used when there is already a process in place by you disagree with
-it, this is where the value divergence comes from. And it is here where a Value Oasis is created.
+influence. However, if this is used when there is already a process in place and you disagree with it, this is where the value divergence comes from. And it is here where a Value Oasis is created.
 
 
 If a Value Oasis is defined as a misalignment of values between a team's values and an
-organization's values, a team's values shifting away from the organization values isn't the only way
-to cause drift. The other that Larson doesn't explicitly explore is the organization values shifting
-and the team values not shifting with the organization. To determine if this misalignment caused by
+organization's values, a team's values shifting away from the organization's values isn't the only way
+to cause drift. The other that Larson doesn't explicitly explore is the organization's values shifting
+and the team's values not shifting with the organization. To determine if this misalignment caused by
 shifting values is good or bad is an ethical conversation based on the values themselves and as such
-are outside of the scope of the conversation. The end is the same though: misalignment.
+is outside of the scope of the conversation. The end is the same though: misalignment.
 
 I want to explore Value Oases a bit more, but first, some historical context.
 
@@ -45,17 +44,17 @@ contributor (IC) success to success as a people manager felt a lot more natural 
 expecting. I went from a very competitive mindset and communication style to a supportive one.
 Overnight, my success criteria went from implementing elegant and resilient solutions to solve
 technical problems to my success being my team's success. And in those first two weeks, my beliefs
-in the value of perspective was put to the test in addition to the opportunity to add or remove
+in the value of perspective were put to the test in addition to the opportunity to add or remove
 trust from this new position (as the topic of this post is not on building trust or the value of
 perspectives, [this post](/posts/e2m-marbles) goes into more details).
 
 Somewhere in my childhood or adolescence I developed an ego problem. I first became aware of it in
 university where I caught myself thinking that I was smarter than most of my computer science
 professors. There are quite a few things wrong with the phrase "was smarter", but the theories of
-intelligence in psychology is a topic for another post. Breaking the number one rule of studying
+intelligence in psychology are a topic for another post. Breaking the number one rule of studying
 psychology--do not psycho-analyze yourself--there are two main sources that I believe led to the
 building of this ego. The first is praise for "being smart" instead of praise for the behavior that
-led to the specific outcome
+led to the specific outcome.
 [[2](https://www.penguinrandomhouse.com/books/44330/mindset-by-carol-s-dweck-phd/)]. The second is a
 particular way of "seeing the big picture" in a way that people around me couldn't see. Together,
 these worked in a vicious loop to build that ego. 
@@ -66,7 +65,7 @@ diverse perspectives could solve issues in more creative and robust ways, I star
 why I was different. This search wasn't to bolster my ego, it was to find the why so that I could
 then translate what I was seeing to language that someone else could see and understand. Having a
 great idea or having a great perspective but not having the skills to translate and communicate it
-is what Jocko Willink and Leif Babin call a "tortured genius"
+is what Jocko Willink and Leif Babin call a "tortured genius".
 [[4](https://echelonfront.com/books/extreme-ownership/)]. It doesn't matter how good the idea is or
 how big of an impact it will have, if a group of people cannot be organized around it because they
 don't understand it, the idea will not take off.
@@ -83,7 +82,7 @@ In the studies of Systems Theory, a system is defined as: "a set of elements or 
 coherently organized and interconnected in a pattern or structure that produces a characteristic set
 of behaviors, often classified as its _function_ or _purpose_". The elements of most real-world
 systems are other subsystems. The human body is made up of organs which are made up of cells which
-is made up of DNA. An organization is made up of teams which are made up of individuals. 
+are made up of DNA. An organization is made up of teams which are made up of individuals. 
 
 Another idea is Systems Theory to be aware of in a conversation about Systems Theory is a specific
 type of system called a hierarchy. A _hierarchy_ is created when a system _self-organizes_ (another
@@ -97,7 +96,7 @@ implemented and pushed out into the world, the world loves it and demands more. 
 the product grows, so does the demand for time devoted to marketing to drive more demand, sales to
 help deliver that demand, customer success for people who are having issues, design for new
 features, engineering to build those features and scale the original solution. Eventually, the
-original "system" of two technologists is exceeded and company is required to create teams--or
+original "system" of two technologists is exceeded and a company is required to create teams--or
 subsystems--and increase head count. The system just _self-organized_ and created a _hierarchy_ to
 continue to enable the specific jobs needed to put the solution out into the world.
 
@@ -108,15 +107,14 @@ of the total system's goals.
 ---
 
 A Value Oasis in an organization is a _suboptimization_ of a team's values or goals in an
-organization. But the opposite side of the coin is the hierarchy forgetting that their _purpose_ is
+organization. But the opposite side of the coin is the hierarchy forgetting that its _purpose_ is
 to help the subsystems do their jobs better. Having or using too much central control to set the
 goals for a subsystem causes the hierarchy to malfunction. 
 
 From a Systems Theory perspective, there are two reasons why an organization is dysfunctional: 1)
 optimization of team goals over the organization goals, and 2) the hierarchy of the organization
 forgetting its original purpose to help the subsystems do their jobs better. Systems in the real
-world are messy, so it isn't either/or. It is a mixture of both. And it's true Systems Theory fashion,
-is there a causation between the both reasons? Are there feedback loops in the system? And if so,
+world are messy, so it isn't either/or. It is a mixture of both. And in true Systems Theory fashion,\nis there a causation between both reasons? Are there feedback loops in the system? And if so,
 are they reinforcing or balancing feedback loops? How do we dampen the oscillations in a
 dysfunctional organization to converge to a sustainable long-term future instead of leading to a
 self-induced extinction?

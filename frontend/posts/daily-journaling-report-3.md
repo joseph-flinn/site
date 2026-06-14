@@ -3,7 +3,7 @@ title: "[Daily Journaling] Report 3"
 slug: daily-journaling-report-3
 published: 2025-08-12
 description: >
-  The third report in the series on "daily journaling" with my second-brain setup.
+  The third report in the series on "daily journaling" second brain.
 
 ---
 
@@ -11,23 +11,23 @@ It has been just under 7 months since my last overhaul of my daily journaling sy
 it. In that time, I have had some significant life changes that have led me to a different usage
 pattern of my devices. My needs have changed with respect to my "second brain".
 
-Last year, every morning would start with me making a cup of coffee (a pourover) and sitting down to
-turn on my computer. As soon as I was logged in, I would pop open my second-brain and write all of
-my morning subconcious/shower thoughts, review the previous day, set an intention for that day, and
-then make a todo list. It quickly became my mornning ritual, cultivating my digital home where I
-track of my tasks and any thoughts that pop into my head. 
+Last year, every morning would start with me making a cup of coffee (a pour-over) and sitting down to
+turn on my computer. As soon as I was logged in, I would pop open my second brain and write all of
+my morning subconscious/shower thoughts, review the previous day, set an intention for that day, and
+then make a to-do list. It quickly became my morning ritual, cultivating my digital home where I
+track my tasks and any thoughts that pop into my head. 
 
 However, this year has brought on a more nomadic lifestyle. The months of April and May barely saw
-me turn on my computer more than once a week. During this time, I still needed some-what daily todo
+me turn on my computer more than once a week. During this time, I still needed somewhat to-do
 lists and reverted to using the ever-present Obsidian on my phone. As this muscle memory was
-defined, I found myself duplicating my todo list between devices on the days where I would use both,
+defined, I found myself duplicating my to-do list between devices on the days where I would use both,
 depending on the context and what I needed. And every pragmatic software engineer bristles at
 breaking DRY principles. 
 
 
 ## Updates - Goodbye Apple (Set up Note Syncing)
 
-How do you solve a duplication error when data in needed in more than one place? You've probably
+How do you solve a duplication error when data is needed in more than one place? You've probably
 already guessed. I needed to sync my notes between my mobile device and my laptop. So, as any
 engineering leader worth their salt, I sat down and did a return on investment analysis:
 
@@ -42,7 +42,7 @@ engineering leader worth their salt, I sat down and did a return on investment a
 > 1. Full Neovim use while on laptop (unopinionated markdown files)
 > 2. Mobile App markdown editor
 > 3. Note syncing (could be manual)
-> 4. Optimize for laptop power usage and only an extension with the phone
+> 4. Optimize for laptop power usage and only an extension on the phone
 > 
 > | ID | Solution | Cost |
 > | -- | -------- | ---- |
@@ -58,7 +58,7 @@ engineering leader worth their salt, I sat down and did a return on investment a
 > This workflow feels pretty clunky and I don't think it solves my issue with
 > syncing.
 > 
-> #### Syncthing + Android
+> #### SyncThing + Android
 > 
 > SyncThing doesn't work on iOS because of folder "security" measures.
 >
@@ -95,20 +95,20 @@ engineering leader worth their salt, I sat down and did a return on investment a
 > until 8/15 for the current $400 deal.
 
 In the end, I decided not to purchase a new Pixel since my Pixel 7 works just fine and seems a lot
-thinner with a the needed protective case.
+thinner with the needed protective case.
 
 
 ### Solution Implementation
 
 SyncThing is designed to be a distributed file syncing system. This means that you can share a local
 folder with many other devices. While my phone is almost never off, it might lose internet access
-through a connection issue or airplane mode. While syncing dirctly between my laptop and phone would
+through a connection issue or airplane mode. While syncing directly between my laptop and phone would
 probably work for the majority of the time, I decided on a more complex syncing architecture through
 my NAS.
 
 I have a somewhat extensive homelab setup that includes a Synology NAS. Installing SyncThing from
 the third-party registry was easy. Adding SyncThing to my NixOS laptop was a little more interesting
-with the general lack of user friendly documentation for most NixOS packages, but it quickly fit
+with the general lack of user-friendly documentation for most NixOS packages, but it quickly fit
 into the declarative nature of its configuration.
 
 Choosing this solution required switching to an Android-based phone over an iPhone. iPhones have
@@ -117,8 +117,8 @@ in this case.
 
 I took this time to finally switch to GrapheneOS since I have been meaning to switch for the last
 few years (and even had a Pixel 7 from a few years ago when I was trying to get ready to switch).
-The setup of SyncThing and Obsidian was straight forward and the Storage Space feature was a great
-use to allow both both Obsidian and SyncThing to access the same files.
+The setup of SyncThing and Obsidian was straightforward and the Storage Space feature was a great
+use to allow both Obsidian and SyncThing to access the same files.
 
 ### Gotchas 
 I did run into a few issues that needed resolving while testing the end-to-end system. The first is
@@ -131,8 +131,8 @@ the NixOS declarative configuration.
 Additionally, the `.stignore` file is different on every device and should be created before syncing
 anything off the local device. I wanted to ignore the `.obsidian` directory on my phone because it
 is different than the one on my laptop (on the rare occasion that I use Obsidian on my laptop). I
-also didn't want the updates to the obsidian workspace files to constantly sync. I made a similar
-choice with the laptops's `.zk/notebook.db` file which constantly changes with every edit. However,
+also didn't want the updates to the Obsidian workspace files to constantly sync. I made a similar
+choice with the laptop's `.zk/notebook.db` file which constantly changes with every edit. However,
 care must be taken if the file was previously synced. In such a case, the file should be added to
 the remote device's `.stignore` file before deleting to make sure that the deletion is not synced
 across all devices as well.

@@ -19,6 +19,6 @@ project to start building a userbase before the MVP launched.
 The second biggest reason was that recent lifestyle changes led to having less time to devote to the
 project. At the outset of the project, we agreed that life is more important than this project and
 that we weren't going to sacrifice life for it. Startups require a lot of energy to build
-successfuly, so this decision may have prevented the project from ever taking off in the timeframe
+successfully, so this decision may have prevented the project from ever taking off in the timeframe
 we needed. However, that's ok because spending our life energy in ways that bring joy is always
 going to be more important than giving it to the non-living company.

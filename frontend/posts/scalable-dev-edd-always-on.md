@@ -12,10 +12,10 @@ Martin Fowler et al. have [a great article](https://martinfowler.com/articles/ev
 design in a way that enables the ability to evolve with how the corresponding code started to change with new Agile
 methodologies. In my [previous article](/posts/scalable-dev-edd), we looked at an example of
 creating tooling to assist with automating work around implementing EDD. Both articles allude to more advanced scenarios
-where additional processes are required to support EDD; one of which are environments where the application must be up
+where additional processes are required to support EDD; one of which is environments where the application must be up
 at all times.
 
-The agile practices Fowler et al. describe work really well in environments where the application can be taken offline
+The Agile practices Fowler et al. describe work really well in environments where the application can be taken offline
 while the database is updated. If this is not the case, extra care must be taken in approaching changes, and the
 processes that EDD outline are even more necessary.
 
@@ -42,11 +42,11 @@ is still dumping new data to the old place).
 
 ## The Solution
 
-To solve the problem, we will heavily rely on the scaffolding that is Fowler et al. discusses extensively to support the
+To solve the problem, we will heavily rely on the scaffolding that Fowler et al. discuss extensively to support the
 new and old versions of the application code--either stored procedures in the DB or in a data access layer that sits
 between the database and the application. We will also be adding in a _Transition_ type migration to run while the
 database is in the transition phase. A _Transition_ migration should only be used for things that are batched and do not
-run quickly enough to to be run with the rest of the _Initial_ migrations. They must be written in a re-runnable way.
+run quickly enough to be run with the rest of the _Initial_ migrations. They must be written in a re-runnable way.
 With the newly added _Transition_ migration, a single deployment from *X.1* to *X.2* will look like:
 
 1. Run migrations for *X.2* deploy. This will inherently include:
@@ -65,7 +65,7 @@ With the newly added _Transition_ migration, a single deployment from *X.1* to *
 
 When it is boiled down, the automation of EDD for applications in always-on environments is an orchestration problem.
 While all of the different types of migrations are just migrations, each type is treated a bit differently in the
-deploy process. The simplest solution is to keep the different until it is the right time to move them to the
+deploy process. The simplest solution is to keep the different migrations until it is the right time to move them to the
 `migrations` directory.
 
 ```
@@ -77,7 +77,7 @@ database-name/
 ```
 
 We used the above directory setup in the [previous article](/posts/scalable-dev-edd).
-`migrations` contain any of the migrations that will be run in step 1 of the deploy. The order they are added are
+`migrations` contain any of the migrations that will be run in step 1 of the deploy. The order they are added is
 incredibly important. When preparing for the *X.2* deploy, _Transition_ migrations that are going to be finalized must be
 added into the `migrations` directory _*BEFORE*_ their corresponding _Finalization_ migrations. After them come the
 _Finalization_ migrations and then any of the other migrations for the *X.2* deploy. Any _Initial_ or non-destructive
@@ -85,8 +85,8 @@ migrations can be added anywhere in the order as long as they do not depend on t
 migrations being run. If that is the case, they should be added accordingly.
 
 `transition_migrations` include all *X.2* specific migrations that will be run a non-zero number of times between *X.2*
-and the deployment where it is finalized. `finalization_migrations` include all migrations that correspond to an
-_Initial_ migration that is ran during the *X.2* deployment. The migrations from `transition_migrations` and
+and the deployment where they are finalized. `finalization_migrations` include all migrations that correspond to an
+_Initial_ migration that is run during the *X.2* deployment. The migrations from `transition_migrations` and
 `finalization_migrations` are moved together to `migrations` when it is time for them to be finalized some time after
 the *X.2* deployment. A good approach to this is to automate a PR/MR on application deploy to move all of the migrations
 in the transition and finalization directories.
@@ -94,7 +94,7 @@ in the transition and finalization directories.
 The automation for orchestrating this process is outside the scope of `edda`. However, `edda` has been expanded to track
 the different states that a _Transition_ migration is in. `edda` will now run any net-new migrations in `migrations` as
 well as any migrations in `transition_migrations` whether they have been run before and logged or not. However, when
-those migrations are moved (manually or with some external automation), `edda` will run it one last time and set the
+those migrations are moved (manually or with some external automation), `edda` will run them one last time and set the
 migrations table flag to prevent it from being run again.
 
 _Transition_ migrations can be created with `edda create -t "migration name"`. A _Finalization_ migration will also be
@@ -104,4 +104,4 @@ created even if the `-f` flag is forgotten.
 
 One solution to orchestrating EDD in an always-on environment is to keep the different migrations in separate
 directories until they can be moved to the shared `migrations` directory. This allows a tool like `edda` to be
-migration-type aware and be orchestrated in a way to support evolutionary database changes
+migration-type-aware and be orchestrated in a way to support evolutionary database changes
