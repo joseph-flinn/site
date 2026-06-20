@@ -75,7 +75,7 @@ a new technology that had a TRL 7 in _Product Definition_ but a TRL 2 in _Testin
 all other TRLs were greater than 2), the overall TRL of the technology would be a TRL 2. 
 
 These level definitions have a heavy skew towards physical engineering. But lucky for us, NASA also
-develops software and has adapted its original TRLs to software engineering (_Software Technology
+develops software and has adapted their original TRLs to software engineering (_Software Technology
 Readiness Levels - NASA_):
 
 | Level | Software Description |

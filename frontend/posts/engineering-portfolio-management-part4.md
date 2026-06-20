@@ -17,7 +17,7 @@ all integrated into a portfolio management system.
 
 Before diving into what makes up a portfolio management system, it is important to understand why we
 need a system to manage projects throughout their life-cycle in addition to the frameworks we use
-to manage the projects individually (like Scrum, Kanban, etc.)
+to manage the projects individually (like Scrum, Kanban, etc).
 
 ## Why do we need a system?
 
@@ -86,7 +86,7 @@ Firms establish multi-stage portfolio management systems to implement five of th
 drivers for successful new product development. An effective portfolio management system will: 1)
 achieve strategic alignment with the business objectives, 2) maximize the value of the portfolio of
 projects, 3) maintain the right balance of projects, and 4) maintain the correct number of ongoing
-projects (Kahn et al, p. 156). The critical success drivers 2, 3, 4, 5, and 9 are all met with an
+projects (Kahn et al, p.156). The critical success drivers 2, 3, 4, 5, and 9 are all met with an
 effective portfolio management system.
 
 The structure of the system is provided by the stages of product development life-cycle with gates
@@ -143,7 +143,7 @@ In multi-project organizations where there is not a system to manage portfolio d
 environment of product development teams quickly becomes unstable. Teams do not know what they are
 working on week-to-week because projects appear and disappear so quickly. Organizational capacity is
 often overloaded, causing project slip and quality issues to appear because key activities are
-omitted from the pressure to deliver (Kahn et al., p.157). This can result in degrading team
+omitted from the pressure to deliver (Kahn et al, p.157). This can result in degrading team
 performance and critical performance reviews of the teams and individuals trying to keep up on the
 constantly changing priorities. The quickly shifting priority projects often come at the expense of
 the projects that are tied to the continued success of the organization. Over a few years, this
