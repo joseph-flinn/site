@@ -3,17 +3,17 @@ title: "[Manager Retro] Success - Deployment Complexity Reduction"
 slug: retro-success-deployment-complexity-reduction
 published: 2024-06-03
 description: >
-  Reflection and gratitude on one of the most challenging project we worked on. 
+  Reflection and gratitude on one of the most challenging projects we worked on. 
 
 ---
 
-One of the greatest technical achievements that the team has made was to decrease the complexity the
+One of the greatest technical achievements that the team has made was to decrease the complexity of the
 backend deploy. There is also a significant failure associated with the result, but we will review
 that with the long list of other failures and the lessons learned from them.
 
 There are two types of complexities when it comes to systems: combinatorial and dynamic (Sterman
 2009). Combinatorial complexity is associated with the size of the system or the size of the
-solution search space for a particular problem. Dynamic complexity on the other hand is the
+solution search space for a particular problem. Dynamic complexity, on the other hand, is the
 complexity of subsystems interacting with one another over time. 
 
 Specifically in software systems, combinatorial complexity is directly correlated with the number of
@@ -33,12 +33,12 @@ send to the application that the application is not going to use.
 Software architecture has to balance both the combinatorial complexity of the system with the
 dynamic complexity of the system. Over time as the organization grows and the software system has to
 handle more data and more throughput, more problems arise where the original software system is no
-longer able to keep up with the throughput. When this happens, the system needs to updated or risk
+longer able to keep up with the throughput. When this happens, the system needs to be updated or risk
 catastrophic collapse.
 
 The software delivery life cycle processes also have to balance combinatorial complexity and the
 dynamic complexities of the system. As the organization grows, the delivery processes that worked
-when the organization was at a smaller size with less changes going out, may no longer work. And
+when the organization was at a smaller size with fewer changes going out, may no longer work. And
 similarly, if these processes are not updated to support the growing system, it also risks failure
 and possibly collapse.
 
@@ -48,16 +48,16 @@ delivery processes at the time were going to scale linearly at best and my team 
 opportunity to double in size to support double the work. We needed to figure out a way to prevent
 this new production environment from doubling the work. We decided to migrate away from the tech
 debt of the current delivery process for one in favor of being able to grow to many environments and
-enabled delivery processes needed for non-production environments. 
+enable delivery processes needed for non-production environments. 
 
 It took six months and many iterations, but we were able to replace the underlying compute
 architecture with one that provided a lot more flexibility in deployments and paired this with
 automating our database changes (where we were previously only allowed to make them manually).
-Between the two of these changes, we were able to able to decrease the number of manual steps that
+Between the two of these changes, we were able to decrease the number of manual steps that
 were needed for a successful deploy of an environment by 96%.
 
 While this was a resounding success for my team, the project did not come without its challenges.
-There was extreme amounts of pressure on the team to deliver by deadlines that were found to be
+There was an extreme amount of pressure on the team to deliver by deadlines that were found to be
 artificial. This pressure resulted in some breakdown in communication between the teams which made
 collaboration more difficult. It also led to decisions being made that weighted the short term
 higher than the long term. And my challenges with effective communication skills and the lack of
@@ -76,7 +76,7 @@ frustrated from our differing perspectives, but we didn't let that come between 
 how to lean in, get frustrated, communicate, and get to a solution we could move forward with. I
 learned a lot about human connection and how powerful it is to use differing perspectives in
 communication and problem solving. While I am tempted to wish to go back and use what I know now, I
-wouldn't know what I know now if I had not had to stumble though those less-than-stellar times of
+wouldn't know what I know now if I had not had to stumble through those less-than-stellar times of
 communication.
 
 I am also grateful for how the team came together to solve all of the problems. It is amazing what

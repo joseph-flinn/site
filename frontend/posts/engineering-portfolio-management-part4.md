@@ -9,7 +9,7 @@ description: >
 ---
 
 After all the buildup through what portfolio management is and the role it plays 
-([Part 1](/posts/engineering-portfolio-management-part1)), the definitions of  Technology Readiness
+([Part 1](/posts/engineering-portfolio-management-part1)), the definitions of Technology Readiness
 Levels ([Part 2](/posts/engineering-portfolio-management-part2)), and the definitions of
 Manufacturing Readiness and how it can be applied to the software industry 
 ([Part 3](/posts/engineering-portfolio-management-part3)), we finally get to the part where this is
@@ -17,7 +17,7 @@ all integrated into a portfolio management system.
 
 Before diving into what makes up a portfolio management system, it is important to understand why we
 need a system to manage projects throughout their life-cycle in addition to the frameworks we use
-to manage the projects individually (like Scrum, Kanban, etc).
+to manage the projects individually (like Scrum, Kanban, etc.)
 
 ## Why do we need a system?
 
@@ -31,10 +31,10 @@ innovation.
 
 Those riskiest projects, the new-to-the-world or breakthrough innovations, are the ones most
 necessary for firms to stay relevant in the market; furthering their time in the infinite game
-(Sinek). We have heard that one out of ten startups succeed and one out of seven new products are
-successful (Cooper p.22). However, Cooper's research found a significant difference between the
-performance between the best and worst innovators, showing that the best innovators regularly hit a
-70% success rate measured with hitting profit objectives and project schedule which is well above
+(Sinek). We have heard that one out of ten startups succeed and one out of seven new products is
+successful (Cooper p.22). However, Cooper's research found a significant difference in performance
+between the best and worst innovators, showing that the best innovators regularly hit a 70% success
+rate measured with hitting profit objectives and project schedule which is well above
 the average 14% success rate (p.15):
 
 | Area | Best | Worst | Ratio |
@@ -59,7 +59,7 @@ innovators do this significantly better than worst performers (Cooper p.41)
 | Deliver a product with superior quality | 58.6% | 28.0% | 2.0x |
 
 There is nothing surprising in any of these areas. We intuitively know that if a firm comes to
-market with a superior product that meets all of the customer needs and has a higher value-to-money
+market with a superior product that meets all of the customer needs and has a higher value-for-money
 ratio, that product is going to win. The above data reinforces this intuition but does not give us
 insight into how to tactically implement a successful new-product development strategy. "Just do it"
 is not sufficient.
@@ -75,7 +75,7 @@ Cooper goes on to describe the nine critical success drivers for new-product dev
 5. Have resources in place
 6. Cultivate a climate and culture for innovations
 7. The right organizational design and structure to maximize product teams
-8. Top management support, focused on developing a innovation strategy rather than hands-on managing
+8. Top management support, focused on developing an innovation strategy rather than hands-on managing
    of the projects themselves
 9. Utilizing a multistage stage-and-gate idea-to-launch system
 
@@ -86,7 +86,7 @@ Firms establish multi-stage portfolio management systems to implement five of th
 drivers for successful new product development. An effective portfolio management system will: 1)
 achieve strategic alignment with the business objectives, 2) maximize the value of the portfolio of
 projects, 3) maintain the right balance of projects, and 4) maintain the correct number of ongoing
-projects (Kahn et al, p.156). The critical success drivers 2, 3, 4, 5, and 9 are all met with an
+projects (Kahn et al, p. 156). The critical success drivers 2, 3, 4, 5, and 9 are all met with an
 effective portfolio management system.
 
 The structure of the system is provided by the stages of product development life-cycle with gates
@@ -109,18 +109,18 @@ into the Development stage.
 | ------ | ----------------- |
 | Gate 1 | - Fit the company's strategy?<br/> - Attractive market?<br/> - Technically Feasible? |
 | Gate 2 | - Legal or technical "killer variables"?<br/> - Core competency synergies?<br/> - Risk vs reward? |
-| Gate 3 | - Does the in-depth financial business case still work?<br/> - Is the project officially well defined?<br/> - TRL 3?<br/> - ORL 3? |
+| Gate 3 | - Does the in-depth financial business case still work?<br/> - Is the project officially well-defined?<br/> - TRL 3?<br/> - ORL 3? |
 | Gate 4 | - Does the project meet specs?<br/> - Still financially viable?<br/> - TRL 5?<br/> - ORL 5? |
 | Gate 5 | - Does the project meet all quality standards?<br/> - Marketing plan ready?<br/> - Operations plan ready?<br/> - TRL 9?<br/> - ORL 7? |
 
 Pairing a stage-and-gate system like the above with a policy of expected timelines that projects
 should meet while progressing through the gates, helps bring structure and transparency to the
 project investment process. During a quarterly portfolio review, if projects have not been able to
-meet their scheduled stage (measured by their gate criteria) the project committee may deem that the
+meet their scheduled stage (measured by their gate criteria), the project committee may deem that the
 project should no longer receive resource investment and make the decision to kill it.
 Alternatively, if the project is close to meeting the gate requirements but not quite there, the
-committee may elect to approve a Conditional pass meaning that the project can automatically move to
-the next stage if the set conditions met. However, if it fails to meet the condition in the
+committee may elect to approve a Conditional pass, meaning that the project can automatically move to
+the next stage if the set conditions are met. However, if it fails to meet the condition in the
 additional time set, it is killed.
 
 As mentioned above, this example is a generic approach to new product development. Such a portfolio
@@ -128,8 +128,8 @@ management system would be extremely helpful for long-term projects spanning mul
 years. However, there is a lot of upfront work that comes along with a serial process which might
 provide friction in an environment that uses Agile project management. The generic stage-and-gate
 system can be tweaked to work within any environment that a firm has. The main idea is to establish
-Go/Kill decision criteria to optimize the resource investment across the firm as well as making the
-it transparent. 
+Go/Kill decision criteria to optimize the resource investment across the firm as well as making it
+transparent. 
 
 In the software industry, a portfolio management system brings the needed structure to managing
 project life-cycles. I have witnessed too many large software projects go immediately from ideation
@@ -142,19 +142,19 @@ project investment decisions.
 In multi-project organizations where there is not a system to manage portfolio decisions, the
 environment of product development teams quickly becomes unstable. Teams do not know what they are
 working on week-to-week because projects appear and disappear so quickly. Organizational capacity is
-often overloaded causing project slip and quality issues to appear because key activities are
-omitted from the pressure to deliver (Kahn et al, p.157). This can result in degrading team
+often overloaded, causing project slip and quality issues to appear because key activities are
+omitted from the pressure to deliver (Kahn et al., p.157). This can result in degrading team
 performance and critical performance reviews of the teams and individuals trying to keep up on the
 constantly changing priorities. The quickly shifting priority projects often come at the expense of
 the projects that are tied to the continued success of the organization. Over a few years, this
 leads to burnout.
 
-While it seems that implementing project management portfolio will slow everything down, it only
+While it seems that implementing a project management portfolio will slow everything down, it only
 slows down the processes that need to be. As the military saying goes, "slow is smooth, smooth is
 fast". Building a system to support strategic decisions slows down the decision making and planning
 processes, but speeds up the overall process to get to a confident direction where the firm is
 maximizing its potential in working in alignment with its mission and purpose. It supports
-delivering more value to end customers in a faster more reliable way.
+delivering more value to end customers in a faster, more reliable way.
 
 The next post will look at how the serial generic and traditional stage-and-gate system can be
 tweaked to better fit in an organization that uses Agile as its main approach to project management.

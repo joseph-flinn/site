@@ -9,15 +9,15 @@ description: >
 ---
 
 Over the last decade, I have observed in myself that I have a close-to-physical response of
-revulsion to the word "accountability". The word "accountability" and associated idea has grown
+revulsion to the word "accountability". The word "accountability" and associated idea have grown
 exponentially since the 1960s.
 
 ![Ngram results of accountability from Google (link in Resources)](/posts/0050/google-ngram-accountability-v0_2.png)
 
-I don't quite know where the response comes from which seems to point to it being an emotional
+I don't quite know where the response comes from, which seems to point to it being an emotional
 response since it is not based in a conscious decision. I want to understand what is leading to the
 response and to bring the subconscious thoughts into the conscious. The best way I know how to do
-this is to take the nonlinear cloud of thought and order them linearly on a page. Herick Karlsson
+this is to take the nonlinear cloud of thought and order them linearly on a page. Henrik Karlsson
 has an outstanding piece on this idea (Karlsson 2023).
 
 Let's start with some background. I was raised to value responsibility and honor. When I make a
@@ -30,7 +30,7 @@ team’s (Sinek 2017).
 In addition to responsibility and honor, I strongly believe in having a growth mindset (Dweck 2008).
 [Past success does not predict future success](/posts/retro-success-does-not-predict-success). If
 past success does not predict future success, there are few lessons to learn from past success. If
-one cannot learn from success, then learning failure is the only other option. 
+one cannot learn from success, then learning from failure is the only other option. 
 
 How might accountability fit? It seems to me that accountability should fit nicely. Accountability,
 as it is often described, should help me live up to my seemingly rigid beliefs of responsibility and
@@ -40,7 +40,7 @@ honor. So why do I have such a strong reaction to it?
 
 Accountability is an externally applied framework to some account in a social system. All social
 systems develop hierarchies (Koski 2015). Let's define the decisions, actions, and inactions of an
-individual in a social system as their behavior. In the social system of an organization the account
+individual in a social system as their behavior. In the social system of an organization, the account
 that is often used in accountability practices is the list of an individual's behavior. By
 definition, accountability can only have a single owner. 
 
@@ -50,15 +50,15 @@ loop exists in the system, it is activated and the owner of that specific accoun
 responsible for the failure.
 
 Systems thinking shows that the decisions, actions, and inactions that an individual makes in a
-system is the summation of the goals, incentives, and pressures on the role that the individual has
+system are the summation of the goals, incentives, and pressures on the role that the individual has
 rather than from a characteristic of the individual themselves. This is known as bounded rationality
 (Meadows 2008). 
 
 System outcomes are directly correlated by the behavior of the system. If they are not the desired
-outcomes, the behavior of the system needs to be adjusted. Adjustments in decision making policies
-change the behavior which in turn changes the outcome. This is known academically as double-loop
-learning, where the outcomes from the system feeds back into the system to adjust the decision
-policies (Sterman 2009). However, the adjustments to the decision making process must be an
+outcomes, the behavior of the system needs to be adjusted. Adjustments in decision-making policies
+change the behavior, which in turn changes the outcome. This is known academically as double-loop
+learning, where the outcomes from the system feed back into the system to adjust the decision
+policies (Sterman 2009). However, the adjustments to the decision-making process must be an
 adjustment to the variables of bounded rationality--system goals, incentives, and pressures--or the
 output will not change. 
 
@@ -89,9 +89,9 @@ The only place for accountability in a system is to hold individuals accountable
 fundamental responsibilities. There is only one type of individual in a hierarchical system that
 has a fundamental responsibility given to them by the system itself. That individual is a leader.
 
-Hierarchical social systems grants power and unequal benefits to leaders in exchange for them to
-risking themselves for the good of the system. The social system expects the leader to be the first
-to dive into the unknown, to blaze the trail and the put themselves in harm's way if required. The
+Hierarchical social systems grant power and unequal benefits to leaders in exchange for them to
+risk themselves for the good of the system. The social system expects the leader to be the first
+to dive into the unknown, to blaze the trail and to put themselves in harm's way if required. The
 leader's role in a system is to put the sustainability and perpetuity of the system ahead of their
 own gain. The only effective role of accountability in a system is to hold a leader accountable when
 they shirk their fundamental responsibility as a leader by using the power the social system
@@ -102,7 +102,7 @@ collapse.
 To use Sinek’s metaphor for great leadership being the alpha wolf--the wolf that gets their
 choice of the kill and their choice of mate in exchange for being the first to dive into a fight to
 defend the pack--accountability in a pack is the challenging of the alpha when they no longer
-put the pack first and are no longer are able to be the first into the fray.
+put the pack first and are no longer able to be the first into the fray.
 
 
 ---
@@ -120,4 +120,3 @@ put the pack first and are no longer are able to be the first into the fray.
 ### Links
 
 - https://books.google.com/ngrams/graph?content=accountability&year_start=1800&year_end=2019&corpus=en-2019&smoothing=3
-

@@ -7,7 +7,7 @@ description: >
 
 ---
 
-A large scary-but-exciting transition in coming in life. The next step is out of the comfortable
+A large scary-but-exciting transition is coming in life. The next step is out of the comfortable
 place that I have found and built in a successful company. The company has been a large part of my
 life in the last four years.  It seems like a crazy decision to move on where career and monetary
 success is all-but-guaranteed; somewhere where I have been tirelessly working to assist with laying
@@ -22,11 +22,11 @@ can be--and I have found an area of study that will hold my interest for at leas
 years it will take for a graduate school program.
 
 In the time of transition, reflecting on the past and on lessons learned is a helpful way of
-concluding a chapter and moving smoothly into the next. Learning--more often then not--comes from
+concluding a chapter and moving smoothly into the next. Learning--more often than not--comes from
 failure, yet we would not purchase a book on someone's failure (Holiday 2016). We want to know what
 people have done to succeed so that we can try that formula of success in our own lives. But those
 stories of success skip over the years of challenges or the years of failure that come before every
-success (Holiday 2016). Every story that includes success that is only worth telling if there were
+success (Holiday 2016). Every story that includes success is only worth telling if there were
 challenges overcome to get there.
 
 However, focusing only on the failures dishonors the successes and wins that the team has

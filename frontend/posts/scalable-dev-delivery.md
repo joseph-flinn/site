@@ -7,45 +7,50 @@ description: >
   more value faster to the end user
 
 ---
-In the last article, we did a deep dive on CI to prep us for the conversation about CD and how it can be implemented. 
-As [MinimumCD](https://minimumcd.org/minimumcd/) shows, CI is required to realize all of the benefits of effective CD.
-If you haven't already, give 
+
+In the last article, we did a deep dive on CI to prep us for the conversation about CD and how it
+can be implemented. As [MinimumCD](https://minimumcd.org/minimumcd/) shows, CI is required to
+realize all of the benefits of effective CD. If you haven't already, give 
 [_Scalable Development Practices - CI_](/posts/scalable-dev-ci) a read.
 
-CD has come to mean two different things: Continuous Delivery and Continous Deployment. As we discussed in 
-[_Scalable Development Practices - Overview_](/posts/scalable-dev-overview), the difference between
-continuous delivery and continuous deployment is the number of manual steps in the pipeline from the time where a
-software engineer commits a change to the trunk branch and when it appears in Production. Here, Production can be
-defined as the end state where value is handed over to the end user. While a hosted application is what is normally
-referred to as having a Production, I expand the definition to also include any form of released library or SDK.
+CD has come to mean two different things: Continuous Delivery and Continuous Deployment. As we
+discussed in [_Scalable Development Practices - Overview_](/posts/scalable-dev-overview), the
+difference between continuous delivery and continuous deployment is the number of manual steps in
+the pipeline from the time where a software engineer commits a change to the trunk branch and when
+it appears in Production. Here, Production can be defined as the end state where value is handed
+over to the end user. While a hosted application is what is normally referred to as having a
+Production, I expand the definition to also include any form of released library or SDK.
 
-Continuous Delivery is a precursor to Continuous Deployment. While Continuous Deployment is sexy, let's focus on
-Delivery first and deliver incremental value. Having Delivery in the processes while working on implementing Deployment
-will allow for the benefits of this approach to start being used and value to start being obtained in contrast to a full
-rollout after the entire process has been automated from front to back. It will also help encapsulate Delivery and
-Deployment separately to set us up to be flexible on where we are targeting the deployment. For instance, if Production 
+Continuous Delivery is a precursor to Continuous Deployment. While Continuous Deployment is sexy,
+let's focus on Delivery first and deliver incremental value. Having Delivery in the processes while
+working on implementing Deployment will allow for the benefits of this approach to start being used
+and value to start being obtained in contrast to a full rollout after the entire process has been
+automated from front to back. It will also help encapsulate Delivery and Deployment separately to
+set us up to be flexible on where we are targeting the deployment. For instance, if Production
 platform technologies change, only the Deployment portions of the process will need to be updated.
 
 ## Continuous Integration & Continuous Delivery
 
-Continuous Integration and Continuous Delivery work very closely together. Integration's goal is to provide fast
-feedback to engineers on how their code interacts with the current code and verifies that it will not break. Continuous
-Delivery takes the new combined code after all of the CI tests pass and packages it up to create an artifact. That 
-artifact is signed off and ready to be run through the deploy processes. Continuous Delivery runs immediately after the CI
-tests have all passed (including the desired end-to-end tests) to build that artifact and push it to a place where the
-deploy process expects it to be.
+Continuous Integration and Continuous Delivery work very closely together. Integration's goal is to
+provide fast feedback to engineers on how their code interacts with the current code and verifies
+that it will not break. Continuous Delivery takes the new combined code after all of the CI tests
+pass and packages it up to create an artifact. That artifact is signed off and ready to be run
+through the deploy processes. Continuous Delivery runs immediately after the CI tests have all
+passed (including the desired end-to-end tests) to build that artifact and push it to a place where
+the deploy process expects it to be.
 
-Since we are running trunk based development where the trunk is assumed to always be in a deployable state, every update
-to the trunk should have a corresponding build artifact that is ready to be configured and deployed. During the deploy process,
-there should be not be any more artifact building. If this was the case, the artficats would not necessarily be fully tested
-signed off. If the deploy process includes rebuilding and retesting, this also increases the length feedback loop to Production 
-and slows down value delivery.
+Since we are running trunk based development where the trunk is assumed to always be in a deployable
+state, every update to the trunk should have a corresponding build artifact that is ready to be
+configured and deployed. During the deploy process, there should not be any more artifact building.
+If this was the case, the artifacts would not necessarily be fully tested signed off. If the deploy
+process includes rebuilding and retesting, this also increases the length feedback loop to
+Production and slows down value delivery.
 
 ## Code
 
-Continuous Integraiton and Continuous Delivery work so close together that I put them in the same pipeline. For the
-running example, we are going to add a job to the end of `CI-main.yml` that pushes the already-built package to a
-predetermined place where the deployment process can pick it up.
+Continuous Integration and Continuous Delivery work so close together that I put them in the same
+pipeline. For the running example, we are going to add a job to the end of `CI-main.yml` that pushes
+the already-built package to a predetermined place where the deployment process can pick it up.
 
 ```yaml
 # .github/workflows/CI-main.yml
@@ -149,14 +154,16 @@ jobs:
           docker tag $VERSION_IMAGE $NEW_LATEST_IMAGE
 ```
 
-In `CI-main.yml`, if all of those tests pass, we feel good about tagging and releasing that version on GitHub. In the
-`release` job, we create that GitHub Tag, Release, and publish the newest versioned container to the GitHub container
-registry as well as update the `latest` container image to point to the versioned container built in this flow. We now
-have a fully tested artifact ready for publishing or deployment.
+In `CI-main.yml`, if all of those tests pass, we feel good about tagging and releasing that version
+on GitHub. In the `release` job, we create that GitHub Tag, Release, and publish the newest
+versioned container to the GitHub container registry as well as update the `latest` container image
+to point to the versioned container built in this flow. We now have a fully tested artifact ready
+for publishing or deployment.
 
 
 ---
 
-Continuous Integration & Continuous Delivery work very closely together to deliver more value than either of them can
-deliver on their own. Continuous Delivery's goal is to build and deliver a fully tested artifact that is ready to be
-configured--if needed--and picked up in whatever deploy process the organization has. 
+Continuous Integration & Continuous Delivery work very closely together to deliver more value than
+either of them can deliver on their own. Continuous Delivery's goal is to build and deliver a fully
+tested artifact that is ready to be configured--if needed--and picked up in whatever deploy process
+the organization has. 

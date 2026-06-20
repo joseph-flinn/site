@@ -19,19 +19,19 @@ few years as an engineer, I saw the areas where improvements were needed to incr
 systems. I observed where the industry was going with containers and infrastructure-as-code and
 pitched those technologies with my management. When those ideas did not stick, I thought it was
 because of the lack of years of experience that I had in the industry that led to not getting
-traction. More recently, advice around software and infrastructure architectures was not taken which
+traction. More recently, advice around software and infrastructure architectures was not taken, which
 led to scaling issues that could have been avoided. There have been numerous smaller events like the
 above. However, I do not believe in cultures of blame. As such, I cannot throw my hands up and say that it
 is the fault of those that I was talking with that decided to ignore what was said. 
 
 Let's step back and define the generic problem. Let's say that there are three people in the room
-discussing how best to solve a problem. Each one of these people are bringing with them a lifetime
+discussing how best to solve a problem. Each one of these people is bringing with them a lifetime
 of perspective which uniquely shapes their mental model of the problem and therefore the solution to
 the problem. The challenge becomes taking three unique mental models and leaving with a single
 strategy and building a single tactical plan to execute in the direction of the strategic goals.
 
 There are two main approaches to getting to a single strategy. The first approach is pitting the
-three unique mental models against each other and see which one wins, using some metrics to decide
+three unique mental models against each other and seeing which one wins, using some metrics to decide
 (often whoever has the most hierarchical power). The second approach is having an open discussion to
 change all mental models of the problem to leave aligned on a single understanding of both the
 problem and the solution which builds alignment on the strategy and tactical execution plan.
@@ -44,7 +44,7 @@ to support mental model alignment. A culture of psychological safety is paramoun
 space to share ideas, if someone does not feel like they can speak up, or if someone feels like
 speaking up has no value, mental model alignment is highly unlikely.
 
-However, a culture of psychological safety, providing opportunity to speak up is not sufficient.
+However, a culture of psychological safety, providing opportunity to speak up, is not sufficient.
 There are communication skills that are required to effectively change both my mental model as well
 as others'. I have experienced having the opportunity to speak, but that alone does not prevent the
 situation of spinning our wheels trying to solve a problem. I have 
@@ -58,12 +58,12 @@ Going back to the generic problem of three unique mental models in the room. The
 that are necessary to leave with alignment: a leader that is dedicated to alignment and at least one
 supercommunicator (Duhigg 2024). Getting to alignment is a lot of work, both in the long term generation
 of a psychologically safe culture as well as the tactical conversations with unique mental models.
-Active listening, used by supercommunicators is also requires a lot of energy. A leader who is
+Active listening, used by supercommunicators, also requires a lot of energy. A leader who is
 dedicated to alignment is needed to make sure that the decision that is reached does not default to
-pitting ideas against one another which is is the easier route to a single strategy. With that
+pitting ideas against one another which is the easier route to a single strategy. With that
 dedication, the supercommunicator then essentially asks a significant number of questions to tease
 out everyone's mental models so that they are essentially all out in the open. Through the act of
-answering questions and followup questions, the person answering has a chance to form their thoughts
+answering questions and follow-up questions, the person answering has a chance to form their thoughts
 linearly and express themselves to the group. When all of the mental models are out in the open,
 they will often be mixed and matched with a high likelihood of everyone leaving the conversation
 understanding everyone else's and possibly leaving with alignment on the definition of the problem
@@ -85,9 +85,9 @@ The core lie that I believe is that human value is equated to the knowledge poss
 devalued or attacked, it is almost always something to do with knowledge, like being treated as if I
 do not know what I am talking about. This may explain the library of books that I am amassing.
 Owning the book form of knowledge counts towards my core lie of possessing that knowledge; even if I
-have yet to read the book. When I feel attacked in the realm of possessed knowledge. When I feel
-attacked and my defenses go up, the stories that I tell myself of the other is that they are dumb
-and doing stupid things. 
+have yet to read the book. When I feel attacked in the realm of possessed knowledge, my defenses go
+up, The stories that I tell myself about my "attacker" is that they are dumb and/or doing stupid
+things. 
 
 It was through the failure to drive influence as the expert in a specific area that I became aware
 of my core lie. It has been an immense challenge to face this part of who I am, something that I
@@ -96,12 +96,10 @@ have considered a large part of my identity for most of my life, and see it for 
 Influence does not come from having more knowledge on a topic than others. In today's world where
 information is at all of our fingertips and the number of armchair experts is on the rise (myself
 often included in this number), influence actually comes from moving past our core lies, moving into
-human connection, and learning how to effective communicate through humility and active listening.
+human connection, and learning how to effectively communicate through humility and active listening.
 
 ---
 
 ## Resources
 
 1. Duhigg, Charles. Supercommunicators: How to Unlock the Secret Language of Connection. First edition, Random House, 2024.
-
-

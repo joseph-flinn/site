@@ -9,7 +9,7 @@ description: >
 ---
 
 In this final post of the series, we are going to expand on the idea that Engineering Portfolio
-Management is not a debate between Agile vs a gated idea-to-launch systems. A robust system that
+Management is not a debate between Agile and gated idea-to-launch systems. A robust system that
 integrates both Agile and a gated system is needed, especially in the software industry.
 
 ## Agile _vs_ Plan-driven (Gated system)
@@ -17,7 +17,7 @@ integrates both Agile and a gated system is needed, especially in the software i
 Plan-driven systems have been designed to focus on the validation and verification of deliverables
 against a set of specifications (Cooper p.187). When a problem is well defined, the solution can
 also be well defined and the deliverables measured against the required specifications. This is the
-approach that physical engineering has traditionally taken (getting to the moon, the Space Shuttle,
+approach that physical engineering has traditionally taken (getting to the Moon, the Space Shuttle,
 etc.).
 
 However, the experience of the authors of the Agile Manifesto, customers/users could not fully
@@ -33,7 +33,7 @@ conducted statistical analysis to look at the correlation of using Agile methodo
 failure, finding that projects following Agile practices when it came to requirements were 227% more
 likely to fail (Ali, p.311). 
 
-One of the reasons that this topic is so hotly debated is that because both sides are right.
+One of the reasons that this topic is so hotly debated is that both sides are right.
 Plan-driven projects work and Agile projects work. Both have their strengths in different
 situations. Cooper describes the strengths of each approach (p.188):
 
@@ -47,14 +47,14 @@ situations. Cooper describes the strengths of each approach (p.188):
 
 Projects need a balance of _both agility and discipline_ (Cooper p.188). Swinging the pendulum too
 far towards Agile leads to increased local communication, but also an increase of siloing around the
-project team with decreased cross-departmental communication. However, swinging too far the other
+project team with decreased cross-departmental communication. However, swinging too far in the other
 direction results in a rigid system that does not provide room for the fast-paced changing world
 that we are in (Cooper p.189). 
 
 
 ## Agile _and_ Plan-driven (Gated system)
 
-Further examination of the characteristic differences can be seen below show that Plan-driven Agile
+Further examination of the characteristic differences shown below shows that Plan-driven and Agile
 not only have their strengths for different projects, but also at different levels. Namely, the
 Plan-driven is good at the macro-level planning and Agile is good at micro-level planning (Cooper
 p.189):
@@ -62,14 +62,14 @@ p.189):
 | Characteristic | Gated System | Agile |
 | -------------- | ----- | ------------ |
 | Type of model | Macroplanning | Microplanning, project management |
-| Scope | Idea to launch, end-to-end | Focused in the Development & Testing stages | 
+| Scope | Idea-to-launch, end-to-end | Focused in the Development & Testing stages | 
 | Organizational: project team and breadth | Cross-functional: Technical,<br/>Marketing, Sales, & Operations | Largely technical dedicated project teams |
 | End point | Product launched into market | Developed and tested product |
 | Decision model | Resource investment: Go/Kill from senior governance group | Tactical implementations by the self-managed team |
 
 In the software industry, implementations of Agile often forget to solidify their requirements
 through the Development phase by iterating with the customer to make sure they have a robust
-voice-of-customer which is imperative to the success of a new product. I believe this one of the
+voice-of-customer which is imperative to the success of a new product. I believe this is one of the
 underlying causes of the issues that Ali highlighted in _Impact Engineering_. If requirements are
 not constantly being solidified throughout the Development stage, there is risk that the project
 will never finish.
@@ -108,7 +108,7 @@ The Agile Manifesto states (Beck et al.):
 > **Responding to change** over following a plan<br/><br/>
 > While there is value in the items on the right, we value the items on the left more
 
-These principles do well in managing projects at the micro level; achieving the goals internal to
+These principles do well in managing projects at the micro level, achieving the goals internal to
 the project. However, none of these principles directly help support the goals of portfolio
 management. Remember from [Part 4](/posts/engineering-portfolio-management-part4) that the goals of
 portfolio management are to: 1) achieve strategic alignment with the business objectives, 2)

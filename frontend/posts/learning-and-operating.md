@@ -20,7 +20,7 @@ During the first few years of my career I would always question why I wasn't in 
 of the two career paths that I was considering while in university. Two years ago was the decision
 to pause a part-time construction project that I had been working on for the prior two years. Last
 year, it was grad school again. This year's Thanksgiving reflection is on the first semester of a
-Masters degree.
+Master's degree.
 
 Learning is one of my two core values and was what ultimately pushed me over the fence to go to grad
 school. In 2023, the amount of energy that I was expending in my career was not producing the amount
@@ -50,7 +50,7 @@ class, to then get a degree, to be certified to the world that they have suffici
 subject.
 
 Working backwards, we can assume that students go to university to be certified that they have
-sufficiently learned a subject. They take course to pass the class, and take exams to verify that
+sufficiently learned a subject. They take courses to pass the class, and take exams to verify that
 they have indeed learned something in the last 12-16 weeks. But this exposes the competing goal for
 the student. Systems thinking suggests that systems can only have a single overarching goal that is
 being optimized (Meadows, p.85). If the goal of learning for the long-term starts dominating the
@@ -59,10 +59,10 @@ balancing loop being activated to optimize for the good grade rather than learni
 
 When tension exists between the two goals, which one wins? It fully depends on the student and the
 balancing loops that they have set up for themselves and their personal goals with their program.
-Two weeks into my new lifestyle as a student, I chose to optimize for grades; sacrificing learning
+Two weeks into my new lifestyle as a student, I chose to optimize for grades, sacrificing learning
 which meant I was living out of alignment with my core value. Living out of alignment with one's
 core values is a recipe for quickly becoming discontent and unhappy. This was the start of
-questioning if a terminal Masters program was how I wanted to spend the next two years.
+questioning if a terminal Master's program was how I wanted to spend the next two years.
 
 Learning best comes through immersion into a subject to be exposed to new ideas. These ideas form a
 chaotic cloud that connect to currently held mental models. Writing pierces through the cloud to

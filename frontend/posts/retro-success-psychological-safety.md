@@ -3,7 +3,7 @@ title: "[Manager Retro] Success - Psychological Safety "
 slug: retro-success-psychological-safety
 published: 2024-05-13
 description: >
-  Reflection and gratitude for the psychological safe environment on the team
+  Reflection and gratitude for the psychologically safe environment on the team
 
 ---
 
@@ -11,8 +11,8 @@ In my time as a manager, the greatest of achievements has been the trust cultiva
 relationship with my direct reports. Every action that is taken includes a trust component. The
 action either adds trust to the relationship or removes it. While every relationship follows this
 ebb and flow of trust, in a hierarchical system like a company, the most important view is the trust
-is between direct report and their manager. Every action by the manager adds or removes trust in the
-relationship. Brené Brown calls this idea the marble jar (Brown 2018). Jocko Willink calls it
+between the direct report and their manager. Every action by the manager adds or removes trust in
+the relationship. Brené Brown calls this idea the marble jar (Brown 2018). Jocko Willink calls it
 leadership capital (Willink 2015). 
 
 
@@ -36,7 +36,7 @@ command-and-control structure, the success of the outcome is fully dependent on 
 that the leader has the group's best interest in mind (Sinek 2017). It is important to apply the
 correct style of leadership to the situation. Misapplying can lead to unwanted results.
 
-To use a command-and-control structure effectively, there must be immense amount of trust in the
+To use a command-and-control structure effectively, there must be an immense amount of trust in the
 relationship. Trust is rarely built by giving and receiving orders with no opportunity to ask
 questions. Trust must be cultivated outside of the command-and-control structure, which means that a
 different leadership style must be used the majority of the time. This other style's goal is to
@@ -46,7 +46,7 @@ From a Western philosophical perspective, consensus takes on this idea of arguin
 to a point where all parties agree. In a world where logic rules emotions, this might work. However,
 all humans have an amygdala that processes all thought with emotions prior to getting to the
 prefrontal cortex to process it logically (Brown 2018). Getting to a place where the entire group is
-aligned and moving in single direction together is actually about getting to a point where everyone
+aligned and moving in a single direction together is actually about getting to a point where everyone
 has felt heard and understood. When someone feels heard and understood, they are more open to
 hearing and understanding others which will eventually get to a place where a unified direction can
 be achieved (also known as consensus). Active listening and getting to a place where someone feels
@@ -68,14 +68,14 @@ Note that I said "potential to give feedback". The remote-work setting creates c
 observations of situations and behavior which is the key to success in the SBI Feedback framework
 ("Use Situation-Behavior-Impact (SBI)™ to Understand Intent"). I have often found my expectations
 not being met by engineers on my team, only to come to the realization that the observations that I
-thought I had was my brain creating gap fillers in the data that was available for me to try to
+thought I had were my brain creating gap fillers in the data that was available for me to try to
 understand the situation. This is a normal function of the brain--looking for patterns and trying to
 explain what is being observed. But it is extremely risky to act on conclusions drawn from these
 observations as they have a high chance of not being founded in reality. 
 
 When expectations are not met, there is a high chance that any of these conclusions based on
 brain-created data cause an emotional hook or amygdala hijack (Brown 2018). Brown calls this process
-"the stories we tell ourselves". Brown goes on to describe that every person has different way of
+"the stories we tell ourselves". Brown goes on to describe that every person has a different way of
 physically responding when the amygdala is hijacked. Identifying your own response is an important
 step to being able to use that trigger to become aware of the hijacking in the moment, pause, take a
 step out of the emotional thoughts and reevaluate from a more rational mindset to verify that the
@@ -85,7 +85,7 @@ When my amygdala hijacks my thinking process, I go into "fight" mode. I get a ma
 dump, my heart rate quickens, my breath quickens and grows more forceful bringing more oxygen into
 my system, and my shoulders rise and tighten. When I notice this, I write down my thoughts, the
 stories that I am telling myself, and the feedback that I want to give in response to those stories.
-Once those are written out, the stories stop going around in my head and set them aside for a day or
+Once those are written out, the stories stop going around in my head and I set them aside for a day or
 so. In our next one-on-one I start by asking about the other's perspective of the situation from the
 perspective of trying to get caught up and understanding what is happening. Understanding what is
 happening is actually the whole point and needs to happen before effective feedback can be given and
@@ -104,7 +104,7 @@ and leadership capital into it.
 
 Asking for feedback on how I am doing as a manager is another important way of building leadership
 capital and trust. Routinely asking for feedback communicates that I am interested in my direct
-report's perspective of how the team is functioning to better improve team work. It also
+report's perspective of how the team is functioning to better improve teamwork. It also
 communicates that I am open to receiving feedback to improve myself or to improve the working
 relationship and it provides an opportunity for the direct report to ask for something to feel more
 successful that they might not be getting from the relationship.
@@ -114,7 +114,7 @@ how I might respond to feedback that is critical to the success of the team but 
 Giving feedback is a skill. Just like in health sciences, if those muscles are not exercised with
 high reps and low to medium resistance, it is going to be a lot more challenging to deliver the high
 resistance feedback when it is critical. This also goes for the manager giving feedback to the
-direct report. (Normalizing both positive and negative feedback is important in high performance
+direct report. (Normalizing both positive and negative feedback is important in high-performance
 teams)
 
 
@@ -127,7 +127,7 @@ have learned over the last few years. As a leader, my sole focus is to keep trus
 of my mind.
 
 I am also very grateful to have had the opportunity to learn and practice feedback. This has been a
-really hard lesson to put into practice (and is actually also one of the Failures that I will be
+really hard lesson to put into practice (and is actually also one of the failures that I will be
 exploring in a later post). I have seen the fruit of effective feedback and I have seen the negative
 outcomes when I have shied away from delivering feedback. Feedback is core to every relationship,
 from work to family. I am thankful that I have been able to become aware and start practicing

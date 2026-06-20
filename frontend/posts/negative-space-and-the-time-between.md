@@ -9,7 +9,7 @@ description: >
 
 I have recently been pondering the idea of the importance of negative space. Contrast between light
 and dark, sound and silence, and busyness and tranquility; each brings their counterpart more
-meaning. The absence is a just as important as the existence. Both are a part of the whole.
+meaning. The absence is just as important as the existence. Both are a part of the whole.
 
 Taking examples from a few artistic mediums, portraits in graphite use the color of the paper to
 create contrast. The sparkle in someone's eye is the absence of graphite on the page: letting the
@@ -19,9 +19,9 @@ reverberate before moving on to play the next. Without using the negative space,
 solid graphite; songs would be an onslaught of sound. The negative space brings meaning to the
 positive space.
 
-Atoms are made up of neutrons and protons with a cloud of electrons orbiting it. 99.9% of the space
+Atoms are made up of neutrons and protons with a cloud of electrons orbiting them. 99.9% of the space
 that an atom takes up is characterized by the empty space between the orbiting electrons. Similarly
-a galaxy of is made up for star systems with celestial bodies orbiting them with incredible amounts
+a galaxy is made up of star systems with celestial bodies orbiting them with incredible amounts
 of nothingness between. Nothingness is an important part of the whole.
 
 When it comes to our time, it seems like we have a tendency to maximize the use of positive space. We
@@ -49,7 +49,7 @@ than to strive to be a fireman, banker, policeman or doctor.
 
 > I don’t mean that we can’t BE firemen, bankers, or doctors--but that we must make the goal conform to the individual, rather than make the individual conform to the goal.
 
-When we do not strive to be ourselves and design our around what we want to do on a daily or weekly
+When we do not strive to be ourselves and design our lives around what we want to do on a daily or weekly
 basis, circumstance will inevitably choose for us.
 
 > But a man who procrastinates in his CHOOSING will inevitably have his choice made for him by circumstance. -- Thompson

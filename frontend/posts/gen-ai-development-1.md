@@ -1,6 +1,5 @@
 ---
 title: "[Gen AI] Claude Code Usage Notes (1) - Failure?"
-slug: gen-ai-development-1
 published: 2025-07-23
 description: >
   Notes from using Claude Code to work on dependency updates for Strapi plugin, ultimately ending in
@@ -17,7 +16,7 @@ Working with a story of a failed mobile app in the past and the non-technical CE
 coding an app, I decided that it was time for me to get my hands dirty with using genAI
 experimentation in a development workflow.
 
-With some research into tools available, I decided to go with an Expo app for ease of cross platform
+With some research into tools available, I decided to go with an Expo app for ease of cross-platform
 and Strapi as the headless CMS. We needed content updates to be easily done by non-technical admins
 and Strapi has the most stars on the [Jamstack site's CMS list](https://jamstack.org/headless-cms/).
 This architecture would easily allow for a follow-on update to the business's website if they chose
@@ -49,7 +48,7 @@ SUM:                            60            450            155          16341
 ```
 
 I know from past experience, a project of this size would take me about two weeks to fully update
-myself. I'd have to spin up on how Strapi pluigns work (in both v4 and v5), spin up on the code
+myself. I'd have to spin up on how Strapi plugins work (in both v4 and v5), spin up on the code
 base, read the docs on breaking changes, develop the updates, and test. The tasks in front of
 us--Claude Code and I--were to update the project dependencies while upgrading the plugin to support
 the v5 major version of Strapi. 
@@ -68,18 +67,18 @@ the browser errors as a guide. I worked this way for about 5 days squashing one 
 another. Fixing one thing seemed to break something somewhere else. 
 
 Shortly after starting, it became apparent that something weird happened in the development cycles
-of Strapi which was confusing Claude. Strapi's major verison update to version 5 was released on
+of Strapi which was confusing Claude. Strapi's major version update to version 5 was released on
 September 18, 2024. It included a major version update to the custom design system that was tagged
 `2.0.0-rc*`, but not yet released. Claude kept trying to use the latest released `1.19.0` (from May
 31, 2024) instead of using v2. The plugin code would successfully build, but then break in the
 browser when trying to
 
 Errors were being logged in the browser console where Claude didn't have access to them. I was doing
-a lot of copy and pasting of errors into the Claude Code chat (ie. vibe coding). I set up a
-Puppeteer MCP server to try to give Claude direct access to those errors, but Claude didn't seem to
-use it. It could have been a setup issue or something else entirely.
+a lot of copy/pasting of errors into the Claude Code chat (ie. vibe coding). I set up a Puppeteer
+MCP server to try to give Claude direct access to those errors, but Claude didn't seem to use it. It
+could have been a setup issue or something else entirely.
 
-In some downtime, I made a note that one of drawbacks of using genAI in this way was that once you
+In some downtime, I made a note that one of the drawbacks of using genAI in this way was that once you
 needed to "eject" from that workflow, the context is not as robust as the one that you would have
 built from manually working in the codebase.
 
@@ -101,16 +100,16 @@ On to the next task: fixing the backend breaking change for CMS file upload, whi
 create Stripe Products in the database. During this task, Claude started creating new coding and
 architecture patterns which surprised me. One of the things that great engineers learn to do is to
 work within the patterns that are already set up in a project. This skill supports effective
-long-term maintenance of the code base. It is really difficult to maintain a code-base that has
+long-term maintenance of the codebase. It is really difficult to maintain a codebase that has
 constantly shifting patterns.
 
 The project came with a utils file pattern where all of the api calls were being handled. We needed
-a new api call to solve the file upload issue, and instead of creating a new fuction in the utils
+a new api call to solve the file upload issue, and instead of creating a new function in the utils
 file, Claude created it directly in the page that we were working on. This function was also going
 to be needed elsewhere, so this pattern violates both SOLID and DRY principles. 
 
-That being said, this pattern was implicit in the code base and not explicitly called out in
-Claude's working memory through CLUADE.md or any collaborative planning doc (which we'll take a look
+That being said, this pattern was implicit in the codebase and not explicitly called out in
+Claude's working memory through CLAUDE.md or any collaborative planning doc (which we'll take a look
 at in Attempt 2). I asked it to fix this by moving the function to a shared file which it did. Then
 Claude created a new `./hooks/` directory instead of adding the function to the already existing
 utils file. I finally explicitly asked it to move the code to the `./utils.js` file. But then in
@@ -131,13 +130,13 @@ And now for the scariest part of this whole experience. While I was getting fami
 plugin worked while during my management of the Claude agent, I noted that the plugin didn't support
 the modern pattern of using user session tokens or RBAC. It instead used a hardcoded environment
 variable for STRAPI_ADMIN_API_TOKEN. This environment variable is set in the build server, but is
-referenced in the `./admin/` directory. The admin directory is the javascript that is loaded into
+referenced in the `./admin/` directory. The admin directory is the JavaScript that is loaded into
 the browser, so this environment variable is sent to the browser and is readable to whomever loads
-that minified Javascript file. Alarm bells started going off in my head. 
+that minified JavaScript file. Alarm bells started going off in my head. 
 
 Thankfully, this is a pattern that came with the plugin and Claude had nothing to do with creating
 this security vulnerability. I worked with Claude to convert to the user session tokens, which
-didn't end up working. But then then Claude "fixed" the user session token issue that it created by
+didn't end up working. But then Claude "fixed" the user session token issue that it created by
 reverting to using the hardcoded admin token because "that's what the project was set up with". The
 next few attempts ended with Claude changing all of the authenticated routes to public ones. More
 alarm bells. It was here where I decided to completely restart the upgrade using a different
@@ -153,7 +152,7 @@ The initial plan seemed pretty good, but I did have to use what I learned from t
 highlight the issues with the design system components as well as the security vulnerability.
 
 The first thing that I did was have Claude generate a full test suite to have something to verify
-changes against. Unfortunately this was mostly for the backend code (`./server`)and not the frontend
+changes against. Unfortunately this was mostly for the backend code (`./server`) and not the frontend
 code (`./admin`) where I was having most of the problems. I am pretty unfamiliar with testing
 frontend code, so I didn't look too far into creating a more robust suite.
 
@@ -199,7 +198,7 @@ for an easy integration with Next.js for a website.
   includes Stripe integration for users to purchase products, and a public event calendar. TODO:
   further refinement of these through user stories is required.
 - A CMS is pretty important for any future updates to the mobile app and website. Strapi seems like
-  a good headless swiss army knife. However, the Strip integration does not support Strapi v5. The
+  a good headless swiss army knife. However, the Stripe integration does not support Strapi v5. It
   seems like a good place to use Claude: dependency updates.
 - With the update of Strapi to v5 and strapi/design-system at the pre-release 2.0, Claude is getting
   confused when searching GitHub for code usage examples since the latest release is 1.19. I think
@@ -207,7 +206,8 @@ for an easy integration with Next.js for a website.
 ```
 # Bash commands
     - nix develop: Start the development environment
-    - npm run build: Build the project npm run lint: Run ESLint
+    - npm run build: Build the project
+    - npm run lint: Run ESLint
     - npm audit: Run an audit on npm packages looking for vulnerabilities
 
 # Code style
@@ -223,7 +223,7 @@ for an easy integration with Next.js for a website.
 - https://www.anthropic.com/engineering/claude-code-best-practices
 - I think it might be helpful to give Claude access to Puppeteer since a lot of our testing is going
   to be visual. Time to set up some MCP servers. They seem to be able to be hosted through docker
-  containers, so maybe a docker compose project is a good way to go. Docker compose isn't acutally
+  containers, so maybe a Docker Compose project is a good way to go. Docker Compose isn't actually
   needed since the "server" is just a CLI tool inside of docker container
 
 - Frustrating when things happen and compiling no longer works, and reverting the work to a working
@@ -238,18 +238,18 @@ for an easy integration with Next.js for a website.
 - I've reworked all of the IconButtons and it did not resolve the issue.
 - Confirmed that the working Alert component in Configuration is the same as the one in the
   ProductTable.
-- Wow...We finally have the fix. I missed a few of the IconButtons in the product table...The reason
+- Wow... We finally have the fix. I missed a few of the IconButtons in the product table... The reason
   why it was new was because of the product being returned from the database.
 - Now I need to go fix all of the Fields again.
 
-- Continuing to debug the file upload breaking change, Claude decided to not follow the implicit
+- Continuing to debug the file upload breaking change, Claude decided not to follow the implicit
   pattern of using a utils file for the fixed upload call. Instead, it created it in the component
   that it was needed. I had to explicitly ask Claude to move its implementation to the original file
   twice. The first time it created a custom hook which was a new project organization pattern
   instead of following the pattern it already found.
 - Once that was set, the actual implementation was not correct. In correcting the issue, I caught
   the agent doing the same codebase searches for the same patterns it had already done. There is a
-  pretty glaring issue with short and long-term memory with agents. In moving the function around,
+  pretty glaring issue with short-term and long-term memory with agents. In moving the function around,
   Claude rewrote the solutions instead of keeping the same logic as its original solution.
 - The plugin doesn't currently support user session tokens and is designed around the hardcoded ENV
   var. I would like to update this, but I'm scared that Claude doesn't know what it's doing.
@@ -292,9 +292,9 @@ for an easy integration with Next.js for a website.
   needs to skip GPG signing.
 
 - I am restarting the plugin development from scratch for testing purposes. This
-  time around I am going to be using TDD (with a comprehensive testsuite that Claude generated) and
+  time around I am going to be using TDD (with a comprehensive test suite that Claude generated) and
   a collaborative planning cycle that is dumped to CLAUDE_PLAN.md for longer term memory.
-- The initial plan seems pretty good . However, the two main pain points were 
+- The initial plan seems pretty good. However, the two main pain points were 
   not surfaced in the first go through. I had to use my personal context to nudge Claude to identify
   the component API issues as well as the security vulnerability.
 
@@ -303,7 +303,7 @@ for an easy integration with Next.js for a website.
   after the migration as the system is not really live in production and testing could have been
   done directly after the work instead of needing to pause for the design system migration.
 - One other interesting thought: if I trust Claude enough to implement the plan in the background, I
-  have found that I that I can do some critical thinking and note taking as it is working. This is
+  have found that I can do some critical thinking and note taking as it is working. This is
   an interesting workflow change.
 - Having Claude implement example code in CLAUDE_PLAN seems to really help in future sessions.
 

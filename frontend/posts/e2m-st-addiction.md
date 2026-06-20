@@ -3,7 +3,7 @@ title: "System Dynamics - The Burden to the Intervenor Trap"
 slug: e2m-st-addiction
 published: 2024-01-22
 description: >
-  Discussing one of the largest systems trap my team has been battling.
+  Discussing one of the largest systems traps my team has been battling.
 
 ---
 
@@ -21,13 +21,13 @@ burden to the intervenor (also known as addiction in some systems)
 It is not the structure of the system itself that creates the trap. Meadows goes on to show that
 intervenors are sometimes necessary to maintain a desirable state of the system. Doctors are a
 necessary part of the biophysical system of the human body. They help intervene in behaviors that do
-not serve the overall and long term health of an individual. 
+not serve the overall and long-term health of an individual. 
 
 A few years ago, I low-sided my bicycle by trying to maintain my speed through a corner and catching
 my pedal on the road. I landed on my hip pretty hard and only took about 50 steps a day for about 14
 days. With every step I babied my right leg and hip. Muscles tightened and soft tissue built up all
 to protect the injury to allow for healing. I started physical therapy to loosen what tightened and
-strengthen what loosened; changing my behavior of babying my leg to using it to get back to normal.
+strengthen what loosened, changing my behavior of babying my leg to using it to get back to normal.
 The physical therapist was an intervenor.
 
 However, the trap comes when the temporary intervenor becomes the permanent solution to keep the
@@ -54,13 +54,13 @@ On any engineering team, capacity to do work is a stock. For the purposes of thi
 abstract the capacity to be a constant equal to the number of human-hours that a team has (8 hours
 times the number of team members), in a given time period of days (cycle, sprint, etc). This is a
 very simplistic model of team capacity that ignores the in-flows of individual capacity degradation
-from time-since last vacation, aligned with team purpose, feeling of fulfillment, and many more
+from time since last vacation, aligned with team purpose, feeling of fulfillment, and many more
 flows (a topic for a future post).
 
 When the work assigned to the team exceeds this capacity, one possible intervention is the people
 manager stepping in to take some of the load. Maybe this is how the system is designed to function.
 Or maybe the team is too big for this to happen. In _An Elegant Puzzle: Systems of Engineering
-Management_ , Larson shows from experience that a team any larger than three direct reports will
+Management_, Larson shows from experience that a team any larger than three direct reports will
 necessitate that the manager must be a People Manager and not a Technical Manager
 [[2](https://lethain.com/elegant-puzzle/)]. There are roles and responsibilities that a manager must
 do and once a team is big enough (four or more direct reports), those management duties require more
@@ -68,17 +68,17 @@ time or capacity from the manager to be relied upon to do technical work.
 
 I have had five direct reports for the last sixteen months and also act as the team's project
 manager because we are mostly an enablement team and not a value-stream aligned team
-[[3](https://teamtopologies.com/book)]. But in time of pressure from outside of the team to deliver
+[[3](https://teamtopologies.com/book)]. But in times of pressure from outside of the team to deliver
 specific value ASAP, I have taken my people management and project management hats off and put on my
 technical engineering hat. It takes the load and pressure off of the team, but sacrifices dropping
 the people and project management duties. The issue is compounded by the fact that being an IC is
-still a relatively recent experience in addition to the organization action praising "heroes"
+still a relatively recent experience in addition to the organization's action praising "heroes"
 instead of working towards building an organization system that prevents the need (Larson also talks
 about killing heroes and why it's important [[2](https://lethain.com/elegant-puzzle/)]). 
 
 I identified this problem early last year and have talked extensively about it with my coach. We
 have talked about quite a few different possible solutions, but the actual behavior shows that the
-solution that I landed on in all of ineffectiveness was "just don't put on the technical hat".
+solution that I landed on in all its ineffectiveness was "just don't put on the technical hat".
 
 > The bounded rationality of each actor in a system--determined by the information, incentives,
 > disincentives, goals, stresses, and constraints impinging on that actor--may or may not lead to

@@ -24,7 +24,7 @@ why general behavior changed for this technology.
 
 I have degrees in both Computer Science and Mathematics. During my schooling, I studied artificial
 intelligence and the underlying mathematics being used (probability, statistics, linear algebra,
-etc) and the algorithms used (gradient decent, sigmoid function, etc). After school, I continued to
+etc) and the algorithms used (gradient descent, sigmoid function, etc). After school, I continued to
 study artificial intelligence and machine learning. I took Andrew Ng's online machine learning
 course that took a deep dive into the underlying linear algebra that neural networks and other
 machine learning algorithms use.
@@ -46,14 +46,14 @@ Northwest), the topic of religion is only brought with consent from both parties
 ### Curiosity
 
 I am curious about the new approach to using genAI by creating agents. It seems pretty powerful to
-expose tools and have an LLM have the permission to make decisions to use them with the whatever
+expose tools and have an LLM have the permission to make decisions to use them with whatever
 feedback they are getting from their feedback loops. The systems engineer in me is interested in how
 systems are incorporating LLMs. Without too much in-depth learning, it seems that the most
 productive uses of LLMs are currently with stringent systems designed around them.
 
 A common use case that I have been seeing is building an LLM agent that has context around
 codebases, generates code changes, runs test suites, updates the code, and loops until the
-acceptance criteria has been met and a PR drafted. Let's assume that there was a specific style that
+acceptance criteria have been met and a PR drafted. Let's assume that there was a specific style that
 the code review engineer wanted. Any feedback from the engineer could result in the style being
 adapted, but the LLM would forget about that style as soon as the PR is put in. There is a high risk
 that a future PR from that LLM would make the same mistake.
@@ -90,7 +90,7 @@ agent, they will not stop and ask questions to create more context. This require
 self-awareness to draw a conclusion, compare that conclusion to what was requested, and then decide
 that it is not close enough to actually answer the initial question. 
 
-This loop seems like it might be possible with an genAI agent interfacing with an LLM. It would be
+This loop seems like it might be possible with a genAI agent interfacing with an LLM. It would be
 interesting to what such an agent would look like. But as of right now, the user experience is
 aesthetically displeasing. More often than not, working on something productive seems to get
 aggravating quickly. Granted, this may stem from not understanding how best to utilize LLM
@@ -114,14 +114,14 @@ I have graduated to sending passages to genAI to check grammar for me.
 
 The counter argument is that technological advancements almost always remove the need for learning
 something. Very few people need to know how kerosene lamps work or how to maintain them because of
-the invention of electricity. Blacksmiths and stone masons, while still exist, are considered
+the invention of electricity. Blacksmiths and stone masons, while they still exist, are considered
 artisans because their skill sets are not needed by the wider public.
 
 But counter to this counter argument, the skill that genAI provides is "writing" text. And this is
 what concerns me the most. I can easily see a future in which I no longer proofread my own writing
 and wrestle with how a sentence should be written. In such a future, any sentence that was fixed by
 the genAI was a sentence which I did not struggle and learn how to write better. Writers and authors
-tend to agree that one has to write--on a daily basis--to improve and to eventually find my voice.
+tend to agree that one has to write--on a daily basis--to improve and to eventually find one's voice.
 Letting an AI write for you keeps this from happening as it is their voice being used (or
 technically a cacophony of writers on which the model was trained).
 
@@ -142,7 +142,7 @@ published a
 found that over 80% of companies that have deployed genAI have not seen an impact to their bottom
 line. If companies are not seeing increased revenue, a genAI implementation is a break-even project
 at best. With genAI providers still in the red, the technology is still not in a sustainable state.
-While this may not be true forever, a future where genAI is can only be speculative. All we can
+While this may not be true forever, a future where genAI exists can only be speculative. All we can
 conclude right now is that genAI is not a sustainable technology in its current state. Further
 technological advancements are required to make it sustainable.
 
@@ -159,7 +159,7 @@ skills to clean it up have been lost by the majority of the workforce?
 #### Environmental Impact
 
 [An article on Forbes](https://www.forbes.com/sites/katharinabuchholz/2024/08/23/the-extreme-cost-of-training-ai-models/)
-shows that training a single GPT-style model costs over a $100 million before taking into account
+shows that training a single GPT-style model costs over $100 million before taking into account
 the salaries or operational costs of the model. This is a lot of compute/cooling power to train, and
 this is only for a single company training a single model. It is so much power that all of the major
 cloud providers are investing in companies building next-generation nuclear power plants so that
@@ -167,12 +167,12 @@ they can keep on track for their carbon neutral roadmaps.
 
 In [a Nature article](https://www.nature.com/articles/s41598-024-76682-6), researchers found that if
 LLMs can replace humans in companies, the LLM environmental impact may be decreased, but this
-assumes that LLMs can replace humans in companies--which assumes that their bottom-line is somehow
+assumes that LLMs can replace humans in companies--which assumes that their bottom line is somehow
 positively affected to justify the cost of the implementation--and ignores the assumption that the
 human is removed from the smaller company system but (hopefully) still accounted for in the larger
 global system.
 
-Since ROI has not been show in the majority of companies, genAI providers are still not profitable,
+Since ROI has not been shown in the majority of companies, genAI providers are still not profitable,
 I have to conclude that the current state of genAI is having a net negative on the environment. All
 arguments that LLMs will help us solve environmental problems are speculative since it has not been
 shown that LLMs are capable of original thought.
@@ -181,9 +181,9 @@ shown that LLMs are capable of original thought.
 #### Model Providers
 
 As I have learned more about business and business practices in the software world, the more I
-distrust any corporate entity. I have to assume that companies have their best interest in mind and
+distrust any corporate entity. I have to assume that companies have their best interests in mind and
 will immediately sacrifice my best interest for theirs. With genAI being a technology that is not
-easily understood (experts cannot explain why models generate the output they do) nor can stand up
+easily understood (experts cannot explain why models generate the output they do) nor can it stand up
 to scientific testing (different outputs generated for the same input), blindly trusting a company
 to provide a tool that is starting to be integrated into everything seems like a very ill-advised
 proposition for my interests.
@@ -202,8 +202,8 @@ curious about the experience chatting with my extensive collection of digital no
 It seems like genAI is one of the latest topics that is suffering from poor discussion skills. In
 general, it feels like humanity's communication skills have gotten worse and that constructive
 discussions are disappearing (but this is a topic for another post). Most of the discussions around
-the concerns or lack of concerns around genAI all rely speculation of what the future will look
-like. Since no one can predict the future, there is a lot of hand wavy assumptions that are made.
+the concerns or lack of concerns around genAI all rely on speculation of what the future will look
+like. Since no one can predict the future, there are a lot of hand-wavy assumptions that are made.
 This is true for both AI visionaries and AI cautionaries.
 
 I think there are some interesting and important opportunities for problems to be solved with genAI,

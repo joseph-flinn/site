@@ -7,8 +7,8 @@ description: >
 
 ---
 
-The darkside of having a growth mindset is that there is far more attention and focus put on the
-failures to grow from than celebrating the successes. However, the I think it balances out since the
+The dark side of having a growth mindset is that there is far more attention and focus put on the
+failures to grow from than celebrating the successes. However, I think it balances out since the
 lessons learned from the failures are successes in themselves.
 
 My greatest failure in the shift from engineer to manager was a personal one: I let most of my
@@ -20,7 +20,7 @@ Working outside of business hours is neither a good or a bad thing. Similarly, w
 also neither a good or bad thing. Spending one's time, or life energy (Dominguez 2018), on what one
 values and what brings joy should be the focus. For some of us, hard work and long weeks is that.
 However, as life energy is finite ("there are only so many hours in a day"), the time devoted to
-work is time that is not devoted to cultivating personal friendships outside of the work place.
+work is time that is not devoted to cultivating personal friendships outside of the workplace.
 
 Balancing work and life is not strictly a manager issue. As an engineer, I regularly worked over
 fifty hours a week. When it comes to being a manager, there are some nuances that make it more
@@ -55,7 +55,7 @@ friendships have given the valuable gift of human connection that I can carry fo
 ones.
 
 
-## Graditude
+## Gratitude
 
 Even as friends drift out of life, there are new ones to be made. While some of my friendships
 outside of work have shrunk, new ones have been made at work. While some of them may stay

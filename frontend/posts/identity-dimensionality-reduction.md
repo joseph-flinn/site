@@ -16,9 +16,9 @@ discomfort.
 
 The societally expected answer to this question is to reply with a quick summary of what one does
 for employment ("I am DevOps Manager" or "I work in tech") or to reply with some version of a
-excepted excuse for not working ("I am a stay-at-home dad", "I volunteer at x,y,z, or something of
-the sort). If one's reply, probably rehearsed, is captivating enough, follow-up questions may
-follow. If not one quickly moves on and reciprocates the question to their conversational partner. 
+accepted excuse for not working ("I am a stay-at-home dad", "I volunteer at XYZ, or something of
+the sort"). If one's reply, probably rehearsed, is captivating enough, follow-up questions may
+follow. If not, one quickly moves on and reciprocates the question to their conversational partner. 
 
 Over time, there might be a growing feeling of discontent in this type of conversation. Having this
 conversation over and over may become boring. One may come up with cheeky alternate answers to try
@@ -60,7 +60,7 @@ share? What if we seek to truly understand and see the innate value that our par
 and find what they bring to the world? What if we set aside our ego and desire for people to be
 interested and marvel in us (the center of our universe) and instead be that for others?
 
-This is not a suggestion to be the change that we would like to see in the world. It is to instead
+This is not a suggestion to be the change that we would like to see in the world. It is instead
 to change the world that we live in by changing our perspective. We have no control over the outward
 world, we can only control our inward world (Satchidananda 2015). 
 

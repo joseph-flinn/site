@@ -11,7 +11,7 @@ description: >
 One of the first issues that a scaling engineering team at a startup will run into is in managing a
 growing number of projects. At the beginning, there are a lot of ad-hoc processes to get code
 written and delivered to users in order to prove out demand and market fit. After the business model
-has been proven and the engineering team start growing, processes have to evolve to keep pace and
+has been proven and the engineering team starts growing, processes have to evolve to keep pace and
 effectively scale with the teams. 
 
 Project management is one of the core organizational processes that needs to be grown alongside
@@ -30,11 +30,11 @@ processes. Below is a table of the descriptions of the different levels (Schwalb
 | Level | Name | Description | 
 | ----- | ---- | ----------- |
 | 0 | _Incomplete_ | A process is either not performed or only partially performed. No generic goals exist for this level, and one or more of the specific goals for the process area are not satisfied. |
-| 1 | _Performed_ | A process satisfies the specific goals of the process area and supports and enables the work needed to produce work products. Although this capability level can result in improvements, those improvements can be lost over time if the are not institutionalized. |
+| 1 | _Performed_ | A process satisfies the specific goals of the process area and supports and enables the work needed to produce work products. Although this capability level can result in improvements, those improvements can be lost over time if they are not institutionalized. |
 | 2 | _Managed_ | A process has the basic infrastructure in place to support it. The process is planned and executed based on policies and employs skilled people who have adequate resources to produce controlled outputs. The process discipline reflected ensures that existing practices are retained during times of stress. |
 | 3 | _Defined_ | A process is rigorously defined and the standards, process descriptions, and procedures for a project are tailored from the organization's set of standard processes to suit that particular project. |
-| 4 | _Quantitatively Managed_ | A process is controlled using statistical and other quantitative techniques. The organization establishes quantitative objectives for quality and process performance that are used as criteria in managing the process |
-| 5 | _Optimizing_ | A process is improved based on the understanding of the common causes of variation inherent in the process. The focus is on continually improving the range of process performance through incremental and innovative improvements |
+| 4 | _Quantitatively Managed_ | A process is controlled using statistical and other quantitative techniques. The organization establishes quantitative objectives for quality and process performance that are used as criteria in managing the process. |
+| 5 | _Optimizing_ | A process is improved based on the understanding of the common causes of variation inherent in the process. The focus is on continually improving the range of process performance through incremental and innovative improvements. |
 
 The CMMI model lays out the path towards continuously improving generic processes, but it can also
 be applied to project management specifically. The CMMI levels can be used to gauge the level of
@@ -52,9 +52,9 @@ p.372):
 | Level | Name | Description |
 | ----- | ---- | ----------- |
 | 1 | Ad-hoc | No project management process or practices are consistently available, and data is not consistently collected or analyzed. |
-| 2 | Planned | Project management process, problem areas, and data are informally defined, identified, and collected |
-| 3 | Managed | Formal project planning, control systems, and data are managed |
-| 4 | Integrated | Program management is used, and project management data and processes are integrated and quantitatively analyzed, measured, and stored |
+| 2 | Planned | Project management process, problem areas, and data are informally defined, identified, and collected. |
+| 3 | Managed | Formal project planning, control systems, and data are managed. |
+| 4 | Integrated | Program management is used, and project management data and processes are integrated and quantitatively analyzed, measured, and stored. |
 | 5 | Sustained | Project management processes are continuously improved and are fully understood, and data is optimized and sustained. |
 
 While running an analysis to see where your current project management maturity level is, it is
@@ -75,7 +75,7 @@ about growing to Berkeley's level 3: the _Managed_ level. Formal processes are n
 complexities of multiple simultaneous projects. While formal, the processes can stay lightweight
 and flexible to meet any agility requirements from the organization.
 
-Once a startup is confident in being around long enough to have a two or five year plan, it is time
+Once a startup is confident in being around long enough to have a two- or five-year plan, it is time
 to start implementing level 4: program and portfolio management. When the organization's strategic
 drivers start implementing for business longevity, it is important to make sure that all project
 investments are aligned with the organization's mission, values, and vision. The specific timing may
