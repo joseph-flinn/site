@@ -45,7 +45,7 @@ were highly personalized to my personality and perspective.
 
 In the early days, I was also highly sensitive to giving feedback on expectations that had not
 already previously been explicitly defined. I know from many personal experiences that receiving
-strong or critical feedback on an expectation that was not communicated is a quick way to
+strong or critical feedback on an expectation that failed to be communicated is a quick way to
 lose trust in a leader. However, after a few months of having feedback conversations around my
 expectations that had not explicitly been set, I realized that feedback conversations themselves can
 be a great catalyst to setting expectations that had not previously been discussed. The 

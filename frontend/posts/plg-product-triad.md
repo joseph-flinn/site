@@ -22,7 +22,8 @@ Product is responsible for the value that is delivered to the end user through t
 the collection point for all end user feedback. Their primary responsibility is to collect all of
 this feedback, and synthesize it to a problem definition. They also lead the planning on what
 metrics need to be collected to verify the problem and calculate the value of solving the problem
-for the end user. Product then uses the value calculation to rank problem definitions against one another. All types of reasons of why something should be done in the product should be captured
+for the end user. Product then uses the value calculation to rank problem definitions against one
+another. All types of reasons of why something should be done in the product should be captured
 in metrics used to calculate the value. No product decision, whether it leads to financial growth or
 not, is made without the data in support.
 
@@ -71,8 +72,8 @@ the outcomes of practicing DevOps.
 The organization structure should be such that it promotes PLG and Lean management. The Lean
 management principles should be applied to the communication channel creation as well: maximize the
 delivery of value in communication while minimizing waste of unneeded communication. Organizational
-communications are the hardest problems to solve. 
-[Conway's Law](https://www.melconway.com/Home/Committees_Paper.html), 
+communication problems are the hardest problems to solve. Apply
+[Conway's Law](https://www.melconway.com/Home/Committees_Paper.html) and 
 the 
 [Inverse Conway Maneuver reference](https://yoan-thirion.gitbook.io/knowledge-base/xtrem-reading/resources/book-notes/team-topologies#conways-law)
 to the findings in 

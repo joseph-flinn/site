@@ -66,7 +66,7 @@ effectively communicate the need for an explicit purpose for the team and the ne
 to meet the growing needs of the organization. I value psychological safety and providing a space
 with low adverse pressure but high motivation. The environment outside the team was becoming less
 conducive to those values. While I believe in humanistic autonomy of decisions, I also believe that
-the bounded reality of an actor in a system heavily weighs the direction of some of those decisions.
+the bounded reality of an actor in a system heavily weights the direction of some of those decisions.
 The more pressure mounted on the team without the support required to meet the demands, the more I
 started shielding the team, creating a value oasis (Larson 2020). 
 

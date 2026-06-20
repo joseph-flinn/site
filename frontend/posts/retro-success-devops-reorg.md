@@ -101,7 +101,7 @@ However, there was still that nagging issue of naming and the growing concern of
 missions between the BRE/DTE teams and Platform team. I had really good relationships with both
 the Engineering Manager of the Platform development team and the Director of Engineering. Before my
 departure, I wanted to do what I could to leave my teams, my department, and the organization as a
-whole in the best place that I could. This meant having a crucial conversation (Grenny et al.) with
+whole in the best place that I could. This meant having a crucial conversation (Grenny et al) with
 the Director and Engineering Manager to make sure there were no issues with colliding missions
 between the teams in the future.
 

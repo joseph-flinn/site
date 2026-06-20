@@ -71,7 +71,7 @@ Wait what? How is it that a negotiation can be successful without either party g
 came in wanting? Take the example of a salary negotiation, and let's assume that the value of the
 job is only monetary and no other intrinsic motivations exist. If I believe that I am worth _X_
 amount of dollars and a company will only pay me _0.75 * X_, it is a win-win for me to walk away. If
-I compromise and accept the job at _0.75 * X_, I run a high risk of becoming bitter about not
+I compromise and accept the job at _0.75 * X_, I become a high risk of becoming bitter about not
 being paid what I think I am worth which will negatively affect both my performance and the
 performance of the team that I am on. If the company compromises and raises their salary to _X_,
 there is a risk that I have overvalued myself and do not have the organizational impact to match.

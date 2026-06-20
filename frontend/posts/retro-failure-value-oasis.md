@@ -45,10 +45,11 @@ in a field carries weight in decisions (an upcoming topic of failure all of its 
 Upon presenting the industry research and the different changes that were needed to deliver end-user
 value faster and in a more reliable way, it was both ignored and shot down. There were differing
 perspectives on how to approach the dependencies and how those dependencies should work. The path to
-being a high-performing technology organization was blocked. My personal value of being high-performing and working in a high-performing organization was blocked from becoming a reality. But
-instead of accepting this and readjusting alignment or moving on, I decided not to and continued
-working towards high performance anyway. This decision put me and my team up against the
-organization structure; the DNA of the organization itself.
+being a high-performing technology organization was blocked. My personal value of being
+high-performing and working in a high-performing organization was blocked from becoming a reality.
+But instead of accepting this and readjusting alignment or moving on, I decided to continue working
+towards high performance anyway. This decision put me and my team up against the organization
+structure; the DNA of the organization itself.
 
 Before taking the initial job as a DevOps Engineer, I knew that any organization that was correctly
 "doing DevOps" would rarely have a DevOps Engineer or a DevOps team. I made it my mission to accept
@@ -110,7 +111,7 @@ away from others.
 ## Resources
 
 1. Larson, Will. Trapped in a Values Oasis. 18 June 2020, https://lethain.com/values-oasis/.
-2. Forsgren, Nicole, et al. Accelerate: The Science behind DevOps: Building and Scaling High-Performing Technology Organizations. First edition, IT Revolution, 2018.
+2. Forsgren, Nicole, et al. Accelerate: The Science behind DevOps: Building and Scaling High Performing Technology Organizations. First edition, IT Revolution, 2018.
 3. Kim, Gene, et al. The DevOps Handbook: How to Create World-Class Agility, Reliability, & Security in Technology Organizations. First edition, IT Revolution Press, LLC, 2016.
 4. Brown, Brené. Dare to Lead: Brave Work, Tough Conversations, Whole Hearts. Random House, 2018.
 5. “Minimum Viable CD.” Minimum CD, https://minimumcd.org/minimumcd/.

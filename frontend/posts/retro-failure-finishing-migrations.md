@@ -46,7 +46,7 @@ Where did I go wrong? I failed to understand that all problems are people proble
 problems (Atwood 2008). My core lie of human value being tied to knowledge was a large catalyst in
 this. The more technical knowledge and experience I had in a specific area, the more I thought
 others would listen. But I have not found that to be the case. Instead, it takes a completely
-separate skillset of communication; active listening is one of the most important skills (Duhigg
+separate skillset of communication--active listening being one of the most important skills (Duhigg
 2024). 
 
 I also failed in the implementation of making the work that the team was doing tangible by making it
@@ -59,15 +59,17 @@ to see where raw materials or parts are stacking up if there is a bottleneck in 
 
 In addition to the people problem failure and the visibility of work, I exacerbated these issues by
 not successfully migrating the technical IC decisions off of my plate so that I could focus on
-solving these problems. I kept putting the technical IC hat back on as fires broke out around us, which prevented others from learning how to put out those fires.
+solving these problems. I kept putting the technical IC hat back on as fires broke out around us,
+which prevented others from learning how to put out those fires.
 
 
 ## Gratitude
 
 Coming out of the last few years, I now have personal experience on why successful migrations are
-important and the importance of planning, execution, and completion and the exponential increase
-of tech debt if they are not finished and the pain that interrupts cause. It is extremely important
-to plan, strategize, and execute to completion all of the migrations that have been decided upon.
+important and how important planning, execution, and completion are to success migrations. I also
+have the scars from the exponential increase of tech debt if the migrations are not finished and the
+pain that migration interruptions cause. It is extremely important to plan, strategize, and execute
+to completion all of the migrations that have been decided upon.
 
 
 ---

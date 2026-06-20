@@ -25,11 +25,11 @@ but for the learning/growing/stretching process itself.
 
 ## Howard Gardner's Theory of Multiple Intelligences
 
-The breadth of focus in my recent learning across academics and body movement has reminded me of Howard
-Gardner's theory of multiple intelligences [3]. The underlying idea is that there are multiple
-dimensions of intelligence that every human has access to use. Everyone has strengths and weaknesses
-across all nine. The below table of overviews has been adapted from the _Center for Innovative
-Teaching and Learning_ at Northern Illinois University [3]:
+The breadth of focus in my recent learning across academics and body movement has reminded me of
+Howard Gardner's theory of multiple intelligences [3]. The underlying idea is that there are
+multiple dimensions of intelligence that every human has access to use. Everyone has strengths and
+weaknesses across all nine. The below table of overviews has been adapted from the _Center for
+Innovative Teaching and Learning_ at Northern Illinois University [3]:
 
 | Intelligence | Description |
 | ------------ | ----------- |
@@ -83,7 +83,7 @@ I have spent the majority of my life developing my logical and spatial intellige
 additional minor cultivation in musical, linguistic, and existential. It wasn't until my senior year
 in university that I started becoming interested in the application of kinesthetic intelligence. I
 became an avid rock climber for a few years, which cultivated my body awareness: how different parts
-felt at any given time, and where I was in space in relation to the wall I was climbing.
+felt at any given time, and where they was in space in relation to the wall I was climbing.
 
 With the changing social landscape through COVID and dealing with an injury, I moved on from
 climbing to take up yoga, skiing, and cycling to continue developing kinesthetically. Throughout the

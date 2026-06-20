@@ -57,7 +57,7 @@ Between the two of these changes, we were able to decrease the number of manual 
 were needed for a successful deploy of an environment by 96%.
 
 While this was a resounding success for my team, the project did not come without its challenges.
-There were extreme amounts of pressure on the team to deliver by deadlines that were found to be
+There was an extreme amount of pressure on the team to deliver by deadlines that were found to be
 artificial. This pressure resulted in some breakdown in communication between the teams which made
 collaboration more difficult. It also led to decisions being made that weighted the short term
 higher than the long term. And my challenges with effective communication skills and the lack of

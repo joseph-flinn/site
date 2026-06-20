@@ -72,7 +72,7 @@ incorporates routine check-ins (gate reviews) to make sure that continued invest
 sense, even prior to _MVP Launch_. If one of these check-ins results in a decision to kill the
 product, we will also consider everything that we have learned up to that point a success.
 
-Keep an eye out for an upcoming post; it will be doing a more in-depth review of our product
+Keep an eye out for an upcoming post that will be doing a more in-depth review of our product
 development strategy and how we are planning for the gate review sessions.
 
 ---

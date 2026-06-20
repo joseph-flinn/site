@@ -16,7 +16,7 @@ discomfort.
 
 The societally expected answer to this question is to reply with a quick summary of what one does
 for employment ("I am DevOps Manager" or "I work in tech") or to reply with some version of a
-accepted excuse for not working ("I am a stay-at-home dad", "I volunteer at x, y, z, or something of
+accepted excuse for not working ("I am a stay-at-home dad", "I volunteer at XYZ, or something of
 the sort"). If one's reply, probably rehearsed, is captivating enough, follow-up questions may
 follow. If not, one quickly moves on and reciprocates the question to their conversational partner. 
 

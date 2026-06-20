@@ -10,8 +10,9 @@ description: >
 In my time as a manager, the greatest of achievements has been the trust cultivated in each
 relationship with my direct reports. Every action that is taken includes a trust component. The
 action either adds trust to the relationship or removes it. While every relationship follows this
-ebb and flow of trust, in a hierarchical system like a company, the most important view is the trust between the direct report and their manager. Every action by the manager adds or removes trust in the
-relationship. Brené Brown calls this idea the marble jar (Brown 2018). Jocko Willink calls it
+ebb and flow of trust, in a hierarchical system like a company, the most important view is the trust
+between the direct report and their manager. Every action by the manager adds or removes trust in
+the relationship. Brené Brown calls this idea the marble jar (Brown 2018). Jocko Willink calls it
 leadership capital (Willink 2015). 
 
 

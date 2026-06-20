@@ -101,7 +101,7 @@ related ideas. It is critical that RFDs in the _Ideation_ state are clear and na
 Any member of the team is encouraged to champion or take ownership of and start active work on any
 RFD (moving it to this _Discussion_ state) with or without the participation of the original author.
 This should start a conversation around the idea, which ideally would be in a single communication
-channel (card comments, document comments, etc.). Any points of discussion that end up revising the
+channel (card comments, document comments, etc). Any points of discussion that end up revising the
 RFD should be captured in the RFD itself. This state enables our work to remain asynchronous.
 
 #### Deep Dive

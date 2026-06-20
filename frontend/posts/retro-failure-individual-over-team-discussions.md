@@ -59,12 +59,13 @@ To cultivate the space for psychological safety, I regularly asked for questions
 concerns, or ideas; sometimes multiple times a meeting. The majority of the time, this request was
 met with silence, indicating to me and the rest of the team that there was nothing to add. I did not
 fully believe that there was nothing to add, so I started re-asking these same questions in
-1:1s where it might be more comfortable for someone to share their thoughts. 
+one-on-ones where it might be more comfortable for someone to share their thoughts. 
 
 Over time, the quieter engineers learned that I would circle back to the important questions and
-re-ask them in 1:1s, so they would decide not to answer the questions in the team meetings and rather
-save their input until the 1:1s. My comfort zone is the one-on-one conversations, so these would be
-really valuable conversations, but they would have very little transparency to the rest of the team.
+re-ask them in one-on-ones, so they would decide not to answer the questions in the team meetings
+and rather save their input until the one-on-ones. My comfort zone is the one-on-one conversations,
+so these would be really valuable conversations, but they would have very little transparency to the
+rest of the team.
 
 This pattern is a pretty inefficient communication pattern where the hub is aware of everything
 going on, but the spokes sometimes are not. This inefficient pattern is exacerbated by the breadth of
@@ -89,11 +90,10 @@ I wonder if this is an option in synchronous meetings, where we go around the ta
 through a static-order circular list (remote) to sound off with any questions, comments, concerns or
 ideas. A "pass" acknowledges that the information has been received and there is nothing to add. In
 addition to this, being careful when approaching one-on-one discussions on the same topics is
-important. Any side discussions must be scrutinized to make sure they aren't taking place
-outside of the team discussion. If there is any information that surfaces that is important, it
-should be brought back to the team by the source of the information (ie. if an engineer has an idea,
-they should be the one to share it with the rest of the group in a team meeting rather than the
-manager). 
+important. Any side discussions must be scrutinized to make sure they are not taking place outside
+of the team discussion. If there is any information that surfaces that is important, it should be
+brought back to the team by the source of the information (ie. if an engineer has an idea, they
+should be the one to share it with the rest of the group in a team meeting rather than the manager). 
 
 ---
 

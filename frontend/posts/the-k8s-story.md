@@ -15,7 +15,7 @@ One of the larger topics is my largest area of interest: systems thinking.
 Through the class work, I have had a chance to reflect back over my engineering career and write
 about some of the large challenges that I have overcome. I have written about some of these
 challenges separately, but put together they make up the longest, most challenging, and most
-rewarding project that I have been a part of.
+rewarding project that I have yet been a part of.
 
 
 ### Infrastructure and Deployment
@@ -33,7 +33,8 @@ on each App Service one at a time.
 
 If the VM services had changed, we would `scp` a zip of the compiled projects to each of the 13 VMs,
 taking the VM offline, unzipping the new project, and rebooting. Because of the heavy manual
-processes, we only did this when the service codebase changed (which we never knew because no one was accurately tracking breaking changes to that service). 
+processes, we only did this when the service codebase changed (which we never knew because no one
+was accurately tracking breaking changes to that service). 
 
 Database changes were not backwards compatible, so there was a high chance that the old code running
 in the services would start crashing after the new database changes. We would have to rush the
@@ -67,10 +68,10 @@ correctly freeing up the memory. But for some reason, in production it would run
 then crash. Like any infrastructure engineer worth their salt, we decided to automate the problem
 away and kill/restart the service once the OOM was detected. Kubernetes made this easy. The pod
 would crash with OOM, another copy would be created to take its place, and then we would run
-[descheduler](https://github.com/Kubernetes-sigs/descheduler) to clean up all the old dead pods.
+[descheduler](https://github.com/kubernetes-sigs/descheduler) to clean up all the old dead pods.
 This system hummed along with no further problems for the next three years through my departure.
 
-When I worked on the first part of the Kubernetes migration, I had not yet been introduced to the idea
+When I worked on the first part of the Kubernetes migration, I had yet been introduced to the idea
 of systems thinking. However, I intuitively knew that it would take more effort than we had to
 automate and maintain clusters of VMs to run these services natively when they were already in
 containers. I inadvertently stumbled into Donella Meadows's 4th class of high leverage points in the
@@ -113,15 +114,15 @@ worked on by the staff software engineers (the solution being
 [EDD](/posts/scalable-dev-edd-always-on)). Assuming we had a database migrator tool to implement EDD
 (which was a big assumption) and it was running from the Helm Chart, we would remove the human error
 in database changes and the IP addresses where all database changes would be constrained to the
-Kubernetes cluster, allowing us to move the database into an internal-only subnet (i.e., not
+Kubernetes cluster, allowing us to move the database into an internal-only subnet (ie. not
 accessible from the public internet). Migrating the services from the VMs to the Helm Chart would
-remove the 20+ steps for deploying to the VMs. The GitHub Actions workflow that changed the values of
-the service version in the Helm Chart reduced the 20+ steps to deploy the App Services to a single
-button. Using Kubernetes also homogenized the required application infrastructure which helped
-simplify the management and deployment of the cloud infrastructure (OS and application patches were
-not required across a cluster of VMs; just the updates to the Kubernetes version in those clusters).
-This simplified both the infrastructure deployments and application deployments when we duplicated
-everything in production into the EU for data/compute residency policies.
+remove the 20+ steps for deploying to the VMs. The GitHub Actions workflow that changed the values
+of the service version in the Helm Chart reduced the 20+ steps to deploy the App Services to a
+single button. Using Kubernetes also homogenized the required application infrastructure which
+helped simplify the management and deployment of the cloud infrastructure (OS and application
+patches were not required across a cluster of VMs; just the updates to the Kubernetes version in
+those clusters). This simplified both the infrastructure deployments and application deployments
+when we duplicated everything in production into the EU for data/compute residency policies.
 
 No matter how great this idea was, I could not do it alone. I needed to get my team of engineers
 onboard. But it was hard to clearly communicate the idea in a convincing way. We had a lot of

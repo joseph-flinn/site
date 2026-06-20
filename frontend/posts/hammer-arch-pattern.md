@@ -59,7 +59,7 @@ priorities for ease of mental contexts and for security purposes.
 ## Benefits 
 
 Having the data access layer in source code allows for the use of software engineering tools and
-practices (versioning, testing suites, etc.) which creates more stability in the system long-term.
+practices (versioning, testing suites, etc) which creates more stability in the system long-term.
 Full testing suites can be easily built around an API data access layer compared to the more
 difficult testing suites for stored procedures.
 

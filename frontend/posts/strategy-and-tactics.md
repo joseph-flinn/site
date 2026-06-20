@@ -51,7 +51,8 @@ situation didn't have a clearly defined goal. In wilderness first response, the 
 the victim(s) and get them to a medical provider as soon as necessary. This goal does not change
 from one emergency to another. In contrast, the tactics required to get to the undefined goal in the
 vehicle emergency wildly varied. The actions required to get everyone to the destination were very
-different than the actions required to arrive at the destination that night, with the possibility of a smaller travel party.
+different than the actions required to arrive at the destination that night, with the possibility of
+a smaller travel party.
 
 In computer science, there is a subset of problems called pathfinding. Pathfinding problems can be
 abstracted to model strategic problem solving by creating a current state (being broken down on the

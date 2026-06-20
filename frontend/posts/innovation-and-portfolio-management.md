@@ -85,7 +85,7 @@ the firm's portfolio of projects is aligned with the firm's strategy and objecti
 ## Resources
 
 1. Sinek, Simon. The Infinite Game. Portfolio/Penguin, 2019.
-2. Christensen, Clayton M. The Innovator’s Dilemma: The Revolutionary Book That Will Change the Way You Do Business ; [with a New Preface]. 1. Harper Business paperback publisher, Harper Business, 2011.
+2. Christensen, Clayton M. The Innovator’s Dilemma: The Revolutionary Book That Will Change the Way You Do Business ; [with a New Preface]. 1. Harper Business paperback publ, Harper Business, 2011.
 3. Flinn, Peter. Managing Technology and Product Development Programmes: A Framework for Success. Wiley, 2019.
 4. Cooper, Robert G. Winning at New Products: Creating Value through Innovation - 5th Edition. Fifth edition, Revised and Updated, Basic Books, 2017.
 5. Kahn, Kenneth B., et al., editors. The PDMA Handbook of New Product Development. Third edition, Wiley, 2013.

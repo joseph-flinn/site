@@ -85,9 +85,9 @@ The core lie that I believe is that human value is equated to the knowledge poss
 devalued or attacked, it is almost always something to do with knowledge, like being treated as if I
 do not know what I am talking about. This may explain the library of books that I am amassing.
 Owning the book form of knowledge counts towards my core lie of possessing that knowledge; even if I
-have yet to read the book. When I feel attacked in the realm of possessed knowledge, when I feel
-attacked and my defenses go up, the stories that I tell myself of the other are that they are dumb
-and doing stupid things. 
+have yet to read the book. When I feel attacked in the realm of possessed knowledge, my defenses go
+up, The stories that I tell myself about my "attacker" is that they are dumb and/or doing stupid
+things. 
 
 It was through the failure to drive influence as the expert in a specific area that I became aware
 of my core lie. It has been an immense challenge to face this part of who I am, something that I
@@ -103,5 +103,3 @@ human connection, and learning how to effectively communicate through humility a
 ## Resources
 
 1. Duhigg, Charles. Supercommunicators: How to Unlock the Secret Language of Connection. First edition, Random House, 2024.
-
-
