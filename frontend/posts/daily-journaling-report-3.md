@@ -3,7 +3,7 @@ title: "[Daily Journaling] Report 3"
 slug: daily-journaling-report-3
 published: 2025-08-12
 description: >
-  The third report in the series on "daily journaling" second brain.
+  The third report in the series on "daily journaling" with my second-brain setup.
 
 ---
 
@@ -12,16 +12,16 @@ it. In that time, I have had some significant life changes that have led me to a
 pattern of my devices. My needs have changed with respect to my "second brain".
 
 Last year, every morning would start with me making a cup of coffee (a pour-over) and sitting down to
-turn on my computer. As soon as I was logged in, I would pop open my second brain and write all of
+turn on my computer. As soon as I was logged in, I would pop open my second-brain and write all of
 my morning subconscious/shower thoughts, review the previous day, set an intention for that day, and
 then make a to-do list. It quickly became my morning ritual, cultivating my digital home where I
 track my tasks and any thoughts that pop into my head. 
 
 However, this year has brought on a more nomadic lifestyle. The months of April and May barely saw
-me turn on my computer more than once a week. During this time, I still needed somewhat to-do
+me turn on my computer more than once a week. During this time, I still needed somewhat-daily to-do
 lists and reverted to using the ever-present Obsidian on my phone. As this muscle memory was
-defined, I found myself duplicating my to-do list between devices on the days where I would use both,
-depending on the context and what I needed. And every pragmatic software engineer bristles at
+defined, I found myself duplicating my to-do list between devices on the days where I would use
+both, depending on the context and what I needed. And every pragmatic software engineer bristles at
 breaking DRY principles. 
 
 
@@ -42,7 +42,7 @@ engineering leader worth their salt, I sat down and did a return on investment a
 > 1. Full Neovim use while on laptop (unopinionated markdown files)
 > 2. Mobile App markdown editor
 > 3. Note syncing (could be manual)
-> 4. Optimize for laptop power usage and only an extension on the phone
+> 4. Optimize for laptop power usage and only an extension with the phone
 > 
 > | ID | Solution | Cost |
 > | -- | -------- | ---- |

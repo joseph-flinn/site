@@ -26,7 +26,7 @@ that energy that could be used for larger and more important decisions later in 
 
 While recently reading a book on smart note-taking, I have stumbled upon the academic term for this,
 _ego depletion_ (Ahrens 2022). Ego depletion is why some people eat the same thing every day for
-breakfast and why some people wear the same outfit every day as these are one fewer thing to use the
+breakfast and why some people wear the same outfit every day as these are one less thing to use the
 decision-making energy on. Once the energy is used, it has to be replenished before one can continue
 making decisions. Decisions of self-control, responsibility, and discrete choices all deplete this
 energy. 

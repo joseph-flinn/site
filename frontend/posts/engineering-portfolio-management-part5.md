@@ -76,16 +76,16 @@ will never finish.
 
 The Scrum flavor of Agile also has a high risk to focus too heavily on sprint goals and lose sight
 of the overall objective (Cooper p.192). Flow of communication is drastically increased internal to
-the project team, but it is often heavily siloed and lacks a good process to communicate up and out.
+the project team, but it is often heavily siloed and lacks good process to communicate up and out.
 
 The flaws in Agile implementations can be mitigated by embedding Agile practices into the more
 disciplined gated idea-to-launch system. Gated systems communicate up and out, giving senior
 management visibility into the health and value of projects while making sure that all projects are
-aligned with the company's objectives and are balanced on a quarterly basis. The gated systems bring
+aligned with the company objectives and are balanced on a quarterly basis. The gated systems bring
 the discipline of making sure that due process is followed in building the voice-of-customer and the
 business cases to validate the [continuous] resource investment. Once a rough project scope is
 defined in the product backlog and validated by the customer, Agile practices can be effectively
-deployed through the Development and Testing phases to continuously define and validate that the
+deployed through the Development and Testing phases to continuously define and validate the
 customer's needs are met through the iterative solutions delivered.
 
 In the engineering and manufacturing industries, robust gated systems are often already in place
@@ -113,7 +113,7 @@ the project. However, none of these principles directly help support the goals o
 management. Remember from [Part 4](/posts/engineering-portfolio-management-part4) that the goals of
 portfolio management are to: 1) achieve strategic alignment with the business objectives, 2)
 maximize the value of the portfolio of projects, 3) maintain the right balance of projects, and 4)
-maintain the correct number of ongoing projects (Kahn et al., p.156). This is where a gated system
+maintain the correct number of ongoing projects (Kahn et al, p.156). This is where a gated system
 comes in to help support Agile. Using a gated system for portfolio management will lead to changes,
 and Agile will help the organization respond to those changes. Both of these systems work
 hand-in-hand to drive alignment throughout the entire organization and optimize for longevity in

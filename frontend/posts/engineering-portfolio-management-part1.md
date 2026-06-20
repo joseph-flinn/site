@@ -121,7 +121,8 @@ how time and money are invested over a balanced time-horizon.
 Engineering portfolio management is one of the most important systems to create at any company that
 is developing technology. It provides a framework to make sure the right investments are made at the
 right time. And it helps foster a culture of innovation while making sure that all projects and team
-members are aligned with the firm's mission, values, and vision. Next week we will take a look at two tools that are core to physical engineering portfolio management, _Technology Readiness Levels_
+members are aligned with the firm's mission, values, and vision. Next week we will take a look at
+two tools that are core to physical engineering portfolio management, _Technology Readiness Levels_
 and _Manufacturing Readiness Levels_, and how they can be related to the software industry.
 
 ---

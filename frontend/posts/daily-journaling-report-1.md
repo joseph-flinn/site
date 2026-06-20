@@ -29,7 +29,7 @@ do nothing else until that task is completed.
 Unfortunately, as a manager I ran into trouble around organizational goals and priorities.
 Attempting to align team goals to unknown or constantly-shifting organizational goals is a recipe
 for burnout. Add to this the struggle of determining what daily fires were wildfires versus
-candles; daily practices of setting intention and priority did not take root.
+candles, daily practices of setting intention and priority did not take root.
 
 Moving into my next chapter of graduate school, there is the lack of structure that was previously
 provided by the four to six hours of daily meetings. I needed to find a replacement. Starting a

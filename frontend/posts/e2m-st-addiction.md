@@ -21,7 +21,7 @@ burden to the intervenor (also known as addiction in some systems)
 It is not the structure of the system itself that creates the trap. Meadows goes on to show that
 intervenors are sometimes necessary to maintain a desirable state of the system. Doctors are a
 necessary part of the biophysical system of the human body. They help intervene in behaviors that do
- not serve the overall and long-term health of an individual. 
+not serve the overall and long-term health of an individual. 
 
 A few years ago, I low-sided my bicycle by trying to maintain my speed through a corner and catching
 my pedal on the road. I landed on my hip pretty hard and only took about 50 steps a day for about 14
@@ -36,7 +36,7 @@ desirable state.
 > A corrective feedback process within the system is doing a poor (or even so-so) job of maintaining
 > the state of the system. A well-meaning and efficient intervenor watches the struggle and steps in
 > to take some of the load. The intervenor quickly brings the system to the state everybody wants it
-> to be in. Congratulations are in order, usually self-congratulation by the intervenor to the
+> to be in. Congratulations are in order, usually a self-congratulations by the intervenor to the
 > intervenor
 >
 > Then the original problem reappears, since nothing has been done to solve it at its root cause. So
@@ -52,7 +52,7 @@ desirable state.
 
 On any engineering team, capacity to do work is a stock. For the purposes of this analysis, let's
 abstract the capacity to be a constant equal to the number of human-hours that a team has (8 hours
-times the number of team members), in a given time period of days (cycle, sprint, etc.). This is a
+times the number of team members), in a given time period of days (cycle, sprint, etc). This is a
 very simplistic model of team capacity that ignores the in-flows of individual capacity degradation
 from time since last vacation, aligned with team purpose, feeling of fulfillment, and many more
 flows (a topic for a future post).
@@ -70,7 +70,8 @@ I have had five direct reports for the last sixteen months and also act as the t
 manager because we are mostly an enablement team and not a value-stream aligned team
 [[3](https://teamtopologies.com/book)]. But in times of pressure from outside of the team to deliver
 specific value ASAP, I have taken my people management and project management hats off and put on my
-technical engineering hat. It takes the load and pressure off of the team, but sacrifices the people and project management duties. The issue is compounded by the fact that being an IC is
+technical engineering hat. It takes the load and pressure off of the team, but sacrifices dropping
+the people and project management duties. The issue is compounded by the fact that being an IC is
 still a relatively recent experience in addition to the organization's action praising "heroes"
 instead of working towards building an organization system that prevents the need (Larson also talks
 about killing heroes and why it's important [[2](https://lethain.com/elegant-puzzle/)]). 

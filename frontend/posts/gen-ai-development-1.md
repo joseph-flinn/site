@@ -1,6 +1,5 @@
 ---
 title: "[Gen AI] Claude Code Usage Notes (1) - Failure?"
-slug: gen-ai-development-1
 published: 2025-07-23
 description: >
   Notes from using Claude Code to work on dependency updates for Strapi plugin, ultimately ending in
@@ -51,7 +50,7 @@ SUM:                            60            450            155          16341
 I know from past experience, a project of this size would take me about two weeks to fully update
 myself. I'd have to spin up on how Strapi plugins work (in both v4 and v5), spin up on the code
 base, read the docs on breaking changes, develop the updates, and test. The tasks in front of
-us -- Claude Code and I--were to update the project dependencies while upgrading the plugin to support
+us--Claude Code and I--were to update the project dependencies while upgrading the plugin to support
 the v5 major version of Strapi. 
 
 
@@ -75,9 +74,9 @@ September 18, 2024. It included a major version update to the custom design syst
 browser when trying to
 
 Errors were being logged in the browser console where Claude didn't have access to them. I was doing
-a lot of copying and pasting of errors into the Claude Code chat (i.e. vibe coding). I set up a
-Puppeteer MCP server to try to give Claude direct access to those errors, but Claude didn't seem to
-use it. It could have been a setup issue or something else entirely.
+a lot of copy/pasting of errors into the Claude Code chat (ie. vibe coding). I set up a Puppeteer
+MCP server to try to give Claude direct access to those errors, but Claude didn't seem to use it. It
+could have been a setup issue or something else entirely.
 
 In some downtime, I made a note that one of the drawbacks of using genAI in this way was that once you
 needed to "eject" from that workflow, the context is not as robust as the one that you would have
@@ -207,12 +206,13 @@ for an easy integration with Next.js for a website.
 ```
 # Bash commands
     - nix develop: Start the development environment
-    - npm run build: Build the project; npm run lint: Run ESLint
+    - npm run build: Build the project
+    - npm run lint: Run ESLint
     - npm audit: Run an audit on npm packages looking for vulnerabilities
 
 # Code style
     - Use ES modules (import/export) syntax, not CommonJS (require)
-    - Destructure imports when possible (e.g. import { foo } from 'bar')
+    - Destructure imports when possible (eg. import { foo } from 'bar')
 
 # Workflow
     - Be sure to typecheck when you’re done making a series of code changes

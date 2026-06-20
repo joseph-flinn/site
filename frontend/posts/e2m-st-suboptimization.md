@@ -24,8 +24,8 @@ misalignment comes from a leader applying the wrong technique to influence witho
 touches briefly on enacting changes inside of your authority to model to those outside to influence
 their direction. However, there are two different instances where this might be applied: ambiguity
 or disagreement. Larson explains that when there is ambiguity, this approach is a great way to
-influence. However, if this is used when there is already a process in place and you disagree with it, this is where the value divergence comes from. And it is here where a Value Oasis is created.
-
+influence. However, if this is used when there is already a process in place and you disagree with
+it, this is where the value divergence comes from. And it is here where a Value Oasis is created.
 
 If a Value Oasis is defined as a misalignment of values between a team's values and an
 organization's values, a team's values shifting away from the organization's values isn't the only way
@@ -54,7 +54,7 @@ professors. There are quite a few things wrong with the phrase "was smarter", bu
 intelligence in psychology are a topic for another post. Breaking the number one rule of studying
 psychology--do not psycho-analyze yourself--there are two main sources that I believe led to the
 building of this ego. The first is praise for "being smart" instead of praise for the behavior that
-led to the specific outcome.
+led to the specific outcome
 [[2](https://www.penguinrandomhouse.com/books/44330/mindset-by-carol-s-dweck-phd/)]. The second is a
 particular way of "seeing the big picture" in a way that people around me couldn't see. Together,
 these worked in a vicious loop to build that ego. 
@@ -65,7 +65,7 @@ diverse perspectives could solve issues in more creative and robust ways, I star
 why I was different. This search wasn't to bolster my ego, it was to find the why so that I could
 then translate what I was seeing to language that someone else could see and understand. Having a
 great idea or having a great perspective but not having the skills to translate and communicate it
-is what Jocko Willink and Leif Babin call a "tortured genius".
+is what Jocko Willink and Leif Babin call a "tortured genius"
 [[4](https://echelonfront.com/books/extreme-ownership/)]. It doesn't matter how good the idea is or
 how big of an impact it will have, if a group of people cannot be organized around it because they
 don't understand it, the idea will not take off.
@@ -107,14 +107,15 @@ of the total system's goals.
 ---
 
 A Value Oasis in an organization is a _suboptimization_ of a team's values or goals in an
-organization. But the opposite side of the coin is the hierarchy forgetting that its _purpose_ is
+organization. But the opposite side of the coin is the hierarchy forgetting that their _purpose_ is
 to help the subsystems do their jobs better. Having or using too much central control to set the
 goals for a subsystem causes the hierarchy to malfunction. 
 
 From a Systems Theory perspective, there are two reasons why an organization is dysfunctional: 1)
 optimization of team goals over the organization goals, and 2) the hierarchy of the organization
 forgetting its original purpose to help the subsystems do their jobs better. Systems in the real
-world are messy, so it isn't either/or. It is a mixture of both. And in true Systems Theory fashion,\nis there a causation between both reasons? Are there feedback loops in the system? And if so,
+world are messy, so it isn't either/or. It is a mixture of both. And in true Systems Theory fashion,
+is there a causation between both reasons? Are there feedback loops in the system? And if so,
 are they reinforcing or balancing feedback loops? How do we dampen the oscillations in a
 dysfunctional organization to converge to a sustainable long-term future instead of leading to a
 self-induced extinction?

@@ -33,8 +33,8 @@ There is a large amount of literature on the success of both plan-driven project
 Agile project management. As such, I can hear the question being asked: "If there are examples of
 both succeeding, which is correct?"
 
-I think this is the wrong question to be asking. It was certainly the wrong question to be asking going
-into a course on the _Foundations of Project Management_. The PMBOK provides the _standard_ of
+I think this is the wrong question to be asking. It was certainly the wrong question to be asking
+going into a course on the _Foundations of Project Management_. The PMBOK provides the _standard_ of
 project management: what needs to be done regardless of the _framework_ that is chosen for the
 project (Schwalbe p.79). As an example, the PMBOK states that a communication management plan is
 important for the success of any project. Such a plan answers the questions: How will the team
@@ -87,7 +87,7 @@ project is significantly higher.
 
 In a plan-driven framework, the definition of completion is tied to the scope. The project is
 finished when the well-defined scope has been delivered. As an example, a utility company needs to
-build a dam to increase its ability to produce electricity. The scope of the dam is pre-defined
+build a dam to increase their ability to produce electricity. The scope of the dam is pre-defined
 ahead of construction. The project is not finished until a functioning dam has been completed and
 has been delivered to the utility company's operations team. In this case, the cost and schedule are
 relatively flexible. The success of the project may be tied to the cost and schedule constraints, but

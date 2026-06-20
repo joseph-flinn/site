@@ -221,7 +221,7 @@ Sobriety is required to sustain the intoxication of success. A system dedicated
 to the work instead of to us is required.
 
 ## 103
-“as our island of knowledge grows, so do the shores of our ignorance” -- John
+“as our island of knowledge grows, so does the shores of our ignorance” -- John
 Wheeler.
 
 ## 104

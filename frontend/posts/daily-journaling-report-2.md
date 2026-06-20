@@ -7,6 +7,10 @@ description: >
 
 ---
 
+It has been about three months since the first report of my [new daily journling
+practice](/posts/daily-journaling-report-1). I thought I would share some of the updates I have made
+since.
+
 
 ## Updates - Minor Adjustments
 
@@ -44,8 +48,8 @@ The largest change to my daily journaling habit has been task management beyond 
 priorities. As the repository of my daily notes grew with the **Backlog** section, I started losing
 tasks in the backlog. The fuzzy search that I use to search my thought notes doesn't do well with
 building a list of things to do. My idea had been to create a tool to query all of the notes and
-build a unified backlog on the fly. It would be an interesting problem to work on, such as tracking 
-the global ranking of priorities.
+build a unified backlog on the fly. Tracking the global ranking of priorities across multiple files
+would be an interesting problem to work on.
 
 During the same time, I was using [OpenProject](https://www.openproject.org) to stay on top of
 managing my class work last semester. I thought that I would use it extensively to track tasks, but
@@ -61,21 +65,21 @@ With the issues with a time-distributed backlog and the significant task managem
 OpenProject, I decided I needed a simpler, centralized approach. Like many of those before me, I set
 off on the journey to find the perfect task management system to fit into my note-taking workflow.
 
-With a few hours of research, I compiled a few contenders that I thought were promising and conducted
+With a few hours of research, I compiled a few contenders that I thought were promising and did some
 more in-depth research and experimentation to see how they would fit into my workflow.
 
 | System | Notes | Conclusion |
 | ------ | ----- | ---------- |
 | [NocoDB](https://nocodb.com) | I already use NocoDB to track some areas of my life. It has a Calendar view. However, for some reason, the EndDate value is behind a paywall... | ❌|
 | [TaskMD](https://github.com/BaldissaraMatheus/Tasks.md) | This was essentially just a Kanban board. As much as I love lean management practices, I was not having task-flow issues. | ❌ |
-| [Taskwarrior](https://taskwarrior.io) | I set this up, but it required me to rebuild my entire workflow around the tool, rather than the tool fitting into my current workflow | ❌ |
+| [Taskwarrior](https://taskwarrior.io) | I set this up, but it required me to rebuild my entire workflow around the tool rather than the tool fitting into my current workflow | ❌ |
 | [Vault-tasks](https://github.com/louis-thevenet/vault-tasks) | Cool idea with the same "Why?" as what I was looking for, but didn't quite fit my needs | ❌ |
 | [Custom-built task management app](https://www.roadmap-ui.com) | My first instinct is to build the solution myself rather than finding one that is already built. However, this would require too much time | ❌ |
 | [GitHub Project](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) | This is the closest that I got, but it is not local and would require quite a bit of automation effort to link to my note-taking workflow | ❔|
 
 
-So... no perfect solution... Back to the drawing board, but this time to generate a user requirements
-list so that I actually know what I am looking for (which I should have done to begin with). My guiding
+So...no perfect solution... Back to the drawing board, but this time to generate a user requirements
+list to actually know what I am looking for (which I should have done to begin with). My guiding
 requirements were:
 
 - The system should fit into my current workflow
@@ -110,7 +114,7 @@ expanded note types and how Tasks would fit in.
 | Project Note | Central place for managing related tasks and sub-projects |
 | Daily Task | A task that is small enough to be finished within a day (see Daily Note) |
 | Project Task | A task that is related to a specific project. This will be treated as a Daily Task when I add it to a day's plan and start working it. |
-| Backlog Task | A Daily Task that is not high enough priority to plan for that day. |
+| Backlog Task | A Daily Task that is not high enough priority to plan for that day |
 
 With these definitions, I expanded the current file structure to include `./tasks.md` and
 `./projects`.
@@ -160,17 +164,17 @@ of the **Backlog** section of the _Daily Notes_ to a centralized `./tasks.md`.
 
 ```markdown
 # Backlog
- 
+
 ## Projects
- 
+
 - [ ] Book - Engineering Management from Masters program
     [[projects/book-engineering-management/outline]]
 - [ ] Book - Accountability
     [[journal/2024-10-02###Accountability vs Responsibility]]
     [[journal/2024-12-13###Accountability and its place in hierarchical social structures]]
     [[journal/2024-12-30###Accountability Book timing]]
- 
- 
+
+
 ## Tasks
  
 - [ ] Migrate site to `joseph-flinn.com`
@@ -180,15 +184,15 @@ of the **Backlog** section of the _Daily Notes_ to a centralized `./tasks.md`.
     #blog
 - [ ] Experiment with RAG for the second-brain
     #second-brain
- 
+
 ...
- 
+
 # Completed
- 
+
 ## Projects 
- 
+
 ## Tasks
- 
+
 - [x] Add a manually managed _Popular_ list of blog articles
     [[journal/2025-01-02###Today's Plan]]
     #blog
@@ -197,7 +201,7 @@ of the **Backlog** section of the _Daily Notes_ to a centralized `./tasks.md`.
     #blog
 ```
 
-There are two sections: **Backlog** and **Completed**, and each of those sections has subsections
+There are two sections: **Backlog** and **Completed** and each of those sections have subsections
 for projects and tasks. The project backlog is used for both budding project ideas and for projects
 that are under way. If a project has yet to be initiated with a _Project Note_, the project backlog
 links to a list of journal entries in _Daily Notes_ that are related to the ideation phase of the
@@ -219,42 +223,42 @@ While the _Project Note_ template is still under development, the current format
 
 ```
 # Project Name
- 
+
 Background information on the project or the problem.
- 
+
 [[journal/day1#thought]]
 [[journal/day2#thought]]
- 
- 
+
+
 ## Goal 
- 
+
 The goal of the project is to help prioritize against other projects and make sure the right project is
 being worked on at the right time. This section answers the "Why do we need the project?" and
 "What is the scope of the project?"
- 
- 
+
+
 ## Notes - Journal
- 
+
 - [[journal/day3#Project Thought]]
- 
- 
+
+
 ## Notes - Project
- 
+
 ### Random Thought
- 
+
 This is a random thought that needs to be captured and stored alongside the project for ease of
 retrieval. 
- 
- 
+
+
 ## Tasks
- 
+
 ### Backlog
- 
+
 - [ ] Task 1
 - [ ] Task 2
- 
+
 ### Completed
- 
+
 ```
 
 The links to journal entries in the background information section contain thoughts around why the
@@ -279,7 +283,7 @@ working out quite well with my zettelkasten approach to note-taking. There are s
 I will be focusing on improving over the next few months.
 
 ## Room for improvement
- 
+
 Retrieval of thoughts and ideas from journal entries is still a pain point. I have not yet
 implemented a replacement for the fuzzy keyword search in NeoVim. With all of the text data that I
 have created, I would like to experiment with a self-hosted RAG to be able to chat with my
@@ -290,9 +294,9 @@ experimented with it in my workflow for a bit.
 ---
 
 ## Resources
- 
+
 ### Journal Entry Excerpt - 2024-12-13
- 
+
 > My second-brain system is working well as it is. Instead of changing my workflow to adapt to a
 > tool, I want tooling to expand my workflow. TaskWarrior seems extremely robust but feels
 > disconnected from my personal workflow. And it feels like its focus is optimizing local
@@ -337,9 +341,10 @@ experimented with it in my workflow for a bit.
 > further thought, markdown links might be a good solution to keeping context rather than building a
 > custom tool to generate and query a distributed backlog. Instead the backlog can be its own
 > markdown file that includes links back to the originating Daily Note thought.
- 
+
+
 ### Journal Entry Excerpt - 2024-12-14
- 
+
 > Expanding on the thoughts on the Project type note from yesterday, a Project should also have a
 > section for smaller sub-projects. For instance, the Masters of Engineering Management book is a
 > large project made up of smaller projects. Those should have a first-class place to live in the

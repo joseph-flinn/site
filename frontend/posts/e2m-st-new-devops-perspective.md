@@ -58,7 +58,7 @@ is a large part of the study of Systems Dynamics.
 > to individuals and threatening to power structures (p. 81). 
 
 DevOps strives to improve the system of the organization to create a self-organizing structure that
-works towards the goal of value delivery. The characteristics of a self-organizing system are
+works towards the goal of value delivery. A characteristic of a self-organizing system is
 experimentation which is the culture DevOps pushed towards Westrum Organizational Culture
 [[1](https://itrevolution.com/product/accelerate/)]. 
 

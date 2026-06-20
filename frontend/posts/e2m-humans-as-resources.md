@@ -23,7 +23,9 @@ what was being talked about. And the conversation was not on computing the sum t
 Neither the first nor the second definitions of _resource_ sit well with me. The second implies that
 people are a natural source to use to build wealth or to create revenue. Or in other words, one
 person using another person or a group of people to build wealth and profit. The first is by far the
-least bad of the two, but there is a knife edge to walk. If the answer is anywhere near "wealth" or "revenue", the first definition turns to the second.
+least bad of the two, but there is a knife edge to walk. "Available means" leads me to ask "To what
+ned?" If the answer is anywhere near "wealth" or "revenue", the first definition turns to the
+second.
 
 Maybe this is just a me thing. Maybe I am too sensitive to feeling like I am being used and hearing
 others talk about using other people hits too close to home. Maybe I have an issue with losing sight

@@ -24,7 +24,7 @@ Product development is the process in which technologies are turned into a comme
 service. How do we know when a technology is sufficiently ready to be turned into a product? Some
 might say as soon as someone is willing to pay for it, but this leaves out a whole slew of testing
 and safety considerations. It also leaves out one of the more important business questions: "How do
-we know which of the technologies are the most promising (i.e., best return for the organization)?"
+we know which of the technologies are the most promising (ie. best return for the organization)?"
 
 Fortunately for us, one of the great innovators of the 20th century has built a guide in determining
 the readiness of technology. These readiness levels help measure technologies against themselves in
@@ -114,7 +114,7 @@ efficacy. It seems to have become an excuse not to do the upfront legwork to val
 before building them.
 
 It seems that the intangibility of software makes it look like writing software is cheap. It might
-take five minutes to write these three lines of code and five days to write three other
+take five minutes to write these three lines of code and five days to write three additional
 lines of code. The end product in both cases is three lines of code but the impact may be completely
 different: an HTML button with a new hover state versus statistical analysis monitoring algorithm to
 determine the failure state of a dam generator.
@@ -136,8 +136,8 @@ planning and validation is needed.
 Failing fast needs to get back to failing early in the TRL levels rather than in TRL 9 after the
 technology has been fully implemented and deployed to production. While learning after the fact is
 valuable, it is better to learn prior to the significant financial investment in TRL 7-9. The gate
-review system that will be discussed in [Part 4](/posts/engineering-portfolio-management-part4) will provide a process to fail fast in a reliable
-way.
+review system that will be discussed in [Part 4](/posts/engineering-portfolio-management-part4) will
+provide a process to fail fast in a reliable way.
 
 ---
 

@@ -222,13 +222,13 @@ I now have a professional-looking site, but it had generic business consulting c
 align with my experience or the services that I offer. I asked Claude to rewrite all of the copy to
 be in line with my description of myself:
 
-> Please update all of the copy on the website to align more closely with my experience and story.
+> Please update all of the copy on the website to more align to my experience and story.
 >
 > "I'm Joseph Flinn, an engineering manager focused on empowering teams to reach their highest
 > potential through curiosity and continuous improvement. I create inclusive, psychologically-safe
 > environments where every team member's voice matters. My systems thinking approach to continuous
 > improvement reinforces a safe environment while driving technical excellence with a balance
-> between the short- and long-term goals. I have built an expertise in improving Engineering
+> between the short and long term goals. I have built an expertise in improving Engineering
 > Operations across the SDLC: from Design to final value delivery to end users."
 
 It did a pretty good job with correcting the copy, the list of services, and even the story on the About
@@ -585,7 +585,7 @@ and business requirements. However, as soon as I need to go update the site desi
 wade through a mess of code (or an AI agent will). 
 
 My concern is that AI is amplifying the over-optimization of short-term business goals rather than
-building for a sustainable business. Or maybe sustainable businesses are a thing of the past and
+building for a sustainable business. Or maybe sustainable business is a thing of the past and
 instead everyone should be looking to capitalize on whatever the trend is, spending someone else's
 money and trying to exit before it is no longer the trend. Then again, this feels like trying to
 time the stock market.
