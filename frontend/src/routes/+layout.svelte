@@ -26,7 +26,7 @@
   <meta property="og:url" content={base} />
 </svelte:head>
 
-<CentralColumn>
+<CentralColumn bannerEnabled={true}>
   <HorizontalNav pages={siteNav}/>
   <div class="flex flex-col grow">
     <slot></slot>
