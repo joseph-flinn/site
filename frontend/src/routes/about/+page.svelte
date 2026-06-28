@@ -7,13 +7,13 @@
 
   import ParagraphRenderer from '$lib/renderers/ParagraphRenderer.svelte';
 
-  import { aboutCopy, skillsData, influentialBooks } from "$lib/config";
+  import { aboutCopy, aiValues, skillsData, influentialBooks } from "$lib/config";
 
 </script>
 
 <div class="sm:pt-8">
   <PageTitle name="About" />
-  <div class="px-4">
+  <div class="px-4 prose prose-tin max-w-none">
     <SvelteMarkdown 
       source={aboutCopy} 
       renderers={{
@@ -21,9 +21,18 @@
       }}
     />
   </div>
+  <PageTitle name="AI Values" />
+  <div class="px-4 prose prose-tin max-w-none">
+    <SvelteMarkdown 
+      source={aiValues} 
+      renderers={{
+        paragraph: ParagraphRenderer,
+      }}
+    />
+  </div>
   <div class="p-4"/>
   <PageTitle name="Expertise" />
-  <div class="columns-1 gap-y-4 sm:columns-2">
+  <div class="columns-1 gap-y-4 sm:columns-2 text-tin-800">
     {#each Object.entries(skillsData) as [areaName, areaData]}
       <Card title={areaName}>
         <ul class="list-disc list-outside pl-8 break-inside-avoid-column">
@@ -36,7 +45,7 @@
   </div>
   <div class="p-4"/>
   <PageTitle name="Influential Books" />
-  <div class="">
+  <div class="px-4 prose prose-tin max-w-none">
     <ul>
       {#each influentialBooks as book}
         <li>
