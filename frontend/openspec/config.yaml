@@ -1,0 +1,28 @@
+schema: spec-driven
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+
+context: |
+  Tech stack: Javascript, SvelteKit, TailwindCSS, mdsvex (blog posts)
+
+  The goal of this site is to be fully static and should prioritize server-side 
+  rendering (in CI) over fetching data from a backend. Reusable components should be 
+  prioritized over custom CSS. TailwindCSS should be used instead of raw CSS.
+
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
