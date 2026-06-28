@@ -22,7 +22,6 @@
   })
 </script>
 
-
 <article class="prose prose-tin max-w-none">
   <svelte:component this={data.content} />
 </article>

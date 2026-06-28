@@ -17,7 +17,7 @@
 
 <div class="sm:pt-8">
   <PageTitle name="Intro" />
-  <div class="px-4">
+  <div class="px-4 prose prose-tin max-w-none">
     <SvelteMarkdown 
       source={introCopy} 
       renderers={{
