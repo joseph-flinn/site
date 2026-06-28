@@ -44,3 +44,19 @@ It is rare to feel such as strong of an emotional pull to something in the past 
 interacting with this calculator. This might be something to explore. How do I create space to do
 more mathematics in my life? Or is this a combination of burnout, ambiguity, with a sprinkle of
 nostalgia?
+
+Something similar hit towards the end of my previous job. I splurged on a handful of advanced books
+on mathematics (complex analysis, abstract algebra, etc). However, when I sat down with my old
+calculus book and worked through the intro/review chapter, I realized that I had forgotten most of
+the intricacies over the years. I could not recall the quadratic formula without looking it up
+(something that I learned in 6th grade) let alone L'Hôpital's rule. While the desire was to review
+and build from where I had been in university, I found the friction was too high at that time.
+
+However, thinking back, I wonder if I chose the wrong area to start with? I found calculus and most
+other applied mathematics courses hard to keep motivated. But the theoretical classes that were
+centered around proofs were where I shined. Instead of choosing a low-friction re-entry point, I
+chose the highest.
+
+I do not think there is any lifestyle change coming soon around more mathematics, but when this
+nostalgia hits again--which I am sure it will--starting with something more theoretical may help get
+through the initial startup friction to the point of building a habit.
