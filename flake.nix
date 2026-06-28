@@ -16,7 +16,7 @@
       devShells.x86_64-linux.default = pkgs.mkShell {
         name = "site";
         packages = [
-          pkgs.nodejs_20
+          pkgs.nodejs_24
           pkgs.actionlint
           pkgs.k6
           pkgs.rclone
