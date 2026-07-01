@@ -19,7 +19,7 @@
   </div>
 {:else}
   <pre class="flex w-full">
-    <code class="grow p-2 rounded-md overflow-x-auto bg-tin-200 text-xs">{text}</code>
+    <code class="grow p-2 rounded-md overflow-x-auto text-xs">{text}</code>
   </pre>
 {/if}
 </div>
