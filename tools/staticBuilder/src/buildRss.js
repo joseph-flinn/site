@@ -1,13 +1,15 @@
-import fs from 'fs';
-import posts from '../../../dist/posts.json' assert {type: "json"};
+import fs from 'fs/promises';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import posts from '../../../dist/posts.json' with {type: "json"};
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const SITE_URL = 'https://joseph.flinnlab.com';
-const OUTPUT_DIR = '../../dist';
+const OUTPUT_DIR = path.resolve(__dirname, '../../../dist');
 
 const year = new Date().getFullYear();
-
-const rssPosts = Object.values(posts).sort((postA, postB) => postA.published > postB.published ? -1 : 1)
 
 const escapeXml = (unsafe) => {
     return unsafe.replace(/[<>&'"]/g, (c) => {
@@ -19,10 +21,13 @@ const escapeXml = (unsafe) => {
             case '"': return '&quot;';
         }
     });
-}
-
+};
 
 const render = (posts) => {
+  const sortedPosts = Object.values(posts).sort((postA, postB) => 
+    new Date(postA.published) > new Date(postB.published) ? -1 : 1
+  );
+
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" >
   <channel>
@@ -30,7 +35,7 @@ const render = (posts) => {
     <link>${SITE_URL}</link>
     <description>Joseph Flinn's blog about optimizing technology organizations</description>
     <copyright>Copyright ${year} Joseph Flinn</copyright>
-    ${rssPosts
+    ${sortedPosts
       .map(
         (post) => `
         <item>
@@ -48,7 +53,19 @@ const render = (posts) => {
 `;
 };
 
-// Save post data to posts.json
-fs.writeFile(`${OUTPUT_DIR}/rss.xml`, render(posts), (err) => {
-  if (err) throw err;
-})
+async function main() {
+  try {
+    const rssContent = render(posts);
+    
+    // Ensure output directory exists
+    await fs.mkdir(OUTPUT_DIR, { recursive: true });
+    
+    await fs.writeFile(path.join(OUTPUT_DIR, 'rss.xml'), rssContent);
+    console.log(`RSS feed generated successfully at ${path.join(OUTPUT_DIR, 'rss.xml')}`);
+  } catch (err) {
+    console.error('Error generating RSS feed:', err);
+    process.exit(1);
+  }
+}
+
+main();
